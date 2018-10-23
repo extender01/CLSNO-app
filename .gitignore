@@ -1,0 +1,8 @@
+node_modules
+server/config/config.json
+
+client/node_modules
+client/public/bundle.js
+client/public/bundle.js.map
+client/public/styles.css
+client/public/styles.css.map
