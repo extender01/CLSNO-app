@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
+const {mongoose} = require('./db/mongoose');
 const {User} = require('./models/user');
 const {Test} = require('./models/test');
 const {authenticate} = require('./middleware/authenticate');
@@ -29,6 +30,8 @@ app.use(bodyParser.json());
 
 //==================I AM ALIVE============================================
 app.get('/api/alive', (req,res) => {
+    console.log(process.env.MONGODB_URI);
+     
     res.status(200).send("I am alive!")
 });
 
@@ -43,7 +46,8 @@ app.get('/api/alive', (req,res) => {
 app.get('/api/get-all', (req, res) => {
     
     Test.find({}).then((foundTests) => {
-        console.log(req.cookies['x-auth']);
+        console.log('testy nalezeny');
+        
         
         
         res.send(foundTests);
@@ -52,9 +56,11 @@ app.get('/api/get-all', (req, res) => {
 
 
 // ========== ADD TEST
-app.post('/api/addtest', authenticate, (req, res) => {
+app.post('/api/addtest', (req, res) => {
     //_.pick pulls selected props from req.body and puts them to extractedProps object
-    let extractedProps = _.pick(req.body, ['name', 'where']);   
+    let extractedProps = _.pick(req.body, ['name', 'where']);  
+    console.log('pridani testu pred spustenim save');
+     
     let test = new Test(extractedProps);         //creates new mongoose model
     test.save().then((savedTest) => {
         console.log(savedTest)
@@ -172,9 +178,9 @@ app.delete('/api/logout', authenticate, (req, res) => {
 
 //========================================= CLIENT RENDERING =========================
 
-app.get ('*', (req, res) => {
-    res.sendFile(path.join(publicPath, 'index.html'));
-});
+// app.get ('*', (req, res) => {
+//     res.sendFile(path.join(publicPath, 'index.html'));
+// });
 
 
 

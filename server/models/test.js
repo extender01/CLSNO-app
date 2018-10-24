@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
-const validator = require('validator');
-const jwt = require('jsonwebtoken');
+
 
 
 let TestSchema = new mongoose.Schema({
@@ -22,4 +21,4 @@ let TestSchema = new mongoose.Schema({
 
 let Test = mongoose.model('Test', TestSchema);
 
-module.exports = {Test}
+module.exports = {Test};
