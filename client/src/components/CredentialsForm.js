@@ -1,5 +1,7 @@
 import React from 'react';
 
+import { history } from '../routers/AppRouter';
+
 
 export default class CredentialsForm extends React.Component {
     
@@ -23,7 +25,7 @@ export default class CredentialsForm extends React.Component {
     
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.formSubmit({nick: this.state.nick, password: this.state.password})
+        this.props.formSubmit({nick: this.state.nick, password: this.state.password});
 
     };
 
@@ -43,3 +45,4 @@ export default class CredentialsForm extends React.Component {
         )
     }
 };
+

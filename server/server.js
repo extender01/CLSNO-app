@@ -56,7 +56,7 @@ app.get('/api/get-all', (req, res) => {
 
 
 // ========== ADD TEST
-app.post('/api/addtest', (req, res) => {
+app.post('/api/addtest', authenticate, (req, res) => {
     //_.pick pulls selected props from req.body and puts them to extractedProps object
     let extractedProps = _.pick(req.body, ['name', 'where']);  
     console.log('pridani testu pred spustenim save');
@@ -96,7 +96,8 @@ app.post('/api/adduser', (req, res) => {
     user.save().then((savedUser) => {
         return user.generateAuthToken();
     }).then((retreivedToken) => {
-        res.header('x-auth', retreivedToken).send(user);
+        res.cookie('x-auth', retreivedToken).send(user);
+        //res.header('x-auth', retreivedToken).send(user);
     }).catch((e) => {
         res.status(400).send(e)
     });

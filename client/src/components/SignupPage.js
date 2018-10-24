@@ -1,22 +1,31 @@
 import React from 'react';
+import CredentialsForm from './CredentialsForm';
+import {startSignup} from '../actions/userActions';
 
-export default class SignupPage extends React.Component {
+import {connect} from 'react-redux';
+
+class SignupPage extends React.Component {
     
-    onSubmit = (e) => {
-        e.preventDefault();
         
-    };
-    
     render() {
         return (
             <div>
             <p>Sign up form</p>
-            <form>
-                <input type='text' placeholder='nick'/>
-                <input type='text' placeholder='password' />
-                <button>SIGNUP</button>
-            </form>
+            <CredentialsForm formSubmit={this.props.startSignup} />
             </div>
         )
     };
 };
+
+
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        startSignup: (credentials) => {
+            dispatch(startSignup(credentials))
+        }
+    };
+};
+
+
+export default connect(undefined, mapDispatchToProps)(SignupPage);
