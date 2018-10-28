@@ -1,16 +1,12 @@
 import React from 'react';
 
-const EditTestPage = (props) => {
-   
-    console.log(props);
-    
-   
-   return (
-    <div>
-    This is from my edit test page
-    </div>
-
-    )
+const EditTestPage = () => {
+       
+    return (
+        <div>
+            This is from my edit test page
+        </div>
+    );
 };
     
 

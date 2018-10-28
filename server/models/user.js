@@ -104,11 +104,18 @@ UserSchema.statics.findByCredentials = function (nick, password) {
 //for authenticate, when invoked with token, checks if token is valid, decodes its data and searches db for user (token owner) - if bad, returns rejected promise and ends
 UserSchema.statics.findByToken = function (token) {
     let User = this;
+    let decoded;
+    //console.log('overeni tokenu je:', jwt.verify(token, process.env.JWT_SECRET) );
+    
+   
+
+
 
     try {
         decoded = jwt.verify(token, process.env.JWT_SECRET)
     } catch (e) {
-        return Promise.reject();
+       //return {nick: 'nobody'}
+       return  Promise.reject('overovany token je neplatny')
     }
 
     return User.findOne({
@@ -116,6 +123,8 @@ UserSchema.statics.findByToken = function (token) {
         'tokens.token': token,
         'tokens.access': 'auth'
     });
+
+    
 };
 
 

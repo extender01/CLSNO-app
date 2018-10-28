@@ -10,6 +10,7 @@ import NotFoundPage from '../components/NotFoundPage';
 import Header from '../components/Header';
 import SignupPage from '../components/SignupPage';
 import LogoutTest from '../components/LogoutTest';
+import LabMetList from '../components/LabMethods/LabMetList';
 
 export const history = createHistory();
 
@@ -24,6 +25,7 @@ const AppRouter = () => (
                 <Route path='/login' component={LoginPage} />
                 <Route path='/help' component={HelpPage}/>
                 <Route path='/logout' component={LogoutTest} />
+                <Route path='/lab-metody' component={LabMetList} />
                 <Route component={NotFoundPage}/>
             </Switch>
         </div>

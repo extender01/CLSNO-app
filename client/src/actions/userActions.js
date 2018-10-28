@@ -84,20 +84,20 @@ export const startSignup = (credentials) => {
 };
 
 
-//==================LOGGED USER==========================================================
+//==================WHO IS LOGGED USER==========================================================
 
 //checks in db who is owner of x-auth cookie and sends back nick and id info (and stores them to redux)
 const loggedUserBegin = () => ({type: "LOGGED_USER_BEGIN"});
 const loggedUserFailure = (error = null) => ({type: 'LOGGED_USER_FAILURE', error: error});
-export const loggedUserSuccess = (user = {}) => {
-    if (user) {
+export const loggedUserSuccess = (sourceAPI = {user: {_id: '', nick: nobody}}) => {
+    if (sourceAPI) {
         return {
             type: 'LOGGED_USER_SUCCESS',
             user: {
-                _id: user._id,
-                nick: user.nick
+                _id: sourceAPI.user._id,
+                nick: sourceAPI.user.nick
             },
-            isLogged: user._id ? true : false
+            isLogged: sourceAPI.user._id ? true : false
             
         }
     } 
@@ -114,15 +114,8 @@ export const startLoggedUser = () => {
 
         //checks if client has cookie with token, if yes then that user is returned as result of GET request, if not only string that says nobody is logged is returned
         axios.get('/api/me').then((result) => {
-            console.log('kdo je zalogovan',result.data);
-            if (result.data._id) {
-                dispatch(loggedUserSuccess(result.data));
-            } else {
-                console.log('bude proveden prazdny dispatch');
-                
-                dispatch(loggedUserSuccess());
-
-            }
+           
+            dispatch(loggedUserSuccess(result.data))
             
             
         });

@@ -6,10 +6,11 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const cookieParser = require('cookie-parser');
 
-const {mongoose} = require('./db/mongoose');
+const {mongoose} = require('./db/mongoose'); //must stay
 const {User} = require('./models/user');
 const {Test} = require('./models/test');
 const {authenticate} = require('./middleware/authenticate');
+const {whoIsIt} = require('./middleware/whoIsIt');
 
 const app = express();
 const publicPath = path.join(__dirname, '..', 'client', 'public')
@@ -29,10 +30,10 @@ app.use(bodyParser.json());
 
 
 //==================I AM ALIVE============================================
-app.get('/api/alive', (req,res) => {
-    console.log(process.env.MONGODB_URI);
-     
-    res.status(200).send("I am alive!")
+app.get('/api/alive', whoIsIt, (req,res) => {
+ 
+
+    res.send(req.user);
 });
 
 
@@ -44,7 +45,7 @@ app.get('/api/alive', (req,res) => {
 //=================GET ALL TESTS=========================================
 
 app.get('/api/get-all', (req, res) => {
-    
+   
     Test.find({}).then((foundTests) => {
         console.log('testy nalezeny');
         
@@ -63,9 +64,9 @@ app.post('/api/addtest', authenticate, (req, res) => {
      
     let test = new Test(extractedProps);         //creates new mongoose model
     test.save().then((savedTest) => {
-        console.log(savedTest)
+        console.log(savedTest);
         res.send(savedTest);
-    }).catch((e) => {res.status(400).send(e);})
+    }).catch((e) => {res.status(400).send(e);});
 });
 
 
@@ -91,7 +92,7 @@ app.patch('/api/tests/:id', (req, res) => {
 // ============ SIGN UP=================================
 app.post('/api/adduser', (req, res) => {
     let extractedProps = _.pick(req.body, ['nick', 'password']);
-    let user = new User(extractedProps)
+    let user = new User(extractedProps);
 
     user.save().then((savedUser) => {
         return user.generateAuthToken();
@@ -99,7 +100,7 @@ app.post('/api/adduser', (req, res) => {
         res.cookie('x-auth', retreivedToken).send(user);
         //res.header('x-auth', retreivedToken).send(user);
     }).catch((e) => {
-        res.status(400).send(e)
+        res.status(400).send(e);
     });
 });
 
@@ -111,46 +112,47 @@ app.post('/api/login', (req, res) => {
     User.findByCredentials(extractedProps.nick, extractedProps.password).then((user) => {
         return user.generateAuthToken().then((token) => {
             console.log('token', token);
-           // res.header('x-auth', token).send(user);
-           res.cookie('x-auth', token).send(user);
+            // res.header('x-auth', token).send(user);
+            res.cookie('x-auth', token).send(user);
         }).catch((e) => {
             res.status(400).send(e);
         });
     }).catch((e) => {
         res.status(400).send(e);
-    })
+    });
 });
 
 
 
 //===========================WHOISLOGGED======================================
 
-app.get('/api/me', (req, res) => {
+app.get('/api/me', whoIsIt, (req, res) => {
     //check if client sends cookie with token, if yes then user is found by that token and that user is returned as object in res.send. If there is no cookie, just send a string that no on is logged
     
-    const token = req.cookies['x-auth']
+    // const token = req.cookies['x-auth']
     
-    if (token) {
-        console.log('token v cookies existuje, bude provedena verifikace');
-        User.findByToken(token).then((matchedUser) => {
-            if (!matchedUser) {
-                return Promise.reject();
-            }
+    // if (token) {
+    //     console.log('token v cookies existuje, bude provedena verifikace');
+    //     User.findByToken(token).then((matchedUser) => {
+    //         if (!matchedUser) {
+    //             res.clearCookie('x-auth');
+    //             return Promise.reject(res.send('prihlaseny uzivatel nenalezen v db'));
+    //         }
            
-            console.log('matchedUser', matchedUser);
+    //         console.log('matchedUser', matchedUser);
             
-            res.send(matchedUser)
+    //         res.send(matchedUser)
 
-        }).catch((e) => {
-            res.status(401).send(e);
-        });
+    //     }).catch((e) => {
+    //         res.status(401).send(e);
+    //     });
         
-    } else {
-        console.log('token v cookies neexistuje');
-        res.send('nikdo neni prihlasen');
-    }
+    // } else {
+    //     console.log('token v cookies neexistuje');
+    //     res.send('nikdo neni prihlasen');
+    // }
     
-   // res.send(req.user)
+    res.send({user: req.user});
    
 });
 
@@ -163,12 +165,13 @@ app.delete('/api/logout', authenticate, (req, res) => {
     console.log('pokus o smazani');
     console.log(req.token);
     
-   // res.send('ahoj');
+    // res.send('ahoj');
     req.user.removeToken(req.token).then(() => {
         console.log('povedla se fce removeToken');
         
         
         res.status(200).clearCookie('x-auth').send('uspesne odhlasen')
+        res.status(200).send('uspesne odhlasen')
     }).catch((e) => {
         console.log('pokus o smazani na severu se nepovedl');
         
@@ -195,6 +198,6 @@ app.delete('/api/logout', authenticate, (req, res) => {
 
 app.listen(port, () => {
     console.log(`Started up at port ${port}`);
-  });
-  
-  module.exports = {app};
+});
+
+module.exports = {app};

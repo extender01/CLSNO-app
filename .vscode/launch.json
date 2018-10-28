@@ -1,0 +1,38 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "attach",
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "webRoot": "${workspaceFolder}}\\client\\public"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "React debug",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}\\client",
+            "skipFiles": [
+                "${workspaceFolder}/client/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js",
+                "<node_internals>/**/*.js"
+              ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Node debug",
+            "program": "${workspaceFolder}\\server\\server.js",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**/*.js",
+                "${workspaceFolder}/lib/**/*.js",
+                "<node_internals>/**/*.js"
+              ]
+        }
+    ]
+}

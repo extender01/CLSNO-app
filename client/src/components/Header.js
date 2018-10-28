@@ -1,11 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import {startLoggedUser }from '../actions/userActions';
-
-
-
 
 class Header extends React.Component {
     
@@ -30,12 +27,13 @@ class Header extends React.Component {
                 <NavLink to='/login' activeClassName='is-active'>Login</NavLink>
                 <NavLink to='/logout' activeClassName='is-active'>Logout</NavLink>
                 <NavLink to='/signup' activeClassName='is-active'>Signup</NavLink>
+                <NavLink to='/lab-metody' activeClassName='is-active'>Metody</NavLink>
 
 
             </header>
-        )
+        );
     }
-};
+}
 
 
 const mapStateToProps = (state) => {
@@ -47,12 +45,17 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         checkWhoIsLogged: () => {
-            dispatch(startLoggedUser())
-        },
-        justTellNoOneLogged: () => {
-            dispatch(loggedUserSuccess())
+            dispatch(startLoggedUser());
         }
+        
     };
 };
+
+Header.propTypes = {
+    checkWhoIsLogged: React.propTypes.func,
+    nick: React.propTypes.string
+};
+
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);

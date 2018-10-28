@@ -15,7 +15,12 @@ const addTestSuccess = (test = {}) => {
         addedTest: {
             _id: test._id,
             name: test.name,
-            where: test.where
+            where: test.where,
+            forLab: {
+                parcelWho: test.parcelWho,
+                parcelPreanal: test.parcelPreanal,
+                parcelNote: test.parcelNote
+            }
         }
     };
 };
