@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
 import {startLoggedUser }from '../actions/userActions';
 
@@ -52,8 +53,8 @@ const mapDispatchToProps = (dispatch) => {
 };
 
 Header.propTypes = {
-    checkWhoIsLogged: React.propTypes.func,
-    nick: React.propTypes.string
+    checkWhoIsLogged: PropTypes.func,
+    nick: PropTypes.string
 };
 
 
