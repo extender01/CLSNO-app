@@ -6,10 +6,14 @@ let {User} = require('../models/user');
     //if x-auth token is not found in db (if !found user) or is invalid (.catch), then nobody is returned
     //if everything is fine users nick and _id is appended to request object
 
+
+
+// MISTO req.user = {nick: 'nobody', _id: ''}; DAT req = {...req, nick: nobody, _id: ''} ABY TAM NEBYL ZBYTECNY NEST, PODLE TOHO UPRAVIT V USERACTIONS
+
 let whoIsIt = (req, res, next) => {
-  let token;
+    let token;
     if (req.cookies['x-auth']) {
-        token = req.cookies['x-auth']
+        token = req.cookies['x-auth'];
 
         User.findByToken(token).then((foundUser) => {
            
@@ -18,7 +22,7 @@ let whoIsIt = (req, res, next) => {
             } else {
                 console.log(' else matchedUser');
     
-                req.user = foundUser
+                req.user = foundUser;
                 req.token = token;
             }
            
@@ -26,13 +30,13 @@ let whoIsIt = (req, res, next) => {
         }).catch((e) => {
             req.user = {nick: 'nobody', _id: ''};
             next();
-        })
+        });
 
 
-   } else {
-    req.user = {nick: 'nobody', _id: ''};
-    next();   
-   }  
+    } else {
+        req.user = {nick: 'nobody', _id: ''};
+        next();   
+    }  
 };
 
 

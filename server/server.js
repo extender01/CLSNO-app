@@ -127,30 +127,7 @@ app.post('/api/login', (req, res) => {
 //===========================WHOISLOGGED======================================
 
 app.get('/api/me', whoIsIt, (req, res) => {
-    //check if client sends cookie with token, if yes then user is found by that token and that user is returned as object in res.send. If there is no cookie, just send a string that no on is logged
-    
-    // const token = req.cookies['x-auth']
-    
-    // if (token) {
-    //     console.log('token v cookies existuje, bude provedena verifikace');
-    //     User.findByToken(token).then((matchedUser) => {
-    //         if (!matchedUser) {
-    //             res.clearCookie('x-auth');
-    //             return Promise.reject(res.send('prihlaseny uzivatel nenalezen v db'));
-    //         }
-           
-    //         console.log('matchedUser', matchedUser);
-            
-    //         res.send(matchedUser)
 
-    //     }).catch((e) => {
-    //         res.status(401).send(e);
-    //     });
-        
-    // } else {
-    //     console.log('token v cookies neexistuje');
-    //     res.send('nikdo neni prihlasen');
-    // }
     
     res.send({user: req.user});
    

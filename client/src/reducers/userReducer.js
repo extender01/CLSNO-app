@@ -6,6 +6,7 @@ const userReducerDefaultState = {
         'nick': ''
     },
     isLogged: false,
+    isAdmin: true,
     loading: true,
     newcomeLoginCheck: false,
     error: null

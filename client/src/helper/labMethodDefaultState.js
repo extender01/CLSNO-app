@@ -1,0 +1,33 @@
+const labMethodDefaultState = {
+    name: '',
+    where: '',
+    isExt: false,
+    syn: '',
+    nameAk: '',
+    groupAk: '',
+    whenExtTransport: '',
+    draw: '',
+    preanal: '',
+    note: '',
+    customNote: '',
+    parcelWho: '',
+    parcelPreanal: '',
+    parcelNote: '',
+    extHowOften: '',
+    extResponse: '',
+    metodics: '',
+    unit: '',
+    expertise: '',
+    refRange: '',
+    rutCare: true,
+    rutTime: '',
+    statCare: false,
+    additionalOrder: '',
+    responseNote: '',
+    interfereDown: '',
+    interfereUp: '',
+    physVar: '',
+    bioHalfLife: ''
+};
+
+export default labMethodDefaultState;

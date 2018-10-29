@@ -2,16 +2,16 @@ import axios from 'axios';
 import { history } from '../routers/AppRouter';
 
 
-const url = 'http://127.0.0.1:3000';
+
 
 
 //========================LOGIN==========================================================
 
-const loginBegin = () => ({type: "LOGIN_BEGIN"});
-const loginFailure = (error = null) => ({type: "LOGIN_FAILURE", error: error});
+const loginBegin = () => ({type: 'LOGIN_BEGIN'});
+const loginFailure = (error = null) => ({type: 'LOGIN_FAILURE', error: error});
 const loginSuccess = (user = {}) => {
     return {
-        type: "LOGIN_SUCCESS",
+        type: 'LOGIN_SUCCESS',
         user: {
             _id: user._id,
             nick: user.nick
@@ -28,30 +28,30 @@ export const startLogin = (credentials) => {
             method: 'post',
             url: '/api/login',
             data: {
-              nick: credentials.nick,
-              password: credentials.password
+                nick: credentials.nick,
+                password: credentials.password
             }}
-          ).then((result) => {
+        ).then((result) => {
             
               
-             dispatch(loginSuccess(result.data));
-             history.push('/help');
+            dispatch(loginSuccess(result.data));
+            history.push('/help');
               
-          }).catch((e) => {
-              console.log('neco se pokazilo,', e);
-              dispatch(loginFailure(e))
-          });
-    }
+        }).catch((e) => {
+            console.log('neco se pokazilo,', e);
+            dispatch(loginFailure(e));
+        });
+    };
 };
 
 
 //========================SIGNUP=======================================================
 
-const signupBegin = () => ({type: "SIGNUP_BEGIN"});
-const signupFailure = (error = null) => ({type: "SIGNUP_FAILURE", error: error});
+const signupBegin = () => ({type: 'SIGNUP_BEGIN'});
+const signupFailure = (error = null) => ({type: 'SIGNUP_FAILURE', error: error});
 const signupSuccess = (user = {}) => {
     return {
-        type: "SIGNUP_SUCCESS",
+        type: 'SIGNUP_SUCCESS',
         user: {
             _id: user._id,
             nick: user.nick
@@ -68,36 +68,37 @@ export const startSignup = (credentials) => {
             method: 'post',
             url: '/api/adduser',
             data: {
-              nick: credentials.nick,
-              password: credentials.password
+                nick: credentials.nick,
+                password: credentials.password
             }}
-          ).then((result) => {
+        ).then((result) => {
             
               
-             dispatch(signupSuccess(result.data));
+            dispatch(signupSuccess(result.data));
               
-          }).catch((e) => {
-              console.log('neco se pokazilo,', e);
-              dispatch(signupFailure(e))
-          });
-    }
+        }).catch((e) => {
+            console.log('neco se pokazilo,', e);
+            dispatch(signupFailure(e))
+        });
+    };
 };
 
 
 //==================WHO IS LOGGED USER==========================================================
 
 //checks in db who is owner of x-auth cookie and sends back nick and id info (and stores them to redux)
-const loggedUserBegin = () => ({type: "LOGGED_USER_BEGIN"});
+const loggedUserBegin = () => ({type: 'LOGGED_USER_BEGIN'});
 const loggedUserFailure = (error = null) => ({type: 'LOGGED_USER_FAILURE', error: error});
-export const loggedUserSuccess = (sourceAPI = {user: {_id: '', nick: nobody}}) => {
-    if (sourceAPI) {
+
+export const loggedUserSuccess = (APIres = {user: {_id: '', nick: 'nobody'}}) => {
+    if (APIres) {
         return {
             type: 'LOGGED_USER_SUCCESS',
             user: {
-                _id: sourceAPI.user._id,
-                nick: sourceAPI.user.nick
+                _id: APIres.user._id,
+                nick: APIres.user.nick
             },
-            isLogged: sourceAPI.user._id ? true : false
+            isLogged: APIres.user._id ? true : false
             
         }
     } 
@@ -115,7 +116,7 @@ export const startLoggedUser = () => {
         //checks if client has cookie with token, if yes then that user is returned as result of GET request, if not only string that says nobody is logged is returned
         axios.get('/api/me').then((result) => {
            
-            dispatch(loggedUserSuccess(result.data))
+            dispatch(loggedUserSuccess(result.data));
             
             
         });
@@ -130,8 +131,8 @@ export const startLoggedUser = () => {
 
 
 //============================LOGOUT======================================================
-const logoutBegin = () => ({type: "LOGOUT_BEGIN"});
-const logoutFailure = (error) => ({type: "LOGOUT_FAILURE", error: error});
+const logoutBegin = () => ({type: 'LOGOUT_BEGIN'});
+const logoutFailure = (error) => ({type: 'LOGOUT_FAILURE', error: error});
 const logoutSuccess = () => {
     return {
         type: 'LOGOUT_SUCCESS'

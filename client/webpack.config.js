@@ -7,12 +7,12 @@ module.exports = (env) => {
   //extrahovat vsechna zkompilovana scss a css z bundle.js do styles.css
   const CSSExtract = new ExtractTextPlugin('styles.css');
   
-  return {
-    entry: './src/app.js',
-    output: {
-      path: path.join(__dirname, 'public'),
-      filename: 'bundle.js'
-    },
+    return {
+        entry: './src/app.js',
+        output: {
+            path: path.join(__dirname, 'public'),
+            filename: 'bundle.js'
+        },
     module: {
       rules: [{
         loader: 'babel-loader',

@@ -4,6 +4,6 @@ const HelpPage = () => (
     <div>
     This is from my ahelp page
     </div>
-)
+);
 
 export default HelpPage;

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 
-const url = 'http://127.0.0.1:3000';
+
 
 
 //=======================  ADD_TEST
@@ -11,11 +11,12 @@ const addTestFailure = (error = null) => ({type: 'ADD_TEST_FAILURE', payload: {e
 const addTestSuccess = (test = {}) => {
     
     return {
-        type: "ADD_TEST_SUCCESS",
+        type: 'ADD_TEST_SUCCESS',
         addedTest: {
             _id: test._id,
             name: test.name,
             where: test.where,
+            isExt: test.isExt,
             forLab: {
                 parcelWho: test.parcelWho,
                 parcelPreanal: test.parcelPreanal,
@@ -39,7 +40,7 @@ also append getstate as second argument) */
                             
 export const startAddTest = (test) => {
     return (dispatch) => {
-        console.log('startAddTest started, now dispatching addTestBegin');
+        console.log('startAddTest started, now dispatching addTestBegin, test object is: ', test);
         dispatch(addTestBegin());
         //this will get data from result of axios POST call (what is saved to mongodb) and is used to update redux via dispatch
         let testFromMongoToRedux = {};
@@ -49,17 +50,17 @@ export const startAddTest = (test) => {
             method: 'post',
             url: '/api/addtest',
             data: {
-              name: test.name,
-              where: 'Flintstone'
+                name: test.name,
+                where: 'Flintstone'
             }
             //headers: {'x-auth': Cookie.get('x-auth')}
-          }).then((result) => {
+        }).then((result) => {
               
-                testFromMongoToRedux = {
-                  name: result.data.name,
-                  where: result.data.where,
-                  _id: result.data._id
-                };
+            testFromMongoToRedux = {
+                name: result.data.name,
+                where: result.data.where,
+                _id: result.data._id
+            };
               
               dispatch(addTestSuccess(testFromMongoToRedux));
               console.log('successfully added to db and dispatched object with data from db to be saved to redux store');

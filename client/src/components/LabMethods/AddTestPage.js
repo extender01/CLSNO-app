@@ -1,7 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import TestForm from './TestForm';
-import { startAddTest } from '../actions/testActions';
+import { startAddTest } from '../../actions/testActions';
 
 
 class AddTestPage extends React.Component {
@@ -34,7 +34,7 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = (dispatch) => {
     return {
         startAddTest: (test) => {
-            dispatch(startAddTest(test))
+            dispatch(startAddTest(test));
         }
     }
 }
