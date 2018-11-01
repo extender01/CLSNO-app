@@ -13,7 +13,7 @@ let TestSchema = new mongoose.Schema({
         required: true
     },
     isExt: {
-        type: Boolean,
+        type: String,
         required: false
     },
     syn: {
@@ -44,10 +44,10 @@ let TestSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    customNote: {
-        type: String,
-        required: false
-    },
+    customNotes: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'CustomNotes'
+    }],
     parcelWho: {
         type: String,
         required: false

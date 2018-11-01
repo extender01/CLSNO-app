@@ -14,6 +14,8 @@ import AdminHeader from '../components/Headers/AdminHeader';
 import SignupPage from '../components/SignupPage';
 import LogoutTest from '../components/LogoutTest';
 import LabMetList from '../components/LabMethods/LabMetList';
+import LabMetExternal from '../components/LabMethods/Detail/LabMetExternal';
+import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
 
 import AdminRoute from './AdminRoute';
 
@@ -32,7 +34,9 @@ const AppRouter = (props) => (
                 <Route path='/login' component={LoginPage} />
                 <Route path='/help' component={HelpPage}/>
                 <Route path='/logout' component={LogoutTest} />
-                <Route path='/lab-metody' component={LabMetList} />
+                <Route path='/methods' component={LabMetList} exact={true} />
+                <Route path="/methods/external/:id" component={LabMetInternal} />
+
                 <AdminRoute path='/admin' component={LoginPage} />
                 <Route component={NotFoundPage}/>
             </Switch>

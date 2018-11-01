@@ -1,7 +1,7 @@
 const labMethodDefaultState = {
     name: '',
     where: '',
-    isExt: false,
+    isExt: '',
     syn: '',
     nameAk: '',
     groupAk: '',

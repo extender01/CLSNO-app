@@ -8,8 +8,8 @@ class LabMetList extends React.Component {
     
     componentDidMount() {
         console.log('baf', this.props.labTests);
-        this.props.startLoadTests();
-    };
+        //  this.props.startLoadTests();
+    }
     
     
     render() {
@@ -19,12 +19,12 @@ class LabMetList extends React.Component {
                 <p>Tady budou vsechny metody sveta</p>
                 
                 {this.props.labTests.map((labTest) => {
-                    return <LabMetItem key={labTest._id} {...labTest} />
+                    return <LabMetItem key={labTest._id} {...labTest} />;
                 })}
             </div>
-        )
-    };
-};
+        );
+    }
+}
 
 
 const mapStateToProps = (state) => {
@@ -33,13 +33,14 @@ const mapStateToProps = (state) => {
     };
 };
 
+// pokud bude fungovat v componentDidMount z headeru tak tohle smazat
 const mapDispatchToProps = (dispatch) => {
     return {
         startLoadTests: () => {
-            dispatch(startLoadTests())
+            dispatch(startLoadTests());
         }
-    }
-}
+    };
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LabMetList);
 

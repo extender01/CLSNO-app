@@ -45,7 +45,7 @@ UserSchema.methods.generateAuthToken = function () {
     user.tokens = user.tokens.concat([{access, token}])
 
     return user.save().then(() => {
-        return token
+        return token;
     });
 };
 
@@ -114,8 +114,8 @@ UserSchema.statics.findByToken = function (token) {
     try {
         decoded = jwt.verify(token, process.env.JWT_SECRET)
     } catch (e) {
-       //return {nick: 'nobody'}
-       return  Promise.reject('overovany token je neplatny')
+        //return {nick: 'nobody'}
+        return  Promise.reject('overovany token je neplatny')
     }
 
     return User.findOne({
@@ -139,7 +139,7 @@ UserSchema.pre('save', function (next) {
         bcrypt.genSalt(10, (err, salt) => {
             bcrypt.hash(user.password, salt, (err, hash) => {
                 user.password = hash;
-                next()
+                next();
             });
         });
     } else {

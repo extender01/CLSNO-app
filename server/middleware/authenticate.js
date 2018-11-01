@@ -5,7 +5,7 @@ let {User} = require('../models/user');
 //findByToken checks if token is valid and finds and returns that user as promise resolved value
 //then checks if user was found in db and if so, append retreived data to req object to be used in app routing
 let authenticate = (req, res, next) => {
-    let token = req.cookies['x-auth']
+    let token = req.cookies['x-auth'];
     console.log('cookies jsou:', req.cookies);
     
     // console.log('v authenticate je token:', token);

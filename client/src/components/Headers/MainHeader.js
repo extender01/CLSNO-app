@@ -4,12 +4,17 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import {startLoggedUser }from '../../actions/userActions';
+import {startLoadTests} from '../../actions/testActions';
 
 class MainHeader extends React.Component {
     
     componentDidMount() {
        
         this.props.checkWhoIsLogged();
+        this.props.startLoadTests();
+        
+        console.log('probehlo componentdidmount z Headeru');
+        
         
 
         
@@ -24,7 +29,7 @@ class MainHeader extends React.Component {
                             <h1>Lab SNO</h1>
                         </NavLink>
                         <NavLink to='/help' activeClassName='is-active'>O laboratori</NavLink>
-                        <NavLink to='/lab-metody' activeClassName='is-active'>Metody</NavLink>
+                        <NavLink to='/methods' activeClassName='is-active'>Metody</NavLink>
                         {this.props.isLogged ? (
                             <div>
                                 <p>{this.props.nick}</p>
@@ -52,6 +57,9 @@ const mapDispatchToProps = (dispatch) => {
     return {
         checkWhoIsLogged: () => {
             dispatch(startLoggedUser());
+        },
+        startLoadTests: () => {
+            dispatch(startLoadTests());
         }
         
     };
@@ -59,6 +67,7 @@ const mapDispatchToProps = (dispatch) => {
 
 MainHeader.propTypes = {
     checkWhoIsLogged: PropTypes.func,
+    startLoadTests: PropTypes.func,
     nick: PropTypes.string
 };
 

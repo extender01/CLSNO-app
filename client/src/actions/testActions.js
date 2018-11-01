@@ -17,11 +17,7 @@ const addTestSuccess = (test = {}) => {
             name: test.name,
             where: test.where,
             isExt: test.isExt,
-            forLab: {
-                parcelWho: test.parcelWho,
-                parcelPreanal: test.parcelPreanal,
-                parcelNote: test.parcelNote
-            }
+            
         }
     };
 };
@@ -49,10 +45,11 @@ export const startAddTest = (test) => {
         axios({
             method: 'post',
             url: '/api/addtest',
-            data: {
-                name: test.name,
-                where: 'Flintstone'
-            }
+            // data: {
+            //     name: test.name,
+            //     where: 'Flintstone'
+            // }
+            data: test
             //headers: {'x-auth': Cookie.get('x-auth')}
         }).then((result) => {
               

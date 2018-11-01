@@ -56,18 +56,22 @@ app.get('/api/get-all', (req, res) => {
 });
 
 
-// ========== ADD TEST
+// ========== ADD TEST=============================================================
+
 app.post('/api/addtest', authenticate, (req, res) => {
-    //_.pick pulls selected props from req.body and puts them to extractedProps object
-    let extractedProps = _.pick(req.body, ['name', 'where']);  
+   
     console.log('pridani testu pred spustenim save');
      
-    let test = new Test(extractedProps);         //creates new mongoose model
+    let test = new Test(req.body);         //creates new mongoose model
     test.save().then((savedTest) => {
         console.log(savedTest);
         res.send(savedTest);
     }).catch((e) => {res.status(400).send(e);});
 });
+
+// =================ADD CUSTOM NOTE ========================================
+
+
 
 
 
