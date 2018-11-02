@@ -2,8 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import Generic from './DataComponents/Generic';
-import Where from './DataComponents/Where';
-import WhenTransport from './DataComponents/WhenTransport';
 import Draw from './DataComponents/Draw';
 
 class LabMetInternal extends React.Component {
@@ -15,8 +13,8 @@ class LabMetInternal extends React.Component {
     
 
     render () {
+        //until props are loaded from redux, do not render any test details
         const {lm} = this.props;
-        console.log('lm je:', lm);
         
         return (
             <div>
@@ -40,6 +38,10 @@ class LabMetInternal extends React.Component {
                         <div className='flex-container'>
                             <Generic label='PREANALYTICKÁ FÁZE' value={lm.preanal} />
                             <Generic label='OBECNÁ POZNÁMKA' value={lm.note} />
+                        </div>
+
+                        <div className='flex-container'>
+                            <Generic label='VAŠE POZNÁMKA' value={lm.customNote} />
                         </div>
 
                         <div className='flex-container'>

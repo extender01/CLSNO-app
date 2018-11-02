@@ -15,8 +15,8 @@ class LabMetExternal extends React.Component {
     
 
     render () {
+        //until props are loaded from redux, do not render any test details
         const {lm} = this.props;
-        console.log('lm je:', lm);
         
         return (
             <div>
@@ -48,8 +48,7 @@ class LabMetExternal extends React.Component {
                         </div>
 
                         <div className='flex-container'>
-                            <Generic label='VAŠE POZNÁMKA' value={lm.preanal} />
-                            
+                            <Generic label='VAŠE POZNÁMKA' value={lm.customNote} />
                         </div>
 
                         <div className='flex-container'>

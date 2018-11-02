@@ -70,6 +70,7 @@ export const startSignup = (credentials) => {
             data: {
                 nick: credentials.nick,
                 password: credentials.password
+                
             }}
         ).then((result) => {
             

@@ -44,14 +44,34 @@ app.get('/api/alive', whoIsIt, (req,res) => {
 
 //=================GET ALL TESTS=========================================
 
-app.get('/api/get-all', (req, res) => {
-   
-    Test.find({}).then((foundTests) => {
-        console.log('testy nalezeny');
+app.get('/api/get-all', whoIsIt, (req, res) => {
+    let filteredTests;
+    let filteredCustomNotes;
+
+    Test.find({}).then((allTests) => {
+        console.log(JSON.stringify(allTests, undefined, 2));
+
+        //===============================================================================================================================
+        // PRIDAT VLASTNOST RIGHT K FRONTENDU PRI SIGNUPU A PAK FILTROVAT VRACENE TESTY PODLE TOHO JESTLI ODDELENI NEBO LABINA
+        //===============================================================================================================================
+
+        //.map iterates through array of tests, on each test object an array of custom notes is filtered and only notes corresponding to user are returned back to each test object
+        filteredTests = allTests.map((item) => {
+            
+            //each object in customNotes array is checked if it belongs to logged user
+            filteredCustomNotes = item.customNotes.filter((noteItem) => 
+                noteItem.department === req.user.nick
+            );
+
+            //whole array of custom notes is overwritten by filtered one for each test in test array
+            item.customNotes = filteredCustomNotes;
+
+            //test with filtered custom notes is returned to new array
+            return item;
+        });
+
         
-        
-        
-        res.send(foundTests);
+        res.send(filteredTests);
     });
 });
 
@@ -69,9 +89,46 @@ app.post('/api/addtest', authenticate, (req, res) => {
     }).catch((e) => {res.status(400).send(e);});
 });
 
+
+
+
+
+
+
+
+
+
 // =================ADD CUSTOM NOTE ========================================
 
+app.post('/api/customNote/:id', whoIsIt, (req, res) => {
+   
 
+
+    //finds test by id in params, goes through array of customNotes and checks if there is any custom note from particular user (user is checked by whoIsIt middleware),
+    // if yes, it is overwritten, if not, it is pushed as new array item
+
+    Test.findById(req.params.id).then((foundTest) => {
+        if (foundTest) {
+            
+            //check if user has customNote note user is appended to req as user.nick by whoIsIt middleware
+            let index = foundTest.customNotes.findIndex((item) => {
+                return item.department === req.user.nick;
+            });
+
+            //if user does not have custom note (index === -1) then add that note to custom notes array
+            if (index === -1) {
+                foundTest.customNotes.push({department: req.user.nick, customNote: req.body.customNote});
+            // if he does then update value of that array element
+            } else {
+                foundTest.customNotes[index] = {department: req.user.nick, customNote: req.body.customNote};
+            }
+
+            foundTest.save().then(() => {
+                res.send('povedlo se');
+            });                    
+        }
+    });
+});
 
 
 

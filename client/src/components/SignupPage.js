@@ -10,8 +10,8 @@ class SignupPage extends React.Component {
     render() {
         return (
             <div>
-            <p>Sign up form</p>
-            <CredentialsForm formSubmit={this.props.startSignup} />
+                <p>Sign up form</p>
+                <CredentialsForm formSubmit={this.props.startSignup} />
             </div>
         )
     };

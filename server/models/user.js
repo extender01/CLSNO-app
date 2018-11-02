@@ -17,6 +17,9 @@ let UserSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    rights: {
+        type: String
+    },
     tokens: [{
         access: {
             type: String,

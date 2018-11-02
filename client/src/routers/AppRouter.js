@@ -11,11 +11,13 @@ import NotFoundPage from '../components/NotFoundPage';
 import MainHeader from '../components/Headers/MainHeader';
 import AdminHeader from '../components/Headers/AdminHeader';
 
+
 import SignupPage from '../components/SignupPage';
 import LogoutTest from '../components/LogoutTest';
 import LabMetList from '../components/LabMethods/LabMetList';
 import LabMetExternal from '../components/LabMethods/Detail/LabMetExternal';
 import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
+import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/CustomNoteForm';
 
 import AdminRoute from './AdminRoute';
 
@@ -36,6 +38,7 @@ const AppRouter = (props) => (
                 <Route path='/logout' component={LogoutTest} />
                 <Route path='/methods' component={LabMetList} exact={true} />
                 <Route path="/methods/external/:id" component={LabMetInternal} />
+                <Route path='/custom' component={CustomNoteForm} />
 
                 <AdminRoute path='/admin' component={LoginPage} />
                 <Route component={NotFoundPage}/>

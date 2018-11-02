@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const {CustomNoteSchema} = require('./customNote');
 
 
 
@@ -44,10 +45,8 @@ let TestSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    customNotes: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'CustomNotes'
-    }],
+    customNotes: [CustomNoteSchema],
+    
     parcelWho: {
         type: String,
         required: false

@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 //======= SCHEMA =============
 
 let CustomNoteSchema = new mongoose.Schema ({
-    nick: {
+    department: {
         type: String
     },
     customNote: {
@@ -13,4 +13,4 @@ let CustomNoteSchema = new mongoose.Schema ({
 
 let CustomNote = mongoose.model('CustomNote', CustomNoteSchema);
 
-module.exports = {CustomNote};
+module.exports = {CustomNote, CustomNoteSchema};
