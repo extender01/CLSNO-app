@@ -54,7 +54,8 @@ const signupSuccess = (user = {}) => {
         type: 'SIGNUP_SUCCESS',
         user: {
             _id: user._id,
-            nick: user.nick
+            nick: user.nick,
+            rights: user.rights
         }
     };
 };
@@ -69,7 +70,8 @@ export const startSignup = (credentials) => {
             url: '/api/adduser',
             data: {
                 nick: credentials.nick,
-                password: credentials.password
+                password: credentials.password,
+                rights: credentials.rights
                 
             }}
         ).then((result) => {

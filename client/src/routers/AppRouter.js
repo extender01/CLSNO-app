@@ -14,7 +14,7 @@ import AdminHeader from '../components/Headers/AdminHeader';
 
 import SignupPage from '../components/SignupPage';
 import LogoutTest from '../components/LogoutTest';
-import LabMetList from '../components/LabMethods/LabMetList';
+import LabMetDash from '../components/LabMethods/LabMetDash';
 import LabMetExternal from '../components/LabMethods/Detail/LabMetExternal';
 import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
 import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/CustomNoteForm';
@@ -36,7 +36,7 @@ const AppRouter = (props) => (
                 <Route path='/login' component={LoginPage} />
                 <Route path='/help' component={HelpPage}/>
                 <Route path='/logout' component={LogoutTest} />
-                <Route path='/methods' component={LabMetList} exact={true} />
+                <Route path='/methods' component={LabMetDash} exact={true} />
                 <Route path="/methods/external/:id" component={LabMetInternal} />
                 <Route path='/custom' component={CustomNoteForm} />
 

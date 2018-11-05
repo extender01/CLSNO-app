@@ -37,6 +37,15 @@ export default class CredentialsForm extends React.Component {
                 <form onSubmit={this.onSubmit}>
                 <input type='text' name='nick' placeholder='Prihlasovaci jmeno' value={this.state.nick} onChange={this.onChange}/>
                 <input type='password' name='password' placeholder='Heslo' value={this.state.password} onChange={this.onChange} />
+                <div>
+                    <input type='radio' name='rights' value='department' checked />
+                    <label> Oddeleni  </label>
+                    <input type='radio' name='rights' value='lab' checked />
+                    <label> Lab  </label>
+                    <input type='radio' name='rights' value='admin' checked />
+                    <label> Admin  </label>
+                </div>
+                
                     <button>LOGIN</button>
                 </form>
 

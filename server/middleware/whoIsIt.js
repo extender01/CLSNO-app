@@ -20,10 +20,12 @@ let whoIsIt = (req, res, next) => {
             if (!foundUser) {
                 req.user = {nick: 'nobody', _id: ''};
             } else {
-                console.log(' else matchedUser');
+                
     
                 req.user = foundUser;
                 req.token = token;
+                // console.log('req je: ', req.user);
+                
             }
            
             next();

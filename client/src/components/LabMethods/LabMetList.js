@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import LabMetItem from './LabMetItem';
 import {startLoadTests} from '../../actions/testActions';
+import labMetSelector from '../../selectors/labMetSelector';
 
 
 class LabMetList extends React.Component {
@@ -25,11 +26,14 @@ class LabMetList extends React.Component {
         );
     }
 }
-
+//=====================================================================================
+//DO NEJAKE COMPONENT STATE NEBO REDUX DAT STAV FILTRU ZOBRAZENYCH METOD: INT/EXT/ALL A NAHRADIT HARDCODED V MAPSTATETOPROPS
+//=====================================================================================
 
 const mapStateToProps = (state) => {
     return {
-        labTests: state.labTests.tests
+        // labTests: state.labTests.tests
+        labTests: labMetSelector(state.labTests.tests, 'ext')
     };
 };
 

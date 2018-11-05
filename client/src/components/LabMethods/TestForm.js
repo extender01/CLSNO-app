@@ -50,6 +50,8 @@ export default class TestForm extends React.Component {
                     <input type='text' name='name' value={this.state.name} onChange={this.onChange} />
                     <label>Synonyma</label>
                     <input type='text' name='syn' value={this.state.syn} onChange={this.onChange} />
+                    <label>INT/EXT</label>
+                    <input type='text' name='isExt' value={this.state.isExt} onChange={this.onChange} />
                     <label>Kde se dela</label>
                     <input type='text' name='where' value={this.state.where} onChange={this.onChange} />
                     <label>Nazev v Akordu</label>

@@ -45,34 +45,65 @@ app.get('/api/alive', whoIsIt, (req,res) => {
 //=================GET ALL TESTS=========================================
 
 app.get('/api/get-all', whoIsIt, (req, res) => {
-    let filteredTests;
-    let filteredCustomNotes;
+    
 
-    Test.find({}).then((allTests) => {
-        console.log(JSON.stringify(allTests, undefined, 2));
-
-        //===============================================================================================================================
-        // PRIDAT VLASTNOST RIGHT K FRONTENDU PRI SIGNUPU A PAK FILTROVAT VRACENE TESTY PODLE TOHO JESTLI ODDELENI NEBO LABINA
-        //===============================================================================================================================
-
-        //.map iterates through array of tests, on each test object an array of custom notes is filtered and only notes corresponding to user are returned back to each test object
-        filteredTests = allTests.map((item) => {
-            
-            //each object in customNotes array is checked if it belongs to logged user
-            filteredCustomNotes = item.customNotes.filter((noteItem) => 
-                noteItem.department === req.user.nick
-            );
-
-            //whole array of custom notes is overwritten by filtered one for each test in test array
-            item.customNotes = filteredCustomNotes;
-
-            //test with filtered custom notes is returned to new array
-            return item;
+    //aggregate is more complex than find, altering data sent to client
+    //$addFields adds new field (property) to queried test, if field added already exist, it will be overwritten
+    //here to filter custom notes to only those of logged user, customNote array si overwritten with only one array element belonging to logged user
+    Test.aggregate([
+        {
+            $addFields: {
+                customNotes: {
+                    $filter: {
+                        input: '$customNotes',
+                        as: 'item',
+                        cond: {$eq: ['$$item.department', req.user.nick]}
+                    }
+                }
+            }
+        }
+    ]).then((allTestsFromDB) => {
+        //each object in test array is stripped of lab info if user is of department type or not logged in
+        let filteredTests = allTestsFromDB.map((item) => {
+            if (req.user.rights === 'department' || !req.user.rights) {
+                //_.omit removes selected properties from object
+                return _.omit(item, ['parcelWho', 'parcelPreanal', 'parcelNote']);
+            } else {
+                return item;
+            }
+           
         });
-
-        
         res.send(filteredTests);
     });
+
+    
+
+    // Test.find({}).then((allTests) => {
+    //     console.log(JSON.stringify(allTests, undefined, 2));
+
+    //     //===============================================================================================================================
+    //     // PRIDAT VLASTNOST RIGHT K FRONTENDU PRI SIGNUPU A PAK FILTROVAT VRACENE TESTY PODLE TOHO JESTLI ODDELENI NEBO LABINA
+    //     //===============================================================================================================================
+
+    //     //.map iterates through array of tests, on each test object an array of custom notes is filtered and only notes corresponding to user are returned back to each test object
+    //     filteredTests = allTests.map((item) => {
+            
+    //         //each object in customNotes array is checked if it belongs to logged user
+    //         filteredCustomNotes = item.customNotes.filter((noteItem) => 
+    //             noteItem.department === req.user.nick
+    //         );
+
+    //         //whole array of custom notes is overwritten by filtered one for each test in test array
+    //         item.customNotes = filteredCustomNotes;
+
+    //         //test with filtered custom notes is returned to new array
+    //         return item;
+    //     });
+
+        
+    //     res.send(filteredTests);
+    // });
+
 });
 
 
@@ -151,18 +182,26 @@ app.patch('/api/tests/:id', (req, res) => {
 
 
 // ============ SIGN UP=================================
-app.post('/api/adduser', (req, res) => {
-    let extractedProps = _.pick(req.body, ['nick', 'password']);
-    let user = new User(extractedProps);
 
-    user.save().then((savedUser) => {
-        return user.generateAuthToken();
-    }).then((retreivedToken) => {
-        res.cookie('x-auth', retreivedToken).send(user);
-        //res.header('x-auth', retreivedToken).send(user);
-    }).catch((e) => {
-        res.status(400).send(e);
-    });
+
+app.post('/api/adduser', whoIsIt, (req, res) => {
+    //only users with admin rights can create new users
+    if (req.user.rights === 'admin') {
+        let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
+        let user = new User(extractedProps);
+    
+        user.save().then((savedUser) => {
+            return user.generateAuthToken();
+        }).then((retreivedToken) => {
+            res.cookie('x-auth', retreivedToken).send(user);
+            //res.header('x-auth', retreivedToken).send(user);
+        }).catch((e) => {
+            res.status(400).send(e);
+        });
+    } else {
+        res.send('nemas opravneni vytvaret uzivatele');
+    }
+    
 });
 
 
