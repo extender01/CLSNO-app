@@ -8,7 +8,9 @@ export default class LabMetForm extends React.Component {
    
     constructor(props) {
         super(props);
-        this.state = labMethodDefaultState;
+        console.log('baf',this.props.labMetToEdit);
+        
+        this.state = this.props.labMetToEdit || labMethodDefaultState;
         this.state.isExt = 'external'
     };
 

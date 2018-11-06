@@ -168,9 +168,9 @@ app.post('/api/customNote/:id', whoIsIt, (req, res) => {
 //==============EDIT TEST
 app.patch('/api/tests/:id', (req, res) => {
     let id = req.params.id;
-    let updates = _.pick(req.body, ['name', 'where']);
+    // let updates = _.pick(req.body, ['name', 'where']);
 
-    Test.findByIdAndUpdate(id, {$set: updates}, {new: true}).then((updatedTest) => {
+    Test.findByIdAndUpdate(id, {$set: req.body}, {new: true}).then((updatedTest) => {
         if (!updatedTest) {
             return res.status(404).send();
         }

@@ -26,6 +26,8 @@ class AdminHeader extends React.Component {
                     <NavLink to='/login' activeClassName='is-active'>Login</NavLink>
                     <NavLink to='/logout' activeClassName='is-active'>Logout</NavLink>
                     <NavLink to='/signup' activeClassName='is-active'>Signup</NavLink>
+                    <NavLink to='/edit/5be15718748b9506f0566ab0' activeClassName='is-active'>editvoe</NavLink>
+                    
                 </div>
             </div>   
         );

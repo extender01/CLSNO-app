@@ -3,12 +3,12 @@ import {connect} from 'react-redux';
 import { Route, Redirect } from 'react-router-dom';
 
 const AdminRoute = ({
-    isAdmin: isAdmin,
+    rights,
     component: Component,
     ...rest
 }) => (
     <Route {...rest} component={(props) => (
-        isAdmin ? (
+        rights === 'admin' ? (
             <Component {...props} />
         ) : (
             <Redirect to='/' />
@@ -18,7 +18,7 @@ const AdminRoute = ({
  
 
 const mapStateToProps = (state) => ({
-    isAdmin: state.users.isAdmin
+    rights: state.users.user.rights
 });
 
 export default connect(mapStateToProps)(AdminRoute);

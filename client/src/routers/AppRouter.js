@@ -5,6 +5,7 @@ import createHistory from 'history/createBrowserHistory';
 
 import HomePage from '../components/HomePage';
 import AddTestPage from '../components/LabMethods/AddTestPage';
+import EditTestPage from '../components/LabMethods/EditTestPage';
 import LoginPage from '../components/LoginPage';
 import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
@@ -21,6 +22,7 @@ import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/Custo
 
 import AdminRoute from './AdminRoute';
 
+
 export const history = createHistory();
 
 const AppRouter = (props) => (
@@ -31,7 +33,8 @@ const AppRouter = (props) => (
             
             <Switch>
                 <Route path='/' component={HomePage} exact={true}/>
-                <Route path='/create' component={AddTestPage}/>
+                <AdminRoute path='/create' component={AddTestPage}/>
+                <Route path='/edit/:id' component={EditTestPage} />
                 <Route path='/signup' component={SignupPage} />
                 <Route path='/login' component={LoginPage} />
                 <Route path='/help' component={HelpPage}/>
@@ -39,6 +42,7 @@ const AppRouter = (props) => (
                 <Route path='/methods' component={LabMetDash} exact={true} />
                 <Route path="/methods/external/:id" component={LabMetInternal} />
                 <Route path='/custom' component={CustomNoteForm} />
+
 
                 <AdminRoute path='/admin' component={LoginPage} />
                 <Route component={NotFoundPage}/>

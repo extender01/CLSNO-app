@@ -12,7 +12,8 @@ const LabMetItem = (props) => (
         </div>
 
         <div>
-            <p>{props.where}</p>
+            <Link to={'/edit/' + props._id}>{props.where}</Link>
+
         </div>
     
         

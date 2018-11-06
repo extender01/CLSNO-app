@@ -1,29 +1,16 @@
 import axios from 'axios';
 
-
-
-
-
-//=======================  ADD_TEST
+//=======================  ADD_TEST===================================================
 
 const addTestBegin = () => ({type: 'ADD_TEST_BEGIN'});
-const addTestFailure = (error = null) => ({type: 'ADD_TEST_FAILURE', payload: {error}});
+const addTestFailure = (error = null) => ({type: 'ADD_TEST_FAILURE', error: error});
 const addTestSuccess = (test = {}) => {
     
     return {
         type: 'ADD_TEST_SUCCESS',
-        // addedTest: {
-        //     _id: test._id,
-        //     name: test.name,
-        //     where: test.where,
-        //     isExt: test.isExt,
-            
-        // }
         addedTest: test
     };
 };
-
-  
 
 /* normally dispatch function is called with object, when it is called with function as an argument
 it is sensed by redux thunk which executes that function and appends dispatch function as an argument,
@@ -60,16 +47,50 @@ export const startAddTest = (test) => {
     };
 };
 
+//=====================================EDIT TEST========================================================================================
+
+const editTestBegin = () => ({type: 'EDIT_TEST_BEGIN'});
+const editTestFailure = (error = null) => ({type: 'EDIT_TEST_FAILURE', error: error});
+const editTestSuccess = ( id = '', updates = {}) => {
+    
+    return {
+        type: 'EDIT_TEST_SUCCESS',
+        updates,
+        id
+    };
+};
+
+                            
+export const startEditTest = (id, updates) => {
+    return (dispatch) => {
+        console.log('updates are: ', updates);
+        dispatch(editTestBegin());
+        //this will get data from result of axios POST call (what is saved to mongodb) and is used to update redux via dispatch
+        console.log('starting axios POST request to send new test to db');
+        
+        axios({
+            method: 'patch',
+            url: '/api/tests/' + id,
+            data: updates
+        }).then((result) => {
+            // console.log('res z axios', result);
+                          
+            dispatch(editTestSuccess(id, result.data));
+            console.log('successfully added to db and dispatched object with data from db to be saved to redux store');
+
+        }).catch((e) => {
+            console.log('something went wrong when saving data to db', e);
+            //error from axios request is sent action object, then reducer saves error to store and component displays error via mapStateToProps
+            dispatch(editTestFailure(e));
+        });
+    };
+};
 
 
-
-
-
-
-//==================================SHOW ALL TESTS
+//==================================SHOW ALL TESTS===================================================================================
 
 const loadTestsBegin = () => ({type: 'LOAD_TESTS_BEGIN'});
-const loadTestFailure = (error = null) => ({type: 'LOAD_TESTS_FAILURE', payload: {error}});
+const loadTestFailure = (error = null) => ({type: 'LOAD_TESTS_FAILURE', error: error});
 const loadTestsSuccess = (tests = []) => {
     return {
         type: 'LOAD_TESTS_SUCCESS',
