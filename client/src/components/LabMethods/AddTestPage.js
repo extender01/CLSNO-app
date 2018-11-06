@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import TestForm from './TestForm';
+import LabMetForm from './LabMetForm';
 import { startAddTest } from '../../actions/testActions';
 
 
@@ -11,7 +11,7 @@ class AddTestPage extends React.Component {
             <div>
             This is from my add test page
                 {this.props.error &&   <p>{this.props.error.message}</p>}
-                <TestForm formSubmit={this.props.startAddTest} />
+                <LabMetForm formSubmit={this.props.startAddTest} />
             </div>
         );
     }

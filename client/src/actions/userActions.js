@@ -14,7 +14,8 @@ const loginSuccess = (user = {}) => {
         type: 'LOGIN_SUCCESS',
         user: {
             _id: user._id,
-            nick: user.nick
+            nick: user.nick,
+            rights: user.rights
         }
     };
 };
@@ -33,7 +34,8 @@ export const startLogin = (credentials) => {
             }}
         ).then((result) => {
             
-              
+            console.log('tohle se vraci z api po loginu', result.data);
+             
             dispatch(loginSuccess(result.data));
             history.push('/help');
               
@@ -76,7 +78,8 @@ export const startSignup = (credentials) => {
             }}
         ).then((result) => {
             
-              
+            console.log('co se vraci z db po uspesnem signuppu usera', result.data);
+            
             dispatch(signupSuccess(result.data));
               
         }).catch((e) => {
@@ -93,13 +96,16 @@ export const startSignup = (credentials) => {
 const loggedUserBegin = () => ({type: 'LOGGED_USER_BEGIN'});
 const loggedUserFailure = (error = null) => ({type: 'LOGGED_USER_FAILURE', error: error});
 
-export const loggedUserSuccess = (APIres = {user: {_id: '', nick: 'nobody'}}) => {
+export const loggedUserSuccess = (APIres = {user: {_id: '', nick: 'nobody', rights: 'department'}}) => {
     if (APIres) {
+        console.log(APIres);
+        
         return {
             type: 'LOGGED_USER_SUCCESS',
             user: {
                 _id: APIres.user._id,
-                nick: APIres.user.nick
+                nick: APIres.user.nick,
+                rights: APIres.user.rights
             },
             isLogged: APIres.user._id ? true : false
             
@@ -118,7 +124,8 @@ export const startLoggedUser = () => {
 
         //checks if client has cookie with token, if yes then that user is returned as result of GET request, if not only string that says nobody is logged is returned
         axios.get('/api/me').then((result) => {
-           
+            console.log('co posila api:', result.data);
+            
             dispatch(loggedUserSuccess(result.data));
             
             

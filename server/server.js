@@ -187,6 +187,7 @@ app.patch('/api/tests/:id', (req, res) => {
 app.post('/api/adduser', whoIsIt, (req, res) => {
     //only users with admin rights can create new users
     if (req.user.rights === 'admin') {
+    // if(2 > 1) {
         let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
         let user = new User(extractedProps);
     
@@ -207,7 +208,7 @@ app.post('/api/adduser', whoIsIt, (req, res) => {
 
 //=============== LOGIN=============================================
 app.post('/api/login', (req, res) => {
-    let extractedProps = _.pick(req.body, ['nick', 'password']);
+    let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
 
     User.findByCredentials(extractedProps.nick, extractedProps.password).then((user) => {
         return user.generateAuthToken().then((token) => {
@@ -228,6 +229,7 @@ app.post('/api/login', (req, res) => {
 
 app.get('/api/me', whoIsIt, (req, res) => {
 
+    console.log('whoisloggedje: ',req.user);
     
     res.send({user: req.user});
    

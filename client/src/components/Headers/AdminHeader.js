@@ -9,7 +9,7 @@ class AdminHeader extends React.Component {
     
     componentDidMount() {
        
-        this.props.checkWhoIsLogged();
+        // this.props.checkWhoIsLogged();
         
 
         

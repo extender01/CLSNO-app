@@ -24,7 +24,9 @@ let whoIsIt = (req, res, next) => {
     
                 req.user = foundUser;
                 req.token = token;
-                // console.log('req je: ', req.user);
+                console.log('foundUser v db je:', foundUser);
+                
+                console.log('req po mw je: ', req.user);
                 
             }
            

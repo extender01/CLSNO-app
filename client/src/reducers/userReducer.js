@@ -41,10 +41,10 @@ const userReducer = (state = userReducerDefaultState, action) => {
     case 'LOGOUT_SUCCESS':
         return {...state, user: {}, isLogged: false, loading: false, error: null}
 
-    case "SIGNUP_BEGIN":
+    case 'SIGNUP_BEGIN':
         return {...state, isLogged: false, loading: true, error: null}
     case 'SIGNUP_FAILURE':
-        return state
+        return state;
     case 'SIGNUP_SUCCESS':
         return {...state, isLogged: true, loading: false, error: null, user: action.user}
 

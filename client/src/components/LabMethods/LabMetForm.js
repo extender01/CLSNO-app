@@ -4,7 +4,7 @@ import labMethodDefaultState from '../../helper/labMethodDefaultState';
 
 
 
-export default class TestForm extends React.Component {
+export default class LabMetForm extends React.Component {
    
     constructor(props) {
         super(props);

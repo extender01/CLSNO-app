@@ -13,16 +13,15 @@ class SignupPage extends React.Component {
                 <p>Sign up form</p>
                 <CredentialsForm formSubmit={this.props.startSignup} />
             </div>
-        )
-    };
-};
-
+        );
+    }
+}
 
 
 const mapDispatchToProps = (dispatch) => {
     return {
         startSignup: (credentials) => {
-            dispatch(startSignup(credentials))
+            dispatch(startSignup(credentials));
         }
     };
 };

@@ -9,7 +9,8 @@ export default class CredentialsForm extends React.Component {
         super(props);
         this.state = {
             nick: '',
-            password: ''
+            password: '',
+            rights: 'department'
         };
     };
 
@@ -38,11 +39,11 @@ export default class CredentialsForm extends React.Component {
                 <input type='text' name='nick' placeholder='Prihlasovaci jmeno' value={this.state.nick} onChange={this.onChange}/>
                 <input type='password' name='password' placeholder='Heslo' value={this.state.password} onChange={this.onChange} />
                 <div>
-                    <input type='radio' name='rights' value='department' checked />
+                    <input type='radio' name='rights' value='department' onChange={this.onChange}/>
                     <label> Oddeleni  </label>
-                    <input type='radio' name='rights' value='lab' checked />
+                    <input type='radio' name='rights' value='lab' onChange={this.onChange} />
                     <label> Lab  </label>
-                    <input type='radio' name='rights' value='admin' checked />
+                    <input type='radio' name='rights' value='admin' onChange={this.onChange} />
                     <label> Admin  </label>
                 </div>
                 

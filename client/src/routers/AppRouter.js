@@ -27,7 +27,7 @@ const AppRouter = (props) => (
     <Router history={history}>
         <div>
             <MainHeader />
-            {props.isAdmin && <AdminHeader />}
+            {props.rights === 'admin' && <AdminHeader />}
             
             <Switch>
                 <Route path='/' component={HomePage} exact={true}/>
@@ -48,7 +48,7 @@ const AppRouter = (props) => (
 );
 
 const mapStateToProps = (state) => ({
-    isAdmin: state.users.isAdmin
+    rights: state.users.user.rights
 });
 
 export default connect(mapStateToProps)(AppRouter);

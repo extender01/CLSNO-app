@@ -45,7 +45,7 @@ UserSchema.methods.generateAuthToken = function () {
     let token = jwt.sign({_id: user._id.toHexString(), access: access}, process.env.JWT_SECRET).toString();
 
     //add token to particular user in db, ES6 object notation
-    user.tokens = user.tokens.concat([{access, token}])
+    user.tokens = user.tokens.concat([{access, token}]);
 
     return user.save().then(() => {
         return token;
@@ -56,9 +56,9 @@ UserSchema.methods.generateAuthToken = function () {
 //overrides original method to return only some desired data in res.send
 UserSchema.methods.toJSON = function () {
     let user = this;
-    let userJSObject = user.toObject() //convert mongo object to classic JS object
+    let userJSObject = user.toObject(); //convert mongo object to classic JS object
 
-    return _.pick(userJSObject, ['_id', 'nick'])
+    return _.pick(userJSObject, ['_id', 'nick', 'rights']);
 };
 
 
@@ -91,7 +91,9 @@ UserSchema.statics.findByCredentials = function (nick, password) {
         return new Promise((resolve, reject) => {
             bcrypt.compare(password, foundUser.password, (err, res) => {
                 if (res) {
-                    resolve(foundUser)
+                    
+                    
+                    resolve(foundUser);
                 } else {
                     reject(err);
                 }
