@@ -68,7 +68,8 @@ const mapDispatchToProps = (dispatch) => {
 MainHeader.propTypes = {
     checkWhoIsLogged: PropTypes.func,
     startLoadTests: PropTypes.func,
-    nick: PropTypes.string
+    nick: PropTypes.string,
+    isLogged: PropTypes.bool
 };
 
 

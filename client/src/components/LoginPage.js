@@ -10,22 +10,19 @@ import CredentialsForm from './CredentialsForm';
 
 const LoginPage = (props) => (
     <div>       
-        <CredentialsForm formSubmit={props.startLogin}/>
-        <LogoutForm />
+        
+        {!props.isLogged ? <CredentialsForm formSubmit={props.startLogin} isLogged={props.isLogged} buttonName='LOGIN' /> :
+            <div> 
+                <p>Prihlasen jako: {props.user}</p>
+                <LogoutForm />
+            </div>
+        }
+        
     </div>
 );
 
 
-
-
-// const mapStateToProps = (state) => {
-    
-    
-//     return {
-//         isLogged: state.users.isLogged,
-//         loading: state.users.loading
-//     };
-// };
+const mapStateToProps = (state) => ({isLogged: !!state.users.user._id, user: state.users.user.nick});
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -35,6 +32,6 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-export default connect(undefined, mapDispatchToProps)(LoginPage);
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);
 
 

@@ -46,7 +46,7 @@ app.get('/api/alive', whoIsIt, (req,res) => {
 
 app.get('/api/get-all', whoIsIt, (req, res) => {
     
-
+    //retrieve all tests with only custom notes belonging to logged user:
     //aggregate is more complex than find, altering data sent to client
     //$addFields adds new field (property) to queried test, if field added already exist, it will be overwritten
     //here to filter custom notes to only those of logged user, customNote array si overwritten with only one array element belonging to logged user
@@ -131,7 +131,7 @@ app.post('/api/addtest', authenticate, (req, res) => {
 
 // =================ADD CUSTOM NOTE ========================================
 
-app.post('/api/customNote/:id', whoIsIt, (req, res) => {
+app.post('/api/customNote/:id', authenticate, whoIsIt, (req, res) => {
    
 
 
@@ -141,7 +141,7 @@ app.post('/api/customNote/:id', whoIsIt, (req, res) => {
     Test.findById(req.params.id).then((foundTest) => {
         if (foundTest) {
             
-            //check if user has customNote note user is appended to req as user.nick by whoIsIt middleware
+            //check if user has customNote, user is appended to req as user.nick by whoIsIt middleware
             let index = foundTest.customNotes.findIndex((item) => {
                 return item.department === req.user.nick;
             });
@@ -154,8 +154,8 @@ app.post('/api/customNote/:id', whoIsIt, (req, res) => {
                 foundTest.customNotes[index] = {department: req.user.nick, customNote: req.body.customNote};
             }
 
-            foundTest.save().then(() => {
-                res.send('povedlo se');
+            foundTest.save().then((savedNote) => {
+                res.send(savedNote);
             });                    
         }
     });
@@ -165,7 +165,7 @@ app.post('/api/customNote/:id', whoIsIt, (req, res) => {
 
 
 
-//==============EDIT TEST
+//==============EDIT TEST============================================================================================
 app.patch('/api/tests/:id', (req, res) => {
     let id = req.params.id;
     // let updates = _.pick(req.body, ['name', 'where']);
@@ -183,7 +183,29 @@ app.patch('/api/tests/:id', (req, res) => {
 
 // ============ SIGN UP=================================
 
+//THIS VERSION SIGNS UP USER AND LOGIN HIM (CREATES AND SENDS TOKEN) IMMEDIATELY
+// app.post('/api/adduser', (req, res) => {
+//     //only users with admin rights can create new users
+//     if (req.user.rights === 'admin') {
+//     // if(2 > 1) {
+//         let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
+//         let user = new User(extractedProps);
+    
+//         user.save().then((savedUser) => {
+//             return user.generateAuthToken();
+//         }).then((retreivedToken) => {
+//             res.cookie('x-auth', retreivedToken).send(user);
+//             //res.header('x-auth', retreivedToken).send(user);
+//         }).catch((e) => {
+//             res.status(400).send(e);
+//         });
+//     } else {
+//         res.send('nemas opravneni vytvaret uzivatele');
+//     }
+    
+// });
 
+//THIS VERSION ONLY CREATES NEW USER AND SAVES HIM TO DB
 app.post('/api/adduser', whoIsIt, (req, res) => {
     //only users with admin rights can create new users
     if (req.user.rights === 'admin') {
@@ -191,10 +213,8 @@ app.post('/api/adduser', whoIsIt, (req, res) => {
         let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
         let user = new User(extractedProps);
     
-        user.save().then((savedUser) => {
-            return user.generateAuthToken();
-        }).then((retreivedToken) => {
-            res.cookie('x-auth', retreivedToken).send(user);
+        user.save().then(() => {
+            res.send(user);
             //res.header('x-auth', retreivedToken).send(user);
         }).catch((e) => {
             res.status(400).send(e);

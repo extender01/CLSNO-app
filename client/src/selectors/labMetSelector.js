@@ -5,8 +5,8 @@ const labMetSelector = (labMet, filter) => {
     //goes through lab tests object and check if each passes through filtering conditions
     return labMet.filter((item) => {
        
-        // boolean if test name starts with selected letter
-        const byAlphabet = item.name.charAt(0) === filter.alphabet || filter.alphabet === '';
+        // boolean if test name starts with selected letter or with number or if alphabet filter is not selected
+        const byAlphabet = item.name.charAt(0) === filter.alphabet || (!isNaN(item.name.charAt(0)) && filter.alphabet === '0-9') || filter.alphabet === '';
 
         //boolean if test is in selected category or if no category is selected
         const byCategory = item.isExt === filter.category || filter.category === 'all';

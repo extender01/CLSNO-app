@@ -54,11 +54,11 @@ const signupFailure = (error = null) => ({type: 'SIGNUP_FAILURE', error: error})
 const signupSuccess = (user = {}) => {
     return {
         type: 'SIGNUP_SUCCESS',
-        user: {
-            _id: user._id,
-            nick: user.nick,
-            rights: user.rights
-        }
+        // user: {
+        //     _id: user._id,
+        //     nick: user.nick,
+        //     rights: user.rights
+        // }
     };
 };
 

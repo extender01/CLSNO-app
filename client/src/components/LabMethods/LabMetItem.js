@@ -1,10 +1,28 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+
 const LabMetItem = (props) => (
     <div  className='flex-container'>
+        
+       
+
         <div>
-            
-            <Link to={'/methods/external/' + props._id}>{props.name}</Link>
+            {props.isExt === 'external' ? (   
+                <Link to={{
+                    pathname: '/methods/detail/' + props._id,
+                    state: 'external' 
+                }}>
+                    {props.name}
+                </Link>
+            ) : (
+                <Link to={{
+                    pathname: '/methods/detail/' + props._id,
+                    state: 'internal' 
+                }}>
+                    {props.name}
+                </Link>
+            )}
+
         </div>
 
         <div>
@@ -13,10 +31,7 @@ const LabMetItem = (props) => (
 
         <div>
             <Link to={'/edit/' + props._id}>{props.where}</Link>
-
         </div>
-    
-        
     </div>
 );
 

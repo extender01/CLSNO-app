@@ -21,6 +21,7 @@ import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
 import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/CustomNoteForm';
 
 import AdminRoute from './AdminRoute';
+import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
 
 
 export const history = createHistory();
@@ -40,8 +41,9 @@ const AppRouter = (props) => (
                 <Route path='/help' component={HelpPage}/>
                 <Route path='/logout' component={LogoutTest} />
                 <Route path='/methods' component={LabMetDash} exact={true} />
-                <Route path="/methods/external/:id" component={LabMetInternal} />
-                <Route path='/custom' component={CustomNoteForm} />
+                <Route path="/methods/detail/:id" component={LabMetDetail} />
+                <Route path="/methods/internal/:id" component={LabMetInternal} />
+                <Route path='/customNote/:id' component={CustomNoteForm} />
 
 
                 <AdminRoute path='/admin' component={LoginPage} />

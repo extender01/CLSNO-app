@@ -13,12 +13,6 @@ class LabMetList extends React.Component {
     }
 
 
-
-    // componentDidMount() {
-    //     console.log('baf', this.props.labTests);
-    //     //  this.props.startLoadTests();
-    // }
-    
     
     render() {
         console.log('labmetlist se renderoval');
@@ -34,9 +28,7 @@ class LabMetList extends React.Component {
         );
     }
 }
-//=====================================================================================
-//DO NEJAKE COMPONENT STATE NEBO REDUX DAT STAV FILTRU ZOBRAZENYCH METOD: INT/EXT/ALL A NAHRADIT HARDCODED V MAPSTATETOPROPS
-//=====================================================================================
+
 
 const mapStateToProps = (state, ownProps) => {
     return {

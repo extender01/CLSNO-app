@@ -73,7 +73,9 @@ export const startEditTest = (id, updates) => {
             url: '/api/tests/' + id,
             data: updates
         }).then((result) => {
-            // console.log('res z axios', result);
+            console.log('incoming updates', updates);
+
+            console.log('res z axios', result);
                           
             dispatch(editTestSuccess(id, result.data));
             console.log('successfully added to db and dispatched object with data from db to be saved to redux store');
@@ -116,6 +118,30 @@ export const startLoadTests = () => {
     };
 };
 
+
+//===============ADD / EDIT CUSTOM NOTE =============================================
+
+const addCustomNoteBegin = () => ({type: 'ADD_CUSTOM_NOTE_BEGIN'});
+const addCustomNoteFailure = (error) => ({type: 'ADD_CUSTOM_NOTE_FAILURE', error});
+const addCustomNoteSuccess = (customNote) => {
+    return {
+        type: 'ADD_CUSTOM_NOTE_SUCCESS',
+        customNote
+    };
+};
+
+export const startAddCustomNote = (passedNote, passedId) => {
+    return (dispatch) => {
+       
+        dispatch(addCustomNoteBegin());
+        axios.post('/api/customNote/' + passedId, passedNote).then((result) => {
+           console.log(result);
+            
+        }).then((result) => {
+            dispatch(addCustomNoteSuccess(result.data));
+        });
+    };
+};
 
 
 

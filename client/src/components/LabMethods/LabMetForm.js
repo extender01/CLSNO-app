@@ -8,10 +8,8 @@ export default class LabMetForm extends React.Component {
    
     constructor(props) {
         super(props);
-        console.log('baf',this.props.labMetToEdit);
         
         this.state = this.props.labMetToEdit || labMethodDefaultState;
-        this.state.isExt = 'external'
     };
 
     onChange = (e) => {
@@ -31,7 +29,6 @@ export default class LabMetForm extends React.Component {
    
     onSubmit = (e) => {
         e.preventDefault();
-        console.log('submit starts, calling formSubmit defined on AddTestPageComponent with object created from form data, formSubmit calls dispatch(startAddTest(...) via mapStateToProps');
        // fires action dispatch
         this.props.formSubmit(this.state);
     };
@@ -52,8 +49,7 @@ export default class LabMetForm extends React.Component {
                     <input type='text' name='name' value={this.state.name} onChange={this.onChange} />
                     <label>Synonyma</label>
                     <input type='text' name='syn' value={this.state.syn} onChange={this.onChange} />
-                    <label>INT/EXT</label>
-                    <input type='text' name='isExt' value={this.state.isExt} onChange={this.onChange} />
+                    
                     <label>Kde se dela</label>
                     <input type='text' name='where' value={this.state.where} onChange={this.onChange} />
                     <label>Nazev v Akordu</label>
@@ -105,6 +101,8 @@ export default class LabMetForm extends React.Component {
                         <input type='text' name='rutTime' value={this.state.rutTime} onChange={this.onChange} />
                         <label>Statim</label>
                         <input type='checkbox' name='statCare' value={this.state.statCare} onChange={this.onChange} />
+                        <label>Pohotovost</label>
+                        <input type='checkbox' name='erCare' value={this.state.erCare} onChange={this.onChange} />
                         <label>Dohlaska</label>
                         <input type='text' name='additionalOrder' value={this.state.additionalOrder} onChange={this.onChange} />
                         <label>Poznamka k dostupnosti</label>

@@ -7,4 +7,5 @@ const Generic = (props) => (
     </div>
 );
 
+
 export default Generic;

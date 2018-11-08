@@ -85,7 +85,7 @@ let TestSchema = new mongoose.Schema({
     },
     rutCare: {
         type: Boolean,
-        required: false
+        default: true
     },
     rutTime: {
         type: String,
@@ -94,6 +94,20 @@ let TestSchema = new mongoose.Schema({
     statCare: {
         type: Boolean,
         required: false
+    },
+    statTime: {
+        type: String,
+        required: false,
+        default: '1h'
+    },
+    erCare: {
+        type: Boolean,
+        required: false
+    },
+    erTime: {
+        type: String,
+        required: false,
+        default: '5h'
     },
     additionalOrder: {
         type: String,

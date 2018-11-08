@@ -26,7 +26,7 @@ export default class CredentialsForm extends React.Component {
     
     onSubmit = (e) => {
         e.preventDefault();
-        this.props.formSubmit({nick: this.state.nick, password: this.state.password});
+        this.props.formSubmit({nick: this.state.nick, password: this.state.password, rights: this.state.rights});
 
     };
 
@@ -38,16 +38,20 @@ export default class CredentialsForm extends React.Component {
                 <form onSubmit={this.onSubmit}>
                 <input type='text' name='nick' placeholder='Prihlasovaci jmeno' value={this.state.nick} onChange={this.onChange}/>
                 <input type='password' name='password' placeholder='Heslo' value={this.state.password} onChange={this.onChange} />
-                <div>
-                    <input type='radio' name='rights' value='department' onChange={this.onChange}/>
-                    <label> Oddeleni  </label>
-                    <input type='radio' name='rights' value='lab' onChange={this.onChange} />
-                    <label> Lab  </label>
-                    <input type='radio' name='rights' value='admin' onChange={this.onChange} />
-                    <label> Admin  </label>
-                </div>
                 
-                    <button>LOGIN</button>
+                {this.props.buttonName !== 'LOGIN' &&
+                    <div>
+                        <input type='radio' name='rights' value='department' onChange={this.onChange}/>
+                        <label> Oddeleni  </label>
+                        <input type='radio' name='rights' value='lab' onChange={this.onChange} />
+                        <label> Lab  </label>
+                        <input type='radio' name='rights' value='admin' onChange={this.onChange} />
+                        <label> Admin  </label>
+                    </div>
+                }
+               
+                
+                    <button>{this.props.buttonName}</button>
                 </form>
 
                 

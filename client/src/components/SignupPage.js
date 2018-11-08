@@ -11,7 +11,7 @@ class SignupPage extends React.Component {
         return (
             <div>
                 <p>Sign up form</p>
-                <CredentialsForm formSubmit={this.props.startSignup} />
+                <CredentialsForm formSubmit={this.props.startSignup} buttonName='create user' />
             </div>
         );
     }
