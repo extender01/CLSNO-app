@@ -32,6 +32,7 @@ const AppRouter = (props) => (
             <MainHeader />
             {props.rights === 'admin' && <AdminHeader />}
             
+            {(!!props.user && !!props.labmets) &&
             <Switch>
                 <Route path='/' component={HomePage} exact={true}/>
                 <AdminRoute path='/create' component={AddTestPage}/>
@@ -49,12 +50,15 @@ const AppRouter = (props) => (
                 <AdminRoute path='/admin' component={LoginPage} />
                 <Route component={NotFoundPage}/>
             </Switch>
+            }
         </div>
     </Router>
 );
 
 const mapStateToProps = (state) => ({
-    rights: state.users.user.rights
+    rights: state.users.user.rights,
+    user: state.users.user.nick,
+    labmets: state.labTests.tests
 });
 
 export default connect(mapStateToProps)(AppRouter);

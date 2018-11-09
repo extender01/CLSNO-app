@@ -80,7 +80,7 @@ let TestSchema = new mongoose.Schema({
         required: false
     },
     refRange: {
-        type: String,
+        type: Array,
         required: false
     },
     rutCare: {
@@ -130,6 +130,10 @@ let TestSchema = new mongoose.Schema({
         required: false
     },
     bioHalfLife: {
+        type: String,
+        required: false
+    },
+    categories: {
         type: String,
         required: false
     }

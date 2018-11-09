@@ -28,10 +28,10 @@ class LabMetDetail extends React.Component {
                 {!!lm && 
                     <div>
                         
-                        <LabMetGeneric lm={lm} user={this.props.user} />                       
+                        <LabMetGeneric lm={lm} rights={this.props.rights} />                       
                         
                         {this.props.location.state === 'external' ? (
-                            <LabMetExternal lm={lm} />
+                            <LabMetExternal lm={lm} rights={this.props.rights} />
                         ) : (
                             <LabMetInternal lm={lm} />
                         )
@@ -63,6 +63,7 @@ const mapStateToProps = (state, props) => {
     return {
         // lm = lab method
         lm: findParticular(state, props),
+        rights: state.users.user.rights
         
         
     };

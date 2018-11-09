@@ -21,6 +21,8 @@ class MainHeader extends React.Component {
     }
     
     render() {
+        console.log('mainheader se renderoval');
+        
         return (
             <header className='header'>
                 <div className='content-container'>

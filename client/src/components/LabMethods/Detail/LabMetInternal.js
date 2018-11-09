@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Generic from './DataComponents/Generic';
+import RefRange from './DataComponents/RefRange';
 
 
 
@@ -22,15 +23,16 @@ export default class LabMetInternal extends React.Component {
                     <div>
                       
                         <div className='flex-container'>
-                            <Generic label='REFERENČNÍ MEZE' value={lm.refRange} />
-                            <Generic label='JEDNOTKY' value={lm.note} />
+                            
+                            <Generic label='JEDNOTKY' value={lm.unit} />
+                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} />
                         </div>
 
                         <div className='flex-container'>
-                            <Generic label='RUTINA' value={lm.rutCare} />
-                            <Generic label='POHOTOVOST' value={lm.note} />
-                            <Generic label='STATIM' value={lm.note} />
-                            <Generic label='DOHLÁŠKA' value={lm.note} />
+                            <Generic label='RUTINA' value={lm.rutTime} />
+                            <Generic label='POHOTOVOST' value={lm.erTime} />
+                            <Generic label='STATIM' value={lm.statTime} />
+                            <Generic label='DOHLÁŠKA' value={lm.additionalOrder} />
                             <Generic label='POZNÁMKA K DOSTUPNOSTI' value={lm.responseNote} />
 
                         </div>
@@ -42,7 +44,7 @@ export default class LabMetInternal extends React.Component {
 
                         <div className='flex-container'>
                             <Generic label='FYZIOLOGICKÁ VARIABILITA' value={lm.physVar} />
-                            <Generic label='BIOLOGICKÝ POLOČAS' value={lm.bioHalfTime} />
+                            <Generic label='BIOLOGICKÝ POLOČAS' value={lm.bioHalfLife} />
                         </div>
 
 

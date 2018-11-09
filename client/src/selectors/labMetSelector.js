@@ -11,10 +11,17 @@ const labMetSelector = (labMet, filter) => {
         //boolean if test is in selected category or if no category is selected
         const byCategory = item.isExt === filter.category || filter.category === 'all';
 
-        //if name or synonyme contains string from input
+        //if name or synonyme contains string from input (byTextSyn is fuction beacuse we must check if syn exists)
         const byTextName = item.name.toLowerCase().includes(filter.text.toLowerCase());
-        const byTextSyn = item.syn.toLowerCase().includes(filter.text.toLowerCase());
-        const byText = byTextName || byTextSyn;
+        const byTextSyn = () => {
+            if(item.syn) {
+                return item.syn.toLowerCase().includes(filter.text.toLowerCase());
+            } else {
+                return false;
+            }
+        };
+        
+        const byText = byTextName || byTextSyn();
 
         // if search all checkbox is checked, it searches all tests regardless of selected filters
         if(filter.searchAll) {

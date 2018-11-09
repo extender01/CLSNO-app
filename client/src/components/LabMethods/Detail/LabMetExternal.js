@@ -10,7 +10,6 @@ import CustomNote from './DataComponents/CustomNote';
 export default class LabMetExternal extends React.Component {
     constructor(props) {
         super(props);
-        
     }
 
     
@@ -24,12 +23,19 @@ export default class LabMetExternal extends React.Component {
                 {!!lm && 
                     <div>
                         
-                                        
+                        {this.props.rights === 'lab' &&
+                        <div className='flex-container'>
+                            <Generic label='KDO POSILA' value={lm.parcelWho} />
+                            <Generic label='LAB PREANAL' value={lm.parcelPreanal} />
+                            <Generic label='LAB POZNAMKA' value={lm.parcelNote} />
+                        </div>   
+                        }          
 
                         <div className='flex-container'>
                             <Generic label='PROVÁDÍ SE' value={lm.howOften} />
                             <Generic label='ODEZVA' value={lm.response} />
-                            <Generic label='ODBORNOST' value={lm.expertise} />
+                            <Generic label='JEDNOTKA' value={lm.unit} />
+                            <Generic label='METODIKA' value={lm.metodics} />
                         </div>
 
 

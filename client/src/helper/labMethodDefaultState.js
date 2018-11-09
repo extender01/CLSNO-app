@@ -18,7 +18,7 @@ const labMethodDefaultState = {
     metodics: '',
     unit: '',
     expertise: '',
-    refRange: '',
+    refRange: [],
     rutCare: true,
     rutTime: '',
     statCare: false,
@@ -30,7 +30,8 @@ const labMethodDefaultState = {
     interfereDown: '',
     interfereUp: '',
     physVar: '',
-    bioHalfLife: ''
+    bioHalfLife: '',
+    categories: ''
 };
 
 export default labMethodDefaultState;

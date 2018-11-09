@@ -7,6 +7,8 @@ import { startAddTest } from '../../actions/testActions';
 class AddTestPage extends React.Component {
   
     render() {
+        console.log('renderAddTest ', this.state, this.props);
+
         return (
             <div>
             This is from my add test page
@@ -20,7 +22,6 @@ class AddTestPage extends React.Component {
 
 const mapStateToProps = (state) => {
     return {
-        loading: state.labTests.loading,
         error: state.labTests.error
     };
 };

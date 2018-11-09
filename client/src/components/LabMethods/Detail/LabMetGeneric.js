@@ -22,7 +22,6 @@ export default class LabMetGeneric extends React.Component {
             <div>
                 {!!lm && 
                     <div>
-                        
                         <div className='flex-container'>
                             <Generic label='NÁZEV' value={lm.name} />
                             <Generic label='SYNONYMA' value={lm.syn} />
@@ -33,34 +32,23 @@ export default class LabMetGeneric extends React.Component {
                             <Generic label='SKUPINY V AKORDU' value={lm.groupAk} />
                         </div>
 
-                        
+                        {lm.isExt === 'external' &&
                         <div className='flex-container'>
                             <Where where={lm.where}/>
-                            {lm.isExt === 'external' &&
-                                <WhenTransport where={lm.where} />
-                            }
-                        </div>
+                            <WhenTransport where={lm.where} />  
+                        </div> 
+                        }
 
                         <div className='flex-container'>
                             <Draw draw={lm.draw}/>
-                        </div>
-                        
-
-
-                        <div className='flex-container'>
                             <Generic label='PREANALYTICKÁ FÁZE' value={lm.preanal} />
+                        </div>
+
+                        <div className='flex-container'>
                             <Generic label='OBECNÁ POZNÁMKA' value={lm.note} />
-                        </div>
-
-                        <div className='flex-container'>
-                            <CustomNote label='VAŠE POZNÁMKA' _id={lm._id} customNote={lm.customNotes[0]} />
-                        </div>
-                        
-                        <div className='flex-container'>
-                            <Generic label='METODIKA' value={lm.metodics} />
-                            <Generic label='JEDNOTKA' value={lm.unit} />
-                            <Generic label='ODBORNOST' value={lm.expertise} />
-
+                            {this.props.rights === 'department' && 
+                                <CustomNote label='VAŠE POZNÁMKA' _id={lm._id} customNote={lm.customNotes[0]} />
+                            }
                         </div>
                     </div>
                 }

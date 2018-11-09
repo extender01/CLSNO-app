@@ -10,7 +10,12 @@ export default class LabMetForm extends React.Component {
         super(props);
         
         this.state = this.props.labMetToEdit || labMethodDefaultState;
+        this.state.refRangePrepare = {sex: '', age: '', range: ''};
     };
+
+    refRangeObj = {};
+    
+    
 
     onChange = (e) => {
         const inputValue = e.target.value;
@@ -33,9 +38,58 @@ export default class LabMetForm extends React.Component {
         this.props.formSubmit(this.state);
     };
 
+    onChangeRef = (e) => {
+        const inputValue = e.target.value;
+        const inputName = e.target.name;
+        this.setState((prevState) => {
+            return {refRangePrepare: {...prevState.refRangePrepare, [inputName]: inputValue}}
+        })
+       
+        // this. refRangeObj[inputName] = inputValue;
+        // console.log(this.refRangeObj);
+
+    }
+
+    addRefRange = (e) => {       
+        e.preventDefault();
+        console.log(e);
+        
+        this.setState((prevState) => {
+            return {refRange: [...prevState.refRange, prevState.refRangePrepare]}
+        }, () => {
+            this.setState(() => {
+                return {refRangePrepare: {sex: '', age: '', range: ''}}
+            })
+        }
+        );
+        
+    }
+
+    //when button remove ref range is clicked, array of ref ranges is searched and filtered - every button has value of array index...
+    //..if that array index is equal to index of just checked array item, this item is not included in new array...
+    //this new array is used to update component state
+    removeRefRange = (e) => {
+        e.preventDefault();
+        const refRangeOrderNumber = Number(e.target.value);
+        
+        this.setState((prevState) => {
+            return {
+                refRange:  prevState.refRange.filter((item, index) => {
+                    console.log(refRangeOrderNumber === index);
+                    
+                    return refRangeOrderNumber !== index
+                    
+                })
+            }
+        });
+    }
+
+
+
     
 
     render() {
+        console.log('renderLabMetForm ', this.state, this.props);
         
         return (
             <div>
@@ -95,8 +149,8 @@ export default class LabMetForm extends React.Component {
                     </div> }
 
                     {this.state.isExt === 'internal' && <div>
-                        <label>Referencni meze</label>
-                        <input type='text' name='refRange' value={this.state.refRange} onChange={this.onChange} />
+                        
+
                         <label>Cas rutina</label>
                         <input type='text' name='rutTime' value={this.state.rutTime} onChange={this.onChange} />
                         <label>Statim</label>
@@ -108,14 +162,29 @@ export default class LabMetForm extends React.Component {
                         <label>Poznamka k dostupnosti</label>
                         <input type='text' name='responseNote' value={this.state.responseNote} onChange={this.onChange} />
                     </div> }
-
-                    
-
-
-
                     <button>Submitvoe</button>
                 </form>
 
+                {this.state.isExt === 'internal' && <div>
+                    <form onSubmit={this.addRefRange}>
+                        <label>Referencni meze</label>
+                        <input type='text' name='sex' value={this.state.refRangePrepare.sex} onChange={this.onChangeRef} />
+                        <input type='text' name='age' value={this.state.refRangePrepare.age} onChange={this.onChangeRef} />
+                        <input type='text' name='range' value={this.state.refRangePrepare.range} onChange={this.onChangeRef} />
+                        <button>Pridat ref mez</button>
+                    </form>
+                </div>}
+
+                {this.state.refRange.map((item, index) => {
+                    return (
+                        <div key={index} style={{'backgroundColor': '#aa55cc'}}>
+                        <p>{item.sex}</p>
+                        <p>{item.age}</p>
+                        <p>{item.range}</p>
+                        <button value={index} onClick={this.removeRefRange}>remove ref range</button>
+                        </div>
+                    )
+                })}
             </div>
         )
     };
