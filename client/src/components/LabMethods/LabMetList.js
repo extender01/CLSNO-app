@@ -30,10 +30,10 @@ class LabMetList extends React.Component {
 }
 
 
-const mapStateToProps = (state, ownProps) => {
+const mapStateToProps = (state) => {
     return {
         // labTests: state.labTests.tests
-        labTests: labMetSelector(state.labTests.tests, ownProps.filters)
+        labTests: labMetSelector(state.labTests.tests, state.labTests.filters)
     };
 };
 

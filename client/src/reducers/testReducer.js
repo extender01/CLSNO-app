@@ -3,7 +3,13 @@
 const testReducerDefaultState = {
     tests: [],
     loading: false,
-    error: null
+    error: null,
+    filters: {
+        alphabet: '',
+        category: 'all',
+        searchAll: false, 
+        text: ''
+    }
 };
 
 
@@ -38,11 +44,11 @@ const testReducer = (state = testReducerDefaultState, action) => {
         //     // UPDATOVAT REDUX STATE POMOCI NOVYCH DAT CO SE VRATI ZPATKY Z AXIOS PATCH, ABY SE ZMENY PROJEVILY HNED
         // };
 
-    case "LOAD_TESTS_BEGIN":
+    case 'LOAD_TESTS_BEGIN':
         return {...state, loading: true, error: null};
-    case "LOAD_TESTS_FAILURE":
+    case 'LOAD_TESTS_FAILURE':
         return {...state, loading: false, error: action.error};
-    case "LOAD_TESTS_SUCCESS":
+    case 'LOAD_TESTS_SUCCESS':
         return {...state, loading: false, error: null, tests: [...action.allTests] };
 
         
@@ -52,6 +58,19 @@ const testReducer = (state = testReducerDefaultState, action) => {
         return {...state, loading: false, error: action.error};
     case 'ADD_CUSTOM_NOTE_SUCCESS':
         return {...state, loading: false, error: null};
+
+
+    case 'CATEGORY_FILTER':
+        return {...state, filters: {...state.filters, category: action.category}};
+    case 'ALPHABET_FILTER':
+        return {...state, filters: {...state.filters, alphabet: action.alphabet}};
+    case 'TEXT_FILTER':
+        return {...state, filters: {...state.filters, text: action.text}};
+    case 'SEARCH_ALL':
+        return {...state, filters: {...state.filters, searchAll: action.isAll}};
+
+
+
     default:
         return state;
     }

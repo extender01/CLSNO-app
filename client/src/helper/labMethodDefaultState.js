@@ -1,7 +1,7 @@
 const labMethodDefaultState = {
     name: '',
     where: '',
-    isExt: '',
+    isExt: 'internal',
     syn: '',
     nameAk: '',
     groupAk: '',

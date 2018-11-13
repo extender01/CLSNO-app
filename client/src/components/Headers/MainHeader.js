@@ -9,9 +9,9 @@ import {startLoadTests} from '../../actions/testActions';
 class MainHeader extends React.Component {
     
     componentDidMount() {
-       
-        this.props.checkWhoIsLogged();
         this.props.startLoadTests();
+        this.props.checkWhoIsLogged();
+        
         
         console.log('probehlo componentdidmount z Headeru');
         

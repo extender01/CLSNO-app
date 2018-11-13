@@ -13,9 +13,6 @@ export default class LabMetForm extends React.Component {
         this.state.refRangePrepare = {sex: '', age: '', range: ''};
     };
 
-    refRangeObj = {};
-    
-    
 
     onChange = (e) => {
         const inputValue = e.target.value;
@@ -44,16 +41,10 @@ export default class LabMetForm extends React.Component {
         this.setState((prevState) => {
             return {refRangePrepare: {...prevState.refRangePrepare, [inputName]: inputValue}}
         })
-       
-        // this. refRangeObj[inputName] = inputValue;
-        // console.log(this.refRangeObj);
-
     }
 
     addRefRange = (e) => {       
         e.preventDefault();
-        console.log(e);
-        
         this.setState((prevState) => {
             return {refRange: [...prevState.refRange, prevState.refRangePrepare]}
         }, () => {
@@ -62,7 +53,6 @@ export default class LabMetForm extends React.Component {
             })
         }
         );
-        
     }
 
     //when button remove ref range is clicked, array of ref ranges is searched and filtered - every button has value of array index...
@@ -124,14 +114,7 @@ export default class LabMetForm extends React.Component {
                     <input type='text' name='unit' value={this.state.unit} onChange={this.onChange} />
                     <label>Odbornost</label>
                     <input type='text' name='expertise' value={this.state.expertise} onChange={this.onChange} />
-                    <label>Snizujici interference</label>
-                    <input type='text' name='interfereDown' value={this.state.interfereDown} onChange={this.onChange} />
-                    <label>Zvysujici interference</label>
-                    <input type='text' name='interfereUp' value={this.state.interfereUp} onChange={this.onChange} />
-                    <label>Fyziologicka variabilita</label>
-                    <input type='text' name='physVar' value={this.state.physVar} onChange={this.onChange} />
-                    <label>Biologicky polocas</label>
-                    <input type='text' name='bioHalfLife' value={this.state.bioHalfLife} onChange={this.onChange} />
+                   
 
                     {this.state.isExt === 'external' && <div>     
                         <label>Kdy odjizdi externi</label>
@@ -161,6 +144,14 @@ export default class LabMetForm extends React.Component {
                         <input type='text' name='additionalOrder' value={this.state.additionalOrder} onChange={this.onChange} />
                         <label>Poznamka k dostupnosti</label>
                         <input type='text' name='responseNote' value={this.state.responseNote} onChange={this.onChange} />
+                        <label>Snizujici interference</label>
+                        <input type='text' name='interfereDown' value={this.state.interfereDown} onChange={this.onChange} />
+                        <label>Zvysujici interference</label>
+                        <input type='text' name='interfereUp' value={this.state.interfereUp} onChange={this.onChange} />
+                        <label>Fyziologicka variabilita</label>
+                        <input type='text' name='physVar' value={this.state.physVar} onChange={this.onChange} />
+                        <label>Biologicky polocas</label>
+                        <input type='text' name='bioHalfLife' value={this.state.bioHalfLife} onChange={this.onChange} />
                     </div> }
                     <button>Submitvoe</button>
                 </form>
