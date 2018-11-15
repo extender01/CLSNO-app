@@ -1,0 +1,52 @@
+.lm {
+    background-color: rgb(250, 125, 125);
+    padding: 20px 0;
+    margin: 0 auto;
+    text-decoration: none;
+
+    &__search {
+        background-color: rgb(243, 255, 71);
+
+        & input {
+            height: 40px;
+            border: none;
+        }
+
+        & button {
+            height: 40px;
+        }
+
+        &-field input {
+            border-left: $search-border;
+            border-top: $search-border;
+            border-bottom: $search-border;
+        }
+
+        &-field button {
+            border-right: $search-border;
+            border-top: $search-border;
+            border-bottom: $search-border;
+        }   
+    }
+
+    &__cat {
+        background-color: rgb(250, 125, 229);
+
+        &-active {
+            background-color: rgb(120,120,120);
+        }
+    }
+
+    &__item {
+        background-color: rgb(160, 250, 125);
+        margin: 1rem 0;
+    }
+
+    &__abc{
+
+        &-active {
+            background-color: rgb(120,120,120);
+
+        }
+    }
+}

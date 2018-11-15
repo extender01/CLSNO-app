@@ -7,10 +7,7 @@ const userReducerDefaultState = {
         'rights': 'department',
     },
     isLogged: false,
-    isAdmin: true,
     loading: true,
-    newcomeLoginCheck: false,
-    
     error: null
 
 };

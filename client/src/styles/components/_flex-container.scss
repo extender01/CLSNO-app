@@ -1,16 +1,38 @@
-.flex-container {
+.fc {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 1rem 0;
+    flex-flow: row wrap;
+}
+
+.fcraw {
+    display: flex;
+   
+    align-items: center;
+    flex-flow: row wrap;
 }
 
 .fcrw {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
 }
 
 .flex-container > div {
     background-color: #ccc;
+}
+
+//DORESIT DISPLAY FLEX A JEHO EXTENDS, v HTML zmenit fc na f
+
+.f {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.pad {
+    padding: 1rem 0;
 }
 

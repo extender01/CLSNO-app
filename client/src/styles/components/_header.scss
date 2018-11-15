@@ -1,12 +1,18 @@
 .header {
-    background: #fff;
+    background: rgb(176, 223, 255);
 
     &__title {
         text-decoration: none;
         color: rgb(95, 95, 95);
         margin: 0;
+    }
 
-      
+    &__logo {
+        flex-grow: 2
+    }
+
+    &__link {
+        flex-grow: 1;
     }
 }
 

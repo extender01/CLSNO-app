@@ -25,12 +25,14 @@ class MainHeader extends React.Component {
         
         return (
             <header className='header'>
-                <div className='content-container'>
-                    <div className='flex-container'>
+                <div className='content-container f'>
+                    <nav className='f header__logo'>
                         <NavLink className='header__title' to='/' exact={true}>
                             <h1>Lab SNO</h1>
                         </NavLink>
-                        <NavLink to='/help' activeClassName='is-active'>O laboratori</NavLink>
+                    </nav>
+                    <div className ='f header__link'>
+                        <NavLink to='/help'  activeClassName='is-active'>O laboratori</NavLink>
                         <NavLink to='/methods' activeClassName='is-active'>Metody</NavLink>
                         {this.props.isLogged ? (
                             <div>

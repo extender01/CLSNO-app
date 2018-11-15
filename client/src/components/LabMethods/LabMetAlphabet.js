@@ -6,10 +6,10 @@ const alphabet = ['0-9','A','B','C','D','E','F','G','H','I','J','K','L','M','N',
 
 
 const LabMetAlphabet = (props) => (
-    <div>
-        <button name='' onClick={(e) => {props.alphabetFiltering(e.target.name)}}>VSE</button>
+    <div className='fcrw'>
+        <button className={props.active === '' ? 'lm__abc-active' : undefined} name='' onClick={(e) => {props.alphabetFiltering(e.target.name)}}>VSE</button>
         {alphabet.map((item) => (
-            <button key={item} name={item} onClick={(e) => {props.alphabetFiltering(e.target.name)}}>{item}</button>
+            <button className={props.active === item ? 'lm__abc-active' : undefined} key={item} name={item} onClick={(e) => {props.alphabetFiltering(e.target.name)}}>{item}</button>
        
         ))}
    
@@ -17,7 +17,11 @@ const LabMetAlphabet = (props) => (
    
 );
 
-
+const mapStateToProps = (state) => {
+    return {
+        active: state.labTests.filters.alphabet
+    };
+};
 
 
 
@@ -31,4 +35,4 @@ const mapDispatchToProps = (dispatch) => {
 }
 
 
-export default connect(undefined, mapDispatchToProps)(LabMetAlphabet);
+export default connect(mapStateToProps, mapDispatchToProps)(LabMetAlphabet);

@@ -9,7 +9,7 @@ class WhenTransport extends React.Component {
     whenGoes = () => {
         console.log("ma to byt krnov");
         switch (this.props.where) {
-            case "avsd":
+            case "Krnov":
             console.log("je to krnov");
                 // return (<div><p>Po - Pá: cca 7:30 a 11:30</p><p>So-Ne: cca 9:30</p></div>);
                 return (

@@ -95,7 +95,11 @@ export default class LabMetForm extends React.Component {
                     <input type='text' name='syn' value={this.state.syn} onChange={this.onChange} />
                     
                     <label>Kde se dela</label>
-                    <input type='text' name='where' value={this.state.where} onChange={this.onChange} />
+                    <input list='where' name='where' value={this.state.where} onChange={this.onChange} />
+                    <datalist id='where'>
+                        <option value='SNO' />
+                        <option value='Krnov'/>
+                    </datalist>
                     <label>Nazev v Akordu</label>
                     <input type='text' name='nameAk' value={this.state.nameAk} onChange={this.onChange} />
                     <label>Skupiny v akordu</label>
@@ -106,8 +110,6 @@ export default class LabMetForm extends React.Component {
                     <input type='text' name='preanal' value={this.state.preanal} onChange={this.onChange} />
                     <label>Poznamka</label>
                     <input type='text' name='note' value={this.state.note} onChange={this.onChange} />
-                    <label>Poznamka oddeleni</label>
-                    <input type='text' name='customNote' value={this.state.customNote} onChange={this.onChange} />
                     <label>Metodika</label>
                     <input type='text' name='metodics' value={this.state.metodics} onChange={this.onChange} />
                     <label>Jednotka</label>

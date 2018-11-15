@@ -18,9 +18,7 @@ class LabMetList extends React.Component {
         console.log('labmetlist se renderoval');
         
         return (
-            <div>
-                <p>Tady budou vsechny metody sveta</p>
-                
+            <div className='lm'>
                 {this.props.labTests.map((labTest) => {
                     return <LabMetItem key={labTest._id} {...labTest} />;
                 })}

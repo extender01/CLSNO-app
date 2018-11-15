@@ -2,11 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const LabMetItem = (props) => (
-    <div  className='flex-container'>
+    <div  className='fcraw lm__item'>
         
        
 
-        <div>
+        <div className=''>
             {props.isExt === 'external' ? (   
                 <Link to={{
                     pathname: '/methods/detail/' + props._id,
