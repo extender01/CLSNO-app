@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const LabMetItem = (props) => (
-    <div  className='fcraw lm__item'>
+    <div  className='f lm__item'>
         
        
 

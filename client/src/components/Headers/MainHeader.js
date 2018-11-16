@@ -7,6 +7,10 @@ import {startLoggedUser }from '../../actions/userActions';
 import {startLoadTests} from '../../actions/testActions';
 
 class MainHeader extends React.Component {
+
+    constructor(props) {
+        super(props);
+    }
     
     componentDidMount() {
         this.props.startLoadTests();
@@ -26,12 +30,14 @@ class MainHeader extends React.Component {
         return (
             <header className='header'>
                 <div className='content-container f'>
+                   
                     <nav className='f header__logo'>
                         <NavLink className='header__title' to='/' exact={true}>
                             <h1>Lab SNO</h1>
                         </NavLink>
                     </nav>
-                    <div className ='f header__link'>
+                    
+                    <div className ='f header__links'>
                         <NavLink to='/help'  activeClassName='is-active'>O laboratori</NavLink>
                         <NavLink to='/methods' activeClassName='is-active'>Metody</NavLink>
                         {this.props.isLogged ? (
@@ -43,6 +49,7 @@ class MainHeader extends React.Component {
                             <NavLink to='/login' activeClassName='is-active'>Login</NavLink>
                         )}
                     </div>
+
                 </div>   
             </header>
         );

@@ -166,7 +166,7 @@ app.post('/api/customNote/:id', authenticate, whoIsIt, (req, res) => {
 
 
 //==============EDIT TEST============================================================================================
-app.patch('/api/tests/:id', (req, res) => {
+app.patch('/api/tests/:id', authenticate, (req, res) => {
     let id = req.params.id;
     // let updates = _.pick(req.body, ['name', 'where']);
 

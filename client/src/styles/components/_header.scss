@@ -11,8 +11,18 @@
         flex-grow: 2
     }
 
-    &__link {
+    &__links {
         flex-grow: 1;
+    }
+}
+
+@media (max-width: $bp) {
+    .header {
+
+        &__links {
+            display: none;
+            background-color: red;
+        }
     }
 }
 

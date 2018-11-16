@@ -30,7 +30,7 @@
     }
 
     &__cat {
-        background-color: rgb(250, 125, 229);
+        background-color: rgb(255, 255, 255);
 
         &-active {
             background-color: rgb(120,120,120);
@@ -38,15 +38,22 @@
     }
 
     &__item {
-        background-color: rgb(160, 250, 125);
+        background-color: rgb(83, 255, 121);
         margin: 1rem 0;
+        
     }
 
     &__abc{
 
-        &-active {
+        display: none;
+
+        &--active {
             background-color: rgb(120,120,120);
 
+        }
+
+        & button {
+            
         }
     }
 }

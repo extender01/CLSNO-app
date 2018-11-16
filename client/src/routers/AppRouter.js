@@ -2,6 +2,7 @@ import React from 'react';
 import {Router, Route, Switch, Link, NavLink} from 'react-router-dom';
 import {connect} from 'react-redux'
 import createHistory from 'history/createBrowserHistory';
+import Media from 'react-media';
 
 import HomePage from '../components/HomePage';
 import AddTestPage from '../components/LabMethods/AddTestPage';
@@ -11,6 +12,7 @@ import HelpPage from '../components/HelpPage';
 import NotFoundPage from '../components/NotFoundPage';
 import MainHeader from '../components/Headers/MainHeader';
 import AdminHeader from '../components/Headers/AdminHeader';
+import Hamburger from '../components/Headers/Hamburger';
 
 
 import SignupPage from '../components/SignupPage';
@@ -24,11 +26,19 @@ import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
 
 
+//Media from react-media library renders component based on css media query passed as prop parameter and renders what comes back from callback
+
 export const history = createHistory();
 
 const AppRouter = (props) => (
     <Router history={history}>
         <div>
+            <Media query='(max-width: 500px)'>
+                {(matches) => 
+                    matches ? <Hamburger /> : null
+                }
+            </Media>
+            
             <MainHeader />
             {props.rights === 'admin' && <AdminHeader />}
             
