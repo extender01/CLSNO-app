@@ -42,12 +42,18 @@ class LabMetSearch extends React.Component {
         return (
             <div className='lm__search'>
                 <div className='fcent'> 
-                    {/*<img className='lm__search_item' src="../../images/magnifying-glass.png" height="40px" />*/}
-                    <input  className='lm__search_input' autoFocus type='search' name='search' value={this.props.text} placeholder='Hledej metodu...' onChange={this.textFilter}></input>
-                    {/*<button  className='lm__search_item' value='' onClick={this.clearSearch} checked={this.props.isSearchAll}>X</button>*/}
+                    <input  
+                        className='lm__search_input' 
+                        autoFocus 
+                        type='search' 
+                        name='search' 
+                        value={this.props.text} 
+                        placeholder='Hledej metodu...' 
+                        onChange={this.textFilter}>
+                    </input>                   
                     
                     <img 
-                        className={!this.props.text ? 'lm__search_del' : undefined}
+                        className={!this.props.text ? 'lm__search_del lm__search_img' : 'lm__search_img'}
                         onClick={this.clearSearch} 
                         src="../../images/clear2.png" 
                         height="40px" 
@@ -56,14 +62,9 @@ class LabMetSearch extends React.Component {
                 </div>
 
 
-                <div className={this.noFilters() ? 'lm__search_clearFilter' : undefined}>
-                   <p onClick={this.clearFilters}>HLEDEJ VSUDE</p> 
+                <div className={this.noFilters() ? 'lm__search--invisible ' : 'lm__search_clearFilter'}>
+                   <p className='lm__search_clearFilter' onClick={this.clearFilters}>HLEDEJ VSUDE</p> 
                 </div>
-                {/* <form>    
-                            <input type='checkbox' name='searchall' onChange={this.searchAll} checked={this.props.isSearchAll}></input>
-                            <label htmlFor="searchall">HLEDAT VSUDE</label>
-                            
-                </form> */}
                 
             </div>
         );

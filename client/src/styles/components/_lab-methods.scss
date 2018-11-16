@@ -1,5 +1,5 @@
 .lm {
-    background-color: rgb(250, 125, 125);
+    background-color: rgb(255, 255, 255);
     padding: 20px 0;
     margin: 0 auto;
     text-decoration: none;
@@ -8,12 +8,24 @@
         background-color: rgb(255, 233, 36);
         padding: 2rem 0;
 
+        &--invisible {
+            visibility: hidden;
+        }
+
         &_input {
             height: 40px;
             border: none;
             padding-left: 1rem;
+            margin-top: 1rem;
             font-size: 3rem;
             
+        }
+
+        &_img {
+            margin-top: 1rem;
+            &:hover {
+                cursor: pointer;
+            }
         }
 
         &_item {
@@ -25,7 +37,12 @@
         }
 
         &_clearFilter {
-            visibility: hidden;
+            margin: 0 auto;
+            width: 500px;
+            text-align: center;
+
+
+            
         }
 
       
