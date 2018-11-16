@@ -19,9 +19,15 @@ export const textFilter = (text) => {
     };
 };
 
-export const searchAll = (isAll) => {
+// export const searchAll = (isAll) => {
+//     return {
+//         type: 'SEARCH_ALL',
+//         isAll
+//     };
+// };
+
+export const clearFilters = () => {
     return {
-        type: 'SEARCH_ALL',
-        isAll
+        type: 'CLEAR_FILTERS'     
     };
 };

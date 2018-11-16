@@ -5,28 +5,32 @@
     text-decoration: none;
 
     &__search {
-        background-color: rgb(243, 255, 71);
+        background-color: rgb(255, 233, 36);
+        padding: 2rem 0;
 
-        & input {
+        &_input {
             height: 40px;
             border: none;
+            padding-left: 1rem;
+            font-size: 3rem;
+            
         }
 
-        & button {
-            height: 40px;
+        &_item {
+            margin: 0 .5rem;
         }
 
-        &-field input {
-            border-left: $search-border;
-            border-top: $search-border;
-            border-bottom: $search-border;
+        &_del {
+            visibility: hidden;
         }
 
-        &-field button {
-            border-right: $search-border;
-            border-top: $search-border;
-            border-bottom: $search-border;
-        }   
+        &_clearFilter {
+            visibility: hidden;
+        }
+
+      
+
+        
     }
 
     &__cat {
@@ -45,7 +49,7 @@
 
     &__abc{
 
-        display: none;
+        // display: none;
 
         &--active {
             background-color: rgb(120,120,120);
@@ -57,3 +61,8 @@
         }
     }
 }
+
+// img {
+//     visibility: hidden;
+// }
+

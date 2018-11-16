@@ -11,6 +11,7 @@ class LogoutForm extends React.Component {
     logout = (e) => {
         e.preventDefault();
         this.props.startLogout();
+        
 
     };
     render() {

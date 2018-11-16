@@ -32,13 +32,13 @@ let whoIsIt = (req, res, next) => {
            
             next();
         }).catch((e) => {
-            req.user = {nick: 'nobody', _id: ''};
+            req.user = {nick: 'nobody', _id: '', rights: 'department'};
             next();
         });
 
 
     } else {
-        req.user = {nick: 'nobody', _id: ''};
+        req.user = {nick: 'nobody', _id: '', rights: 'department'};
         next();   
     }  
 };

@@ -23,12 +23,10 @@ const labMetSelector = (labMet, filter) => {
         
         const byText = byTextName || byTextSyn();
 
-        // if search all checkbox is checked, it searches all tests regardless of selected filters
-        if(filter.searchAll) {
-            return byText;  
-        } else {
-            return byCategory && byAlphabet && byText;
-        }
+        
+        
+        return byCategory && byAlphabet && byText;
+        
         
     }).sort((a, b) => {
         if (a.name.toLowerCase() < b.name.toLowerCase()) {

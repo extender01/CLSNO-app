@@ -36,7 +36,7 @@ const userReducer = (state = userReducerDefaultState, action) => {
     case 'LOGOUT_FAILURE':
         return {...state, loading: false, error: action.error};
     case 'LOGOUT_SUCCESS':
-        return {...state, user: {}, isLogged: false, loading: false, error: null};
+        return {...state, isLogged: false, loading: false, error: null, user: action.user};
 
     case 'SIGNUP_BEGIN':
         return {...state, isLogged: false, loading: true, error: null};

@@ -109,7 +109,7 @@ export const loggedUserSuccess = (APIres = {user: {_id: '', nick: 'nobody', righ
             },
             isLogged: APIres.user._id ? true : false
             
-        }
+        };
     } 
 };
 
@@ -145,7 +145,12 @@ const logoutBegin = () => ({type: 'LOGOUT_BEGIN'});
 const logoutFailure = (error) => ({type: 'LOGOUT_FAILURE', error: error});
 const logoutSuccess = () => {
     return {
-        type: 'LOGOUT_SUCCESS'
+        type: 'LOGOUT_SUCCESS',
+        user: {
+            _id: '',
+            nick: 'nobody',
+            rights: 'department'
+        }
     };
 };
 
@@ -155,16 +160,17 @@ export const startLogout = () => {
         console.log('zacina logout');
         
         axios.delete('/api/logout')
-        .then(() => {
-            console.log('uspesne smazano');
-            dispatch(logoutSuccess())
+            .then(() => {
+                console.log('uspesne smazano');
+                dispatch(logoutSuccess());
+                history.push('/methods');
             
-        }).catch((e) => {
-            console.log('error z catch actions', e);
+            }).catch((e) => {
+                console.log('error z catch actions', e);
             
-            dispatch(logoutFailure(e))
-        });
-    }
+                dispatch(logoutFailure(e));
+            });
+    };
 };
 
 

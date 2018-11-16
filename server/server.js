@@ -270,7 +270,7 @@ app.delete('/api/logout', authenticate, (req, res) => {
         
         
         res.status(200).clearCookie('x-auth').send('uspesne odhlasen')
-        res.status(200).send('uspesne odhlasen')
+        //res.status(200).send('uspesne odhlasen')
     }).catch((e) => {
         console.log('pokus o smazani na severu se nepovedl');
         
