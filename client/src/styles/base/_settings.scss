@@ -1,5 +1,6 @@
 // Colors
 $dark-blue: #364051;
+$grey: #2a2a2a;
 // Spacing
 $s-size: 1.2rem;
 $m-size: 1.6rem;
@@ -9,3 +10,38 @@ $desktop-breakpoint: 45rem;
 $search-border: 1px rgb(120, 120, 120) solid;
 
 $bp: 500px;
+
+
+
+$name: #1565c0;
+$draw: #ffeb3b;
+$customNote: #f5a424;
+$details: #e91e63;
+$unit: #4caf50;
+$runTime: #e91e63;
+$interference: #b01ee9;
+$parcelInfo: #4caf50;
+$extDetails: rgb(0, 180, 224);
+
+
+//barvy komponent na detailu
+$colorName: $name;
+$colorSyn: $name;
+$colorNameAk: $name;
+$colorGroupAk: $name;
+$colorWhere: $draw;
+$colorWhenTransport: $draw;
+$colorDraw: $draw;
+$colorPreanal: $draw;
+$colorNote: $draw;
+$colorCustomNote: $customNote;
+$colorRunTime: $runTime;
+$colorInterference: $interference;
+$colorParcelInfo: $parcelInfo;
+$colorExtDetails: $extDetails;
+
+$barvaProvadiSe: $details;
+$barvaOdezva: $details;
+$barvaMetodika:$details;
+$colorUnit: $unit;
+$barvaOdbornost:$details;

@@ -19,31 +19,31 @@ export default class LabMetExternal extends React.Component {
         const {lm} = this.props;
         
         return (
-            <div>
+            <React.Fragment>
                 {!!lm && 
-                    <div>
+                    <React.Fragment>
                         
                         {this.props.rights === 'lab' &&
-                        <div className='flex-container'>
-                            <Generic label='KDO POSILA' value={lm.parcelWho} />
-                            <Generic label='LAB PREANAL' value={lm.parcelPreanal} />
-                            <Generic label='LAB POZNAMKA' value={lm.parcelNote} />
+                        <div className='f'>
+                            <Generic label='KDO POSILA' value={lm.parcelWho} classNames='g1 colorParcelInfo' />
+                            <Generic label='LAB PREANAL' value={lm.parcelPreanal} classNames='g1 colorParcelInfo'/>
+                            <Generic label='LAB POZNAMKA' value={lm.parcelNote} classNames='g1 colorParcelInfo'/>
                         </div>   
                         }          
 
-                        <div className='flex-container'>
-                            <Generic label='PROVÁDÍ SE' value={lm.howOften} />
-                            <Generic label='ODEZVA' value={lm.response} />
-                            <Generic label='JEDNOTKA' value={lm.unit} />
-                            <Generic label='METODIKA' value={lm.metodics} />
+                        <div className='f'>
+                            <Generic label='PROVÁDÍ SE' value={lm.extHowOften} classNames='g1 colorExtDetails' />
+                            <Generic label='ODEZVA' value={lm.extResponse} classNames='g1 colorExtDetails'/>
+                            <Generic label='JEDNOTKA' value={lm.unit} classNames='g1 colorExtDetails'/>
+                            <Generic label='METODIKA' value={lm.metodics} classNames='g1 colorExtDetails'/>
                         </div>
 
 
                     
 
-                    </div>
+                    </React.Fragment>
                 }
-            </div>
+            </React.Fragment>
             
         );
     }

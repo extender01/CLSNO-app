@@ -13,7 +13,7 @@ class WhenTransport extends React.Component {
             console.log("je to krnov");
                 // return (<div><p>Po - Pá: cca 7:30 a 11:30</p><p>So-Ne: cca 9:30</p></div>);
                 return (
-                    <div>
+                    
                         <table>
                             <tbody>
                                 <tr>
@@ -30,11 +30,11 @@ class WhenTransport extends React.Component {
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    
                 );
             case "Nový Jičín":
                 return (
-                    <div>
+                    
                         <table>
                             <tbody>
                                 <tr>
@@ -43,11 +43,11 @@ class WhenTransport extends React.Component {
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    
                 );           
             case "FN Ostrava":
                 return (
-                    <div>
+                    
                         <table>
                             <tbody>
                                 <tr>
@@ -56,14 +56,14 @@ class WhenTransport extends React.Component {
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
+                    
                 );
          };
     };
    
     render() {
         return(
-            <div>
+            <div className={`box ${this.props.classNames}`}>
                 <h4>KDY JEZDÍ</h4>
                 {this.whenGoes()}
             </div>

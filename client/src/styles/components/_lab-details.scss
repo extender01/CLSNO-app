@@ -1,0 +1,107 @@
+.box {
+    padding: 10px 15px 10px 15px;
+    margin: 0 4px 8px 4px;
+    text-align: center; 
+    color: white;
+}
+
+
+
+//pro ruzne pomery flex grow
+.g1{
+    flex: 1 1 auto;
+}
+
+.g2{
+    flex: 2 1 auto;
+}
+
+.g3{
+    flex: 3 1 auto;
+}
+
+.g4{
+    flex: 4 1 auto;
+}
+
+.gf1 {
+    flex: 1 1 0;
+}
+
+.gf2 {
+    flex: 2 1 0;
+}
+
+.gf3 {
+    flex: 3 1 0;
+}
+
+
+
+.colorName {
+    background: $colorName;
+}
+
+.colorSyn {
+    background: $colorName;
+}
+
+.colorNameAk {
+    background: $colorName;
+}
+
+.colorGroupAk {
+    background: $colorName;
+}
+
+.colorWhere {
+    background: $colorWhere;
+    color: $grey;
+}
+
+.colorWhenTransport {
+    background: $colorWhenTransport;
+    color: $grey;
+}
+
+.colorDraw {
+    background: $colorDraw;
+    color: $grey;
+}
+
+.colorPreanal {
+    background: $colorPreanal;
+    color: $grey;
+}
+
+.colorNote {
+    background: $colorNote;
+    color: $grey; 
+}
+
+.colorCustomNote {
+    background: $colorCustomNote;
+    color: $grey;
+
+}
+
+.colorUnit {
+    background: $colorUnit;
+}
+
+.colorRunTime {
+    background: $colorRunTime;
+}
+
+.colorInterference {
+    background: $colorInterference;
+}
+
+.colorExtDetails {
+    background: $colorExtDetails;
+}
+
+.colorParcelInfo {
+    background: $colorParcelInfo;
+}
+

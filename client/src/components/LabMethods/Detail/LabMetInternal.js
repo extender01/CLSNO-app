@@ -18,41 +18,41 @@ export default class LabMetInternal extends React.Component {
         const {lm} = this.props;
         
         return (
-            <div>
+            <React.Fragment>
                 {!!lm && 
-                    <div>
+                    <React.Fragment>
                       
-                        <div className='flex-container'>
+                        <div className='f'>
                             
-                            <Generic label='JEDNOTKY' value={lm.unit} />
-                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} />
+                            <Generic label='JEDNOTKY' value={lm.unit} classNames='g1 colorUnit' />
+                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} classNames='g3 colorUnit' />
                         </div>
 
-                        <div className='flex-container'>
-                            <Generic label='RUTINA' value={lm.rutTime} />
-                            <Generic label='POHOTOVOST' value={lm.erTime} />
-                            <Generic label='STATIM' value={lm.statTime} />
-                            <Generic label='DOHLÁŠKA' value={lm.additionalOrder} />
-                            <Generic label='POZNÁMKA K DOSTUPNOSTI' value={lm.responseNote} />
+                        <div className='f'>
+                            <Generic label='RUTINA' value={lm.rutTime} classNames='g1 colorRunTime'/>
+                            <Generic label='POHOTOVOST' value={lm.erTime} classNames='g1 colorRunTime' />
+                            <Generic label='STATIM' value={lm.statTime} classNames='g1 colorRunTime' />
+                            <Generic label='DOHLÁŠKA' value={lm.additionalOrder} classNames='g1 colorRunTime' />
+                            <Generic label='POZNÁMKA K DOSTUPNOSTI' value={lm.responseNote} classNames='g1 colorRunTime' />
 
                         </div>
 
-                        <div className='flex-container'>
-                            <Generic label='SNIŽUJÍCÍ INTERFERENCE' value={lm.interfereDown} />
-                            <Generic label='ZVYŠUJÍCÍ INTERFERENCE' value={lm.interfereUp} />
+                        <div className='f'>
+                            <Generic label='SNIŽUJÍCÍ INTERFERENCE' value={lm.interfereDown} classNames='g1 colorInterference' />
+                            <Generic label='ZVYŠUJÍCÍ INTERFERENCE' value={lm.interfereUp} classNames='g1 colorInterference' />
                         </div>
 
-                        <div className='flex-container'>
-                            <Generic label='FYZIOLOGICKÁ VARIABILITA' value={lm.physVar} />
-                            <Generic label='BIOLOGICKÝ POLOČAS' value={lm.bioHalfLife} />
+                        <div className='f'>
+                            <Generic label='FYZIOLOGICKÁ VARIABILITA' value={lm.physVar} classNames='g1 colorInterference' />
+                            <Generic label='BIOLOGICKÝ POLOČAS' value={lm.bioHalfLife} classNames='g1 colorInterference' />
                         </div>
 
 
                     
 
-                    </div>
+                    </React.Fragment>
                 }
-            </div>
+            </React.Fragment>
             
         );
     }

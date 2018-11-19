@@ -26,7 +26,7 @@ class LabMetDetail extends React.Component {
         return (
             <div>
                 {!!lm && 
-                    <div>
+                    <React.Fragment>
                         
                         <LabMetGeneric lm={lm} rights={this.props.rights} />                       
                         
@@ -38,7 +38,7 @@ class LabMetDetail extends React.Component {
                         }
                         
                         
-                    </div>
+                    </React.Fragment>
                 }
             </div>
             

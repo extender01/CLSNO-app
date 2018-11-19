@@ -44,7 +44,7 @@ export default class Draw extends React.Component {
 
     render() {
         return (
-            <div className={this.props.classNames}>
+            <div className={`box ${this.props.classNames}`}>
                 <h4>ODBĚR</h4>
                 <div className="flexi--align-low">
                     {this.coZaOdber(this.props.draw)}

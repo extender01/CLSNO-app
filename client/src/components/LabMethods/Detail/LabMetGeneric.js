@@ -19,40 +19,40 @@ export default class LabMetGeneric extends React.Component {
         const {lm} = this.props;
         
         return (
-            <div>
+            <React.Fragment>
                 {!!lm && 
-                    <div>
-                        <div className='flex-container'>
-                            <Generic label='NÁZEV' value={lm.name} />
-                            <Generic label='SYNONYMA' value={lm.syn} />
+                    <React.Fragment>
+                        <div className='f'>
+                            <Generic label='NÁZEV' value={lm.name} classNames='g1 colorName' />
+                            <Generic label='SYNONYMA' value={lm.syn} classNames='g1 colorSyn' />
                         </div>
 
-                        <div className='flex-container'>
-                            <Generic label='NÁZEV V AKORDU' value={lm.nameAk} />
-                            <Generic label='SKUPINY V AKORDU' value={lm.groupAk} />
+                        <div className='f'>
+                            <Generic label='NÁZEV V AKORDU' value={lm.nameAk} classNames='g1 colorNameAk' />
+                            <Generic label='SKUPINY V AKORDU' value={lm.groupAk} classNames='g1 colorGroupAk' />
                         </div>
 
                         {lm.isExt === 'external' &&
-                        <div className='flex-container'>
-                            <Where where={lm.where}/>
-                            <WhenTransport where={lm.where} />  
+                        <div className='f'>
+                            <Where where={lm.where} classNames='box g1 colorWhere'/>
+                            <WhenTransport where={lm.where} classNames='box g2 colorWhenTransport' />  
                         </div> 
                         }
 
-                        <div className='flex-container'>
-                            <Draw draw={lm.draw}/>
-                            <Generic label='PREANALYTICKÁ FÁZE' value={lm.preanal} />
+                        <div className='f'>
+                            <Draw draw={lm.draw} classNames='box g1 colorDraw' />
+                            <Generic label='PREANALYTICKÁ FÁZE' value={lm.preanal} classNames='box g1 colorPreanal' />
                         </div>
 
-                        <div className='flex-container'>
-                            <Generic label='OBECNÁ POZNÁMKA' value={lm.note} />
+                        <div className='f'>
+                            <Generic label='OBECNÁ POZNÁMKA' value={lm.note}  classNames='box g1 colorNote'/>
                             {this.props.rights === 'department' && 
-                                <CustomNote label='VAŠE POZNÁMKA' _id={lm._id} customNote={lm.customNotes[0]} />
+                                <CustomNote label='VAŠE POZNÁMKA' _id={lm._id} customNote={lm.customNotes[0]} classNames='box g1 colorCustomNote' />
                             }
                         </div>
-                    </div>
+                    </React.Fragment>
                 }
-            </div>
+            </React.Fragment>
             
         );
     }

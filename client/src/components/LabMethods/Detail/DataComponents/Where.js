@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const Where = (props) => (
-    <div>
+    <div className={`box ${props.classNames}`}>
         <h4>KAM TO JEDE</h4>
         <div>
             {props.where==="avsd" ? <img src="../../../images/krnov.png" /> : undefined}
