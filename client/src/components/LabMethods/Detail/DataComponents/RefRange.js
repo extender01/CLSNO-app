@@ -9,7 +9,7 @@ const RefRange = (props) => (
         {props.refRange.length !== 0 && <table>
             <tbody>
                 <tr>
-                    <th></th>
+                    <th>Pohlavi</th>
                     <th>Vek</th>
                     <th>Meze</th>
                 </tr>

@@ -5,7 +5,7 @@ import {startLoadTests} from '../../actions/testActions';
 import labMetSelector from '../../selectors/labMetSelector';
 
 
-class LabMetList extends React.Component {
+export class LabMetList extends React.Component {
     
     constructor(props) {
         super(props);
@@ -19,9 +19,15 @@ class LabMetList extends React.Component {
         
         return (
             <div className='lm'>
-                {this.props.labTests.map((labTest) => {
-                    return <LabMetItem key={labTest._id} {...labTest} />;
-                })}
+                {
+                    this.props.labTests.length === 0 ? (
+                        <p>Laboratorní metody nenalezeny</p>
+                    ) : (
+                        this.props.labTests.map((labTest) => {
+                            return <LabMetItem key={labTest._id} {...labTest} />;
+                        })
+                    )
+                }
             </div>
         );
     }
@@ -35,14 +41,7 @@ const mapStateToProps = (state) => {
     };
 };
 
-// pokud bude fungovat v componentDidMount z headeru tak tohle smazat
-// const mapDispatchToProps = (dispatch) => {
-//     return {
-//         startLoadTests: () => {
-//             dispatch(startLoadTests());
-//         }
-//     };
-// };
+
 
 export default connect(mapStateToProps)(LabMetList);
 

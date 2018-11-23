@@ -10,6 +10,7 @@ $desktop-breakpoint: 45rem;
 $search-border: 1px rgb(120, 120, 120) solid;
 
 $bp: 500px;
+$draw-img: 6rem;
 
 
 
@@ -22,6 +23,7 @@ $runTime: #e91e63;
 $interference: #b01ee9;
 $parcelInfo: #4caf50;
 $extDetails: rgb(0, 180, 224);
+
 
 
 //barvy komponent na detailu
@@ -39,9 +41,6 @@ $colorRunTime: $runTime;
 $colorInterference: $interference;
 $colorParcelInfo: $parcelInfo;
 $colorExtDetails: $extDetails;
-
-$barvaProvadiSe: $details;
-$barvaOdezva: $details;
-$barvaMetodika:$details;
 $colorUnit: $unit;
-$barvaOdbornost:$details;
+$colorRefRange: $unit;
+

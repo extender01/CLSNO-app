@@ -5,6 +5,10 @@
     color: white;
 }
 
+.ld {
+    margin-top: 3rem;
+}
+
 
 
 //pro ruzne pomery flex grow
@@ -62,6 +66,12 @@
 .colorWhenTransport {
     background: $colorWhenTransport;
     color: $grey;
+
+    & > table {
+        margin: 0 auto;
+        text-align: justify;
+    }
+    
 }
 
 .colorDraw {
@@ -89,6 +99,21 @@
     background: $colorUnit;
 }
 
+.colorRefRange {
+    background: $colorRefRange;
+    & > table {
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+    
+    }
+
+    & th, td {
+        border-bottom: 1px white solid;
+        height: 50px;
+    }
+}
+
 .colorRunTime {
     background: $colorRunTime;
 }
@@ -103,5 +128,22 @@
 
 .colorParcelInfo {
     background: $colorParcelInfo;
+}
+
+
+
+
+.draw__img {
+    &--sg {
+        content: url("/images/14.png");
+        height: $draw-img;
+        margin: 0 auto;
+    }
+
+    &--se {
+        content: url("/images/1.png");
+        height: $draw-img;
+        margin: 0 auto;
+    }
 }
 

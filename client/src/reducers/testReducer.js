@@ -27,7 +27,7 @@ const testReducer = (state = testReducerDefaultState, action) => {
     case 'EDIT_TEST_FAILURE':
         return {...state, loading: false, error: action.error};
     case 'EDIT_TEST_SUCCESS':
-        return { 
+        return { ...state,
             tests: state.tests.map((item) => {
                 if(item._id === action.id) {
                     return {...item, ...action.updates};
@@ -56,7 +56,20 @@ const testReducer = (state = testReducerDefaultState, action) => {
     case 'ADD_CUSTOM_NOTE_FAILURE':
         return {...state, loading: false, error: action.error};
     case 'ADD_CUSTOM_NOTE_SUCCESS':
-        return {...state, loading: false, error: null};
+        return {
+            ...state,
+            tests: state.tests.map((item) => {
+                //console.log('item testu z pole je: ', item);
+                
+                if(item._id === action._id) {
+                    // console.log('problehlo add custom note v reduceru');
+                    
+                    return {...item, customNotes: action.customNotes};
+
+                } else {
+                    return item;
+                }}),
+            loading: false, error: null};
 
 
     case 'CATEGORY_FILTER':

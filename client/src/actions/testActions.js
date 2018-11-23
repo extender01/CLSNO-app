@@ -119,14 +119,15 @@ export const startLoadTests = () => {
 };
 
 
-//===============ADD / EDIT CUSTOM NOTE =============================================
+//===============  ADD / EDIT CUSTOM NOTE =============================================
 
 const addCustomNoteBegin = () => ({type: 'ADD_CUSTOM_NOTE_BEGIN'});
 const addCustomNoteFailure = (error) => ({type: 'ADD_CUSTOM_NOTE_FAILURE', error});
-const addCustomNoteSuccess = (customNote) => {
+const addCustomNoteSuccess = (_id, customNotes) => {
     return {
         type: 'ADD_CUSTOM_NOTE_SUCCESS',
-        customNote
+        _id,
+        customNotes
     };
 };
 
@@ -135,15 +136,13 @@ export const startAddCustomNote = (passedNote, passedId) => {
        
         dispatch(addCustomNoteBegin());
         axios.post('/api/customNote/' + passedId, passedNote).then((result) => {
-           console.log(result);
-            
-        }).then((result) => {
-            dispatch(addCustomNoteSuccess(result.data));
+            console.log('result axiosu je:', result);
+            dispatch(addCustomNoteSuccess(result.data._id, result.data.customNotes));
         });
     };
 };
 
-
+//NEAKTUALIZUJE CUTSTOM NOTE PO DISPATCH ADDCUSTOMNOTESUCCES, SPRAVIT
 
 
            

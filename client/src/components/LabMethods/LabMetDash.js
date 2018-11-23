@@ -19,7 +19,7 @@ export default class LabMetDash extends React.Component {
             <div>
                 <LabMetSearch />
                 <LabMetCategory />
-                <LabMetAlphabet />
+                {/*<LabMetAlphabet /> */}
                 <LabMetList />
             </div>
         );

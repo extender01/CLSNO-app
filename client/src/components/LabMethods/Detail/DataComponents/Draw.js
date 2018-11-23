@@ -1,5 +1,6 @@
 import React from "react";
 
+
 export default class Draw extends React.Component {
 
     constructor(props) {
@@ -23,15 +24,28 @@ export default class Draw extends React.Component {
 
     coZaOdber = () => {
         if(!!this.props.draw) {
-            let drawToArray = this.props.draw.split(", ");
+            let drawTypesToArray = this.props.draw.split(", ");
             return (
-                drawToArray.map((item, index) => {
-                    return ( 
-                        <div key={index} className="flexi--column" >
-                            <div className={`detail__img-${item}`}></div>
-                            <p>{this.drawTypes[item] ? this.drawTypes[item] : drawToArray[index]}</p>
-                        </div>
-                    );
+                drawTypesToArray.map((item, index) => {
+                    if(item.startsWith('custom:')) {
+                        const customDraw = 'je tam vlastni odber'
+                        return (
+                            <p key={index}>{item.substring(7)}</p>
+                        )
+                    } else {
+                        return ( 
+                            <div key={index} className="pokusnik" >
+                                
+                                {this.drawTypes[item] &&
+                                    <React.Fragment>
+                                    <img src={`/images/${item}.png`} height='60px' />
+                                    <p>{this.drawTypes[item]}</p>
+                                    </React.Fragment>
+                                }
+                                
+                            </div>
+                        );
+                    }
                 })
             );
         } else {
@@ -46,8 +60,8 @@ export default class Draw extends React.Component {
         return (
             <div className={`box ${this.props.classNames}`}>
                 <h4>ODBĚR</h4>
-                <div className="flexi--align-low">
-                    {this.coZaOdber(this.props.draw)}
+                <div className='f'>
+                    {this.coZaOdber()}
                     
                 </div>
             </div>

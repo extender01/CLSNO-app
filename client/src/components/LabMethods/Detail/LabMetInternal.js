@@ -22,13 +22,13 @@ export default class LabMetInternal extends React.Component {
                 {!!lm && 
                     <React.Fragment>
                       
-                        <div className='f'>
+                        <div className='f_stretch'>
                             
                             <Generic label='JEDNOTKY' value={lm.unit} classNames='g1 colorUnit' />
-                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} classNames='g3 colorUnit' />
+                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} classNames='g3 colorRefRange' />
                         </div>
 
-                        <div className='f'>
+                        <div className='f_stretch'>
                             <Generic label='RUTINA' value={lm.rutTime} classNames='g1 colorRunTime'/>
                             <Generic label='POHOTOVOST' value={lm.erTime} classNames='g1 colorRunTime' />
                             <Generic label='STATIM' value={lm.statTime} classNames='g1 colorRunTime' />
@@ -37,12 +37,12 @@ export default class LabMetInternal extends React.Component {
 
                         </div>
 
-                        <div className='f'>
+                        <div className='f_stretch'>
                             <Generic label='SNIŽUJÍCÍ INTERFERENCE' value={lm.interfereDown} classNames='g1 colorInterference' />
                             <Generic label='ZVYŠUJÍCÍ INTERFERENCE' value={lm.interfereUp} classNames='g1 colorInterference' />
                         </div>
 
-                        <div className='f'>
+                        <div className='f_stretch'>
                             <Generic label='FYZIOLOGICKÁ VARIABILITA' value={lm.physVar} classNames='g1 colorInterference' />
                             <Generic label='BIOLOGICKÝ POLOČAS' value={lm.bioHalfLife} classNames='g1 colorInterference' />
                         </div>

@@ -31,14 +31,37 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    align-items: center;
+}
+
+.f_center {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.f_between {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.f_stretch {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
     align-items: stretch;
 }
 
-.fcent {
+.f_start {
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+
 }
 
 .pad {

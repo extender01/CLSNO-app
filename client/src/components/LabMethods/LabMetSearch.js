@@ -41,7 +41,7 @@ class LabMetSearch extends React.Component {
     render() {
         return (
             <div className='lm__search'>
-                <div className='fcent'> 
+                <div className='f_center'> 
                     <input  
                         className='lm__search_input' 
                         autoFocus 
@@ -63,7 +63,7 @@ class LabMetSearch extends React.Component {
 
 
                 <div className={this.noFilters() ? 'lm__search--invisible ' : 'lm__search_clearFilter'}>
-                   <p className='lm__search_clearFilter' onClick={this.clearFilters}>HLEDEJ VSUDE</p> 
+                   <p className='lm__search_clearFilter' onClick={this.clearFilters}>Jsou aplikovány filtry, klikni a bude hledat všude</p> 
                 </div>
                 
             </div>

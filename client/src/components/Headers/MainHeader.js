@@ -29,24 +29,24 @@ class MainHeader extends React.Component {
         
         return (
             <header className='header'>
-                <div className='content-container f'>
+                <div className='f'>
                    
-                    <nav className='f header__logo'>
+                    <nav className='f_start header__logo'>
                         <NavLink className='header__title' to='/' exact={true}>
                             <h1>Lab SNO</h1>
                         </NavLink>
                     </nav>
                     
                     <div className ='f header__links'>
-                        <NavLink to='/help'  activeClassName='is-active'>O laboratori</NavLink>
-                        <NavLink to='/methods' activeClassName='is-active'>Metody</NavLink>
+                        <NavLink to='/help' className='g1'>O laboratori</NavLink>
+                        <NavLink to='/methods' className='g1'>Metody</NavLink>
                         {this.props.isLogged ? (
-                            <div>
-                                <p>{this.props.nick}</p>
-                                <NavLink to='/login' activeClassName='is-active'>Logout</NavLink>
+                            <div className='f g1'>
+                                <p >{this.props.nick}</p>
+                                <NavLink to='/login'>Logout</NavLink>
                             </div>
                         ) : (
-                            <NavLink to='/login' activeClassName='is-active'>Login</NavLink>
+                            <NavLink to='/login'>Login</NavLink>
                         )}
                     </div>
 

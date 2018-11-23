@@ -11,6 +11,7 @@ export default class LabMetForm extends React.Component {
         
         this.state = this.props.labMetToEdit || labMethodDefaultState;
         this.state.refRangePrepare = {sex: '', age: '', range: ''};
+        this.state.error = '';
     };
 
 
@@ -31,8 +32,13 @@ export default class LabMetForm extends React.Component {
    
     onSubmit = (e) => {
         e.preventDefault();
-       // fires action dispatch
-        this.props.formSubmit(this.state);
+        if (!this.state.name || !this.state.where) {
+            this.setState(() => ({error: 'Vyplň povinné položky Název a kde se to dělá'}))
+        } else {
+            this.setState(() => ({error: ''}));
+            // fires action dispatch
+            this.props.formSubmit(this.state);
+       }
     };
 
     onChangeRef = (e) => {
@@ -65,7 +71,7 @@ export default class LabMetForm extends React.Component {
         this.setState((prevState) => {
             return {
                 refRange:  prevState.refRange.filter((item, index) => {
-                    console.log(refRangeOrderNumber === index);
+                    // console.log(refRangeOrderNumber === index);
                     
                     return refRangeOrderNumber !== index
                     
@@ -79,10 +85,11 @@ export default class LabMetForm extends React.Component {
     
 
     render() {
-        console.log('renderLabMetForm ', this.state, this.props);
+        // console.log('renderLabMetForm ', this.state, this.props);
         
         return (
             <div>
+                {this.state.error && <h2>{this.state.error}</h2>}
                 <div className='flex-container'>
                 <button name='internal' onClick={this.intExtToggle}>Interni</button>
                 <button name='external' onClick={this.intExtToggle}>Externi</button>

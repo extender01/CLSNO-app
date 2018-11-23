@@ -37,7 +37,12 @@ module.exports = (env) => {
           }
           ]
         })
-      }]
+      },
+      { 
+        test: /\.(png|jpg)$/, 
+        loader: 'url-loader?limit=8192'
+      }
+    ]
     },
     plugins: [CSSExtract],
     devtool: isProduction ? 'source-map' : 'inline-source-map',

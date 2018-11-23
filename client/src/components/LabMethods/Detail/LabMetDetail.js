@@ -24,7 +24,7 @@ class LabMetDetail extends React.Component {
         console.log(this.props.location.state);
         
         return (
-            <div>
+            <div className='ld'>
                 {!!lm && 
                     <React.Fragment>
                         
