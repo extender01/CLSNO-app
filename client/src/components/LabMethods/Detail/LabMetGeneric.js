@@ -32,7 +32,7 @@ export default class LabMetGeneric extends React.Component {
                             <Generic label='SKUPINY V AKORDU' value={lm.groupAk} classNames='g1 colorGroupAk' />
                         </div>
 
-                        {lm.isExt === 'external' &&
+                        {lm.category === 'external' &&
                         <div className='f_stretch'>
                             <Where where={lm.where} classNames='g1 colorWhere'/>
                             <WhenTransport where={lm.where} classNames='g2 colorWhenTransport' />  

@@ -13,7 +13,7 @@ let TestSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    isExt: {
+    category: {
         type: String,
         required: false
     },

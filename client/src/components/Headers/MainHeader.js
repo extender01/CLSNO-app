@@ -38,15 +38,16 @@ class MainHeader extends React.Component {
                     </nav>
                     
                     <div className ='f header__links'>
-                        <NavLink to='/help' className='g1'>O laboratori</NavLink>
+                        <NavLink to='/help' className='g1'>O laboratoři</NavLink>
                         <NavLink to='/methods' className='g1'>Metody</NavLink>
                         {this.props.isLogged ? (
                             <div className='f g1'>
+                                <img src={'/images/man-user.png'} height='30px' />
                                 <p >{this.props.nick}</p>
-                                <NavLink to='/login'>Logout</NavLink>
+                                <NavLink to='/login'>Odhlásit se</NavLink>
                             </div>
                         ) : (
-                            <NavLink to='/login'>Login</NavLink>
+                            <NavLink to='/login'>Přihlásit se</NavLink>
                         )}
                     </div>
 

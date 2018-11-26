@@ -7,7 +7,7 @@ const LabMetItem = (props) => (
        
 
         <div className=''>
-            {props.isExt === 'external' ? (   
+            {props.category === 'external' ? (   
                 <Link to={{
                     pathname: '/methods/detail/' + props._id,
                     state: 'external' 

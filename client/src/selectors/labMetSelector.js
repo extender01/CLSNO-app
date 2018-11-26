@@ -9,7 +9,7 @@ const labMetSelector = (labMet, filter) => {
         const byAlphabet = item.name.charAt(0) === filter.alphabet || (!isNaN(item.name.charAt(0)) && filter.alphabet === '0-9') || filter.alphabet === '';
 
         //boolean if test is in selected category or if no category is selected
-        const byCategory = item.isExt === filter.category || filter.category === 'all';
+        const byCategory = item.category === filter.category || filter.category === 'all';
 
         //if name or synonyme contains string from input (byTextSyn is fuction beacuse we must check if syn exists)
         const byTextName = item.name.toLowerCase().includes(filter.text.toLowerCase());

@@ -10,6 +10,7 @@ exports[`should render LabMetList with lab methods 1`] = `
     additionalOrder="24h"
     bioHalfLife="12h"
     categories=""
+    category="internal"
     customNotes={
       Array [
         Object {
@@ -28,7 +29,6 @@ exports[`should render LabMetList with lab methods 1`] = `
     groupAk="CL zaklad bio"
     interfereDown="koureni"
     interfereUp="huleni"
-    isExt="internal"
     key="5be55cf769cf385290c66948"
     metodics="UV-VIS"
     name="ALP"
@@ -74,6 +74,7 @@ exports[`should render LabMetList with lab methods 1`] = `
     additionalOrder=""
     bioHalfLife=""
     categories=""
+    category="external"
     customNotes={Array []}
     draw="sg"
     erCare={false}
@@ -84,7 +85,6 @@ exports[`should render LabMetList with lab methods 1`] = `
     groupAk="EXT_VSE"
     interfereDown=""
     interfereUp=""
-    isExt="external"
     key="5bea74c7c75591445c168693"
     metodics="CLIA"
     name="CYFRA"
@@ -112,6 +112,7 @@ exports[`should render LabMetList with lab methods 1`] = `
     additionalOrder="24h"
     bioHalfLife="2h"
     categories=""
+    category="internal"
     customNotes={
       Array [
         Object {
@@ -130,7 +131,6 @@ exports[`should render LabMetList with lab methods 1`] = `
     groupAk="CL zaklad"
     interfereDown="kren"
     interfereUp="horcice"
-    isExt="internal"
     key="5bec433f51eacf1980555d86"
     metodics="CLIA"
     name="BNP"

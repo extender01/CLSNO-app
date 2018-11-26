@@ -4,9 +4,9 @@ import {categoryFilter} from '../../actions/filterActions';
 
 const LabMetCategory = (props) => (
     <div className='fc lm__cat'>
-        <button className={props.active === 'all' ? 'lm__cat-active': undefined} name='all' onClick={(e) => {props.categoryFilter(e.target.name)}} >VSE</button>
-        <button className={props.active === 'internal' ? 'lm__cat-active' : undefined} name='internal' onClick={(e) => {props.categoryFilter(e.target.name)}} >INTERNI</button>
-        <button className={props.active === 'external' ? 'lm__cat-active' : undefined} name='external' onClick={(e) => {props.categoryFilter(e.target.name)}} >EXTERNI</button>
+        <button className={props.active === 'all' ? 'lm__cat-active': undefined} name='all' onClick={(e) => {props.categoryFilter(e.target.name)}} >VŠE</button>
+        <button className={props.active === 'internal' ? 'lm__cat-active' : undefined} name='internal' onClick={(e) => {props.categoryFilter(e.target.name)}} >INTERNÍ</button>
+        <button className={props.active === 'external' ? 'lm__cat-active' : undefined} name='external' onClick={(e) => {props.categoryFilter(e.target.name)}} >EXTERNÍ</button>
     </div>
 );
 

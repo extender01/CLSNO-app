@@ -26,7 +26,7 @@ export default class LabMetForm extends React.Component {
     intExtToggle = (e) => {
         const buttonName = e.target.name;
         this.setState(() => {
-            return {isExt: buttonName}
+            return {category: buttonName}
         });
     };
    
@@ -95,77 +95,134 @@ export default class LabMetForm extends React.Component {
                 <button name='external' onClick={this.intExtToggle}>Externi</button>
                 </div>
                 <p>This is from test form</p>
-                <form className="fcrw" onSubmit={this.onSubmit}>
-                    <label>Nazev testu</label>
-                    <input type='text' name='name' value={this.state.name} onChange={this.onChange} />
-                    <label>Synonyma</label>
-                    <input type='text' name='syn' value={this.state.syn} onChange={this.onChange} />
+                <form onSubmit={this.onSubmit}>
+                    <ul className='labmetform'>
+                        <li className='f_between labmetform__li'>
+                            <label>Nazev testu</label>
+                            <input type='text' name='name' value={this.state.name} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Synonyma</label>
+                            <input type='text' name='syn' value={this.state.syn} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Kde se dela</label>
+                            <input list='where' name='where' value={this.state.where} onChange={this.onChange} />
+                            <datalist id='where'>
+                                <option value='SNO' />
+                                <option value='Krnov'/>
+                            </datalist>
+                        </li>
+                        <li className='f_between labmetform__li'> 
+                            <label>Nazev v Akordu</label>
+                            <input type='text' name='nameAk' value={this.state.nameAk} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Skupiny v akordu</label>
+                            <input type='text' name='groupAk' value={this.state.groupAk} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Odber</label>
+                            <input type='text' name='draw' value={this.state.draw} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Preanalytika</label>
+                            <input type='text' name='preanal' value={this.state.preanal} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Poznamka</label>
+                            <input type='text' name='note' value={this.state.note} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Metodika</label>
+                            <input type='text' name='metodics' value={this.state.metodics} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Jednotka</label>
+                            <input type='text' name='unit' value={this.state.unit} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Odbornost</label>
+                            <input type='text' name='expertise' value={this.state.expertise} onChange={this.onChange} />
+                        </li>
+                    </ul>
                     
-                    <label>Kde se dela</label>
-                    <input list='where' name='where' value={this.state.where} onChange={this.onChange} />
-                    <datalist id='where'>
-                        <option value='SNO' />
-                        <option value='Krnov'/>
-                    </datalist>
-                    <label>Nazev v Akordu</label>
-                    <input type='text' name='nameAk' value={this.state.nameAk} onChange={this.onChange} />
-                    <label>Skupiny v akordu</label>
-                    <input type='text' name='groupAk' value={this.state.groupAk} onChange={this.onChange} />
-                    <label>Odber</label>
-                    <input type='text' name='draw' value={this.state.draw} onChange={this.onChange} />
-                    <label>Preanalytika</label>
-                    <input type='text' name='preanal' value={this.state.preanal} onChange={this.onChange} />
-                    <label>Poznamka</label>
-                    <input type='text' name='note' value={this.state.note} onChange={this.onChange} />
-                    <label>Metodika</label>
-                    <input type='text' name='metodics' value={this.state.metodics} onChange={this.onChange} />
-                    <label>Jednotka</label>
-                    <input type='text' name='unit' value={this.state.unit} onChange={this.onChange} />
-                    <label>Odbornost</label>
-                    <input type='text' name='expertise' value={this.state.expertise} onChange={this.onChange} />
-                   
+                    {this.state.category === 'external' && <ul className='labmetform'>  
+                        <li className='f_between labmetform__li'>
+                            <label>Kdy odjizdi externi</label>
+                            <input type='text' name='whenExtTransport' value={this.state.whenExtTransport} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Jak casto externi</label>
+                            <input type='text' name='extHowOften' value={this.state.extHowOften} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Odezva externi</label>
+                            <input type='text' name='extResponse' value={this.state.extResponse} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Odezva externi</label>
+                            <input type='text' name='extResponse' value={this.state.extResponse} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Kdo posila z lab</label>
+                            <input type='text' name='parcelWho' value={this.state.parcelWho} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Lab preanalytika</label>
+                            <input type='text' name='parcelPreanal' value={this.state.parcelPreanal} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Lab poznamka</label>
+                            <input type='text' name='parcelNote' value={this.state.parcelNote} onChange={this.onChange} />
+                        </li>
+                    </ul> }
 
-                    {this.state.isExt === 'external' && <div>     
-                        <label>Kdy odjizdi externi</label>
-                        <input type='text' name='whenExtTransport' value={this.state.whenExtTransport} onChange={this.onChange} />
-                        <label>Jak casto externi</label>
-                        <input type='text' name='extHowOften' value={this.state.extHowOften} onChange={this.onChange} />
-                        <label>Odezva externi</label>
-                        <input type='text' name='extResponse' value={this.state.extResponse} onChange={this.onChange} />
-                        <label>Kdo posila z lab</label>
-                        <input type='text' name='parcelWho' value={this.state.parcelWho} onChange={this.onChange} />
-                        <label>Lab preanalytika</label>
-                        <input type='text' name='parcelPreanal' value={this.state.parcelPreanal} onChange={this.onChange} />
-                        <label>Lab poznamka</label>
-                        <input type='text' name='parcelNote' value={this.state.parcelNote} onChange={this.onChange} />
-                    </div> }
-
-                    {this.state.isExt === 'internal' && <div>
+                    {this.state.category === 'internal' && <ul className='labmetform'>
                         
-
-                        <label>Cas rutina</label>
-                        <input type='text' name='rutTime' value={this.state.rutTime} onChange={this.onChange} />
-                        <label>Statim</label>
-                        <input type='checkbox' name='statCare' value={this.state.statCare} onChange={this.onChange} />
-                        <label>Pohotovost</label>
-                        <input type='checkbox' name='erCare' value={this.state.erCare} onChange={this.onChange} />
-                        <label>Dohlaska</label>
-                        <input type='text' name='additionalOrder' value={this.state.additionalOrder} onChange={this.onChange} />
-                        <label>Poznamka k dostupnosti</label>
-                        <input type='text' name='responseNote' value={this.state.responseNote} onChange={this.onChange} />
-                        <label>Snizujici interference</label>
-                        <input type='text' name='interfereDown' value={this.state.interfereDown} onChange={this.onChange} />
-                        <label>Zvysujici interference</label>
-                        <input type='text' name='interfereUp' value={this.state.interfereUp} onChange={this.onChange} />
-                        <label>Fyziologicka variabilita</label>
-                        <input type='text' name='physVar' value={this.state.physVar} onChange={this.onChange} />
-                        <label>Biologicky polocas</label>
-                        <input type='text' name='bioHalfLife' value={this.state.bioHalfLife} onChange={this.onChange} />
-                    </div> }
+                        <li className='f_between labmetform__li'>
+                            <label>Cas rutina</label>
+                            <input type='text' name='rutTime' value={this.state.rutTime} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Statim</label>
+                            <input type='checkbox' name='statCare' value={this.state.statCare} onChange={this.onChange} />
+                            <label>Pohotovost</label>
+                            <input type='checkbox' name='erCare' value={this.state.erCare} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Dohlaska</label>
+                            <input type='text' name='additionalOrder' value={this.state.additionalOrder} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Poznamka k dostupnosti</label>
+                            <input type='text' name='responseNote' value={this.state.responseNote} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Snizujici interference</label>
+                            <input type='text' name='interfereDown' value={this.state.interfereDown} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Zvysujici interference</label>
+                            <input type='text' name='interfereUp' value={this.state.interfereUp} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Fyziologicka variabilita</label>
+                            <input type='text' name='physVar' value={this.state.physVar} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Biologicky polocas</label>
+                            <input type='text' name='bioHalfLife' value={this.state.bioHalfLife} onChange={this.onChange} />
+                        </li>
+                                            
+                    </ul> }
                     <button>Submitvoe</button>
                 </form>
 
-                {this.state.isExt === 'internal' && <div>
+                {this.state.category === 'internal' && <div>
                     <form onSubmit={this.addRefRange}>
                         <label>Referencni meze</label>
                         <input type='text' name='sex' value={this.state.refRangePrepare.sex} onChange={this.onChangeRef} />

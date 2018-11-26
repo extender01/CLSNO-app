@@ -19,15 +19,8 @@ class AdminHeader extends React.Component {
         return (
             
             <div className='f'>
-                <p>{this.props.nick}</p>
-
-                <NavLink to='/create' activeClassName='is-active'>Create</NavLink>
-                <NavLink to='/edit' activeClassName='is-active'>Edit</NavLink>
-                <NavLink to='/login' activeClassName='is-active'>Login</NavLink>
-                <NavLink to='/logout' activeClassName='is-active'>Logout</NavLink>
-                <NavLink to='/signup' activeClassName='is-active'>Signup</NavLink>
-                <NavLink to='/edit/5be15718748b9506f0566ab0' activeClassName='is-active'>editvoe</NavLink>
-                
+                <NavLink to='/create' activeClassName='is-active'>Vytvořit metodu</NavLink>
+                <NavLink to='/signup' activeClassName='is-active'>Vytvořit uživatele</NavLink>
             </div>
                
         );

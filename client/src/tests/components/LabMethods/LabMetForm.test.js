@@ -66,6 +66,8 @@ const inputCheck = (inputNumber, inputName) => {
                 value: newValue
             }
         });
+        
+        
         expect(wrapper.state(inputName)).toBe(newValue);
         
     });
@@ -74,10 +76,3 @@ const inputCheck = (inputNumber, inputName) => {
 
 inputCheck(0, 'name');
 
-// test('should check all inputs', () => {
-//     inputCheck(0, 'name');
-//     inputCheck(0, 'name');
-//     inputCheck(0, 'name');
-
-
-// });
