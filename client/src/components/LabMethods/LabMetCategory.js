@@ -27,11 +27,11 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-const fce = (arg) => {
-    if (arg === 'all') {
-        return arg;
-    }
-};
+// const fce = (arg) => {
+//     if (arg === 'all') {
+//         return arg;
+//     }
+// };
 
 
 

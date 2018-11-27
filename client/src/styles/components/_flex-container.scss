@@ -61,7 +61,13 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+}
 
+.f_column {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .pad {

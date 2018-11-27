@@ -23,7 +23,7 @@ export default class LabMetExternal extends React.Component {
                 {!!lm && 
                     <React.Fragment>
                         
-                        {this.props.rights === 'lab' &&
+                        {(this.props.rights === 'lab' || this.props.rights === 'admin') &&
                         <div className='f_stretch'>
                             <Generic label='KDO POSILA' value={lm.parcelWho} classNames='g1 colorParcelInfo' />
                             <Generic label='LAB PREANAL' value={lm.parcelPreanal} classNames='g1 colorParcelInfo'/>

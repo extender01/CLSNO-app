@@ -2,253 +2,385 @@
 
 exports[`should render LabMetForm for adding method with empty inputs 1`] = `
 <div>
-  <div
-    className="flex-container"
-  >
-    <button
-      name="internal"
-      onClick={[Function]}
-    >
-      Interni
-    </button>
-    <button
-      name="external"
-      onClick={[Function]}
-    >
-      Externi
-    </button>
-  </div>
-  <p>
-    This is from test form
-  </p>
   <form
-    className="fcrw"
+    className="labmetform"
     onSubmit={[Function]}
   >
-    <label>
-      Nazev testu
-    </label>
-    <input
-      name="name"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Synonyma
-    </label>
-    <input
-      name="syn"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Kde se dela
-    </label>
-    <input
-      list="where"
-      name="where"
-      onChange={[Function]}
-      value=""
-    />
-    <datalist
-      id="where"
-    >
-      <option
-        value="SNO"
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název testu
+        </label>
+        <input
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Synonyma
+        </label>
+        <input
+          name="syn"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Kde se dělá
+        </label>
+        <input
+          list="where"
+          name="where"
+          onChange={[Function]}
+          value=""
+        />
+        <datalist
+          id="where"
+        >
+          <option
+            value="SNO"
+          />
+          <option
+            value="Krnov"
+          />
+        </datalist>
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název v Akordu
+        </label>
+        <input
+          name="nameAk"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Skupiny v akordu
+        </label>
+        <input
+          name="groupAk"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odběr
+        </label>
+        <input
+          name="draw"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Preanalytika
+        </label>
+        <input
+          name="preanal"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka
+        </label>
+        <input
+          name="note"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Metodika
+        </label>
+        <input
+          name="metodics"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Jednotka
+        </label>
+        <input
+          name="unit"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odbornost
+        </label>
+        <input
+          name="expertise"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Čas rutina
+        </label>
+        <input
+          name="rutTime"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Statim
+        </label>
+        <input
+          name="statCare"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+        <label>
+          Pohotovost
+        </label>
+        <input
+          name="erCare"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
       />
-      <option
-        value="Krnov"
-      />
-    </datalist>
-    <label>
-      Nazev v Akordu
-    </label>
-    <input
-      name="nameAk"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Skupiny v akordu
-    </label>
-    <input
-      name="groupAk"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Odber
-    </label>
-    <input
-      name="draw"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Preanalytika
-    </label>
-    <input
-      name="preanal"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Poznamka
-    </label>
-    <input
-      name="note"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Metodika
-    </label>
-    <input
-      name="metodics"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Jednotka
-    </label>
-    <input
-      name="unit"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Odbornost
-    </label>
-    <input
-      name="expertise"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <div>
-      <label>
-        Cas rutina
-      </label>
-      <input
-        name="rutTime"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Statim
-      </label>
-      <input
-        name="statCare"
-        onChange={[Function]}
-        type="checkbox"
-        value={false}
-      />
-      <label>
-        Pohotovost
-      </label>
-      <input
-        name="erCare"
-        onChange={[Function]}
-        type="checkbox"
-        value={false}
-      />
-      <label>
-        Dohlaska
-      </label>
-      <input
-        name="additionalOrder"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Poznamka k dostupnosti
-      </label>
-      <input
-        name="responseNote"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Snizujici interference
-      </label>
-      <input
-        name="interfereDown"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Zvysujici interference
-      </label>
-      <input
-        name="interfereUp"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Fyziologicka variabilita
-      </label>
-      <input
-        name="physVar"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Biologicky polocas
-      </label>
-      <input
-        name="bioHalfLife"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-    </div>
-    <button>
-      Submitvoe
-    </button>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Dohláška
+        </label>
+        <input
+          name="additionalOrder"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka k dostupnosti
+        </label>
+        <input
+          name="responseNote"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Snižující interference
+        </label>
+        <input
+          name="interfereDown"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Zvyšující interference
+        </label>
+        <input
+          name="interfereUp"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Fyziologická variabilita
+        </label>
+        <input
+          name="physVar"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Biologický poločas
+        </label>
+        <input
+          name="bioHalfLife"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_center labmetform__li"
+      >
+        <button>
+          Uložit
+        </button>
+      </li>
+    </ul>
   </form>
-  <div>
+  <div
+    className="f_stretch"
+  >
     <form
+      className="labmetform__ref-form g1"
       onSubmit={[Function]}
     >
-      <label>
-        Referencni meze
-      </label>
-      <input
-        name="sex"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <input
-        name="age"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <input
-        name="range"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <button>
-        Pridat ref mez
-      </button>
+      <ul>
+        <li
+          className="f_center labmetform__li"
+        >
+          <label>
+            Referenční meze:
+          </label>
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Pohlaví:
+          </label>
+          <select
+            name="sex"
+            onChange={[Function]}
+            value="U"
+          >
+            <option
+              value="U"
+            >
+              Uni
+            </option>
+            <option
+              value="M"
+            >
+              Muž
+            </option>
+            <option
+              value="F"
+            >
+              Žena
+            </option>
+          </select>
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Věk:
+          </label>
+          <input
+            name="age"
+            onChange={[Function]}
+            placeholder="Např. 0 - 15 let"
+            type="text"
+            value=""
+          />
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Ref. mez:
+          </label>
+          <input
+            name="range"
+            onChange={[Function]}
+            placeholder="Např. 0,25 - 0,60"
+            type="text"
+            value=""
+          />
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Poznámka k rozmezí:
+          </label>
+          <input
+            name="refNote"
+            onChange={[Function]}
+            placeholder="Poznámka k mezi"
+            type="text"
+          />
+        </li>
+        <li
+          className="f_center labmetform__li"
+        >
+          <button>
+            Přidej ref. meze
+          </button>
+        </li>
+      </ul>
     </form>
   </div>
 </div>
@@ -256,450 +388,655 @@ exports[`should render LabMetForm for adding method with empty inputs 1`] = `
 
 exports[`should render LabMetForm for editing method with filled inputs 1`] = `
 <div>
-  <div
-    className="flex-container"
-  >
-    <button
-      name="internal"
-      onClick={[Function]}
-    >
-      Interni
-    </button>
-    <button
-      name="external"
-      onClick={[Function]}
-    >
-      Externi
-    </button>
-  </div>
-  <p>
-    This is from test form
-  </p>
   <form
-    className="fcrw"
+    className="labmetform"
     onSubmit={[Function]}
   >
-    <label>
-      Nazev testu
-    </label>
-    <input
-      name="name"
-      onChange={[Function]}
-      type="text"
-      value="CYFRA"
-    />
-    <label>
-      Synonyma
-    </label>
-    <input
-      name="syn"
-      onChange={[Function]}
-      type="text"
-      value="cyp je to"
-    />
-    <label>
-      Kde se dela
-    </label>
-    <input
-      list="where"
-      name="where"
-      onChange={[Function]}
-      value="Krnov"
-    />
-    <datalist
-      id="where"
-    >
-      <option
-        value="SNO"
-      />
-      <option
-        value="Krnov"
-      />
-    </datalist>
-    <label>
-      Nazev v Akordu
-    </label>
-    <input
-      name="nameAk"
-      onChange={[Function]}
-      type="text"
-      value="S_EXT_CYFRA"
-    />
-    <label>
-      Skupiny v akordu
-    </label>
-    <input
-      name="groupAk"
-      onChange={[Function]}
-      type="text"
-      value="EXT_VSE"
-    />
-    <label>
-      Odber
-    </label>
-    <input
-      name="draw"
-      onChange={[Function]}
-      type="text"
-      value="sg"
-    />
-    <label>
-      Preanalytika
-    </label>
-    <input
-      name="preanal"
-      onChange={[Function]}
-      type="text"
-      value="standard"
-    />
-    <label>
-      Poznamka
-    </label>
-    <input
-      name="note"
-      onChange={[Function]}
-      type="text"
-      value="baf"
-    />
-    <label>
-      Metodika
-    </label>
-    <input
-      name="metodics"
-      onChange={[Function]}
-      type="text"
-      value="CLIA"
-    />
-    <label>
-      Jednotka
-    </label>
-    <input
-      name="unit"
-      onChange={[Function]}
-      type="text"
-      value="UI/ml"
-    />
-    <label>
-      Odbornost
-    </label>
-    <input
-      name="expertise"
-      onChange={[Function]}
-      type="text"
-      value="801"
-    />
-    <div>
-      <label>
-        Kdy odjizdi externi
-      </label>
-      <input
-        name="whenExtTransport"
-        onChange={[Function]}
-        type="text"
-        value="po-pa"
-      />
-      <label>
-        Jak casto externi
-      </label>
-      <input
-        name="extHowOften"
-        onChange={[Function]}
-        type="text"
-        value="denne"
-      />
-      <label>
-        Odezva externi
-      </label>
-      <input
-        name="extResponse"
-        onChange={[Function]}
-        type="text"
-        value="3 dny"
-      />
-      <label>
-        Kdo posila z lab
-      </label>
-      <input
-        name="parcelWho"
-        onChange={[Function]}
-        type="text"
-        value="RIA"
-      />
-      <label>
-        Lab preanalytika
-      </label>
-      <input
-        name="parcelPreanal"
-        onChange={[Function]}
-        type="text"
-        value="stocit stahnout"
-      />
-      <label>
-        Lab poznamka
-      </label>
-      <input
-        name="parcelNote"
-        onChange={[Function]}
-        type="text"
-        value="nesrat se s tim"
-      />
-    </div>
-    <button>
-      Submitvoe
-    </button>
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název testu
+        </label>
+        <input
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value="CYFRA"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Synonyma
+        </label>
+        <input
+          name="syn"
+          onChange={[Function]}
+          type="text"
+          value="cyp je to"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Kde se dělá
+        </label>
+        <input
+          list="where"
+          name="where"
+          onChange={[Function]}
+          value="Krnov"
+        />
+        <datalist
+          id="where"
+        >
+          <option
+            value="SNO"
+          />
+          <option
+            value="Krnov"
+          />
+        </datalist>
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název v Akordu
+        </label>
+        <input
+          name="nameAk"
+          onChange={[Function]}
+          type="text"
+          value="S_EXT_CYFRA"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Skupiny v akordu
+        </label>
+        <input
+          name="groupAk"
+          onChange={[Function]}
+          type="text"
+          value="EXT_VSE"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odběr
+        </label>
+        <input
+          name="draw"
+          onChange={[Function]}
+          type="text"
+          value="sg"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Preanalytika
+        </label>
+        <input
+          name="preanal"
+          onChange={[Function]}
+          type="text"
+          value="standard"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka
+        </label>
+        <input
+          name="note"
+          onChange={[Function]}
+          type="text"
+          value="baf"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Metodika
+        </label>
+        <input
+          name="metodics"
+          onChange={[Function]}
+          type="text"
+          value="CLIA"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Jednotka
+        </label>
+        <input
+          name="unit"
+          onChange={[Function]}
+          type="text"
+          value="UI/ml"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odbornost
+        </label>
+        <input
+          name="expertise"
+          onChange={[Function]}
+          type="text"
+          value="801"
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Kdy odjíždí externí
+        </label>
+        <input
+          name="whenExtTransport"
+          onChange={[Function]}
+          type="text"
+          value="po-pa"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Jak často externí
+        </label>
+        <input
+          name="extHowOften"
+          onChange={[Function]}
+          type="text"
+          value="denne"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odezva externí
+        </label>
+        <input
+          name="extResponse"
+          onChange={[Function]}
+          type="text"
+          value="3 dny"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odezva externí
+        </label>
+        <input
+          name="extResponse"
+          onChange={[Function]}
+          type="text"
+          value="3 dny"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Kdo posílá z lab
+        </label>
+        <input
+          name="parcelWho"
+          onChange={[Function]}
+          type="text"
+          value="RIA"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Lab preanalytika
+        </label>
+        <input
+          name="parcelPreanal"
+          onChange={[Function]}
+          type="text"
+          value="stocit stahnout"
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Lab poznámka
+        </label>
+        <input
+          name="parcelNote"
+          onChange={[Function]}
+          type="text"
+          value="nesrat se s tim"
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_center labmetform__li"
+      >
+        <button>
+          Uložit
+        </button>
+      </li>
+    </ul>
   </form>
+  <div
+    className="f_stretch"
+  />
 </div>
 `;
 
 exports[`should render error when name or where is missing on form submission 1`] = `
 <div>
-  <div
-    className="flex-container"
-  >
-    <button
-      name="internal"
-      onClick={[Function]}
-    >
-      Interni
-    </button>
-    <button
-      name="external"
-      onClick={[Function]}
-    >
-      Externi
-    </button>
-  </div>
-  <p>
-    This is from test form
-  </p>
   <form
-    className="fcrw"
+    className="labmetform"
     onSubmit={[Function]}
   >
-    <label>
-      Nazev testu
-    </label>
-    <input
-      name="name"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Synonyma
-    </label>
-    <input
-      name="syn"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Kde se dela
-    </label>
-    <input
-      list="where"
-      name="where"
-      onChange={[Function]}
-      value=""
-    />
-    <datalist
-      id="where"
-    >
-      <option
-        value="SNO"
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název testu
+        </label>
+        <input
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Synonyma
+        </label>
+        <input
+          name="syn"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Kde se dělá
+        </label>
+        <input
+          list="where"
+          name="where"
+          onChange={[Function]}
+          value=""
+        />
+        <datalist
+          id="where"
+        >
+          <option
+            value="SNO"
+          />
+          <option
+            value="Krnov"
+          />
+        </datalist>
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název v Akordu
+        </label>
+        <input
+          name="nameAk"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Skupiny v akordu
+        </label>
+        <input
+          name="groupAk"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odběr
+        </label>
+        <input
+          name="draw"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Preanalytika
+        </label>
+        <input
+          name="preanal"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka
+        </label>
+        <input
+          name="note"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Metodika
+        </label>
+        <input
+          name="metodics"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Jednotka
+        </label>
+        <input
+          name="unit"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odbornost
+        </label>
+        <input
+          name="expertise"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Čas rutina
+        </label>
+        <input
+          name="rutTime"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Statim
+        </label>
+        <input
+          name="statCare"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+        <label>
+          Pohotovost
+        </label>
+        <input
+          name="erCare"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
       />
-      <option
-        value="Krnov"
-      />
-    </datalist>
-    <label>
-      Nazev v Akordu
-    </label>
-    <input
-      name="nameAk"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Skupiny v akordu
-    </label>
-    <input
-      name="groupAk"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Odber
-    </label>
-    <input
-      name="draw"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Preanalytika
-    </label>
-    <input
-      name="preanal"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Poznamka
-    </label>
-    <input
-      name="note"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Metodika
-    </label>
-    <input
-      name="metodics"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Jednotka
-    </label>
-    <input
-      name="unit"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Odbornost
-    </label>
-    <input
-      name="expertise"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <div>
-      <label>
-        Cas rutina
-      </label>
-      <input
-        name="rutTime"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Statim
-      </label>
-      <input
-        name="statCare"
-        onChange={[Function]}
-        type="checkbox"
-        value={false}
-      />
-      <label>
-        Pohotovost
-      </label>
-      <input
-        name="erCare"
-        onChange={[Function]}
-        type="checkbox"
-        value={false}
-      />
-      <label>
-        Dohlaska
-      </label>
-      <input
-        name="additionalOrder"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Poznamka k dostupnosti
-      </label>
-      <input
-        name="responseNote"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Snizujici interference
-      </label>
-      <input
-        name="interfereDown"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Zvysujici interference
-      </label>
-      <input
-        name="interfereUp"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Fyziologicka variabilita
-      </label>
-      <input
-        name="physVar"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Biologicky polocas
-      </label>
-      <input
-        name="bioHalfLife"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-    </div>
-    <button>
-      Submitvoe
-    </button>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Dohláška
+        </label>
+        <input
+          name="additionalOrder"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka k dostupnosti
+        </label>
+        <input
+          name="responseNote"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Snižující interference
+        </label>
+        <input
+          name="interfereDown"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Zvyšující interference
+        </label>
+        <input
+          name="interfereUp"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Fyziologická variabilita
+        </label>
+        <input
+          name="physVar"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Biologický poločas
+        </label>
+        <input
+          name="bioHalfLife"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_center labmetform__li"
+      >
+        <button>
+          Uložit
+        </button>
+      </li>
+    </ul>
   </form>
-  <div>
+  <div
+    className="f_stretch"
+  >
     <form
+      className="labmetform__ref-form g1"
       onSubmit={[Function]}
     >
-      <label>
-        Referencni meze
-      </label>
-      <input
-        name="sex"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <input
-        name="age"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <input
-        name="range"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <button>
-        Pridat ref mez
-      </button>
+      <ul>
+        <li
+          className="f_center labmetform__li"
+        >
+          <label>
+            Referenční meze:
+          </label>
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Pohlaví:
+          </label>
+          <select
+            name="sex"
+            onChange={[Function]}
+            value="U"
+          >
+            <option
+              value="U"
+            >
+              Uni
+            </option>
+            <option
+              value="M"
+            >
+              Muž
+            </option>
+            <option
+              value="F"
+            >
+              Žena
+            </option>
+          </select>
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Věk:
+          </label>
+          <input
+            name="age"
+            onChange={[Function]}
+            placeholder="Např. 0 - 15 let"
+            type="text"
+            value=""
+          />
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Ref. mez:
+          </label>
+          <input
+            name="range"
+            onChange={[Function]}
+            placeholder="Např. 0,25 - 0,60"
+            type="text"
+            value=""
+          />
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Poznámka k rozmezí:
+          </label>
+          <input
+            name="refNote"
+            onChange={[Function]}
+            placeholder="Poznámka k mezi"
+            type="text"
+          />
+        </li>
+        <li
+          className="f_center labmetform__li"
+        >
+          <button>
+            Přidej ref. meze
+          </button>
+        </li>
+      </ul>
     </form>
   </div>
 </div>
@@ -710,253 +1047,385 @@ exports[`should render error when name or where is missing on form submission 2`
   <h2>
     Vyplň povinné položky Název a kde se to dělá
   </h2>
-  <div
-    className="flex-container"
-  >
-    <button
-      name="internal"
-      onClick={[Function]}
-    >
-      Interni
-    </button>
-    <button
-      name="external"
-      onClick={[Function]}
-    >
-      Externi
-    </button>
-  </div>
-  <p>
-    This is from test form
-  </p>
   <form
-    className="fcrw"
+    className="labmetform"
     onSubmit={[Function]}
   >
-    <label>
-      Nazev testu
-    </label>
-    <input
-      name="name"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Synonyma
-    </label>
-    <input
-      name="syn"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Kde se dela
-    </label>
-    <input
-      list="where"
-      name="where"
-      onChange={[Function]}
-      value=""
-    />
-    <datalist
-      id="where"
-    >
-      <option
-        value="SNO"
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název testu
+        </label>
+        <input
+          name="name"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Synonyma
+        </label>
+        <input
+          name="syn"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Kde se dělá
+        </label>
+        <input
+          list="where"
+          name="where"
+          onChange={[Function]}
+          value=""
+        />
+        <datalist
+          id="where"
+        >
+          <option
+            value="SNO"
+          />
+          <option
+            value="Krnov"
+          />
+        </datalist>
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Název v Akordu
+        </label>
+        <input
+          name="nameAk"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Skupiny v akordu
+        </label>
+        <input
+          name="groupAk"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odběr
+        </label>
+        <input
+          name="draw"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Preanalytika
+        </label>
+        <input
+          name="preanal"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka
+        </label>
+        <input
+          name="note"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Metodika
+        </label>
+        <input
+          name="metodics"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Jednotka
+        </label>
+        <input
+          name="unit"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Odbornost
+        </label>
+        <input
+          name="expertise"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Čas rutina
+        </label>
+        <input
+          name="rutTime"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Statim
+        </label>
+        <input
+          name="statCare"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+        <label>
+          Pohotovost
+        </label>
+        <input
+          name="erCare"
+          onChange={[Function]}
+          type="checkbox"
+          value={false}
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
       />
-      <option
-        value="Krnov"
-      />
-    </datalist>
-    <label>
-      Nazev v Akordu
-    </label>
-    <input
-      name="nameAk"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Skupiny v akordu
-    </label>
-    <input
-      name="groupAk"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Odber
-    </label>
-    <input
-      name="draw"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Preanalytika
-    </label>
-    <input
-      name="preanal"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Poznamka
-    </label>
-    <input
-      name="note"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Metodika
-    </label>
-    <input
-      name="metodics"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Jednotka
-    </label>
-    <input
-      name="unit"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <label>
-      Odbornost
-    </label>
-    <input
-      name="expertise"
-      onChange={[Function]}
-      type="text"
-      value=""
-    />
-    <div>
-      <label>
-        Cas rutina
-      </label>
-      <input
-        name="rutTime"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Statim
-      </label>
-      <input
-        name="statCare"
-        onChange={[Function]}
-        type="checkbox"
-        value={false}
-      />
-      <label>
-        Pohotovost
-      </label>
-      <input
-        name="erCare"
-        onChange={[Function]}
-        type="checkbox"
-        value={false}
-      />
-      <label>
-        Dohlaska
-      </label>
-      <input
-        name="additionalOrder"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Poznamka k dostupnosti
-      </label>
-      <input
-        name="responseNote"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Snizujici interference
-      </label>
-      <input
-        name="interfereDown"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Zvysujici interference
-      </label>
-      <input
-        name="interfereUp"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Fyziologicka variabilita
-      </label>
-      <input
-        name="physVar"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <label>
-        Biologicky polocas
-      </label>
-      <input
-        name="bioHalfLife"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-    </div>
-    <button>
-      Submitvoe
-    </button>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Dohláška
+        </label>
+        <input
+          name="additionalOrder"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Poznámka k dostupnosti
+        </label>
+        <input
+          name="responseNote"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Snižující interference
+        </label>
+        <input
+          name="interfereDown"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Zvyšující interference
+        </label>
+        <input
+          name="interfereUp"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Fyziologická variabilita
+        </label>
+        <input
+          name="physVar"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+      <li
+        className="f_between labmetform__li"
+      >
+        <label>
+          Biologický poločas
+        </label>
+        <input
+          name="bioHalfLife"
+          onChange={[Function]}
+          type="text"
+          value=""
+        />
+      </li>
+    </ul>
+    <ul>
+      <li
+        className="f_center labmetform__li"
+      >
+        <button>
+          Uložit
+        </button>
+      </li>
+    </ul>
   </form>
-  <div>
+  <div
+    className="f_stretch"
+  >
     <form
+      className="labmetform__ref-form g1"
       onSubmit={[Function]}
     >
-      <label>
-        Referencni meze
-      </label>
-      <input
-        name="sex"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <input
-        name="age"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <input
-        name="range"
-        onChange={[Function]}
-        type="text"
-        value=""
-      />
-      <button>
-        Pridat ref mez
-      </button>
+      <ul>
+        <li
+          className="f_center labmetform__li"
+        >
+          <label>
+            Referenční meze:
+          </label>
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Pohlaví:
+          </label>
+          <select
+            name="sex"
+            onChange={[Function]}
+            value="U"
+          >
+            <option
+              value="U"
+            >
+              Uni
+            </option>
+            <option
+              value="M"
+            >
+              Muž
+            </option>
+            <option
+              value="F"
+            >
+              Žena
+            </option>
+          </select>
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Věk:
+          </label>
+          <input
+            name="age"
+            onChange={[Function]}
+            placeholder="Např. 0 - 15 let"
+            type="text"
+            value=""
+          />
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Ref. mez:
+          </label>
+          <input
+            name="range"
+            onChange={[Function]}
+            placeholder="Např. 0,25 - 0,60"
+            type="text"
+            value=""
+          />
+        </li>
+        <li
+          className="f_between labmetform__li"
+        >
+          <label>
+            Poznámka k rozmezí:
+          </label>
+          <input
+            name="refNote"
+            onChange={[Function]}
+            placeholder="Poznámka k mezi"
+            type="text"
+          />
+        </li>
+        <li
+          className="f_center labmetform__li"
+        >
+          <button>
+            Přidej ref. meze
+          </button>
+        </li>
+      </ul>
     </form>
   </div>
 </div>

@@ -9,9 +9,10 @@ const RefRange = (props) => (
         {props.refRange.length !== 0 && <table>
             <tbody>
                 <tr>
-                    <th>Pohlavi</th>
-                    <th>Vek</th>
+                    <th>Pohlaví</th>
+                    <th>Věk</th>
                     <th>Meze</th>
+                    <th>Poznámka</th>
                 </tr>
                 
                 {props.refRange.map((item, index) => {
@@ -20,6 +21,7 @@ const RefRange = (props) => (
                             <td>{item.sex}</td>
                             <td>{item.age}</td>
                             <td>{item.range}</td>
+                            <td>{item.refNote}</td>
                         </tr>
                     );
                 })}

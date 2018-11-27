@@ -18,9 +18,9 @@ class AdminHeader extends React.Component {
     render() {
         return (
             
-            <div className='f'>
-                <NavLink to='/create' activeClassName='is-active'>Vytvořit metodu</NavLink>
-                <NavLink to='/signup' activeClassName='is-active'>Vytvořit uživatele</NavLink>
+            <div className='f  admin-header'>
+                <NavLink to='/create'>Vytvořit metodu</NavLink>
+                <NavLink to='/signup'>Vytvořit uživatele</NavLink>
             </div>
                
         );

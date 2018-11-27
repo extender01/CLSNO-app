@@ -21,11 +21,7 @@ class EditTestPage extends React.Component {
 
     render() {
         return (
-            <div>
-            This is from my edit test page
-               
-                <LabMetForm labMetToEdit={this.props.particularTest} formSubmit={this.onClickEdit}  />
-            </div>
+             <LabMetForm new={false} labMetToEdit={this.props.particularTest} formSubmit={this.onClickEdit}  />
         );
     }
 }

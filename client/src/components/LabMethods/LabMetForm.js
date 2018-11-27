@@ -10,7 +10,7 @@ export default class LabMetForm extends React.Component {
         super(props);
         
         this.state = this.props.labMetToEdit || labMethodDefaultState;
-        this.state.refRangePrepare = {sex: '', age: '', range: ''};
+        this.state.refRangePrepare = {sex: 'U', age: '', range: ''};
         this.state.error = '';
     };
 
@@ -49,13 +49,14 @@ export default class LabMetForm extends React.Component {
         })
     }
 
+    // adds new item to array refRange in componentState based on form data, then wipes form inputs in callback
     addRefRange = (e) => {       
         e.preventDefault();
         this.setState((prevState) => {
             return {refRange: [...prevState.refRange, prevState.refRangePrepare]}
         }, () => {
             this.setState(() => {
-                return {refRangePrepare: {sex: '', age: '', range: ''}}
+                return {refRangePrepare: {sex: 'U', age: '', range: ''}}
             })
         }
         );
@@ -90,15 +91,16 @@ export default class LabMetForm extends React.Component {
         return (
             <div>
                 {this.state.error && <h2>{this.state.error}</h2>}
-                <div className='flex-container'>
-                <button name='internal' onClick={this.intExtToggle}>Interni</button>
-                <button name='external' onClick={this.intExtToggle}>Externi</button>
-                </div>
-                <p>This is from test form</p>
-                <form onSubmit={this.onSubmit}>
-                    <ul className='labmetform'>
+               
+                {this.props.new && <div className='f labmetform__category'>
+                    <button name='internal' className={this.state.category === 'internal' ? 'labmetform__category--active' : undefined} onClick={this.intExtToggle}>Interni</button>
+                    <button name='external' className={this.state.category === 'external' ? 'labmetform__category--active' : undefined} onClick={this.intExtToggle}>Externi</button>
+                </div> }
+
+                <form onSubmit={this.onSubmit} className='labmetform' >
+                    <ul>
                         <li className='f_between labmetform__li'>
-                            <label>Nazev testu</label>
+                            <label>Název testu</label>
                             <input type='text' name='name' value={this.state.name} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
@@ -106,7 +108,7 @@ export default class LabMetForm extends React.Component {
                             <input type='text' name='syn' value={this.state.syn} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Kde se dela</label>
+                            <label>Kde se dělá</label>
                             <input list='where' name='where' value={this.state.where} onChange={this.onChange} />
                             <datalist id='where'>
                                 <option value='SNO' />
@@ -114,7 +116,7 @@ export default class LabMetForm extends React.Component {
                             </datalist>
                         </li>
                         <li className='f_between labmetform__li'> 
-                            <label>Nazev v Akordu</label>
+                            <label>Název v Akordu</label>
                             <input type='text' name='nameAk' value={this.state.nameAk} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
@@ -122,7 +124,7 @@ export default class LabMetForm extends React.Component {
                             <input type='text' name='groupAk' value={this.state.groupAk} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Odber</label>
+                            <label>Odběr</label>
                             <input type='text' name='draw' value={this.state.draw} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
@@ -130,7 +132,7 @@ export default class LabMetForm extends React.Component {
                             <input type='text' name='preanal' value={this.state.preanal} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Poznamka</label>
+                            <label>Poznámka</label>
                             <input type='text' name='note' value={this.state.note} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
@@ -147,25 +149,25 @@ export default class LabMetForm extends React.Component {
                         </li>
                     </ul>
                     
-                    {this.state.category === 'external' && <ul className='labmetform'>  
+                    {this.state.category === 'external' && <ul>  
                         <li className='f_between labmetform__li'>
-                            <label>Kdy odjizdi externi</label>
+                            <label>Kdy odjíždí externí</label>
                             <input type='text' name='whenExtTransport' value={this.state.whenExtTransport} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Jak casto externi</label>
+                            <label>Jak často externí</label>
                             <input type='text' name='extHowOften' value={this.state.extHowOften} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Odezva externi</label>
+                            <label>Odezva externí</label>
                             <input type='text' name='extResponse' value={this.state.extResponse} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Odezva externi</label>
+                            <label>Odezva externí</label>
                             <input type='text' name='extResponse' value={this.state.extResponse} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Kdo posila z lab</label>
+                            <label>Kdo posílá z lab</label>
                             <input type='text' name='parcelWho' value={this.state.parcelWho} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
@@ -173,15 +175,15 @@ export default class LabMetForm extends React.Component {
                             <input type='text' name='parcelPreanal' value={this.state.parcelPreanal} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Lab poznamka</label>
+                            <label>Lab poznámka</label>
                             <input type='text' name='parcelNote' value={this.state.parcelNote} onChange={this.onChange} />
                         </li>
                     </ul> }
 
-                    {this.state.category === 'internal' && <ul className='labmetform'>
+                    {this.state.category === 'internal' && <ul>
                         
                         <li className='f_between labmetform__li'>
-                            <label>Cas rutina</label>
+                            <label>Čas rutina</label>
                             <input type='text' name='rutTime' value={this.state.rutTime} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
@@ -194,54 +196,92 @@ export default class LabMetForm extends React.Component {
                             
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Dohlaska</label>
+                            <label>Dohláška</label>
                             <input type='text' name='additionalOrder' value={this.state.additionalOrder} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Poznamka k dostupnosti</label>
+                            <label>Poznámka k dostupnosti</label>
                             <input type='text' name='responseNote' value={this.state.responseNote} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Snizujici interference</label>
+                            <label>Snižující interference</label>
                             <input type='text' name='interfereDown' value={this.state.interfereDown} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Zvysujici interference</label>
+                            <label>Zvyšující interference</label>
                             <input type='text' name='interfereUp' value={this.state.interfereUp} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Fyziologicka variabilita</label>
+                            <label>Fyziologická variabilita</label>
                             <input type='text' name='physVar' value={this.state.physVar} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            <label>Biologicky polocas</label>
+                            <label>Biologický poločas</label>
                             <input type='text' name='bioHalfLife' value={this.state.bioHalfLife} onChange={this.onChange} />
                         </li>
-                                            
                     </ul> }
-                    <button>Submitvoe</button>
+
+                    <ul>
+                        <li className='f_center labmetform__li'>
+                            <button>Uložit</button>
+                        </li>
+                    </ul>
+                    
                 </form>
 
-                {this.state.category === 'internal' && <div>
-                    <form onSubmit={this.addRefRange}>
-                        <label>Referencni meze</label>
-                        <input type='text' name='sex' value={this.state.refRangePrepare.sex} onChange={this.onChangeRef} />
-                        <input type='text' name='age' value={this.state.refRangePrepare.age} onChange={this.onChangeRef} />
-                        <input type='text' name='range' value={this.state.refRangePrepare.range} onChange={this.onChangeRef} />
-                        <button>Pridat ref mez</button>
-                    </form>
-                </div>}
+               <div className='f_stretch'>
+                    {this.state.category === 'internal' && <form onSubmit={this.addRefRange} className='labmetform__ref-form g1'>
+                        
+                        <ul>
+                            <li className='f_center labmetform__li'>
+                                <label>Referenční meze:</label>
+                            </li>
 
-                {this.state.refRange.map((item, index) => {
-                    return (
-                        <div key={index} style={{'backgroundColor': '#aa55cc'}}>
-                        <p>{item.sex}</p>
-                        <p>{item.age}</p>
-                        <p>{item.range}</p>
-                        <button value={index} onClick={this.removeRefRange}>remove ref range</button>
-                        </div>
-                    )
-                })}
+                            <li className='f_between labmetform__li'>
+                                <label>Pohlaví:</label>
+                                <select name='sex' value={this.state.refRangePrepare.sex} onChange={this.onChangeRef}>
+                                    <option value='U'>Uni</option>
+                                    <option value='M'>Muž</option>
+                                    <option value='F'>Žena</option>
+                                </select>
+                            </li>
+                            <li className='f_between labmetform__li'>
+                                <label>Věk:</label>
+                                <input type='text' name='age' placeholder='Např. 0 - 15 let' value={this.state.refRangePrepare.age} onChange={this.onChangeRef} />
+                            </li>
+                            <li className='f_between labmetform__li'>
+                                <label>Ref. mez:</label>
+                                <input type='text' name='range' placeholder='Např. 0,25 - 0,60' value={this.state.refRangePrepare.range} onChange={this.onChangeRef} />
+                            </li>
+                            <li className='f_between labmetform__li'>
+                                <label>Poznámka k rozmezí:</label>
+                                <input type='text' name='refNote' placeholder='Poznámka k mezi' value={this.state.refRangePrepare.refNote} onChange={this.onChangeRef} />
+                            </li>
+                            <li className='f_center labmetform__li'>
+                                <button>Přidej ref. meze</button>
+                            </li>
+                        </ul>
+                    </form>}
+
+                    
+                    {this.state.refRange.length !== 0 && <div className='g1'>
+                        {this.state.refRange.map((item, index) => {
+                            return (
+                                <div className='labmetform__ref-item' key={index}>
+                                {item.sex && <p>{item.sex}</p>}
+                                <p>{item.age}</p>
+                                <p>{item.range}</p>
+                                <p>{item.refNote}</p>
+                                <button value={index} onClick={this.removeRefRange}>Odstranit ref. mez</button>
+                                </div>
+                            )
+                        })}
+                    </div>}
+               </div>
+                
+               
+
+               
             </div>
         )
     };

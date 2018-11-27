@@ -10,11 +10,10 @@ class AddTestPage extends React.Component {
         console.log('renderAddTest ', this.state, this.props);
 
         return (
-            <div>
-            This is from my add test page
+            <React.Fragment>
                 {this.props.error &&   <p>{this.props.error.message}</p>}
-                <LabMetForm formSubmit={this.props.startAddTest} />
-            </div>
+                <LabMetForm new={true} formSubmit={this.props.startAddTest} />
+            </React.Fragment>
         );
     }
 }

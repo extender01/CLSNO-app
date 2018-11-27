@@ -34,23 +34,22 @@ export default class CredentialsForm extends React.Component {
     
     render() {
         return (
-            <div>
-                <form onSubmit={this.onSubmit}>
-                <input type='text' name='nick' placeholder='Prihlasovaci jmeno' value={this.state.nick} onChange={this.onChange}/>
-                <input type='password' name='password' placeholder='Heslo' value={this.state.password} onChange={this.onChange} />
-                
-                {this.props.buttonName !== 'LOGIN' &&
-                    <div>
-                        <input type='radio' name='rights' value='department' onChange={this.onChange}/>
-                        <label> Oddeleni  </label>
-                        <input type='radio' name='rights' value='lab' onChange={this.onChange} />
-                        <label> Lab  </label>
-                        <input type='radio' name='rights' value='admin' onChange={this.onChange} />
-                        <label> Admin  </label>
-                    </div>
-                }
-               
-                
+            <div className='f_center'>
+                <form className='f_column credentials' onSubmit={this.onSubmit}>
+                    
+                    <input type='text' name='nick' placeholder='Přihlašovací jméno' value={this.state.nick} onChange={this.onChange}/>
+                    <input type='password' name='password' placeholder='Heslo' value={this.state.password} onChange={this.onChange} />
+                    
+                    
+                    {this.props.buttonName !== 'LOGIN' && <div>
+                            <input type='radio' name='rights' value='department' onChange={this.onChange}/>
+                            <label> Oddělení  </label>
+                            <input type='radio' name='rights' value='lab' onChange={this.onChange} />
+                            <label> Laboratoř  </label>
+                            <input type='radio' name='rights' value='admin' onChange={this.onChange} />
+                            <label> Admin  </label>
+                    </div>}
+
                     <button>{this.props.buttonName}</button>
                 </form>
 
