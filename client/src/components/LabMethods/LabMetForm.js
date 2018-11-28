@@ -10,10 +10,17 @@ export default class LabMetForm extends React.Component {
         super(props);
         
         this.state = this.props.labMetToEdit || labMethodDefaultState;
-        this.state.refRangePrepare = {sex: 'U', age: '', range: ''};
+        this.state.refRangePrepare = this.refRangeDefault;
         this.state.error = '';
     };
 
+    refRangeDefault = {
+        sex: 'U',
+        age: '',
+        range: '',
+        refNote: '',
+        sortOrder: ''
+    };
 
     onChange = (e) => {
         const inputValue = e.target.value;
@@ -56,7 +63,7 @@ export default class LabMetForm extends React.Component {
             return {refRange: [...prevState.refRange, prevState.refRangePrepare]}
         }, () => {
             this.setState(() => {
-                return {refRangePrepare: {sex: 'U', age: '', range: ''}}
+                return {refRangePrepare: this.refRangeDefault}
             })
         }
         );
@@ -257,11 +264,18 @@ export default class LabMetForm extends React.Component {
                                 <label>Poznámka k rozmezí:</label>
                                 <input type='text' name='refNote' placeholder='Poznámka k mezi' value={this.state.refRangePrepare.refNote} onChange={this.onChangeRef} />
                             </li>
+                            <li className='f_between labmetform__li'>
+                                <label>Pořadí</label>
+                                <input type='text' name='sortOrder' placeholder='Pořadí mezí' value={this.state.refRangePrepare.sortOrder} onChange={this.onChangeRef} />
+                            </li>
                             <li className='f_center labmetform__li'>
                                 <button>Přidej ref. meze</button>
                             </li>
                         </ul>
                     </form>}
+
+
+                 
 
                     
                     {this.state.refRange.length !== 0 && <div className='g1'>
@@ -272,10 +286,12 @@ export default class LabMetForm extends React.Component {
                                 <p>{item.age}</p>
                                 <p>{item.range}</p>
                                 <p>{item.refNote}</p>
+                                <p>{item.sortOrder}</p>
                                 <button value={index} onClick={this.removeRefRange}>Odstranit ref. mez</button>
                                 </div>
                             )
-                        })}
+                        })
+                    }
                     </div>}
                </div>
                 

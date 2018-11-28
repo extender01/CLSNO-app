@@ -2,11 +2,11 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const LabMetItem = (props) => (
-    <div  className='f_between lm__item'>
+    <div  className={`f_between lm__item lm__${props.category}`}>
         
        
 
-        <div className=''>
+        <div>
             {props.category === 'external' ? (   
                 <Link to={{
                     pathname: '/methods/detail/' + props._id,

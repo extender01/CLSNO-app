@@ -117,7 +117,7 @@ export const loggedUserSuccess = (APIres = {user: {_id: '', nick: 'nobody', righ
 
 
 
-export const startLoggedUser = () => {
+export const startLoggedUser = (callback) => {
     return (dispatch) => {
         dispatch(loggedUserBegin());
 
@@ -127,6 +127,11 @@ export const startLoggedUser = () => {
             console.log('co posila api:', result.data);
             
             dispatch(loggedUserSuccess(result.data));
+            callback()
+            
+        }).catch((e) => {
+            console.log('error pri loadovani testu');
+            
             
             
         });

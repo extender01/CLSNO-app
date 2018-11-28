@@ -11,6 +11,7 @@ const {User} = require('./models/user');
 const {Test} = require('./models/test');
 const {authenticate} = require('./middleware/authenticate');
 const {whoIsIt} = require('./middleware/whoIsIt');
+const {isAdmin} = require('./middleware/isAdmin');
 
 const app = express();
 const publicPath = path.join(__dirname, '..', 'client', 'public')
@@ -109,7 +110,7 @@ app.get('/api/get-all', whoIsIt, (req, res) => {
 
 // ========== ADD TEST=============================================================
 
-app.post('/api/addtest', authenticate, (req, res) => {
+app.post('/api/addtest', isAdmin, (req, res) => {
    
     console.log('pridani testu pred spustenim save');
      
@@ -166,7 +167,7 @@ app.post('/api/customNote/:id', authenticate, whoIsIt, (req, res) => {
 
 
 //==============EDIT TEST============================================================================================
-app.patch('/api/tests/:id', authenticate, (req, res) => {
+app.patch('/api/tests/:id', isAdmin, (req, res) => {
     let id = req.params.id;
     // let updates = _.pick(req.body, ['name', 'where']);
 

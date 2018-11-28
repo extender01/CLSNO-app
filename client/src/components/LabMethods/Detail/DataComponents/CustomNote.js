@@ -14,25 +14,24 @@ const CustomNote = ({customNote: {customNote = null} = {}, user, ...otherProps }
     
     
     <div className={`box ${otherProps.classNames}`}>
-        <h4>POZNAMKA ODDELENI {( user !== 'nobody'  &&  user)}</h4> 
+        
+        <div className='f_center '>
+            <h4>POZNÁMKA ODDĚLENÍ {( user !== 'nobody'  &&  user)}</h4> 
+            {user !== 'nobody' && <Link to={{
+                pathname: '/customNote/' + otherProps._id,
+                jmeno: otherProps.label
+            }}>
+                <img className='customNote__link' src={'/images/pencil-edit-button.png'} />
+            </Link>}
+        </div>
+
+        
         
         {/*if someone is logged then.... else ...*/}
         {user !== 'nobody' ?
-            <React.Fragment>
-                <Link to={{
-                    pathname: '/customNote/' + otherProps._id,
-                    jmeno: otherProps.label
-                }}>
-                    zmenit/pridat poznamku
-                </Link>
-
-                <p>{customNote}</p>
-            </React.Fragment>
-
+            <p>{customNote}</p>
             :
-
             <p>Pro přidání / zobrazení vaší poznámky se musíte přihlásit</p>
-
         }
     </div>
         

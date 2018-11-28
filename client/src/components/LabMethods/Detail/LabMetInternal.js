@@ -25,7 +25,7 @@ export default class LabMetInternal extends React.Component {
                         <div className='f_stretch'>
                             
                             <Generic label='JEDNOTKY' value={lm.unit} classNames='g1 colorUnit' />
-                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} classNames='g3 colorRefRange' />
+                            <RefRange label='REFERENČNÍ MEZE' refRange={lm.refRange} classNames='g4 colorRefRange' />
                         </div>
 
                         <div className='f_stretch'>

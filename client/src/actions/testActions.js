@@ -1,4 +1,6 @@
 import axios from 'axios';
+import { history } from '../routers/AppRouter';
+
 
 //=======================  ADD_TEST===================================================
 
@@ -43,6 +45,7 @@ export const startAddTest = (test) => {
             console.log('something went wrong when saving data to db', e);
             //error from axios request is sent action object, then reducer saves error to store and component displays error via mapStateToProps
             dispatch(addTestFailure(e));
+            history.push('/forbidden');
         });
     };
 };
@@ -82,6 +85,7 @@ export const startEditTest = (id, updates) => {
 
         }).catch((e) => {
             console.log('something went wrong when saving data to db', e);
+            history.push('/forbidden');
             //error from axios request is sent action object, then reducer saves error to store and component displays error via mapStateToProps
             dispatch(editTestFailure(e));
         });
@@ -100,7 +104,7 @@ const loadTestsSuccess = (tests = []) => {
     };
 };
 
-export const startLoadTests = () => {
+export const startLoadTests = (callback) => {
     return (dispatch) => {
     
         dispatch(loadTestsBegin());
@@ -108,6 +112,7 @@ export const startLoadTests = () => {
           
             console.log('uspesne nacteny testy', result.data);
             dispatch(loadTestsSuccess(result.data));
+            callback()
     
         }).catch((e) => {
             console.log('error pri loadovani testu');
@@ -138,6 +143,11 @@ export const startAddCustomNote = (passedNote, passedId) => {
         axios.post('/api/customNote/' + passedId, passedNote).then((result) => {
             console.log('result axiosu je:', result);
             dispatch(addCustomNoteSuccess(result.data._id, result.data.customNotes));
+            history.goBack();
+        }).catch((err) => {
+            console.log(err);
+            history.push('/forbidden');
+            
         });
     };
 };

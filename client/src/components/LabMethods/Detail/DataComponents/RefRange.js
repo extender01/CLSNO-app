@@ -5,7 +5,6 @@ const RefRange = (props) => (
         <h4>{props.label}</h4>
         <p>{props.value}</p>
     
-
         {props.refRange.length !== 0 && <table>
             <tbody>
                 <tr>
@@ -15,21 +14,28 @@ const RefRange = (props) => (
                     <th>Poznámka</th>
                 </tr>
                 
-                {props.refRange.map((item, index) => {
+                {/* first create copy of refRange array to not mutate original from props (via map method, just returning same unchanged item)
+                then sort refrange object in array, then return new array of sorted jsx ref ranges */}
+                
+                {props.refRange.map((item) => {return item;}).sort((a, b) => {
+                    if (a.sortOrder < b.sortOrder) {
+                        return -1;
+                    } else if (a.sortOrder > b.sortOrder) {
+                        return 1;
+                    }
+                    return 0;
+                }).map((item, index) => {
                     return ( 
-                        <tr key={index}>
-                            <td>{item.sex}</td>
+                        <tr key={index} className={`refRange__${item.sex}`}>
+                            <td><img src={`/images/sex_${item.sex}.png`} /></td>
                             <td>{item.age}</td>
                             <td>{item.range}</td>
                             <td>{item.refNote}</td>
                         </tr>
                     );
-                })}
-               
+                })
+                }
             </tbody>
-            
-
-          
         </table> }
     </div>
 );

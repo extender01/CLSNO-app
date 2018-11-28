@@ -9,6 +9,7 @@ import AddTestPage from '../components/LabMethods/AddTestPage';
 import EditTestPage from '../components/LabMethods/EditTestPage';
 import LoginPage from '../components/LoginPage';
 import HelpPage from '../components/HelpPage';
+import Forbidden from '../components/Forbidden';
 import NotFoundPage from '../components/NotFoundPage';
 import MainHeader from '../components/Headers/MainHeader';
 import AdminHeader from '../components/Headers/AdminHeader';
@@ -50,6 +51,7 @@ const AppRouter = (props) => (
                 <Route path='/signup' component={SignupPage} />
                 <Route path='/login' component={LoginPage} />
                 <Route path='/help' component={HelpPage}/>
+                <Route path='/forbidden' component={Forbidden} />
                 <Route path='/logout' component={LogoutTest} />
                 <Route path='/methods' component={LabMetDash} exact={true} />
                 <Route path="/methods/detail/:id" component={LabMetDetail} />

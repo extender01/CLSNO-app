@@ -56,7 +56,7 @@
     }
 
     &__item {
-        background-color: rgb(252, 255, 83);
+        
         margin: 1rem 0;
         padding: 1.5rem 3rem;
         font-size: 2rem;
@@ -64,24 +64,18 @@
         
     }
 
-    &__abc{
-
-        // display: none;
-
-        &--active {
-            background-color: rgb(120,120,120);
-
-        }
-
-        & button {
-            
-        }
+    &__internal {
+        background: rgb(252, 255, 83);
     }
+
+    &__external {
+        background: rgb(161, 210, 255);
+    }
+
+   
 }
 
-// img {
-//     visibility: hidden;
-// }
+
 
 @media (max-width:500px) {
     .lm{

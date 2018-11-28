@@ -147,3 +147,40 @@
     }
 }
 
+
+.refRange__U {
+    color: rgb(144, 255, 133);
+}
+
+.refRange__M {
+    color: rgb(150, 189, 233);
+}
+
+.refRange__F {
+    color: rgb(255, 116, 192);
+}
+
+
+
+.customNote {
+    &__link {
+        margin: 0 1.5rem;
+    }
+
+    &__form {
+        margin: 3rem 0;
+        background: #ccc;
+    }
+
+    &__form > textarea {
+        border: none;
+        padding: 1rem;
+        color: green;
+    }
+
+    &__form > label, &__form > textarea, &__form > button {
+        margin: 1rem 0;
+        
+    }
+}
+

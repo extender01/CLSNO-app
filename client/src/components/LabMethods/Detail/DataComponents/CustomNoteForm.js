@@ -9,7 +9,15 @@ class CustomNoteForm extends React.Component {
         super(props);
         this.state = {
             department: '',
-            customNote: ''
+            customNote: this.isCustomNote()
+        }
+    }
+
+    isCustomNote = () => {
+        if (this.props.labmet.customNotes.length > 0) {
+            return this.props.labmet.customNotes[0].customNote
+        } else {
+            return ''
         }
     }
 
@@ -32,23 +40,35 @@ class CustomNoteForm extends React.Component {
        console.log(this.props.location.jmeno);
        
         return (
-            <div>
-                <form onSubmit={this.customNoteSubmit}>
-                    <label>Poznamka oddeleni </label>
-                    <input type='text' name='customNote' value={this.state.customNote} placeholder='customNote' onChange={this.onChange}></input>
-                    <button>SUBMIT</button>
+            
+                <form className='f_column customNote__form' onSubmit={this.customNoteSubmit}>
+                    <label>{`Poznámka oddělení ${this.props.user} k metodě ${this.props.labmet.name}`} </label>
+                    <textarea autoFocus cols='50' rows='4' name='customNote' value={this.state.customNote} placeholder='Zde napište svoji poznámku. Je viditelná pouze pro vás.' onChange={this.onChange}></textarea>
+                   
+                    <button>ULOŽIT</button>
                 </form>
-            </div>
+            
         );
     }
 }
+
+
+const mapStateToProps = (state, props) => {
+    return {
+        user: state.users.user.nick,
+        labmet: state.labTests.tests.find((item) => {
+            return item._id === props.match.params.id
+        })
+
+    };
+};
 
 const mapDispatchToProps = (dispatch) => {
     return {
         startAddCustomNote: (customNote_param, id_param) => {
             dispatch(startAddCustomNote(customNote_param, id_param))
         }
-    }
+    };
 };
 
-export default connect(undefined, mapDispatchToProps)(CustomNoteForm);
+export default connect(mapStateToProps, mapDispatchToProps)(CustomNoteForm);
