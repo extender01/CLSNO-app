@@ -2,9 +2,12 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import Media from 'react-media';
 
+import Hamburger from './Hamburger';
 import {startLoggedUser }from '../../actions/userActions';
 import {startLoadTests} from '../../actions/testActions';
+import bp from '../../helper/mediaQueryBreakPoint';
 
 class MainHeader extends React.Component {
 
@@ -30,8 +33,15 @@ class MainHeader extends React.Component {
         return (
             <header className='header'>
                 <div className='f'>
+
+                    {/* Media will render Hamburger only if width of viewport is less than 500px */}
+                    <Media query={`(max-width: ${bp})`}>
+                        {(matches) => 
+                            matches ? <Hamburger /> : null
+                        }
+                    </Media> 
                    
-                    <nav className='f_start header__logo'>
+                    <nav className='f_start-end-toggle header__logo'>
                         <NavLink className='header__title' to='/' exact={true}>
                             <h1>Lab SNO</h1>
                         </NavLink>
@@ -40,18 +50,29 @@ class MainHeader extends React.Component {
                     <div className ='f header__links'>
                         <NavLink to='/help' className='g1'>O laboratoři</NavLink>
                         <NavLink to='/methods' className='g1'>Metody</NavLink>
+                        
+                    </div>
+
+                    <div className='header__user'>
                         {this.props.isLogged ? (
-                            <div className='f g1'>
+                            <div className='f_column g1'>
                                 <img src={'/images/man-user.png'} height='30px' />
                                 <p >{this.props.nick}</p>
                                 <NavLink to='/login'>Odhlásit se</NavLink>
                             </div>
                         ) : (
-                            <NavLink to='/login'>Přihlásit se</NavLink>
+                            <div className='f_column g1'>
+                                <NavLink to='/login'>Přihlásit se</NavLink>
+                            </div>
                         )}
                     </div>
 
-                </div>   
+
+                   
+
+                </div> 
+                 
+                
             </header>
         );
     }

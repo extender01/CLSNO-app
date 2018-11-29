@@ -21,7 +21,7 @@ export class LabMetList extends React.Component {
             <div className='lm'>
                 {
                     this.props.labTests.length === 0 ? (
-                        <p>Laboratorní metody nenalezeny</p>
+                        <h2>Laboratorní metody nenalezeny</h2>
                     ) : (
                         this.props.labTests.map((labTest) => {
                             return <LabMetItem key={labTest._id} {...labTest} />;

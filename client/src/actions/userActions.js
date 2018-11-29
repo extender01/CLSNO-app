@@ -37,7 +37,7 @@ export const startLogin = (credentials) => {
             console.log('tohle se vraci z api po loginu', result.data);
              
             dispatch(loginSuccess(result.data));
-            history.push('/help');
+            history.push('/methods');
               
         }).catch((e) => {
             console.log('neco se pokazilo,', e);

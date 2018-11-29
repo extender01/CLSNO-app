@@ -40,6 +40,7 @@ export const startAddTest = (test) => {
                           
             dispatch(addTestSuccess(result.data));
             console.log('successfully added to db and dispatched object with data from db to be saved to redux store');
+            history.push('/methods');
 
         }).catch((e) => {
             console.log('something went wrong when saving data to db', e);
@@ -82,6 +83,7 @@ export const startEditTest = (id, updates) => {
                           
             dispatch(editTestSuccess(id, result.data));
             console.log('successfully added to db and dispatched object with data from db to be saved to redux store');
+            history.goBack();
 
         }).catch((e) => {
             console.log('something went wrong when saving data to db', e);
@@ -141,7 +143,7 @@ export const startAddCustomNote = (passedNote, passedId) => {
        
         dispatch(addCustomNoteBegin());
         axios.post('/api/customNote/' + passedId, passedNote).then((result) => {
-            console.log('result axiosu je:', result);
+            console.log('result customNote z axiosu je:', result);
             dispatch(addCustomNoteSuccess(result.data._id, result.data.customNotes));
             history.goBack();
         }).catch((err) => {

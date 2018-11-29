@@ -112,11 +112,11 @@ app.get('/api/get-all', whoIsIt, (req, res) => {
 
 app.post('/api/addtest', isAdmin, (req, res) => {
    
-    console.log('pridani testu pred spustenim save');
+    // console.log('pridani testu pred spustenim save');
      
     let test = new Test(req.body);         //creates new mongoose model
     test.save().then((savedTest) => {
-        console.log(savedTest);
+        // console.log(savedTest);
         res.send(savedTest);
     }).catch((e) => {res.status(400).send(e);});
 });
@@ -155,8 +155,17 @@ app.post('/api/customNote/:id', authenticate, whoIsIt, (req, res) => {
                 foundTest.customNotes[index] = {department: req.user.nick, customNote: req.body.customNote};
             }
 
-            foundTest.save().then((savedNote) => {
-                res.send(savedNote);
+            
+            foundTest.save().then((updatedLabMet) => {
+                
+                // filteredCustomNotes gets new array with only 1 item -> custom note from logged user, other custom notes are filtered (only if department property of custom note object equals nick of logged user)
+                const filteredCustomNotes = updatedLabMet.customNotes.filter((item) => {
+                    return item.department === req.user.nick;
+                });
+                // new object customNoteAndId get properties of _id of just updated lab met and customNotes of filtered custom notes with only those of logged user
+                //this gets send back to user
+                let customNoteAndId = {_id: updatedLabMet._id, customNotes: filteredCustomNotes};
+                res.send(customNoteAndId);
             });                    
         }
     });
@@ -233,7 +242,7 @@ app.post('/api/login', (req, res) => {
 
     User.findByCredentials(extractedProps.nick, extractedProps.password).then((user) => {
         return user.generateAuthToken().then((token) => {
-            console.log('token', token);
+            // console.log('token', token);
             // res.header('x-auth', token).send(user);
             res.cookie('x-auth', token).send(user);
         }).catch((e) => {
@@ -250,7 +259,7 @@ app.post('/api/login', (req, res) => {
 
 app.get('/api/me', whoIsIt, (req, res) => {
 
-    console.log('whoisloggedje: ',req.user);
+    // console.log('whoisloggedje: ',req.user);
     
     res.send({user: req.user});
    
@@ -262,8 +271,8 @@ app.get('/api/me', whoIsIt, (req, res) => {
 //=================== LOGOUT
 //req.user.removeToken and req.token are accessible cause of authenticate middleware which appends them to req object
 app.delete('/api/logout', authenticate, (req, res) => {
-    console.log('pokus o smazani');
-    console.log(req.token);
+    // console.log('pokus o smazani');
+    // console.log(req.token);
     
     // res.send('ahoj');
     req.user.removeToken(req.token).then(() => {

@@ -65,6 +65,7 @@ const testReducer = (state = testReducerDefaultState, action) => {
                     // console.log('problehlo add custom note v reduceru');
                     
                     return {...item, customNotes: action.customNotes};
+                    // return {...item, customNotes: action.customNotes};
 
                 } else {
                     return item;

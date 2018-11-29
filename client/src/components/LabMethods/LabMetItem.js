@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 
 const LabMetItem = (props) => (
-    <div  className={`f_between lm__item lm__${props.category}`}>
+    <div  className={`lm__item lm__${props.category}`}>
         
        
 

@@ -34,13 +34,13 @@ export const history = createHistory();
 const AppRouter = (props) => (
     <Router history={history}>
         <div>
-            <Media query='(max-width: 500px)'>
-                {(matches) => 
-                    matches ? <Hamburger /> : null
-                }
-            </Media>
             
-            <MainHeader />
+
+            
+            
+            <MainHeader>
+                
+            </MainHeader>
             {props.rights === 'admin' && <AdminHeader />}
             
             {(!!props.user && !!props.labmets) &&

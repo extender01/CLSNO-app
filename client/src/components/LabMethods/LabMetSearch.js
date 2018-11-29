@@ -62,8 +62,8 @@ class LabMetSearch extends React.Component {
                 </div>
 
 
-                <div className={this.noFilters() ? 'lm__search--invisible ' : 'lm__search_clearFilter'}>
-                   <p className='lm__search_clearFilter' onClick={this.clearFilters}>Jsou aplikovány filtry, klikni a bude hledat všude</p> 
+                <div className={this.noFilters() ? 'lm__search--invisible ' : undefined}>
+                   <p className='lm__search_clearFilter' onClick={this.clearFilters}>HLEDAT VŠUDE</p> 
                 </div>
                 
             </div>

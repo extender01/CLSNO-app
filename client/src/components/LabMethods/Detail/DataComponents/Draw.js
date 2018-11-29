@@ -1,4 +1,7 @@
 import React from "react";
+import Media from 'react-media';
+import bp from '../../../../helper/mediaQueryBreakPoint';
+
 
 
 export default class Draw extends React.Component {
@@ -8,16 +11,16 @@ export default class Draw extends React.Component {
     };
 
     drawTypes = {
-        sg: "Srazliva krev s gelem",
-        se: "Srazliva krev bez gelu",
-        pli: "Nesrazliva s Li heparinem",
-        edta: "Nesrazliva krev s EDTA",
-        citr: "Nesrazliva krev s Na citratem",
+        sg: 'Srážlivá krev s gelem',
+        se: 'Srážlivá krev bez gelu',
+        pli: 'Nesrážlivá krev Li Heparin',
+        edta: 'Nesrážlivá krev K2EDTA',
+        citr: 'Nesrážlivá krev Na citrát',
 
-        mocj: "Moc jednorazova",
-        mocsb: "Moc sbirana",
-        pu: "punktat",
-        csf: "Likvor"
+        mocj: 'Moč jednorázová',
+        mocsb: 'Moč sbíraná',
+        pu: 'Punktát',
+        csf: 'Likvor'
         
         
     };
@@ -34,12 +37,19 @@ export default class Draw extends React.Component {
                         )
                     } else {
                         return ( 
-                            <div key={index} className="pokusnik" >
+                            <div key={index} className="draw__type" >
                                 
                                 {this.drawTypes[item] &&
                                     <React.Fragment>
-                                    <img src={`/images/${item}.png`} height='60px' />
-                                    <p>{this.drawTypes[item]}</p>
+                                    <img src={`/images/${item}.png`} title={this.drawTypes[item]} height='60px' />
+                                    
+                                    <Media query={`(min-width: ${bp})`}>
+                                        {(matches) => 
+                                            matches ? <p>{this.drawTypes[item]}</p> : null
+                                        }
+                                    </Media> 
+
+                                    
                                     </React.Fragment>
                                 }
                                 
@@ -60,7 +70,7 @@ export default class Draw extends React.Component {
         return (
             <div className={`box ${this.props.classNames}`}>
                 <h4>ODBĚR</h4>
-                <div className='f'>
+                <div className='draw__wrapper'>
                     {this.coZaOdber()}
                     
                 </div>

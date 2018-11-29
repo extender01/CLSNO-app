@@ -18,11 +18,12 @@
   
   /* Position and sizing of burger button */
   .bm-burger-button {
-    position: fixed;
+      
+    position: relative;
     width: 36px;
     height: 30px;
-    left: 36px;
-    top: 36px;
+    left: 2rem;
+    top: 0;
   }
   
   /* Color/shape of burger icon bars */
@@ -48,5 +49,6 @@
     font-size: 1.15em;
     max-height: 400px;
   }
-  
+
+
   

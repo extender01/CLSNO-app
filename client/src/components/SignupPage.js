@@ -4,19 +4,19 @@ import {startSignup} from '../actions/userActions';
 
 import {connect} from 'react-redux';
 
-class SignupPage extends React.Component {
+// class SignupPage extends React.Component {
     
         
-    render() {
-        return (
-            <div>
-                <p>Sign up form</p>
-                <CredentialsForm formSubmit={this.props.startSignup} buttonName='create user' />
-            </div>
-        );
-    }
-}
+//     render() {
+//         return (
+//             <CredentialsForm formSubmit={this.props.startSignup} buttonName='create user' />
+//         );
+//     }
+// }
 
+const SignupPage = (props) => (
+    <CredentialsForm formSubmit={props.startSignup} buttonName='create user' />
+);
 
 const mapDispatchToProps = (dispatch) => {
     return {
@@ -25,6 +25,5 @@ const mapDispatchToProps = (dispatch) => {
         }
     };
 };
-
 
 export default connect(undefined, mapDispatchToProps)(SignupPage);

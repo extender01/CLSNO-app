@@ -3,6 +3,17 @@ import { slide as Menu } from 'react-burger-menu';
 import {Link} from 'react-router-dom';
  
 export default class Hamburger extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {burgerOpen: false};
+    }
+
+    burgerHide = () => {
+        this.setState((prevState) => {
+            return {burgerOpen: false}
+        })
+    }
+    
     showSettings (event) {
         event.preventDefault();
     
@@ -10,13 +21,21 @@ export default class Hamburger extends React.Component {
  
     render () {
         return (
-            <Menu className='hambac'>
-                <Link to='/methods' activeClassName='is-active'>Metody</Link>
-                <Link to='/help'  activeClassName='is-active'>O laboratori</Link>
-                <Link to='/login' activeClassName='is-active'>Logout</Link>
-                <Link to='/login' activeClassName='is-active'>Login</Link>
-                <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
-            </Menu>
+            <div className='hambac'>
+                <Menu isOpen={this.state.burgerOpen}>
+                    <Link onClick={this.burgerHide} to='/methods'>Metody</Link>
+                    <Link onClick={this.burgerHide} to='/help'>O laboratori</Link>
+                    <Link onClick={this.burgerHide} to='/login'>Login</Link>
+                    <Link onClick={this.burgerHide} to='/login'>Logout</Link>
+                    
+                </Menu>
+            </div>
         );
     }
+
+
+ 
+
+
+
 }

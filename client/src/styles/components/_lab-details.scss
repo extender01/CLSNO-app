@@ -11,34 +11,7 @@
 
 
 
-//pro ruzne pomery flex grow
-.g1{
-    flex: 1 1 auto;
-}
 
-.g2{
-    flex: 2 1 auto;
-}
-
-.g3{
-    flex: 3 1 auto;
-}
-
-.g4{
-    flex: 4 1 auto;
-}
-
-.gf1 {
-    flex: 1 1 0;
-}
-
-.gf2 {
-    flex: 2 1 0;
-}
-
-.gf3 {
-    flex: 3 1 0;
-}
 
 
 
@@ -133,17 +106,32 @@
 
 
 
-.draw__img {
-    &--sg {
-        content: url("/images/14.png");
-        height: $draw-img;
-        margin: 0 auto;
-    }
+// .draw__img {
+//     &--sg {
+//         content: url("/images/14.png");
+//         height: $draw-img;
+//         margin: 0 auto;
+//     }
 
-    &--se {
-        content: url("/images/1.png");
-        height: $draw-img;
-        margin: 0 auto;
+//     &--se {
+//         content: url("/images/1.png");
+//         height: $draw-img;
+//         margin: 0 auto;
+//     }
+// }
+
+
+
+.draw {
+    &__wrapper {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: flex-end;
+        justify-content: center;
+    }
+    
+    &__type {
+        margin: 0 1rem;
     }
 }
 
@@ -181,6 +169,15 @@
     &__form > label, &__form > textarea, &__form > button {
         margin: 1rem 0;
         
+    }
+}
+
+
+@media (max-width: 500px) {
+    .draw__type {
+        // border-bottom: 1px solid red;
+        // flex-grow: 1;
+        // margin: 1rem 0;
     }
 }
 

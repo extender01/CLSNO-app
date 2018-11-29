@@ -9,16 +9,19 @@ import CredentialsForm from './CredentialsForm';
 
 
 const LoginPage = (props) => (
-    <div>       
+    <React.Fragment>       
         
-        {!props.isLogged ? <CredentialsForm formSubmit={props.startLogin} isLogged={props.isLogged} buttonName='LOGIN' /> :
-            <div> 
-                <p>Prihlasen jako: {props.user}</p>
+        {!props.isLogged ? 
+            
+            <CredentialsForm formSubmit={props.startLogin} isLogged={props.isLogged} buttonName='LOGIN' />  
+            :
+            <div className='f_column credentials'> 
+                <h2>Přihlášen jako: {props.user}</h2>
                 <LogoutForm />
             </div>
         }
         
-    </div>
+    </React.Fragment>
 );
 
 
