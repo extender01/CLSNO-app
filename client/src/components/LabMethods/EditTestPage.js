@@ -1,6 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import LabMetForm from './LabMetForm';
+import LabMetDelete from './LabMetDelete';
 import { startEditTest } from '../../actions/testActions';
 
 //When clicked on submit button, formSubmit method is called in LabMetForm, with current component state object as parameter. That state object gets passed here as formData parameter...
@@ -21,7 +22,10 @@ class EditTestPage extends React.Component {
 
     render() {
         return (
-             <LabMetForm new={false} labMetToEdit={this.props.particularTest} formSubmit={this.onClickEdit}  />
+            <React.Fragment>
+                <LabMetForm new={false} labMetToEdit={this.props.particularTest} formSubmit={this.onClickEdit}  />
+                {this.props.particularTest ? <LabMetDelete id={this.props.particularTest._id}/> : <p>ahoj</p>}
+            </React.Fragment>
         );
     }
 }

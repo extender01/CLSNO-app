@@ -16,13 +16,14 @@ $draw-img: 6rem;
 
 $name: #1b7ab9;
 $draw: #f0e65f;
-$customNote: #ff6565;
+$customNote: #fc4c9e;
 $details: #984b43;
 $unit: #5c5c5c;
-$runTime: #f19f4d;
+$runTimeNo: #f16f6f;
 $interference: #ae00c5;
 $parcelInfo: #4caf50;
 $extDetails: rgb(0, 180, 224);
+$runTimeYes: #50b153;
 
 
 
@@ -37,7 +38,8 @@ $colorDraw: $draw;
 $colorPreanal: $draw;
 $colorNote: $draw;
 $colorCustomNote: $customNote;
-$colorRunTime: $runTime;
+$colorRunTimeNo: $runTimeNo;
+$colorRunTimeYes: $runTimeYes;
 $colorInterference: $interference;
 $colorParcelInfo: $parcelInfo;
 $colorExtDetails: $extDetails;

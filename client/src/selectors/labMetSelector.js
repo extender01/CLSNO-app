@@ -12,10 +12,10 @@ const labMetSelector = (labMet, filter) => {
         const byCategory = item.category === filter.category || filter.category === 'all';
 
         //if name or synonyme contains string from input (byTextSyn is fuction beacuse we must check if syn exists)
-        const byTextName = item.name.toLowerCase().includes(filter.text.toLowerCase());
+        const byTextName = accentFold(item.name.toLowerCase()).includes(filter.text.toLowerCase());
         const byTextSyn = () => {
             if(item.syn) {
-                return item.syn.toLowerCase().includes(filter.text.toLowerCase());
+                return accentFold(item.syn.toLowerCase()).includes(accentFold(filter.text.toLowerCase()));
             } else {
                 return false;
             }
@@ -37,10 +37,28 @@ const labMetSelector = (labMet, filter) => {
 
         return 0;
     });
-    
+};
 
-    
-    
+export const accentFold = (str) => {   //převede string s diakritikou na string bez
+    if (!str) return '';
+    const accentMap = {
+        'á':'a',
+        'é':'e',
+        'í':'i',
+        'ó':'o',
+        'ú':'u',
+        'ě': 'e',
+        'š': 's',
+        'č': 'c',
+        'ř': 'r',
+        'ž': 'z',
+        'ý': 'y'
+    };
+    let bezDia = '';
+    for (let i = 0; i < str.length; i++) {
+        bezDia += accentMap[str.charAt(i)] || str.charAt(i);
+    };
+    return bezDia
 };
 
 export default labMetSelector;

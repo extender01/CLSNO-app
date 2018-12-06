@@ -37,6 +37,20 @@ const testReducer = (state = testReducerDefaultState, action) => {
             loading: false,
             error: null,
         };
+
+    case 'DELETE_TEST_BEGIN':
+        return {...state, loading: true, error: null};
+    case 'DELETE_TEST_FAILURE':
+        return {...state, loading: false, error: action.error};
+    case 'DELETE_TEST_SUCCESS':
+        return {
+            ...state,
+            tests: state.tests.filter((item) => {
+                return action.id !== item._id;
+            }),
+            loading: false,
+            error: null
+        };
     
         // return {
         //     ...state

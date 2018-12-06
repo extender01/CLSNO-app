@@ -94,6 +94,33 @@ export const startEditTest = (id, updates) => {
     };
 };
 
+//=======================================DELETE TEST ======================================================================
+
+const deleteTestBegin = () => ({type: 'DELETE_TEST_BEGIN'});
+const deleteTestFailure = (error) => ({type: 'DELETE_TEST_FAILURE', error});
+const deletTestSuccess = (id) => ({type: 'DELETE_TEST_SUCCESS', id});
+
+export const startDeleteTest = (id) => {
+    return (dispatch) => {
+        dispatch(deleteTestBegin());
+        console.log('id k vymazani:', id);
+        
+        axios({
+            method: 'delete',
+            url: '/api/tests/' + id,
+        }).then((result) => {
+            console.log('byla smazana metoda:', result.data.name);
+            dispatch(deletTestSuccess(id));
+            history.push('/methods');
+        }).catch((e) => {
+            console.log('neco se nepovedlo pri mazani metody');
+            history.push('/forbidden');
+            dispatch(deleteTestFailure(e));
+            
+        });
+    };
+};
+
 
 //==================================SHOW ALL TESTS===================================================================================
 

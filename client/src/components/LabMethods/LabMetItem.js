@@ -1,12 +1,14 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import accentFold from '../../selectors/labMetSelector';
 
 const LabMetItem = (props) => (
     <div  className={`lm__item lm__${props.category}`}>
         
        
-
-        <div>
+        {/* if filtering text exists in redux, check if that searched text string is contained in name of labTest, if so then apply class to div*/}
+        <div className={(props.textFilter && props.name.toLowerCase().includes(props.textFilter.toLowerCase())) ? 'lm__item--found' : undefined}>
             {props.category === 'external' ? (   
                 <Link to={{
                     pathname: '/methods/detail/' + props._id,
@@ -25,7 +27,7 @@ const LabMetItem = (props) => (
 
         </div>
 
-        <div>
+        <div className={(props.textFilter && props.syn.toLowerCase().includes(props.textFilter.toLowerCase())) ? 'lm__item--found' : undefined}>
             <p>{props.syn}</p>
         </div>
 
@@ -35,5 +37,12 @@ const LabMetItem = (props) => (
     </div>
 );
 
-export default LabMetItem;
+const mapStateToProps = (state) => {
+    return {
+        textFilter: state.labTests.filters.text
+    };
+};
+
+
+export default connect(mapStateToProps)(LabMetItem);
 

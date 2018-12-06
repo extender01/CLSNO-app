@@ -48,6 +48,7 @@ const AppRouter = (props) => (
                 <Route path='/' component={HomePage} exact={true}/>
                 <AdminRoute path='/create' component={AddTestPage}/>
                 <Route path='/edit/:id' component={EditTestPage} />
+                
                 <Route path='/signup' component={SignupPage} />
                 <Route path='/login' component={LoginPage} />
                 <Route path='/help' component={HelpPage}/>

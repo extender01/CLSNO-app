@@ -25,9 +25,7 @@ export default class LabMetGeneric extends React.Component {
                         <div className='f_stretch'>
                             <Generic label='NÁZEV' value={lm.name} classNames='g1 colorName' />
                             <Generic label='SYNONYMA' value={lm.syn} classNames='g1 colorSyn' />
-                        </div>
 
-                        <div className='f_stretch'>
                             <Generic label='NÁZEV V AKORDU' value={lm.nameAk} classNames='g1 colorNameAk' />
                             <Generic label='SKUPINY V AKORDU' value={lm.groupAk} classNames='g1 colorGroupAk' />
                         </div>
@@ -41,13 +39,11 @@ export default class LabMetGeneric extends React.Component {
 
                         <div className='f_stretch'>
                             <Draw draw={lm.draw} classNames='g1 colorDraw' />
-                            <Generic label='PREANALYTICKÁ FÁZE' value={lm.preanal} classNames='g1 colorPreanal' />
-                        </div>
-
-                        <div className='f_stretch'>
-                            <Generic label='OBECNÁ POZNÁMKA' value={lm.note}  classNames='g1 colorNote'/>
+                            <Generic label='PREANALYTICKÁ FÁZE' value={lm.preanal ? lm.preanal : 'Standardní podmínky preanalytické fáze'} classNames='g1 colorPreanal' />
+                        
+                            {lm.note && <Generic label='OBECNÁ POZNÁMKA' value={lm.note}  classNames='g1 colorNote'/>}
                             {this.props.rights === 'department' && 
-                                <CustomNote label='VAŠE POZNÁMKA' _id={lm._id} customNote={lm.customNotes[0]} classNames='g1 colorCustomNote' />
+                                <CustomNote label='VAŠE POZNÁMKA' _id={lm._id} customNote={lm.customNotes[0] !== undefined ? lm.customNotes[0] : 'Kliknutím na tužku přidáte vlastní poznámku'} classNames='g1 colorCustomNote' />
                             }
                         </div>
                     </React.Fragment>

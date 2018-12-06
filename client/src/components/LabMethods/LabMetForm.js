@@ -25,10 +25,19 @@ export default class LabMetForm extends React.Component {
     onChange = (e) => {
         const inputValue = e.target.value;
         const inputName = e.target.name;
+        console.log(inputName, inputValue);
+        
         this.setState(() => {
             return {[inputName]: inputValue}
         });
     };
+
+    checkboxToggle = (e) => {
+       const cbName = e.target.name
+       this.setState((prevState) => {
+           return {[cbName]: !prevState[cbName] }
+       });
+    }
 
     intExtToggle = (e) => {
         const buttonName = e.target.name;
@@ -195,9 +204,9 @@ export default class LabMetForm extends React.Component {
                         </li>
                         <li className='f_between labmetform__li'>
                             <label>Statim</label>
-                            <input type='checkbox' name='statCare' value={this.state.statCare} onChange={this.onChange} />
+                            <input type='checkbox' name='statCare' value={this.state.statCare} onChange={this.checkboxToggle} />
                             <label>Pohotovost</label>
-                            <input type='checkbox' name='erCare' value={this.state.erCare} onChange={this.onChange} />
+                            <input type='checkbox' name='erCare' value={this.state.erCare} onChange={this.checkboxToggle} />
                         </li>
                         <li className='f_between labmetform__li'>
                             

@@ -123,6 +123,37 @@ app.post('/api/addtest', isAdmin, (req, res) => {
 
 
 
+//========================= DELETE TEST ===================================================
+
+app.delete('/api/tests/:id', isAdmin, (req, res) => {
+    let id = req.params.id;
+
+    Test.findByIdAndRemove(id).then((removedTest) => {
+        res.send(removedTest);
+    });
+
+
+});
+
+
+
+
+app.patch('/api/tests/:id', isAdmin, (req, res) => {
+    let id = req.params.id;
+    // let updates = _.pick(req.body, ['name', 'where']);
+
+    Test.findByIdAndUpdate(id, {$set: req.body}, {new: true}).then((updatedTest) => {
+        if (!updatedTest) {
+            return res.status(404).send();
+        }
+        res.send(updatedTest);
+    }).catch((e) => {
+        res.status(400).send(e);
+    });
+});
+
+
+
 
 
 
