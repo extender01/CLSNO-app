@@ -249,8 +249,8 @@ app.patch('/api/tests/:id', isAdmin, (req, res) => {
 //THIS VERSION ONLY CREATES NEW USER AND SAVES HIM TO DB
 app.post('/api/adduser', whoIsIt, (req, res) => {
     //only users with admin rights can create new users
-    // if (req.user.rights === 'admin') {
-    if(2 > 1) {
+    if (req.user.rights === 'admin') {
+    // if(2 > 1) {
         let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
         let user = new User(extractedProps);
     
