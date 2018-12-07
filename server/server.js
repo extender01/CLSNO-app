@@ -320,11 +320,11 @@ app.delete('/api/logout', authenticate, (req, res) => {
 });
 
 
-//========================================= CLIENT RENDERING =========================
+// ========================================= CLIENT RENDERING =========================
 
-// app.get ('*', (req, res) => {
-//     res.sendFile(path.join(publicPath, 'index.html'));
-// });
+app.get ('*', (req, res) => {
+    res.sendFile(path.join(publicPath, 'index.html'));
+});
 
 
 
