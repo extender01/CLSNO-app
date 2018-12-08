@@ -48,14 +48,14 @@ class LabMetSearch extends React.Component {
                         type='search' 
                         name='search' 
                         value={this.props.text} 
-                        placeholder='Hledej metodu...' 
+                        placeholder='Hledat metodu' 
                         onChange={this.textFilter}>
                     </input>                   
                     
                     <img 
-                        className={!this.props.text ? 'lm__search_del lm__search_img' : 'lm__search_img'}
+                        className='lm__search_img'
                         onClick={this.clearSearch} 
-                        src="../../images/clear2.png" 
+                        src={this.props.text ? '/images/clear2.png' : '/images/magnifier.png'}
                         height="40px" 
                     />
 

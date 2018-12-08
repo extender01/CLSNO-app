@@ -3,10 +3,18 @@
     margin: 0 4px 8px 4px;
     text-align: center; 
     color: white;
+    box-shadow: 2px 2px 1px #b4b4b4;
+   
 }
 
 .ld {
-    margin-top: 2rem;
+    // margin-top: 3rem;
+    padding: 2rem;
+
+    // background-image: url('/images/ET2.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
 }
 
 
@@ -17,18 +25,22 @@
 
 .colorName {
     background: $colorName;
+    // color: $grey
 }
 
 .colorSyn {
     background: $colorName;
+    // color: $grey
 }
 
 .colorNameAk {
     background: $colorName;
+    // color: $grey
 }
 
 .colorGroupAk {
     background: $colorName;
+    // color: $grey
 }
 
 .colorWhere {
@@ -89,8 +101,8 @@
 
 .colorRunTime {
 
-    background: $colorName;
-    color: white;
+    background: $colorDraw;
+    color: $grey;
 
     &--no {
         background: $colorRunTimeNo;
@@ -112,6 +124,7 @@
 
 .colorParcelInfo {
     background: $colorParcelInfo;
+    
 }
 
 

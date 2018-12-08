@@ -81,6 +81,7 @@ export const startSignup = (credentials) => {
             console.log('co se vraci z db po uspesnem signuppu usera', result.data);
             
             dispatch(signupSuccess(result.data));
+            history.push('/methods');
               
         }).catch((e) => {
             console.log('neco se pokazilo,', e);

@@ -55,6 +55,11 @@
     justify-content: space-evenly;
     align-items: stretch;
     margin-bottom: 2rem;
+
+    &:first-of-type {
+       
+        margin-bottom: 1rem;
+    }
 }
 
 .f_start {

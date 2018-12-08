@@ -247,9 +247,9 @@ app.patch('/api/tests/:id', isAdmin, (req, res) => {
 // });
 
 //THIS VERSION ONLY CREATES NEW USER AND SAVES HIM TO DB
-app.post('/api/adduser', whoIsIt, (req, res) => {
+app.post('/api/adduser', isAdmin, (req, res) => {
     //only users with admin rights can create new users
-    if (req.user.rights === 'admin') {
+    // if (req.user.rights === 'admin') {
     // if(2 > 1) {
         let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
         let user = new User(extractedProps);
@@ -260,9 +260,9 @@ app.post('/api/adduser', whoIsIt, (req, res) => {
         }).catch((e) => {
             res.status(400).send(e);
         });
-    } else {
-        res.send('nemas opravneni vytvaret uzivatele');
-    }
+    // } else {
+    //     res.status(400).send('nemas opravneni vytvaret uzivatele');
+    // }
     
 });
 

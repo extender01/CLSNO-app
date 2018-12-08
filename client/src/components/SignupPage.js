@@ -4,15 +4,7 @@ import {startSignup} from '../actions/userActions';
 
 import {connect} from 'react-redux';
 
-// class SignupPage extends React.Component {
-    
-        
-//     render() {
-//         return (
-//             <CredentialsForm formSubmit={this.props.startSignup} buttonName='create user' />
-//         );
-//     }
-// }
+
 
 const SignupPage = (props) => (
     <CredentialsForm formSubmit={props.startSignup} buttonName='create user' />

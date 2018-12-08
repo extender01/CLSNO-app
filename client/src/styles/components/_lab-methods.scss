@@ -1,16 +1,22 @@
 .lm {
-    background-color: rgb(255, 255, 255);
-    padding: 20px 0;
+    // background-color: rgb(255, 255, 255);
+    padding: 2rem;
     margin: 0 auto;
     text-decoration: none;
+
+    
+    // background-image: url('/images/ET2.jpg');
+    // background-repeat: no-repeat;
+    // background-size: cover;
+    // background-attachment: fixed;
 
     & > h2 {
         text-align: center;
     }
 
     &__search {
-        background-color: rgb(255, 233, 36);
-        padding: 2rem 0 2rem 5rem;
+        background-color: $searchBar;
+        padding-top: 2.5rem;
 
         &--invisible {
             visibility: hidden;
@@ -28,6 +34,7 @@
 
         &_img {
             margin-top: 1rem;
+            margin-left: 1rem;
             &:hover {
                 cursor: pointer;
             }
@@ -58,10 +65,10 @@
     }
 
     &__cat {
-        background-color: rgb(255, 255, 255);
+        background: $searchBar;
 
         &-active {
-            background-color: rgb(120,120,120);
+            background-color: rgb(3, 92, 0);
         }
     }
 

@@ -9,12 +9,36 @@ body {
   background-color: white;
   margin: 0;
   padding: 0;
+  background-image: url('/images/ET3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
+  
 }
 
 #app {
   max-width: 1200px;
   min-width:300px;
   margin: 0 auto;
+  
+}
+
+.main {
+  // background-image: url('/images/ET2.jpg');
+  // background-repeat: no-repeat;
+  // background-size: cover;
+  // background-attachment: fixed;
+//   // background: red;
+//   // padding: 0 2rem;
+background: white;
+  
+}
+
+@media (min-width: 600px) {
+  #app {
+    width: 85%;
+  }
 }
 
 p {
@@ -24,6 +48,11 @@ p {
 a {
   text-decoration: none;
   color: rgb(31, 31, 31);
+}
+
+h1 {
+  margin: 1rem 0;
+  padding: 0;
 }
 
 h4 {
@@ -63,6 +92,30 @@ button:disabled {
 
 
 
+
+
+::-webkit-input-placeholder {
+  text-align: left;
+  color: #999;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  text-align: center;  
+  color: #999;
+
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  text-align: center;  
+  color: #999;
+
+}
+
+:-ms-input-placeholder {  
+  text-align: center; 
+  color: #999;
+
+}
 
 
 

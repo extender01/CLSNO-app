@@ -34,7 +34,7 @@ class MainHeader extends React.Component {
             <header className='header'>
                 <div className='f'>
 
-                    {/* Media will render Hamburger only if width of viewport is less than 500px */}
+                    {/* Media will render Hamburger only if width of viewport is less value of bp variable */}
                     <Media query={`(max-width: ${bp})`}>
                         {(matches) => 
                             matches ? <Hamburger /> : null
@@ -43,7 +43,7 @@ class MainHeader extends React.Component {
                    
                     <nav className='f_start-end-toggle header__logo'>
                         <NavLink className='header__title' to='/' exact={true}>
-                            <h1>Lab SNO</h1>
+                            <img src={'/images/logo.png'} height='40px' />
                         </NavLink>
                     </nav>
                     

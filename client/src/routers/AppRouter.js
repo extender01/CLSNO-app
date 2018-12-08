@@ -33,7 +33,7 @@ export const history = createHistory();
 
 const AppRouter = (props) => (
     <Router history={history}>
-        <div>
+        <div className='main'>
             
 
             

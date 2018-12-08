@@ -17,6 +17,7 @@ export default class Draw extends React.Component {
         edta: 'Nesrážlivá krev K2EDTA',
         citr: 'Nesrážlivá krev Na citrát',
 
+        moc: 'Moč jednorázová nebo sbíraná',
         mocj: 'Moč jednorázová',
         mocsb: 'Moč sbíraná',
         pu: 'Punktát',

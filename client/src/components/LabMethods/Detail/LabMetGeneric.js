@@ -23,6 +23,9 @@ export default class LabMetGeneric extends React.Component {
                 {!!lm && 
                     <React.Fragment>
                         <div className='f_stretch'>
+                            <h1>{lm.name}</h1>
+                        </div>
+                        <div className='f_stretch'>
                             <Generic label='NÁZEV' value={lm.name} classNames='g1 colorName' />
                             <Generic label='SYNONYMA' value={lm.syn} classNames='g1 colorSyn' />
 
