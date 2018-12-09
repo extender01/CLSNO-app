@@ -32,7 +32,8 @@ class MainHeader extends React.Component {
         
         return (
             <header className='header'>
-                <div className='f'>
+                
+                <div className='f header__line'>
 
                     {/* Media will render Hamburger only if width of viewport is less value of bp variable */}
                     <Media query={`(max-width: ${bp})`}>

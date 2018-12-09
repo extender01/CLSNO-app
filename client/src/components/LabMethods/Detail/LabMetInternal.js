@@ -13,6 +13,12 @@ export default class LabMetInternal extends React.Component {
         
     }
 
+
+    responseNote = {
+        _nextDay: 'Při doručení do laboratoře po 13:30 bude stanovení provedeno následující pracovní den voe pyco',
+        _ahoj: 'Kuk jak se mas'
+    };
+
     
 
     render () {
@@ -31,7 +37,13 @@ export default class LabMetInternal extends React.Component {
                             <GenericIcon label='POHOTOVOST' value={lm.erTime}  isAvailable={lm.erCare} classNames={lm.erCare ? 'g1 colorRunTime--yes' : 'g1 colorRunTime--no'} />
                             <GenericIcon label='STATIM' value={lm.statTime} isAvailable={lm.statCare} classNames={lm.statCare ? 'g1 colorRunTime--yes' : 'g1 colorRunTime--no'} />
                             <GenericIcon label='DOHLÁŠKA' value={lm.additionalOrder} isAvailable={lm.additionalOrder} classNames={lm.additionalOrder ? 'g1 colorRunTime--yes' : 'g1 colorRunTime--no'} />
-                            {lm.responseNote && <Generic label='POZNÁMKA K DOSTUPNOSTI' value={lm.responseNote} classNames='g1 colorRunTime' />}
+                            
+                            {/* poznamka k dostupnosti - responseNote will rendeer only if it exists in db. If it is presaved string from this.responseNote (starts with _) it will render particular string from responseNote object, otherwise it will render plain text*/}
+                            {lm.responseNote && (lm.responseNote.charAt(0) === '_' ?
+                                <Generic label='POZNÁMKA K DOSTUPNOSTI' value={this.responseNote[lm.responseNote]} classNames='g1 colorRunTime' />
+                                 :
+                                 <Generic label='POZNÁMKA K DOSTUPNOSTI' value={lm.responseNote} classNames='g1 colorRunTime' />
+                            )}
                         </div>
                         
                     

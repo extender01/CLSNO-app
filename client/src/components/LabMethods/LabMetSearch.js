@@ -63,7 +63,7 @@ class LabMetSearch extends React.Component {
 
 
                 <div className={this.noFilters() ? 'lm__search--invisible ' : undefined}>
-                   <p className='lm__search_clearFilter' onClick={this.clearFilters}>HLEDAT VŠUDE</p> 
+                   <p className='lm__search_clearFilter' onClick={this.clearFilters}><img src={'/images/error.png'} height='12px' />HLEDAT VŠUDE</p> 
                 </div>
                 
             </div>
