@@ -41,9 +41,9 @@ class LabMetSearch extends React.Component {
     render() {
         return (
             <div className='lm__search'>
-                <div className='f_center'> 
+                <div className='f_center lm__search_input'> 
                     <input  
-                        className='lm__search_input' 
+                        className='lm__search_input_element' 
                         autoFocus 
                         type='search' 
                         name='search' 
@@ -55,7 +55,7 @@ class LabMetSearch extends React.Component {
                     <img 
                         className='lm__search_img'
                         onClick={this.clearSearch} 
-                        src={this.props.text ? '/images/clear2.png' : '/images/magnifier.png'}
+                        src={this.props.text ? '/images/cross.png' : '/images/search.png'}
                         height="40px" 
                     />
 
@@ -63,7 +63,7 @@ class LabMetSearch extends React.Component {
 
 
                 <div className={this.noFilters() ? 'lm__search--invisible ' : undefined}>
-                   <p className='lm__search_clearFilter' onClick={this.clearFilters}><img src={'/images/error.png'} height='12px' />HLEDAT VŠUDE</p> 
+                   <p className='lm__search_clearFilter' onClick={this.clearFilters}><img src={'/images/cross.png'} height='12px' />HLEDAT VŠUDE</p> 
                 </div>
                 
             </div>

@@ -44,7 +44,7 @@ class MainHeader extends React.Component {
                    
                     <nav className='f_start-end-toggle header__logo'>
                         <NavLink className='header__title' to='/' exact={true}>
-                            <img src={'/images/logo.png'} height='40px' />
+                            <img src={'/images/SNO_400W.png'} height='40px' />
                         </NavLink>
                     </nav>
                     
@@ -56,11 +56,13 @@ class MainHeader extends React.Component {
 
                     <div className='header__user'>
                         {this.props.isLogged ? (
-                            <div className='f_column g1'>
-                                <img src={'/images/man-user.png'} height='30px' />
-                                <p >{this.props.nick}</p>
+                            <React.Fragment>
+                                <div className='f_column'>
+                                    <img src={'/images/user.png'} height='20px' />
+                                    <p >{this.props.nick}</p>
+                                </div>
                                 <NavLink to='/login'>Odhlásit se</NavLink>
-                            </div>
+                            </React.Fragment>
                         ) : (
                             <div className='f_column g1'>
                                 <NavLink to='/login'>Přihlásit se</NavLink>

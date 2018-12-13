@@ -1,6 +1,6 @@
 .header {
-    background: rgb(75, 183, 255);
-
+    background: rgba(0, 0, 0, 0.06);
+    
     &__title {
         text-decoration: none;
         color: rgb(95, 95, 95);
@@ -22,19 +22,30 @@
     }
 
     &__user {
-        flex-grow: 1;
+        // flex-grow: 1;
+        display: flex;
+        align-items: center;
+        margin-right:  3rem;
+
+        & > div, & > a {
+            padding-left: 2rem;
+        }
+    }
+
+    & a {
+        color: white;
     }
 }
 
 .admin-header {
-    background: rgb(212, 255, 132);
+    // background: rgb(212, 255, 132);
     padding: 1rem 0;
 }
 
 .header-up {
     height: 3rem;
     width: 100%;
-    background: white;
+    // background: white;
 }
 
 @media (max-width: $bp) {

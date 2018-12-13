@@ -3,12 +3,13 @@
     margin: 0 4px 8px 4px;
     text-align: center; 
     color: white;
-    box-shadow: 2px 2px 1px #b4b4b4;
+    background: rgba(86, 29, 29, 0.22);
    
 }
 
 .ld {
-    // margin-top: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
     padding: 2rem;
 
     // background-image: url('/images/ET2.jpg');
@@ -23,34 +24,34 @@
 
 
 
-.colorName {
-    background: $colorName;
-    // color: $grey
-}
+// .colorName {
+//     background: $colorName;
+//     // color: $grey
+// }
 
-.colorSyn {
-    background: $colorName;
-    // color: $grey
-}
+// .colorSyn {
+//     background: $colorName;
+//     // color: $grey
+// }
 
-.colorNameAk {
-    background: $colorName;
-    // color: $grey
-}
+// .colorNameAk {
+//     background: $colorName;
+//     // color: $grey
+// }
 
-.colorGroupAk {
-    background: $colorName;
-    // color: $grey
-}
+// .colorGroupAk {
+//     background: $colorName;
+//     // color: $grey
+// }
 
-.colorWhere {
-    background: $colorWhere;
-    color: $grey;
-}
+// .colorWhere {
+//     background: $colorWhere;
+//     color: $grey;
+// }
 
 .colorWhenTransport {
-    background: $colorWhenTransport;
-    color: $grey;
+    // background: $colorWhenTransport;
+    // color: $grey;
 
     & > table {
         margin: 0 auto;
@@ -59,20 +60,20 @@
     
 }
 
-.colorDraw {
-    background: $colorDraw;
-    color: $grey;
-}
+// .colorDraw {
+//     background: $colorDraw;
+//     color: $grey;
+// }
 
-.colorPreanal {
-    background: $colorPreanal;
-    color: $grey;
-}
+// .colorPreanal {
+//     background: $colorPreanal;
+//     color: $grey;
+// }
 
-.colorNote {
-    background: $colorNote;
-    color: $grey; 
-}
+// .colorNote {
+//     background: $colorNote;
+//     color: $grey; 
+// }
 
 .colorCustomNote {
     background: $colorCustomNote;
@@ -80,12 +81,12 @@
 
 }
 
-.colorUnit {
-    background: $colorUnit;
-}
+// .colorUnit {
+//     background: $colorUnit;
+// }
 
 .colorRefRange {
-    background: $colorRefRange;
+    // background: $colorRefRange;
     & > table {
         margin: 0 auto;
         text-align: center;
@@ -101,8 +102,8 @@
 
 .colorRunTime {
 
-    background: $colorDraw;
-    color: $grey;
+    // background: $colorDraw;
+    // color: $grey;
 
     &--no {
         background: $colorRunTimeNo;
@@ -114,35 +115,22 @@
     
 }
 
-.colorInterference {
-    background: $colorInterference;
-}
+// .colorInterference {
+//     background: $colorInterference;
+// }
 
-.colorExtDetails {
-    background: $colorExtDetails;
-}
+// .colorExtDetails {
+//     background: $colorExtDetails;
+// }
 
 .colorParcelInfo {
-    background: $colorParcelInfo;
+    background: rgba(69, 5, 136, 0.33);
     
 }
 
 
 
 
-// .draw__img {
-//     &--sg {
-//         content: url("/images/14.png");
-//         height: $draw-img;
-//         margin: 0 auto;
-//     }
-
-//     &--se {
-//         content: url("/images/1.png");
-//         height: $draw-img;
-//         margin: 0 auto;
-//     }
-// }
 
 
 
@@ -165,11 +153,11 @@
 }
 
 .refRange__M {
-    color: rgb(150, 189, 233);
+    color: rgb(163, 206, 255);
 }
 
 .refRange__F {
-    color: rgb(255, 116, 192);
+    color: rgb(255, 172, 217);
 }
 
 

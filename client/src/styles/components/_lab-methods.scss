@@ -1,8 +1,15 @@
+.dash {
+    // background: #eee;
+}
+
+
 .lm {
     // background-color: rgb(255, 255, 255);
     padding: 2rem;
     margin: 0 auto;
     text-decoration: none;
+    max-width: 1000px;
+    // background: #eee;
 
     
     // background-image: url('/images/ET2.jpg');
@@ -12,29 +19,51 @@
 
     & > h2 {
         text-align: center;
+        color: white;
     }
 
+    
+
     &__search {
-        background-color: $searchBar;
         padding-top: 2.5rem;
+        //for centering lm__search_input inline block
+        text-align: center;
 
         &--invisible {
             visibility: hidden;
         }
 
+        //div with input
         &_input {
-            height: 40px;
-            border: none;
-            padding-left: 1rem;
+            display: inline-flex;
+            border: 1px white solid;
+            padding: 1rem;
             margin-top: 1rem;
             font-size: 3rem;
-            min-width: 27rem;
+            background: none;
+
+            //remove blue border when focused on input
+            & > input:focus {
+                outline: none
+            }
+
+            //input element
+            &_element {
+                height: 40px;
+                border: none;
+                font-size: 3rem;
+                font-weight: 100;
+                min-width: 27rem;
+                background: none;
+                color: white;
+
+               
+            }
             
         }
 
         &_img {
-            margin-top: 1rem;
-            margin-left: 1rem;
+
             &:hover {
                 cursor: pointer;
             }
@@ -48,12 +77,17 @@
             margin: 0 auto;
             min-width: 350px;
             text-align: center;
-            padding-right: 4rem;
             padding-top: 1rem;
+            color: white;
+
+            & > img {
+                margin: 0 .5rem;
+            } 
 
             &:hover {
                 cursor: pointer;
             }
+
 
 
             
@@ -65,10 +99,13 @@
     }
 
     &__cat {
-        background: $searchBar;
+        // background: $searchBar;
 
         &-active {
-            background-color: rgb(3, 92, 0);
+            // background-color: rgba(255, 201, 25, .2);
+            font-weight: bold;
+            border: 3px white solid;
+            outline: none;
         }
     }
 
@@ -77,27 +114,33 @@
         margin: 1rem 0;
         padding: 1.5rem 3rem;
         font-size: 2rem;
-        color: rgb(63, 63, 63);
+        color: white;
+        border: 1px white solid;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-between;
         align-items: center;
 
         &--found {
-            background: rgb(10, 255, 22);
+            background: rgb(185, 0, 86);
             transition: background .8s;
             border-radius: 5%;
             padding: .5rem;
+            
+        }
+
+        & a {
+            color: white;
         }
         
     }
 
     &__internal {
-        background: rgb(252, 255, 83);
+        background: rgba(1, 113, 0, 0.24);
     }
 
     &__external {
-        background: rgb(161, 210, 255);
+        background: rgba(37, 5, 117, 0.18);
     }
 
    
