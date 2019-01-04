@@ -4,23 +4,29 @@
 
 
 .lm {
-    // background-color: rgb(255, 255, 255);
-    padding: 2rem;
-    margin: 0 auto;
-    text-decoration: none;
-    max-width: 1000px;
-    // background: #eee;
+    padding-top: 64px;
+       background-color: rgb(48, 127, 170);
 
+
+
+    &__methods {
+        padding: 2rem;
+        margin: 0 auto;
+        text-decoration: none;
+        max-width: 1000px;
     
-    // background-image: url('/images/ET2.jpg');
-    // background-repeat: no-repeat;
-    // background-size: cover;
-    // background-attachment: fixed;
-
-    & > h2 {
-        text-align: center;
-        color: white;
+        
+        // background-image: url('/images/ET2.jpg');
+        // background-repeat: no-repeat;
+        // background-size: cover;
+        // background-attachment: fixed;
+    
+        & > h2 {
+            text-align: center;
+            color: white;
+        }    
     }
+  
 
     
 

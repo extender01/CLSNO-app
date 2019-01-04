@@ -4,19 +4,16 @@ html {
 }
 
 body {
-  font-family: 'Roboto', Helvetica, Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-size: $m-size;
-  // background-color: white;
   margin: 0;
   padding: 0;
   // background-image: url('/images/ET3.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
-  background-image: radial-gradient(#3CCDC9, #378BBD);
-  color: white;
-  
-  
+  //background-image: radial-gradient(#3CCDC9, #378BBD);
+  // color: white;
 }
 
 #app {
@@ -26,25 +23,13 @@ body {
   
 }
 
-.main {
-  // background-image: url('/images/ET2.jpg');
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // background-attachment: fixed;
-//   // background: red;
-//   // padding: 0 2rem;
-// background: white;
-  
+.main-content {
+  // background: white;
 }
-
-// @media (min-width: 600px) {
-//   #app {
-//     width: 85%;
-//   }
-// }
 
 p {
   margin: 0;
+  font-family: 'Raleway', sans-serif;
 }
 
 a {

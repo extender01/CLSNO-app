@@ -4,9 +4,9 @@ import { history } from '../routers/AppRouter';
 
 //=======================  ADD_TEST===================================================
 
-const addTestBegin = () => ({type: 'ADD_TEST_BEGIN'});
-const addTestFailure = (error = null) => ({type: 'ADD_TEST_FAILURE', error: error});
-const addTestSuccess = (test = {}) => {
+export const addTestBegin = () => ({type: 'ADD_TEST_BEGIN'});
+export const addTestFailure = (error = null) => ({type: 'ADD_TEST_FAILURE', error: error});
+export const addTestSuccess = (test = {}) => {
     
     return {
         type: 'ADD_TEST_SUCCESS',
@@ -31,7 +31,8 @@ export const startAddTest = (test) => {
         //this will get data from result of axios POST call (what is saved to mongodb) and is used to update redux via dispatch
         console.log('starting axios POST request to send new test to db');
         
-        axios({
+        //this return is for jest testing in testActions.test.js - this returns original promise, which can be chained with .then where expect()... assertions are put
+        return axios({
             method: 'post',
             url: '/api/addtest',
             data: test

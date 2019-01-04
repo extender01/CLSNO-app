@@ -22,6 +22,12 @@ import LabMetDash from '../components/LabMethods/LabMetDash';
 import LabMetExternal from '../components/LabMethods/Detail/LabMetExternal';
 import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
 import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/CustomNoteForm';
+import Contact from '../components/About/Contact';
+import Akreditace from '../components/About/Akreditace';
+import LabIdentification from '../components/About/LabIdentification';
+import Introduction from '../components/About/Introduction';
+import DrawSystem from '../components/Info/Draw/DrawSystem';
+import About from '../components/About/About';
 
 import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
@@ -51,7 +57,14 @@ const AppRouter = (props) => (
                 
                 <Route path='/signup' component={SignupPage} />
                 <Route path='/login' component={LoginPage} />
-                <Route path='/help' component={HelpPage}/>
+                <Route path='/kontakty' component={Contact}/>
+                <Route path='/akreditace' component={Akreditace} />
+                <Route path='/identifikace' component={LabIdentification} />
+                <Route path='/organizace' component={Introduction} />
+                <Route path='/odberovy-system' component={DrawSystem} />
+                <Route path='/about' component={About} />
+
+
                 <Route path='/forbidden' component={Forbidden} />
                 <Route path='/logout' component={LogoutTest} />
                 <Route path='/methods' component={LabMetDash} exact={true} />

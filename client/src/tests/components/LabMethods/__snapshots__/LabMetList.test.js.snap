@@ -4,7 +4,7 @@ exports[`should render LabMetList with lab methods 1`] = `
 <div
   className="lm"
 >
-  <LabMetItem
+  <Connect(LabMetItem)
     __v={4}
     _id="5be55cf769cf385290c66948"
     additionalOrder="24h"
@@ -68,7 +68,7 @@ exports[`should render LabMetList with lab methods 1`] = `
     whenExtTransport=""
     where="SNO"
   />
-  <LabMetItem
+  <Connect(LabMetItem)
     __v={0}
     _id="5bea74c7c75591445c168693"
     additionalOrder=""
@@ -106,7 +106,7 @@ exports[`should render LabMetList with lab methods 1`] = `
     whenExtTransport="po-pa"
     where="Krnov"
   />
-  <LabMetItem
+  <Connect(LabMetItem)
     __v={10}
     _id="5bec433f51eacf1980555d86"
     additionalOrder="24h"
@@ -167,8 +167,8 @@ exports[`should render LabMetList with warning, that there are no methods 1`] = 
 <div
   className="lm"
 >
-  <p>
+  <h2>
     Laboratorní metody nenalezeny
-  </p>
+  </h2>
 </div>
 `;

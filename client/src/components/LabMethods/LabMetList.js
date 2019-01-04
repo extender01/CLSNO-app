@@ -18,7 +18,7 @@ export class LabMetList extends React.Component {
         console.log('labmetlist se renderoval');
         
         return (
-            <div className='lm'>
+            <div className='lm__methods'>
                 {
                     this.props.labTests.length === 0 ? (
                         <h2>Laboratorní metody nenalezeny</h2>

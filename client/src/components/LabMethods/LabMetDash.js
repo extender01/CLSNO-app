@@ -16,7 +16,7 @@ export default class LabMetDash extends React.Component {
         console.log('dash se renderoval');
         
         return (
-            <div className='dash'>
+            <div className='lm'>
                 <LabMetSearch />
                 <LabMetCategory />
                 {/*<LabMetAlphabet /> */}
