@@ -2,7 +2,7 @@ import React from 'react';
 
 const Introduction = () => (
     
-    <div className='introduction fc'>
+    <div className='introduction f_center_wrap'>
             
         <div>
             <h1>Centrální laboratoře SNO</h1>

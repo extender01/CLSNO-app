@@ -51,7 +51,7 @@ const AppRouter = (props) => (
             
             {(!!props.user && !!props.labmets) &&
             <Switch>
-                <Route path='/' component={HomePage} exact={true}/>
+                <Route path='/' component={About} exact={true}/>
                 <AdminRoute path='/create' component={AddTestPage}/>
                 <Route path='/edit/:id' component={EditTestPage} />
                 

@@ -39,6 +39,13 @@
     flex-flow: row nowrap;
     justify-content: center;
     align-items: center;
+}
+
+.f_center_wrap {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
 
 }
 

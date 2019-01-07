@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Contact = () => (
-    <div className='contact'>
+    <div id='contact'>
         <div>     
             <h1>Kontakty</h1>
             <p>553 76 XXXX</p>
         </div>
-        <div className='fc'>
+        <div className='f_stretch'>
             
             <div className='contact__table' >
                 <h4>Centrální laboratoře</h4>
@@ -91,7 +91,7 @@ const Contact = () => (
             </div>
         </div>
 
-        <div className='fc'> 
+        <div className='f_stretch'> 
             <div className='contact__table'>
                 <h4>Úsek Hematologie</h4>
                 <table className='contact__table--hem'>

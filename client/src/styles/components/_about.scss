@@ -1,3 +1,28 @@
+//=======================ABOUT HEADER
+
+.about-header {
+    padding-top: 64px;
+    color: #4d4d4d;
+    height: 6.4rem;
+    box-shadow: -10px -10px #4d4d4d ;
+
+    & a {
+        color: #4d4d4d;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //=============INTRODUCTION
 
@@ -55,8 +80,19 @@
 //==================METHODS======================================================
 .methods {
     box-shadow: 0 10px 15px rgb(200, 200, 200);
-    height: 20rem;
+    height: 15rem;
     background: #3888B3;
+    // padding-top: 6rem;
+    // max-width: 50rem;
+
+    &__div {
+        max-width: 70rem;
+        margin: 0 auto;
+    }
+
+    & h2 {
+        text-align: center;
+    }
 
     & a {
         color: #ffffff;
@@ -78,15 +114,45 @@
 
 .departments {
     padding: 5rem 0;
-}
+    height: 40rem;
 
-.labimg {
-    max-width: 300px;
+    background: url('/images/ET3.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
 
-    & img {
-        max-width: 100%;
+    &__items {
+        margin: 0 3rem;
+        color: #4d4d4d;
+
+        & h2 {
+            max-width: 50rem;
+            font-size: 3rem;
+            
+        }
+
+        & ul {
+            padding-left: 1.5
+            
+            
+            rem;
+            line-height: 3rem;
+        }
+    }
+
+    &__image {
+        max-width: 350px;
+        margin: 0 3rem;
+
+        & img {
+            max-width: 100%;
+        }
+
     }
 }
+
+
 
 
 //============================DRAW ORGANIZATION ========================================================
@@ -96,14 +162,27 @@
     background: #3888B3;
     padding: 10rem 0;
     box-shadow: 0 10px 15px rgb(200, 200, 200);
+    margin: 0;
 
 
     &__card {
         background: rgb(43, 106, 139);
         padding: 2rem;
         text-align: center;
+        margin: 2rem 0;
+        width: 40rem;
+
+        &:hover {
+            background: rgb(29, 70, 92);
+        }
+
+        & img {
+            height: 128px;
+        }
     }
 }
+
+
 
 
 
@@ -118,7 +197,7 @@
 //============================CONTACTS =======================================================================
 
 
-.contact {
+#contact {
     padding: 2rem 0;
     text-align: center;
     background: #3888B3;

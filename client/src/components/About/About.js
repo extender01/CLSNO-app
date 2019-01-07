@@ -7,14 +7,17 @@ import Methods from './Methods';
 import Departments from './Departments';
 import DrawOrg from './DrawOrg';
 import Request from './Request';
+import AboutHeader from '../Headers/AboutHeader';
 
 const About = () => (
     <React.Fragment>
+        <AboutHeader />
         <Introduction />
-        <Methods />
-        <Departments />
+        
         <DrawOrg />
-        <Request />
+
+        <Departments />
+
         <Contact />
         <LabIdentification />
         <Akreditace />
