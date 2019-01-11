@@ -50,7 +50,7 @@ class MainHeader extends React.Component {
                     
                     <div className ='f header__links'>
                         <NavLink to='/about' className='g1'>O laboratoři</NavLink>
-                        <NavLink to='/methods' className='g1'>Metody</NavLink>
+                        <NavLink to='/metody' className='g1'>Metody</NavLink>
                         
                     </div>
 

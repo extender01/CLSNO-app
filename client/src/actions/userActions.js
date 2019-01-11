@@ -37,7 +37,7 @@ export const startLogin = (credentials) => {
             console.log('tohle se vraci z api po loginu', result.data);
              
             dispatch(loginSuccess(result.data));
-            history.push('/methods');
+            history.push('/metody');
               
         }).catch((e) => {
             console.log('neco se pokazilo,', e);
@@ -81,7 +81,7 @@ export const startSignup = (credentials) => {
             console.log('co se vraci z db po uspesnem signuppu usera', result.data);
             
             dispatch(signupSuccess(result.data));
-            history.push('/methods');
+            history.push('/metody');
               
         }).catch((e) => {
             console.log('neco se pokazilo,', e);
@@ -169,7 +169,7 @@ export const startLogout = () => {
             .then(() => {
                 console.log('uspesne smazano');
                 dispatch(logoutSuccess());
-                history.push('/methods');
+                history.push('/metody');
             
             }).catch((e) => {
                 console.log('error z catch actions', e);

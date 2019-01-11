@@ -12,6 +12,8 @@ import {startLoadTests} from './actions/testActions';
 import 'normalize.css/normalize.css';
 import './styles/styles.scss';
 
+import 'babel-polyfill';
+
 const store = configureStore();
 
 

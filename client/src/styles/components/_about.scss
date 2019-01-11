@@ -2,9 +2,11 @@
 
 .about-header {
     padding-top: 64px;
+    padding: 64px 20px 0 20px;
     color: #4d4d4d;
     height: 6.4rem;
     box-shadow: -10px -10px #4d4d4d ;
+    background: rgb(233, 233, 233);
 
     & a {
         color: #4d4d4d;
@@ -31,7 +33,7 @@
     color: rgb(83, 83, 83);
     margin: 0;
     padding: 10.4rem 0 4rem 0;
-    height: 50rem;
+    height: 45rem;
     background: url('/images/ET6.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -114,7 +116,7 @@
 
 .departments {
     padding: 5rem 0;
-    height: 40rem;
+    min-height: 40rem;
 
     background: url('/images/ET3.jpg');
     background-repeat: no-repeat;

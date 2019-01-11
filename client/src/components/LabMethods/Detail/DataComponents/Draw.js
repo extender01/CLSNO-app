@@ -42,7 +42,7 @@ export default class Draw extends React.Component {
                                 
                                 {this.drawTypes[item] &&
                                     <React.Fragment>
-                                    <img src={`/images/${item}.png`} title={this.drawTypes[item]} height='60px' />
+                                    <img src={`/images/drawsystem/${item}.png`} title={this.drawTypes[item]} height='60px' />
                                     
                                     <Media query={`(min-width: ${bp})`}>
                                         {(matches) => 

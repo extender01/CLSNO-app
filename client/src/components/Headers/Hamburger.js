@@ -23,8 +23,8 @@ export default class Hamburger extends React.Component {
         return (
             <div className='hambac'>
                 <Menu isOpen={this.state.burgerOpen}>
-                    <Link onClick={this.burgerHide} to='/methods'>Metody</Link>
-                    <Link onClick={this.burgerHide} to='/help'>O laboratori</Link>
+                    <Link onClick={this.burgerHide} to='/metody'>Metody</Link>
+                    <Link onClick={this.burgerHide} to='/about'>O laboratori</Link>
                     <Link onClick={this.burgerHide} to='/login'>Login</Link>
                     <Link onClick={this.burgerHide} to='/login'>Logout</Link>
                     

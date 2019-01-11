@@ -1,9 +1,15 @@
 .fc {
+    
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem 0;
     flex-flow: row wrap;
+    flex: 1 0 0;
+
+    @supports  (justify-content: space-evenly) {
+        justify-content: space-evenly;
+    }
 }
 
 .fcraw {
@@ -59,9 +65,13 @@
 .f_stretch {
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: stretch;
     margin-bottom: 2rem;
+
+    @supports  (justify-content: space-evenly) {
+        justify-content: space-evenly;
+    }
 
     &:first-of-type {
        

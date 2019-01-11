@@ -11,14 +11,14 @@ const LabMetItem = (props) => (
         <div className={(props.textFilter && props.name.toLowerCase().includes(props.textFilter.toLowerCase())) ? 'lm__item--found' : undefined}>
             {props.category === 'external' ? (   
                 <Link to={{
-                    pathname: '/methods/detail/' + props._id,
+                    pathname: '/metody/detail/' + props._id,
                     state: 'external' 
                 }}>
                     {props.name}
                 </Link>
             ) : (
                 <Link to={{
-                    pathname: '/methods/detail/' + props._id,
+                    pathname: '/metody/detail/' + props._id,
                     state: 'internal' 
                 }}>
                     {props.name}

@@ -41,7 +41,7 @@ export const startAddTest = (test) => {
                           
             dispatch(addTestSuccess(result.data));
             console.log('successfully added to db and dispatched object with data from db to be saved to redux store');
-            history.push('/methods');
+            history.push('/metody');
 
         }).catch((e) => {
             console.log('something went wrong when saving data to db', e);
@@ -112,7 +112,7 @@ export const startDeleteTest = (id) => {
         }).then((result) => {
             console.log('byla smazana metoda:', result.data.name);
             dispatch(deletTestSuccess(id));
-            history.push('/methods');
+            history.push('/metody');
         }).catch((e) => {
             console.log('neco se nepovedlo pri mazani metody');
             history.push('/forbidden');

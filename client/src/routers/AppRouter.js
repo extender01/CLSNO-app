@@ -26,8 +26,12 @@ import Contact from '../components/About/Contact';
 import Akreditace from '../components/About/Akreditace';
 import LabIdentification from '../components/About/LabIdentification';
 import Introduction from '../components/About/Introduction';
-import DrawSystem from '../components/Info/Draw/DrawSystem';
+import DrawSystem from '../components/About/Draws/DrawSystem';
 import About from '../components/About/About';
+import DrawOrder from '../components/About/Draws/DrawOrder';
+import DrawMistakes from '../components/About/Draws/DrawMistakes';
+
+import Draw from '../components/About/Draws/Draw';
 
 import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
@@ -63,13 +67,16 @@ const AppRouter = (props) => (
                 <Route path='/organizace' component={Introduction} />
                 <Route path='/odberovy-system' component={DrawSystem} />
                 <Route path='/about' component={About} />
+                <Route path='/odbery' component={Draw} />
+                <Route path='/odbery-poradi' component={DrawOrder} />
+                <Route path='/odbery-chyby' component={DrawMistakes} />
 
 
                 <Route path='/forbidden' component={Forbidden} />
                 <Route path='/logout' component={LogoutTest} />
-                <Route path='/methods' component={LabMetDash} exact={true} />
-                <Route path="/methods/detail/:id" component={LabMetDetail} />
-                <Route path="/methods/internal/:id" component={LabMetInternal} />
+                <Route path='/metody' component={LabMetDash} exact={true} />
+                <Route path="/metody/detail/:id" component={LabMetDetail} />
+                <Route path="/metody/internal/:id" component={LabMetInternal} />
                 <Route path='/customNote/:id' component={CustomNoteForm} />
 
 
