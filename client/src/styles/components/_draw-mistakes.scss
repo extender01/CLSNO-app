@@ -2,13 +2,16 @@
     padding-top: 64px;
 
     &__item {
+        border: 1px rgb(117, 117, 117) solid;
+    }
+
+    &__what {
         padding: 3rem 0;
         display: flex;
         flex-flow: row wrap;
         justify-content: space-around;
         align-items: center;
         // background: rgb(219, 219, 219);
-        border: 2px red solid;
 
         & img {
             max-width:50rem;
@@ -19,54 +22,89 @@
         }
     }
 
+    &__how {
+        // display: flex;
+        // flex-flow: row wrap;
+        // justify-content: space-around;
+        // align-items: center;
+        text-align: center;
 
-    &__description {
-        display: inline-block;
-    }
-
-
-
-    &__button {
-        max-width:15rem;
-        height: 3rem;
-        background: #39A6C2;
+        &__table {
         display: flex;
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        color: white;
-        padding: 1rem;
-        margin: 2rem 0;
-        border-radius: .5rem;
-
-        &:hover {
-            cursor: pointer;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
         }
-    }
-
-
-    &__detail {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-    }
-
-    &__table {
-        margin: 3rem;
-        border: 2px blue solid;
 
         &__item {
-            // background:red;
+            max-width: 25rem;
+            
+           
+            padding: 2rem;
+            margin: 1rem;
+            background-color: #39A6C2;
 
             & p {
-                padding: 2rem 0;
+                text-align: justify;
             }
 
-            & img {
-                padding-bottom: 1rem;
-            }
         }
+
     }
+
+
+    &__cons {
+        text-align: center;
+    }
+
+
+    // &__description {
+    //     display: inline-block;
+    // }
+
+
+
+    // &__button {
+    //     max-width:15rem;
+    //     height: 3rem;
+    //     background: #39A6C2;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-content: center;
+    //     align-items: center;
+    //     color: white;
+    //     padding: 1rem;
+    //     margin: 2rem 0;
+    //     border-radius: .5rem;
+
+    //     &:hover {
+    //         cursor: pointer;
+    //     }
+    // }
+
+
+    // &__detail {
+    //     display: flex;
+    //     flex-flow: column nowrap;
+    //     justify-content: center;
+    // }
+
+    // &__table {
+    //     margin: 3rem;
+    //     border: 2px blue solid;
+
+    //     &__item {
+    //         // background:red;
+
+    //         & p {
+    //             padding: 2rem 0;
+    //         }
+
+    //         & img {
+    //             padding-bottom: 1rem;
+    //         }
+    //     }
+    // }
 }
 
 

@@ -29,7 +29,7 @@ import Introduction from '../components/About/Introduction';
 import DrawSystem from '../components/About/Draws/DrawSystem';
 import About from '../components/About/About';
 import DrawOrder from '../components/About/Draws/DrawOrder';
-import DrawMistakes from '../components/About/Draws/DrawMistakes';
+import DrawMistakesSummary from '../components/About/Draws/DrawMistakes/DrawMistakesSummary';
 
 import Draw from '../components/About/Draws/Draw';
 
@@ -69,7 +69,7 @@ const AppRouter = (props) => (
                 <Route path='/about' component={About} />
                 <Route path='/odbery' component={Draw} />
                 <Route path='/odbery-poradi' component={DrawOrder} />
-                <Route path='/odbery-chyby' component={DrawMistakes} />
+                <Route path='/odbery-chyby' component={DrawMistakesSummary} />
 
 
                 <Route path='/forbidden' component={Forbidden} />
