@@ -1,0 +1,82 @@
+{
+    "venipuncture": {
+        "name": "Žilní odběr",
+        "guide": [
+            "Pacient má být seznámen s postupem odběru",
+            "Odběr žilní krve se provádí ráno nalačno, v poloze vsedě nebo vleže",
+            "Pracovník posoudí kvalitu žilního systému v loketní jamce nebo  na hřbetu ruky (masáž nebo prohmatávání ruky nejsou vhodné, protože mohou ovlivnit výsledky)",
+            "Nepoužívá se paže, na které jsou výrazné jizvy, hematom nebo u žen na straně po provedené mastektomii.",
+            "Paže leží volně položená na opěradle, místo odběru se desinfikuje a nechá zaschnout (jinak hrozí kontaminace desinfekcí a hemolýza)",
+            "Po desinfekci se přiloží turniket, který se nemá používat déle než 1 minutu. Zároveň by pacient neměl rukou cvičit (pumpovat). Při delším zaškrcení nebo cvičení dochází ke znatelným změnám hladin vyšetřovaných látek.",
+            "Sterilní odběrová jehla se zašroubuje do držáku. Palcem pod místem vpichu se stabilizuje poloha žíly.",
+            "Jehlou se provede venepunkce",
+            "Evakuovaná zkumavka se zavede do držáku a přes uzávěr se napíchne na druhý konec jehly.",
+            "Vakuum ve zkumavce zajistí automatické naplnění potřebného množství krve",
+            "Jakmile krev začne proudit do zkumavky, je možno odepnout turniket",
+            "Po naplnění se zkumavka vytáhne z držáku. Jehla stále zůstává v žíle, bezpečnostní ventil zabraňuje vytékání krve i srážení v jehle",
+            "Po vytažení je nutné zkumavku promíchat jemným převrácením 6-8x",
+            "Do držáku se postupně nasazují další zkumavky pro požadovaná vyšetření",
+            "Místo vpichu se překryje čtvercem z buničiny, na něj se opatrně zatlačí a jehla se pomalu vytáhne",
+            "Místo se přelepí náplastí a tiskne se nejméně 2 minuty.",
+            "Náplast by se měla nechat alespoň 15 minut (zejména u pacientů s poruchou srážlivosti či pacientů užívajících antikoagulancia a antiagregancia)"
+        
+        ],
+        "important": [ 
+            {
+                "head" : "Odběr při infuzi",
+                "text": "U odběru při infuzi hrozí kontaminace a SILNÉ ovlivnění výsledků",
+                "link": "/metody"
+            },
+            {
+                "head" : "Nezatahovat paži",
+                "text": "Nezatahovat a necvičit paží při odběru. Silně ovlivňuje ŽELEZO"
+            },
+            {
+                "head" : "Pořádně promíchat",
+                "text": "Zkumavky po odběru promíchat převrácením 6-8x, aby se krev dobře promíchala s aditivy"
+            }
+
+            
+        ]
+    },
+
+    "abr": {
+        "name": "Odběr na ABR a krevní plyny",
+        "guide": [
+            "Kapilární odběr pro ABR:",
+            "Kapilární vzorek je získán z arterializované tkáně do heparinizované kapiláry (dodá laboratoř), může tak za určitých předpokladů nahradit arteriální vzorek krve",
+            "Pokožka se arterializuje prohřátím teplou látkou či v teplé vodě (max. 40 ºC)",
+            "Místo vpichu se dezinfikuje a nechá zaschnout (jinak hrozí kontaminace či hemolýza)",
+            "Lancetou se provede vpich",
+            "První kapka se setře sterilním tampónem",
+            "K další kapce se přiloží kapilára a nechá se celá nasát krví",
+            "Oblast kolem vpichu by neměla být během nasávání stlačována, aby nedocházelo k ovlivnění hladin vyšetřovaných analytů",
+            "Po skončení nasávání se do kapiláry vloží míchací drátek a konce kapilár se uzavřou víčky",
+            "Obsah kapiláry se promíchá pohybem magnetu po povrchu kapiláry, který pohybuje s míchacím drátkem uvnitř",
+            "Místo vpichu se dezinfikuje překryje sterilním tampónkem a přelepí náplastí",
+            "Vzorek by se měl co nejrychleji dopravit do laboratoře"
+        ],
+        "important": [
+            {
+                "head": "Rychle do laboratoře",
+                "text": "Analýzu na ABR je třeba ideálně provést nejpozději do 1 hodiny od odběru. V plné krvi 'to žije', leukocyty, obvzláště při jejich zvýšeném množství spotřebovávají kyslík, erytrocyty produkcí laktátu snižují pH."
+            },
+
+            {
+                "head": "Bubliny jsou zlo",
+                "text": "Veškerý vzduch je potřeba jak ze stříkaček tak z kapilár dostat pryč. Odběr musí být anaerobní, protože složení plynů v  krvi je odlišné od složení plynů ve vzduchu"
+            },
+
+            {
+                "head": "Bez sraženin",
+                "text": "Po odběru je potřeba krev dobře promíchat, aby se protisrážlivé činidlo dobře promíchalo s krví. Stříkačku jemným vertikáním otáčením v ruce a kapiláru pomocí magnetického drátku, ten je třeba magnetem rozpohybovat několikrát od jednoho konci k druhému. Kapiláru je třeba dobře uzavřít gumovými víčky"
+            },
+
+            {
+                "head": "1 magnetický drátek",
+                "text": "Do kapilár dávejte pouze 1 magnetický drátek. Když je jich v kapiláře víc, tak je větší riziko vzniku sraženiny na okrajích kapiláry"
+            }
+
+        ]
+    }
+}

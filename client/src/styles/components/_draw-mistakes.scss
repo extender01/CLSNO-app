@@ -2,7 +2,9 @@
     padding-top: 64px;
 
     &__item {
-        border: 1px rgb(117, 117, 117) solid;
+        border-bottom: 1px rgb(117, 117, 117) solid;
+        background-image: linear-gradient( rgb(255, 255, 255) 10%, rgb(190, 241, 255) 90% );
+        
     }
 
     &__what {
@@ -14,7 +16,8 @@
         // background: rgb(219, 219, 219);
 
         & img {
-            max-width:50rem;
+            width:100%;
+            max-width: 30rem;
         }
 
         & p {
@@ -32,20 +35,30 @@
         &__table {
         display: flex;
         flex-flow: row wrap;
-        justify-content: space-around;
+        justify-content: center;
         align-items: stretch;
         }
 
         &__item {
             max-width: 25rem;
-            
+            border: 1px #39a6c2 solid;
+            background: #b9dee7;
            
-            padding: 2rem;
+            // padding: 2rem;
             margin: 1rem;
-            background-color: #39A6C2;
+            
+
+            & h3 {
+                background-color: #39A6C2;
+                padding: 2rem;
+                margin: 0;
+                color: white;
+            }
 
             & p {
                 text-align: justify;
+                padding: 2rem;
+                
             }
 
         }
@@ -55,6 +68,19 @@
 
     &__cons {
         text-align: center;
+        
+        &__item {
+            display: flex;
+            justify-content: center;
+            flex-flow: row wrap;
+            & p {
+                max-width: 50%;
+                margin: 2rem;
+            }
+    
+        }
+
+
     }
 
 

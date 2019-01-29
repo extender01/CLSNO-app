@@ -1,6 +1,7 @@
 import React from 'react';
 import DrawMistakesItem from './DrawMistakesItem';
-import {tubeCont, infusionCont} from './DrawMistakesData';
+import mistakes from '../../../../data/drawMistakes.json';
+
 
 
 export default class DrawMistakesSummary extends React.Component {
@@ -12,8 +13,8 @@ export default class DrawMistakesSummary extends React.Component {
                 <div className='draw__mistakes f_center'>
                     <h1>Chyby v preanalytické fázi vyšetření</h1>
                 </div>
-                <DrawMistakesItem item={tubeCont} />
-                <DrawMistakesItem item={infusionCont} />
+                <DrawMistakesItem item={mistakes.tubeCont} />
+                <DrawMistakesItem item={mistakes.infusionCont} />
                 
             </React.Fragment>
         );

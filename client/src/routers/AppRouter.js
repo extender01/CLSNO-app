@@ -30,11 +30,18 @@ import DrawSystem from '../components/About/Draws/DrawSystem';
 import About from '../components/About/About';
 import DrawOrder from '../components/About/Draws/DrawOrder';
 import DrawMistakesSummary from '../components/About/Draws/DrawMistakes/DrawMistakesSummary';
+import DrawGuideTemplate from '../components/About/Draws/DrawGuide/DrawGuideTemplate';
 
 import Draw from '../components/About/Draws/Draw';
 
 import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
+
+
+
+//==============import JSON data =============
+import drawGuideData from '../data/drawGuides.json';
+
 
 
 //Media from react-media library renders component based on css media query passed as prop parameter and renders what comes back from callback
@@ -70,6 +77,9 @@ const AppRouter = (props) => (
                 <Route path='/odbery' component={Draw} />
                 <Route path='/odbery-poradi' component={DrawOrder} />
                 <Route path='/odbery-chyby' component={DrawMistakesSummary} />
+                <Route path='/odbery-zilni' render={props => <DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  />} />
+                <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
+
 
 
                 <Route path='/forbidden' component={Forbidden} />

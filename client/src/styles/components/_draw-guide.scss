@@ -1,0 +1,34 @@
+.drawguide__template {
+    
+    padding-top: 64px;
+
+    & h1 {
+        text-align: center;
+    }
+
+    &__important {
+        display: flex;
+        justify-content: center;
+        flex-flow: row wrap;
+
+        &__item {
+            background: red;
+            max-width: 30rem;
+            margin: 2rem;
+            padding: 2rem;
+
+            & h3 {
+                text-align: center;
+            }
+        }
+    }
+    
+    &__guide {
+        margin: 3rem;
+        line-height: 3rem;
+        color: #444;
+        
+
+
+    }
+}
