@@ -1,0 +1,14 @@
+.transport {
+
+    &__item {
+        max-width: 40rem;
+
+        & h3 {
+            text-align: center;
+        }
+
+        & p {
+            text-align: justify;
+        }
+    }
+}

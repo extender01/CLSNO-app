@@ -15,7 +15,7 @@ const Organization = () => (
         <GeneralCard
             cardHead='TRANSPORT DO LABORATOŘE' 
             cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
-            cardLink='/odberovy-system' 
+            cardLink='/transport' 
             cardImg='/images/about/draw_256.png' 
         />
 

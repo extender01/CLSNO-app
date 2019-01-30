@@ -38,6 +38,7 @@ import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
 
 import Organization from '../components/About/Organization/Organization';
+import Transport from '../components/About/Organization/Transport/Transport';
 
 
 
@@ -81,6 +82,7 @@ const AppRouter = (props) => (
                 <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
 
                 <Route path='/organizace' component={Organization} />
+                <Route path='/transport' component={Transport} />
 
 
 
