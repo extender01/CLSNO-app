@@ -22,20 +22,22 @@ import LabMetDash from '../components/LabMethods/LabMetDash';
 import LabMetExternal from '../components/LabMethods/Detail/LabMetExternal';
 import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
 import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/CustomNoteForm';
-import Contact from '../components/About/Contact';
+import Contact from '../components/Landing/Contact';
+
 import Akreditace from '../components/About/Akreditace';
-import LabIdentification from '../components/About/LabIdentification';
-import Introduction from '../components/About/Introduction';
-import DrawSystem from '../components/About/Draws/DrawSystem';
-import About from '../components/About/About';
-import DrawOrder from '../components/About/Draws/DrawOrder';
+import LabIdentification from '../components/Landing/LabIdentification';
+import Introduction from '../components/Landing/Jumbotron';
+import DrawSystem from '../components/About/Draws/DrawSystem/DrawSystem';
+import Landing from '../components/Landing/Landing';
+import DrawOrder from '../components/About/Draws/DrawOrder/DrawOrder';
 import DrawMistakesSummary from '../components/About/Draws/DrawMistakes/DrawMistakesSummary';
 import DrawGuideTemplate from '../components/About/Draws/DrawGuide/DrawGuideTemplate';
-
-import Draw from '../components/About/Draws/Draw';
+import DrawDash from '../components/About/Draws/DrawDash';
 
 import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
+
+import Organization from '../components/About/Organization/Organization';
 
 
 
@@ -62,7 +64,7 @@ const AppRouter = (props) => (
             
             {(!!props.user && !!props.labmets) &&
             <Switch>
-                <Route path='/' component={About} exact={true}/>
+                <Route path='/' component={Landing} exact={true}/>
                 <AdminRoute path='/create' component={AddTestPage}/>
                 <Route path='/edit/:id' component={EditTestPage} />
                 
@@ -71,14 +73,14 @@ const AppRouter = (props) => (
                 <Route path='/kontakty' component={Contact}/>
                 <Route path='/akreditace' component={Akreditace} />
                 <Route path='/identifikace' component={LabIdentification} />
-                <Route path='/organizace' component={Introduction} />
                 <Route path='/odberovy-system' component={DrawSystem} />
-                <Route path='/about' component={About} />
-                <Route path='/odbery' component={Draw} />
+                <Route path='/odbery' component={DrawDash} />
                 <Route path='/odbery-poradi' component={DrawOrder} />
                 <Route path='/odbery-chyby' component={DrawMistakesSummary} />
                 <Route path='/odbery-zilni' render={props => <DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  />} />
                 <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
+
+                <Route path='/organizace' component={Organization} />
 
 
 

@@ -1,9 +1,19 @@
 .general {
     &__container {
-
-        // & a {
-        //     display: flex;
-        // }
+        padding-top: 6.4rem;
+        background: $bg-blue;
+        color: white;
+        margin: 0;
+        
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    
+        @supports  (justify-content: space-evenly) {
+            justify-content: space-evenly;
+        }
+    
     }
 
 
@@ -15,7 +25,11 @@
         max-width: 30rem;
        
         
-        
+        & a {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
 
         &:hover {
             background: rgb(29, 70, 92);

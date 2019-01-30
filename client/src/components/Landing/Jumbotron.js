@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Introduction = () => (
+const Jumbotron = () => (
     
-    <div className='introduction f_center_wrap'>
+    <div className='jumbotron f_center_wrap'>
             
         <div>
             <h1>Centrální laboratoře SNO</h1>
@@ -14,4 +14,4 @@ const Introduction = () => (
     </div>
 );
 
-export default Introduction;
+export default Jumbotron;

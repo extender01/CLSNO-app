@@ -2,23 +2,23 @@ import React from 'react';
 import GeneralCard from '../../General/GeneralCard';
 
 const DrawDash = () => (
-    <div className='draw__dash'>
+    <div className='general__container'>
         
                
         <GeneralCard 
             cardHead='ODBĚROVÝ SYSTÉM' 
             cardText='Informace k systému používanému v SNO' 
-            cardLink='draw__system' 
+            cardLink='/odberovy-system' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={true}
+            
         />
 
         <GeneralCard 
             cardHead='SPRÁVNÉ POŘADÍ ZKUMAVEK PŘI ODBĚRU' 
             cardText='V jakém pořadí se mají správně odebírat zkumavky?' 
-            cardLink='draw__order' 
+            cardLink='/odbery-poradi' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={true}
+            
         />
 
         <GeneralCard 
@@ -26,7 +26,6 @@ const DrawDash = () => (
             cardText='Seznam chyb, kterých je třeba se vyvarovat pro obdržení validního výsledku' 
             cardLink='/odbery-chyby' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
 
         <GeneralCard 
@@ -34,7 +33,6 @@ const DrawDash = () => (
             cardText='Pokyny pro správné provedení standardního žilního odběru' 
             cardLink='/odbery-zilni' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
 
         <GeneralCard 
@@ -42,7 +40,6 @@ const DrawDash = () => (
             cardText='Pokyny pro správné provedení kapilárního odběru pro ABR' 
             cardLink='/odbery-abr' 
             cardImg='/images/about/draw_256.png'
-            scrollLink={false} 
         />
 
         <GeneralCard 
@@ -50,7 +47,6 @@ const DrawDash = () => (
             cardText='Pokyny pro správné provedení kapilárního odběru pro glykémie' 
             cardLink='/odbery-glyk' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
 
         <GeneralCard 
@@ -58,7 +54,6 @@ const DrawDash = () => (
             cardText='Pokyny pro odběr ranní (jednorázové moče) např. pro stanovení chemicky a sedimentu' 
             cardLink='/odbery-moc-ranni' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
 
 
@@ -67,7 +62,6 @@ const DrawDash = () => (
             cardText='Pokyny pro správný sběr moče pro biochemické analýzy' 
             cardLink='/odbery-moc-sber' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
 
         <GeneralCard 
@@ -75,7 +69,6 @@ const DrawDash = () => (
             cardText='Pokyny pro sběr moče pro stanovení Hamburgerova sedimentu' 
             cardLink='/odbery-hambac' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
 
         <GeneralCard 
@@ -83,7 +76,6 @@ const DrawDash = () => (
             cardText='Pokyny pro správný odběr stolice na vyšetření okultního krvácení' 
             cardLink='/odbery-stolice' 
             cardImg='/images/about/draw_256.png' 
-            scrollLink={false}
         />
         
         

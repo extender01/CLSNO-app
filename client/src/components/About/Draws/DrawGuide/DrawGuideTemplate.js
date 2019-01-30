@@ -1,5 +1,7 @@
 import React from 'react';
 
+//data from json, props in approuter
+
 const DrawGuideTemplate = (props) => (
     <div className='drawguide__template'>
         <h1>{props.data.name}</h1>

@@ -4,7 +4,7 @@ const LabIdentification = () => (
     <React.Fragment>
         <h1>Identifikace laboratoře</h1>
         <table>
-        <tbody>
+            <tbody>
                 <tr>
                     <td>Název organizace</td>
                     <td>Slezská nemocnice v Opavě, p.o.</td>
