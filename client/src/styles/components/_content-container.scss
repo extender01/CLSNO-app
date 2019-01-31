@@ -2,3 +2,32 @@
     padding: 1rem 2rem;
     
 }
+
+
+.container {
+    margin-top: 6.4rem;
+
+    &__white {
+        
+        & h1, h2, h3 {
+            color: $h-blue;
+        }
+
+        & p {
+            color: $p-grey;
+        }
+    }
+
+    &__blue {
+        
+        background: $bg-blue;
+        
+        & h1, h2, h3, p {
+            color: white;
+        }
+
+        
+        
+        
+    }
+}

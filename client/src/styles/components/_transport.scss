@@ -1,14 +1,23 @@
 .transport {
 
+    
+
     &__item {
         max-width: 40rem;
+        border: 1px white solid;
+        margin: 2rem;
+        padding: 2rem;
+
+
 
         & h3 {
             text-align: center;
+            color: $h-blue;
         }
 
         & p {
             text-align: justify;
+            
         }
     }
 }

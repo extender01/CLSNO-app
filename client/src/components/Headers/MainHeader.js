@@ -31,7 +31,7 @@ class MainHeader extends React.Component {
         console.log('mainheader se renderoval');
         
         return (
-            <header className='header'>
+            <div className='header'>
                 
                 <div className='f header__line'>
 
@@ -76,7 +76,7 @@ class MainHeader extends React.Component {
                 </div> 
                  
                 
-            </header>
+            </div>
         );
     }
 }

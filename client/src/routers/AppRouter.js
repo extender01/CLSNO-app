@@ -39,6 +39,7 @@ import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
 
 import Organization from '../components/About/Organization/Organization';
 import Transport from '../components/About/Organization/Transport/Transport';
+import Modes from '../components/About/Organization/Modes/Modes';
 
 
 
@@ -53,52 +54,57 @@ export const history = createHistory();
 
 const AppRouter = (props) => (
     <Router history={history}>
-        <div className='main'>
+        <React.Fragment>
             
 
             
             
-            <MainHeader>
+            <MainHeader />
                 
-            </MainHeader>
             {props.rights === 'admin' && <AdminHeader />}
+
+            <div className='container'>
             
-            {(!!props.user && !!props.labmets) &&
-            <Switch>
-                <Route path='/' component={Landing} exact={true}/>
-                <AdminRoute path='/create' component={AddTestPage}/>
-                <Route path='/edit/:id' component={EditTestPage} />
-                
-                <Route path='/signup' component={SignupPage} />
-                <Route path='/login' component={LoginPage} />
-                <Route path='/kontakty' component={Contact}/>
-                <Route path='/akreditace' component={Akreditace} />
-                <Route path='/identifikace' component={LabIdentification} />
-                <Route path='/odberovy-system' component={DrawSystem} />
-                <Route path='/odbery' component={DrawDash} />
-                <Route path='/odbery-poradi' component={DrawOrder} />
-                <Route path='/odbery-chyby' component={DrawMistakesSummary} />
-                <Route path='/odbery-zilni' render={props => <DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  />} />
-                <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
+            
+            
+                {(!!props.user && !!props.labmets) &&
+                <Switch>
+                    <Route path='/' component={Landing} exact={true}/>
+                    <AdminRoute path='/create' component={AddTestPage}/>
+                    <Route path='/edit/:id' component={EditTestPage} />
+                    
+                    <Route path='/signup' component={SignupPage} />
+                    <Route path='/login' component={LoginPage} />
+                    <Route path='/kontakty' component={Contact}/>
+                    <Route path='/akreditace' component={Akreditace} />
+                    <Route path='/identifikace' component={LabIdentification} />
+                    <Route path='/odberovy-system' component={DrawSystem} />
+                    <Route path='/odbery' component={DrawDash} />
+                    <Route path='/odbery-poradi' component={DrawOrder} />
+                    <Route path='/odbery-chyby' component={DrawMistakesSummary} />
+                    <Route path='/odbery-zilni' render={props => <DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  />} />
+                    <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
 
-                <Route path='/organizace' component={Organization} />
-                <Route path='/transport' component={Transport} />
-
-
-
-                <Route path='/forbidden' component={Forbidden} />
-                <Route path='/logout' component={LogoutTest} />
-                <Route path='/metody' component={LabMetDash} exact={true} />
-                <Route path="/metody/detail/:id" component={LabMetDetail} />
-                <Route path="/metody/internal/:id" component={LabMetInternal} />
-                <Route path='/customNote/:id' component={CustomNoteForm} />
+                    <Route path='/organizace' component={Organization} />
+                    <Route path='/transport' component={Transport} />
+                    <Route path='/rezimy' component={Modes} />
 
 
-                <AdminRoute path='/admin' component={LoginPage} />
-                <Route component={NotFoundPage}/>
-            </Switch>
-            }
-        </div>
+
+                    <Route path='/forbidden' component={Forbidden} />
+                    <Route path='/logout' component={LogoutTest} />
+                    <Route path='/metody' component={LabMetDash} exact={true} />
+                    <Route path="/metody/detail/:id" component={LabMetDetail} />
+                    <Route path="/metody/internal/:id" component={LabMetInternal} />
+                    <Route path='/customNote/:id' component={CustomNoteForm} />
+
+
+                    <AdminRoute path='/admin' component={LoginPage} />
+                    <Route component={NotFoundPage}/>
+                </Switch>
+                }
+            </div>
+        </React.Fragment>
     </Router>
 );
 

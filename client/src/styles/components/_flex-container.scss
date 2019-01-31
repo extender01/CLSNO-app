@@ -1,3 +1,52 @@
+$se: space-evenly;
+$sa: space-around;
+
+
+@mixin frc($jc: center, $ai: center, $wrap: wrap) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+    
+     
+}
+
+@mixin frs($ai: stretch, $wrap: wrap) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: $wrap;
+    justify-content: space-around;
+    align-items: $ai;
+    @supports  (justify-content: space-evenly) {
+                justify-content: space-evenly;
+    }
+    
+     
+}
+
+@mixin fc($jc: space-evenly, $ai: center, $wrap: nowrap) {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: $wrap;
+    justify-content: $jc;
+    align-items: $ai;
+    
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .fc {
     
     display: flex;

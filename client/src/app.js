@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+import {Helmet} from 'react-helmet';
 
 import AppRouter from './routers/AppRouter';
 
@@ -17,6 +18,7 @@ import 'babel-polyfill';
 const store = configureStore();
 
 
+document.documentElement.setAttribute('data-browser', navigator.userAgent);
 
 
 const jsx = (

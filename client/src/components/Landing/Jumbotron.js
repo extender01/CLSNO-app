@@ -2,9 +2,10 @@ import React from 'react';
 
 const Jumbotron = () => (
     
-    <div className='jumbotron f_center_wrap'>
+    <div className='container__white jumbotron'>
             
-        <div>
+        <div className='jumbotron__heading'>
+            
             <h1>Centrální laboratoře SNO</h1>
             <h2>Rutinní, pohotovostní a specializovaná vyšetření.</h2>
 

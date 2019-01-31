@@ -3,9 +3,9 @@ import GeneralCard from '../General/GeneralCard';
 // import { Link as ScrollLink, animateScroll as scroll } from 'react-scroll';
 
 const DrawOrg = () => (
-    <div className='draworg'>
+    <div className='container__blue draworg'>
 
-        <div className='general__container'>
+        <div className='general__line'>
 
 
             <GeneralCard
@@ -25,7 +25,7 @@ const DrawOrg = () => (
             />
 
         </div>
-        <div className='f_stretch'>
+        <div className='general__line'>
             <GeneralCard
                 cardHead='SEZNAM METOD'
                 cardText='Seznam metod prováděných v SNO a odesílaných do smluvních laboratoří.'

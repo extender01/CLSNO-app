@@ -1,12 +1,12 @@
 import React from 'react';
 
 const Contact = () => (
-    <div id='contact'>
-        <div>     
+    <div id='contact' className='container__blue'>
+        <div className='general__heading'>     
             <h1>Kontakty</h1>
             <p>553 76 XXXX</p>
         </div>
-        <div className='f_stretch'>
+        <div className='general__line'>
             
             <div className='contact__table' >
                 <h4>Centrální laboratoře</h4>
@@ -93,7 +93,7 @@ const Contact = () => (
             </div>
         </div>
 
-        <div className='f_stretch'> 
+        <div className='general__line'> 
             <div className='contact__table'>
                 <h4>Úsek Hematologie</h4>
                 <table className='contact__table--hem'>
@@ -151,7 +151,10 @@ const Contact = () => (
                 </table>    
             </div>        
         </div>
-        <h3>V době 15:30 - 6:30 a přes celé víkendy a svátky je obsluhován pouze telefon POHOTOVOST</h3>
+        
+        <div className='general__line'>
+            <h3>V době 15:30 - 6:30 a přes celé víkendy a svátky je obsluhován pouze telefon POHOTOVOST</h3>
+        </div>
 
         
     </div>

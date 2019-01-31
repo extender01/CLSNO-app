@@ -1,19 +1,34 @@
 .general {
-    &__container {
-        padding-top: 6.4rem;
-        background: $bg-blue;
-        color: white;
-        margin: 0;
+    // &__container {
+    //     padding-top: 6.4rem;
+    //     // background: $bg-blue;
+    //     color: $p-grey;
+    //     margin: 0;
         
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: stretch;
+    //     display: flex;
+    //     flex-flow: row wrap;
+    //     justify-content: space-around;
+    //     align-items: stretch;
     
-        @supports  (justify-content: space-evenly) {
-            justify-content: space-evenly;
-        }
+    //     @supports  (justify-content: space-evenly) {
+    //         justify-content: space-evenly;
+    //     }
+
+    //     font-family: 'Open Sans';
+
+        
     
+    // }
+
+    &__line {
+        @include frs();
+        max-width: 120rem;
+    }
+
+    &__heading {
+        @include fc();
+        max-width: 120rem;
+        margin: 3rem 0;
     }
 
 
@@ -41,3 +56,46 @@
         }
     }
 }
+
+
+//==================== MIXINS ======================================
+
+
+//checks what browser
+@mixin browser($browsers: 'Mozilla') {
+    @each $browser in $browsers {
+      html[data-browser*="#{$browser}"] & {
+        @content;
+      }
+    }
+}
+  
+  
+// background image for div
+@mixin bgimg() {
+    background: url('/images/ET6.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+
+//set image properties from wrapped container
+
+@mixin imgWrapper($mw) {
+    max-width: $mw;
+    
+    & img {
+        max-width: 100%
+    }
+
+}
+
+
+  
+
+
+
+
+
