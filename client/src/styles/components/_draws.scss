@@ -11,6 +11,7 @@
 .draw__system {
     padding: 12rem 4rem 4rem 4rem;
     max-width: 150rem;
+    margin: 0 auto;
 
     &__item {
 
@@ -70,8 +71,10 @@
 
 .draw__order {
     padding-top: 64px;
-    background: #3888B3;
+    // background: #3888B3;
     color: white;
+    margin: 0 auto;
+    max-width: 120rem;
 
     & h1 {
         text-align: center;

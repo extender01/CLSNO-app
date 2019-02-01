@@ -23,12 +23,13 @@
     &__line {
         @include frs();
         max-width: 120rem;
+        margin: 0 auto;
     }
 
     &__heading {
         @include fc();
         max-width: 120rem;
-        margin: 3rem 0;
+        margin: 3rem auto;
     }
 
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const DrawSystem = () => (
-    <div id='draw__system' className='container__white'>
+    <div  className='container__white'>
 
         <div className='draw__system'>
             <h1>Odběrový materiál používaný v OKB</h1>

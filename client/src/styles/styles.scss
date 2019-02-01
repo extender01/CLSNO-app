@@ -8,18 +8,19 @@
 @import './components/header';
 @import './components/content-container';
 // // @import './components/hamburger';
-// @import './components/lab-methods';
-// @import './components/lab-details';
+@import './components/lab-methods';
+@import './components/lab-details';
 // // @import './components/lab-form';
 // // @import './components/credentials-form';
-@import './components/landing';
+@import './components/landing/landing';
 @import './components/draws';
 // @import './components/draw-mistakes';
 // @import './components/draw-guide';
 
 // @import './components/transport';
 
-@import './components/Organization/organization';
+@import './components/organization/organization';
+@import './components/organization/reception/reception';
 
 
 

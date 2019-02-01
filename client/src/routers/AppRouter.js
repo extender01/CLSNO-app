@@ -40,6 +40,7 @@ import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
 import Organization from '../components/About/Organization/Organization';
 import Transport from '../components/About/Organization/Transport/Transport';
 import Modes from '../components/About/Organization/Modes/Modes';
+import Reception from '../components/About/Organization/Reception/Reception';
 
 
 
@@ -88,6 +89,7 @@ const AppRouter = (props) => (
                     <Route path='/organizace' component={Organization} />
                     <Route path='/transport' component={Transport} />
                     <Route path='/rezimy' component={Modes} />
+                    <Route path='/prijem' component={Reception} />
 
 
 

@@ -6,8 +6,11 @@
 
 .container {
     margin-top: 6.4rem;
+    // background: $bg-blue;
 
     &__white {
+        background: white;
+        padding: 3rem 0;
         
         & h1, h2, h3 {
             color: $h-blue;
@@ -19,8 +22,9 @@
     }
 
     &__blue {
-        
+        padding: 3rem 0;
         background: $bg-blue;
+        
         
         & h1, h2, h3, p {
             color: white;

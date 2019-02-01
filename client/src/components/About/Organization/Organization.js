@@ -22,7 +22,7 @@ const Organization = () => (
             <GeneralCard
                 cardHead='ČASOVÝ ROZPIS PŘÍJMU VZORKŮ' 
                 cardText='Časový harmonogram příjmu vzorků na pavilony U a C' 
-                cardLink='/odberovy-system' 
+                cardLink='/prijem' 
                 cardImg='/images/about/draw_256.png' 
             />
 
