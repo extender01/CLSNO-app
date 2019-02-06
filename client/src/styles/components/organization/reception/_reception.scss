@@ -1,19 +1,47 @@
 .reception {
-    @include frc(center, stretch);
+    // @include fc();
+    max-width: 120rem;
+    margin: 0 auto;
+
+    & h2, h3 {
+        text-align: center;
+    }
+
+   
+
+   
 
     &__card {
         @include fc(space-evenly, stretch);
         max-width: 40rem;
-        background: greenyellow;
+        background: $bg-blue;
         padding: 4rem;
         margin: 2rem;
+
+        & h3 {
+            color: white;
+        }
+
+
         & p {
             margin: 1rem;
+            color: white;
+            text-align: center;
+            
         }
 
         & td {
             padding: 1rem 2rem;
-            // text-align: center;
+            border: 1px $h-blue solid;
+            color: white;
+        }
+
+        & th {
+            color: white;
+        }
+
+        &--small {
+            max-width: 25rem;
         }
 
     }
@@ -46,9 +74,38 @@
             }
         }
 
-       
-        
     }
+
+
+    &__notes {
+        margin: 10rem 0;
+    }
+
+    &__plan {
+        margin: 10rem 0;
+    }
+
+   
+
+    &__image {
+        max-width: 60rem;
+        margin: 3rem auto;
+
+        & img {
+            width: 100%;
+        }
+    }
+
+   &__icon {
+       @include iconImage();
+   }
+
+   &__textForIcon {
+       @include textForIcon()
+   }
+
+    
+
 
 
 

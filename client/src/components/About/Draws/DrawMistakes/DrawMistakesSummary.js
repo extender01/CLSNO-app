@@ -10,7 +10,7 @@ export default class DrawMistakesSummary extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <div className='draw__mistakes f_center'>
+                <div className='draw__mistakes'>
                     <h1>Chyby v preanalytické fázi vyšetření</h1>
                 </div>
                 <DrawMistakesItem item={mistakes.tubeCont} />

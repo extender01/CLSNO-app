@@ -26,6 +26,12 @@
         margin: 0 auto;
     }
 
+    &__line-center {
+        @include frc();
+        max-width: 120rem;
+        margin-left: 10rem;
+    }
+
     &__heading {
         @include fc();
         max-width: 120rem;
@@ -55,6 +61,50 @@
         & img {
             height: 128px;
         }
+    }
+
+
+
+
+    //predelat icon a textforicon do mixin
+
+    
+
+
+    &__icon {
+
+        
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        flex-basis: 0;
+
+        margin: 1rem 2rem;
+        & img {
+            max-width: 10rem;
+            max-height: 10rem;
+        }
+
+    }
+
+    &__textForIcon {
+        flex-basis: 0;
+        flex-grow: 4;
+    }
+
+
+}
+
+
+
+.asterisk {
+    font-size: 3rem;
+}
+
+
+@media (max-width: 760px) {
+    .general__line-center {
+        margin-left: 0;
     }
 }
 
@@ -91,6 +141,27 @@
         max-width: 100%
     }
 
+}
+
+
+
+
+@mixin iconImage($g: 1, $mw: 10rem, $mh: 10rem) {
+    display: flex;
+    justify-content: center;
+    flex-grow: $g;
+    flex-basis: 0;
+
+    margin: 1rem 2rem;
+    & img {
+        max-width: $mw;
+        max-height: $mh;
+    }
+}
+
+@mixin textForIcon($g: 4) {
+    flex-basis: 0;
+    flex-grow: $g
 }
 
 
