@@ -18,7 +18,33 @@
             }
         ],
         "cons": [
-            "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK."
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Kontaminace EDTA",
+                "conText": "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                    }
+                ]
+            },
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Kontaminace EDTA",
+                "conText": "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                    }
+                ]
+            }
+            
         ]
     },
 
@@ -38,8 +64,18 @@
             }
         ],
         "cons": [
-            "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
-            "Aktivátory srážení séra mohou zdržet koagulaci u quicka"
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Kontaminace EDTA",
+                "conText": "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                    }
+                ]
+            }
+            
         ]
     }
 

@@ -1,5 +1,9 @@
 .draw__mistakes {
-    // padding-top: 64px;
+
+    & h1 {
+        text-align: center;
+        padding-top: 3rem;
+    }
 
     &__item {
     //     border-bottom: 1px rgb(117, 117, 117) solid;
@@ -7,6 +11,10 @@
        margin: 5rem 0;
        padding: 5rem 0;
        box-shadow: inset 0px 10px 15px -5px rgba(138, 138, 138, 0.52);
+
+       & h2, h3 {
+        text-align: center;
+    }
         
     }
 
@@ -39,42 +47,12 @@
         padding: 1rem;
         border: 1px $bg-blue solid;
 
-    //     // display: flex;
-    //     // flex-flow: row wrap;
-    //     // justify-content: space-around;
-    //     // align-items: center;
-    //     text-align: center;
-
-    //     &__table {
-    //     display: flex;
-    //     flex-flow: row wrap;
-    //     justify-content: center;
-    //     align-items: stretch;
-    //     }
+   
 
         &__item {
             @include frs(stretch, nowrap);
-            
-    //         max-width: 25rem;
-    //         border: 1px #39a6c2 solid;
-    //         background: #b9dee7;
-           
-    //         // padding: 2rem;
-    //         margin: 1rem;
-            
+            margin: 1rem 0;
 
-    //         & h3 {
-    //             background-color: #39A6C2;
-    //             padding: 2rem;
-    //             margin: 0;
-    //             color: white;
-    //         }
-
-    //         & p {
-    //             text-align: justify;
-    //             padding: 2rem;
-                
-    //         }
 
         }
 
@@ -82,71 +60,26 @@
 
 
     &__cons {
-    //     text-align: center;
     border: 1px $bg-blue solid;
-        
-    //     &__item {
-    //         display: flex;
-    //         justify-content: center;
-    //         flex-flow: row wrap;
-    //         & p {
-    //             max-width: 50%;
-    //             margin: 2rem;
-    //         }
-    
-    //     }
+    max-width: 115rem;
+    padding: 1rem;
+    margin: 1rem;
 
-
+    &__item {
+        margin-bottom: 8rem;
     }
 
+        &__table {
+            @include frc();
+            border: 1px $bg-blue solid;
+            padding: 1rem;
+            margin: 1rem 0;
 
-    // &__description {
-    //     display: inline-block;
-    // }
-
-
-
-    // &__button {
-    //     max-width:15rem;
-    //     height: 3rem;
-    //     background: #39A6C2;
-    //     display: flex;
-    //     justify-content: center;
-    //     align-content: center;
-    //     align-items: center;
-    //     color: white;
-    //     padding: 1rem;
-    //     margin: 2rem 0;
-    //     border-radius: .5rem;
-
-    //     &:hover {
-    //         cursor: pointer;
-    //     }
-    // }
-
-
-    // &__detail {
-    //     display: flex;
-    //     flex-flow: column nowrap;
-    //     justify-content: center;
-    // }
-
-    // &__table {
-    //     margin: 3rem;
-    //     border: 2px blue solid;
-
-    //     &__item {
-    //         // background:red;
-
-    //         & p {
-    //             padding: 2rem 0;
-    //         }
-
-    //         & img {
-    //             padding-bottom: 1rem;
-    //         }
-    //     }
-    // }
+            &__item {
+                margin: 1rem
+            }
+        }
+    }
 }
 
 
