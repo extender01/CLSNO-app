@@ -1,0 +1,28 @@
+.modes {
+
+    &__items {
+        @include frs();
+    }
+
+    &__item {
+        flex-basis: 25rem;
+        flex-grow: 1;
+        margin: 6rem 1rem;
+        max-width: 50rem;
+        border: 1px $bg-blue solid;
+
+        &__description {
+
+            & li {
+               margin: 2rem 0;
+               line-height: 2.5rem; 
+            }
+
+        }
+    }
+
+
+}
+
+
+//WRAP AZ PO NEJAKEM ZMENSENI:  nastavit parent na wrap a children na flex-grow 1 nebo neco a flex-basis na minimalni sirku nez se to zacne wrapovat
