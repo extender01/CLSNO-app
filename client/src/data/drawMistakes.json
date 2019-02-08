@@ -6,15 +6,20 @@
         "how": [
             {
                 "howHeading": "Přelévání krve z jednoho typu zkumavky do druhého",
-                "howText": "Například při snaze o doplnění objemu poslední odebírané zkumavky, kde už krev špatně tekla"
+                "howText": "Například při snaze o doplnění objemu poslední odebírané zkumavky, kde už krev špatně tekla",
+                "howImg": "/images/mistakes/draw_mix.svg"
             },
             {
                 "howHeading": "Nesprávné pořadí zkumavek při odběru",
-                "howText": "Při odběru může při výměně zkumavek dojít ke zpětnému toku, který sebou strhne obsažená aaditiva a kontaminuje další použitou zkumavku."
+                "howText": "Při odběru může při výměně zkumavek dojít ke zpětnému toku, který sebou strhne obsažená aaditiva a kontaminuje další použitou zkumavku.",
+                "howImg": "/images/mistakes/draw_order.svg"
+
             },
             {
                 "howHeading": "Záměna vršku",
-                "howText": "Aditivum na vršku zkumavky kontaminuje obsah jiné zkumavky"
+                "howText": "Aditivum na vršku zkumavky kontaminuje obsah jiné zkumavky",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
             }
         ],
         "cons": [

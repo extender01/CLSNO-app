@@ -47,11 +47,22 @@
         padding: 1rem;
         border: 1px $bg-blue solid;
 
+        &__img {
+            width: 10rem;
+            margin-right: 2rem;
+        }
+
+
+        &__text {
+            flex-grow: 1;
+            flex-basis: 20rem;
+        }
+
    
 
         &__item {
-            @include frs(stretch, nowrap);
-            margin: 1rem 0;
+            @include frs(center, wrap);
+            margin: 2rem 0;
 
 
         }

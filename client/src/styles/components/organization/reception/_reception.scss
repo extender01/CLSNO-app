@@ -7,6 +7,11 @@
         text-align: center;
     }
 
+    & p {
+        margin: 2rem;
+        text-align: justify;
+    }
+
    
 
    
@@ -15,7 +20,7 @@
         @include fc(space-evenly, stretch);
         max-width: 40rem;
         background: $bg-blue;
-        padding: 4rem;
+        padding: 2rem;
         margin: 2rem;
 
         & h3 {
@@ -42,6 +47,8 @@
 
         &--small {
             max-width: 25rem;
+            flex-basis: 18rem;
+            flex-grow: 1;
         }
 
     }

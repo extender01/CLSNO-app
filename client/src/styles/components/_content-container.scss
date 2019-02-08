@@ -1,12 +1,25 @@
 .content-container {
     padding: 1rem 2rem;
     
+    
 }
 
 
 .container {
     margin-top: 6.4rem;
-    // background: $bg-blue;
+    // background: url('/images/ET6.jpg');
+    // background-repeat: no-repeat;
+    // background-attachment: fixed;
+    // background-size: cover;
+    // background-position: center;
+    // position:absolute;
+    // top:6.4rem;
+    
+    // bottom:0;
+    right:0;
+    left:0;
+    // height: 100%;
+
 
     &__white {
         background: white;

@@ -7,7 +7,7 @@ const DrawMistakesHow = (props) => (
         {props.item.how && props.item.how.map((item, index) => (
             <div key={index} className='draw__mistakes__how__item'>
                 <div className='draw__mistakes__how__img' >
-                    <img src='/images/about/methods3_128.png' />
+                    <img src={item.howImg} />
                 </div>
                 <div className='draw__mistakes__how__text'>
                     <h4>{item.howHeading}</h4>
