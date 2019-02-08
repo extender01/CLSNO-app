@@ -1,7 +1,7 @@
 .transport {
     text-align: center;
     padding: 0 2rem;
-    @include bgimg();
+    // @include bgimg();
     
     &__items {
         @include frs();
@@ -28,7 +28,7 @@
         }
 
         & img {
-            max-width: 15rem;
+            max-width: 10rem;
         }
     }
 }
