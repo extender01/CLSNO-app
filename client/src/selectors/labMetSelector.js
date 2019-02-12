@@ -11,6 +11,12 @@ const labMetSelector = (labMet, filter) => {
         //boolean if test is in selected category or if no category is selected
         const byCategory = item.category === filter.category || filter.category === 'all';
 
+
+        //byStatim is true if filter.statim is set to false (all methods are displayed) or if filter is applied and method has statCare === true (method is run in statim mode)
+        const byStatim = item.statCare === filter.statim || filter.statim === false;
+        const byEr = item.erCare === filter.er || filter.er === false;
+        const byAdditional = (item.additionalOrder !== '' && filter.additional === true)  || filter.additional === false;
+
         //if name or synonyme contains string from input (byTextSyn is fuction beacuse we must check if syn exists)
         const byTextName = accentFold(item.name.toLowerCase()).includes(filter.text.toLowerCase());
         const byTextSyn = () => {
@@ -25,7 +31,7 @@ const labMetSelector = (labMet, filter) => {
 
         
         
-        return byCategory && byAlphabet && byText;
+        return byCategory && byAlphabet && byText && byStatim && byEr && byAdditional;
         
         
     }).sort((a, b) => {
@@ -52,13 +58,14 @@ export const accentFold = (str) => {   //převede string s diakritikou na string
         'č': 'c',
         'ř': 'r',
         'ž': 'z',
-        'ý': 'y'
+        'ý': 'y',
+        'ď': 'd'
     };
     let bezDia = '';
     for (let i = 0; i < str.length; i++) {
         bezDia += accentMap[str.charAt(i)] || str.charAt(i);
-    };
-    return bezDia
+    }
+    return bezDia;
 };
 
 export default labMetSelector;

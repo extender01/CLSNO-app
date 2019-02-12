@@ -7,7 +7,10 @@ const testReducerDefaultState = {
     filters: {
         alphabet: '',
         category: 'all',
-        text: ''
+        text: '',
+        statim: false,
+        er: false,
+        additional: false
     }
 };
 
@@ -95,6 +98,12 @@ const testReducer = (state = testReducerDefaultState, action) => {
         return {...state, filters: {...state.filters, text: action.text}};
     // case 'SEARCH_ALL':
     //     return {...state, filters: {...state.filters, searchAll: action.isAll}};
+    case 'STATIM_FILTER':
+        return {...state, filters: {...state.filters, statim: action.statim}};
+    case 'ER_FILTER':
+        return {...state, filters: {...state.filters, er: action.er}};
+    case 'ADDITIONAL_FILTER':
+        return {...state, filters: {...state.filters, additional: action.additional}};
     case 'CLEAR_FILTERS':
         return {...state, filters: {...state.filters, category: 'all', alphabet: ''}};
 

@@ -19,6 +19,28 @@ export const textFilter = (text) => {
     };
 };
 
+
+export const statimFilter = (statim) => {
+    return {
+        type: 'STATIM_FILTER',
+        statim
+    };
+};
+
+export const erFilter = (er) => {
+    return {
+        type: 'ER_FILTER',
+        er
+    };
+};
+
+export const additionalFilter = (additional) => {
+    return {
+        type: 'ADDITIONAL_FILTER',
+        additional
+    };
+};
+
 // export const searchAll = (isAll) => {
 //     return {
 //         type: 'SEARCH_ALL',
