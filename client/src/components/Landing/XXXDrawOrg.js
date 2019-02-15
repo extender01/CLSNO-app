@@ -48,4 +48,4 @@ const DrawOrg = () => (
 
 export default DrawOrg;
 
-//POUZIT TADY GENERALCARD KOMPONENTU
+//SMAZAT

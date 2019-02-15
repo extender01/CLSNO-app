@@ -1,5 +1,6 @@
 .draw__dash {
     max-width: 150rem;
+    margin-bottom: 15rem;
 
 }
 
@@ -30,9 +31,33 @@
         }
    }
 
+   
+
     & p {
         padding: .5rem;
         max-width: 10rem;
+        // background: red;
+        flex-grow: 1;
+        // flex-basis: auto;
+    }
+
+    & a {
+        color: $bg-blue;
+        font-weight: bold;
+        &:hover {
+            color: $pink;
+        }
+        
+
+    }
+
+    & > p {
+        max-width: initial;
+        background: initial;
+        text-align: center;
+        margin: 2rem 0;
+        line-height: 3rem;
+        
     }
 
     & h1 {

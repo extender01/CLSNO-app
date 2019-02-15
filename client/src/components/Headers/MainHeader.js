@@ -1,5 +1,6 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
+import {HashLink} from 'react-router-hash-link';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Media from 'react-media';
@@ -49,8 +50,11 @@ class MainHeader extends React.Component {
                     </nav>
                     
                     <div className ='f header__links'>
-                        <NavLink to='/about' className='g1'>O laboratoři</NavLink>
-                        <NavLink to='/metody' className='g1'>Metody</NavLink>
+                        <HashLink to='/metody' className='g1'>O laboratoři</HashLink>
+                        <HashLink to='/#pacienti'className='g1'>Pro pacienty</HashLink>
+                        <HashLink to='/#oddeleni'className='g1'>Pro oddělení</HashLink>
+                        <Link to='/metody' className='g1'>Metody</Link>
+                        <Link to='/metody' className='g1'>Kontakty</Link>
                         
                     </div>
 
@@ -61,11 +65,11 @@ class MainHeader extends React.Component {
                                     <img src={'/images/user.png'} height='20px' />
                                     <p >{this.props.nick}</p>
                                 </div>
-                                <NavLink to='/login'>Odhlásit se</NavLink>
+                                <Link to='/login'>Odhlásit se</Link>
                             </React.Fragment>
                         ) : (
                             <div className='f_column g1'>
-                                <NavLink to='/login'>Přihlásit se</NavLink>
+                                <Link to='/login'>Přihlásit se</Link>
                             </div>
                         )}
                     </div>

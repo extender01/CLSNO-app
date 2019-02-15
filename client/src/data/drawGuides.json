@@ -75,8 +75,171 @@
             {
                 "head": "1 magnetický drátek",
                 "text": "Do kapilár dávejte pouze 1 magnetický drátek. Když je jich v kapiláře víc, tak je větší riziko vzniku sraženiny na okrajích kapiláry"
+            },
+
+            {
+                "head": "Dostatečný objem",
+                "text": "Stříkačka musí pro úspěšné stanovení obsahovat alespoň 0,5 ml krve. Při menším množství nelze stanovit všechny parametry"
             }
 
         ]
-    }
+    },
+
+    "glykemie": {
+        "name": "Odběr na kapilární glykémii",
+        "guide": [
+            "Kapilární odběr pro glykémie:",
+            "Pro stanovení glykémie z kapilární krve se používají skleněné kapiláry s definovaným objemem 20 µl a zkumavky Eppendorf se systémovým roztokem (dodá laboratoř)",
+            "Místo vpichu se očistí desinfekcí a nechá zaschnout",
+            "Místo vpichu musí být dobře prokrveno (nejčastěji nahřátím), u dospělých se odběr provádí z bříška prstu",
+            "Vpich se provede lancetou (kopíčkem). Musí být dostatečně hluboký, aby krev volně vytékala",
+            "První kapka se setře sterilním tampónem",
+            "Přiložením kapiláry se další kapka krve sama nasaje",
+            "Krev v kapiláře musí být zcela bez bublin",
+            "Kapilára se vloží do zkumavky Eppendorf s roztokem a důkladně promíchá",
+            "Obsah kapiláry se promíchá pohybem magnetu po povrchu kapiláry, který pohybuje s míchacím drátkem uvnitř",
+            "Místo vpichu se dezinfikuje překryje sterilním tampónkem a přelepí náplastí",
+            "Místo vpichu se překryje sterilním tampónkem a přelepí náplastí"
+        ],
+        "important": [
+            {
+                "head": "Vždy nová žádánka",
+                "text": "Pro každé stanovení glykemie v různou denní dobu je potřeba v NIS Akord vytvořit NOVOU žádanku. Není možné nápříklad pouze znovu vytisknout žádanky z rána pro odpolední glykemie, žádánky mají unikátní ID a po jejich načtení ráno už je nelze znovu použít"
+            },
+
+            {
+                "head": "Řádně promíchat",
+                "text": "Po vložení kapiláry do zkumavky s roztokem je třeba zkumavku řádně promíchat, aby se krev z kapiláry dostala celá do roztoku"
+            }
+
+        ]
+    },
+
+    "ranniMoc": {
+        "name": "Odběr ranní moče",
+        "guide": [
+            "Odběr ranní moče:",
+            "Před odběrem je doporučen klid alespoň 8 hodin na lůžku",
+            "Moč by se měla odebírat po minimálně 4 hodinách stání v močovém měchýři",
+            "Pacient by měl provést hygienickou očistu genitálií než provede odběr",
+            "Odběr je nutné provést jako první činnost po probuzení (před snídaní…)",
+            "Pro odběr se používá plastová zkumavka s kónickým dnem a žlutým vrškem",
+            "První část proudu moče se nechá odtéct do toalety",
+            "Do odběrové nádoby se nechá natéct cca 10 ml středního proudu moče",
+            "Uzavřenou nádobu je třeba dopravit do 1 hodiny po vymočení (maximálně do 2) do laboratoře",
+            "Obsah kapiláry se promíchá pohybem magnetu po povrchu kapiláry, který pohybuje s míchacím drátkem uvnitř",
+            "Místo vpichu se dezinfikuje překryje sterilním tampónkem a přelepí náplastí",
+            "Místo vpichu se překryje sterilním tampónkem a přelepí náplastí"
+        ],
+        "important": [
+            {
+                "head": "Střední proud",
+                "text": "Pří odběru nezachytávat moč hned ze startu, ale nechat trochu odtéct do toalety a do nádobky odebírat až další část moče"
+            },
+
+            {
+                "head": "Ranní moč",
+                "text": "Na analýzu sedimentu moče by se měla používat VÝHRADNĚ RANNÍ MOČ. Moč odebraná během dne není dostatečně zakoncentrovaná a nemá takovou klinickou výpovědní hodnotu jako moč ranní"
+            },
+
+            {
+                "head": "Do 1 hodiny",
+                "text": "Analýza moče chemicky a sedimentu by měla být provedena DO 1 HODINY OD ODBĚRU. Po delším čase se elementy rozpadají a rychle se množí bakterie"
+            }
+
+        ]
+    },
+
+    "sbiranaMoc": {
+        "name": "Sběr moče",
+        "guide": [
+            "Sběr moče příklad:",
+            "Příklad: Je požadován sběr moče za 24 hodin. Začátek např. v 6:00 ráno",
+            "V 6:00 se pacient vymočí DO ZÁCHODU (zde se často dělá chyba, že pacient tuto moč již sbírá, ale je třeba sbírat až tu, co se od 6:00 začne tvořit v těle)",
+            "Od teď veškerou moč sbírá do nádoby, kterou v mezidobí skladuje uzavřenou v chladu, suchu a mimo přímé sluneční světlo ",
+            "Naposledy se do nádoby vymočí v 6:00 následující den",
+            "Změří se objem s přesností na 10 ml",
+            "Obsah celé nádoby se dobře promíchá a 10 ml se odlije do zkumavky na moč",
+            "Zkumavka se dopraví do laboratoře spolu s údaji o době sběru (v hodinách) a objemu (v mililitrech) – např. 24h, 2120 ml",
+            "Pacientům v bezvědomí nebo s poruchou mikce je nutné zavést močovou cévku"
+           
+        ],
+        "important": [
+            {
+                "head": "Sucho a chlad",
+                "text": "Během doby sběru je třeba sběrnou nádobu uchovávat v suchu a chladu"
+            },
+
+            {
+                "head": "Promíchat",
+                "text": "Po ukončení sběru je třeba moč dobře promíchat a odebrat 10 ml do plastové zkumavky na moč"
+            },
+
+            {
+                "head": "V NIS Akord bez jednotek",
+                "text": "V Akordu zapisujte údaje o době a množství sběru bez jednotek, tedy pouze čísla (v hodinách a mililitrech)"
+            }
+
+        ]
+    },
+
+
+    "hambac": {
+        "name": "Sběr moče pro Hamburgerův sediment",
+        "guide": [
+            "Sběr moče pro Hamburgerův sediment:",
+            "Sběr začíná v určený den a přesně definovanou hodinu",
+            "Na počátku (např. 6:00) se pacient důkladně vymočí DO ZÁCHODU (častá chyba je vymočení se na začátku sběrného období do sběrné nádoby)",
+            "Od té doby veškerou moč sbírá do sběrné nádoby (např. čistá, suchá a uzaviratelná láhev)",
+            "Sběrné období trvá 3 hodiny, přesně v čas ukončení (v příkladu 9:00) se pacient vymočí do sběrné nádoby naposledy",
+            "Není-li možné se vymočit přesně za 3 hodiny, je dovoleno rozmezí 2,5 až 3,5 hodin",
+            "Na nádobě musí být uveden čas zahájení sběru a čas ukončení (poslední močení) a objem moče s přesností na 1 ml",
+            "Moč dobře promíchejte a odlijte 10 ml do zkumavky",
+            "Během pokusu pacient může pít, dávka by se během testu měla pohybovat okolo 300 ml (3 dcl)",
+            "Sběrná nádoba musí být spolu s žádankou doručena do laboratoře do 60 minut"
+           
+        ],
+        "important": [
+            {
+                "head": "3 hodinový sběr",
+                "text": "Moč je třeba sbírat 3 hodiny. Není-li možné dodržet limit přesně, je dovoleno rozmezí 2,5 až 3,5 hodin"
+            },
+
+            {
+                "head": "Do laboratoře do 1 hodiny",
+                "text": "Moč je třeba doručit do laboratoře do 1 hodniny od odběru"
+            }
+
+        ]
+    },
+    
+    "hovno": {
+        "name": "Odběr stolice na okultní krvácení",
+        "guide": [
+            "Odběr stolice na okultní krvácení:",
+            "Pacient dostane podrobný návod spolu s odběrovou soupravou",
+            "Odebere se libovolný vzorek stolice na čistou podložku nebo toaletní papír",
+            "Pacient odšroubuje a vyjme uzávěr s odběrovou tyčinkou z odběrové zkumavky. Pozor, aby se kapalina ze zkumavky nevylila",
+            "Odběrová tyčinka se opakovaně zasune do nejméně třech míst ve stolici. Stolici nenabírejte",
+            "Tyčinka se vzorkem se vloží zpět do odběrové zkumavky a zašroubuje se uzávěr",
+            "Dejte pozor, aby se neulomila špička odběrové zkumavky",
+            "Poté se zkumavka důkladně protřepe 3-5 krát, aby se promíchal vzorek",
+            "Na přiloženém štítku se vyplní jméno a datum odběru stolice a štítek se nalepí na odběrovou zkumavku",
+            "Takto odebraný vzorek se doručí spolu s žádankou do laboratoře"
+           
+        ],
+        "important": [
+            {
+                "head": "3 hodinový sběr",
+                "text": "Moč je třeba sbírat 3 hodiny. Není-li možné dodržet limit přesně, je dovoleno rozmezí 2,5 až 3,5 hodin"
+            },
+
+            {
+                "head": "Do laboratoře do 1 hodiny",
+                "text": "Moč je třeba doručit do laboratoře do 1 hodniny od odběru"
+            }
+
+        ]
+    }    
+
 }

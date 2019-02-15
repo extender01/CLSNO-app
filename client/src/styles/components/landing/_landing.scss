@@ -1,32 +1,8 @@
-//=======================ABOUT HEADER
-
-// .about-header {
-//     // margin-top: 64px;
-//     padding: 0 20px 0 20px;
-//     color: #4d4d4d;
-//     height: 6.4rem;
-    
-//     background: rgb(233, 233, 233);
-
-//     & a {
-//         color: #4d4d4d;
-//     }
-// }
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-//============JUMBOTRON
+//============JUMBOTRON============================================
 
 .jumbotron {
 
@@ -49,6 +25,52 @@
         color: $h-darkblue;
     }
 }
+
+
+//========================FOR PATIENTS==========================================================
+
+#pacienti {
+    height: 6rem;
+    // background: red;
+}
+
+.for-patients {
+    max-width: 150rem;
+    margin: 0 auto;
+    @include frs(stretch);
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+//===============================FOR DEPARTMENTS=============================================================
+
+#oddeleni {
+    height: 6rem;
+    // background: red;
+
+}
+
+.for-departments {
+    max-width: 150rem;
+    margin: 0 auto;
+    @include frs(stretch);
+
+}
+
+
+
+
 
 //============================DRAW ORGANIZATION ========================================================
 

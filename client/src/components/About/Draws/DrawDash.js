@@ -3,9 +3,9 @@ import GeneralCard from '../../General/GeneralCard';
 
 const DrawDash = () => (
     <div className='container__blue'>
-        
+        <h2>Obecne informace k odberum</h2>
         <div className='general__line draw__dash'>
-        
+            
             <GeneralCard 
                 cardHead='ODBĚROVÝ SYSTÉM' 
                 cardText='Informace k systému používanému v SNO' 
@@ -28,6 +28,11 @@ const DrawDash = () => (
                 cardLink='/odbery-chyby' 
                 cardImg='/images/draw/draw_mistakes2.svg' 
             />
+
+        </div>
+
+        <h2>Informace ke konkretnim typum odberu</h2>
+        <div className='general__line draw__dash'>
 
             <GeneralCard 
                 cardHead='ŽILNÍ ODBĚR' 

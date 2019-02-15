@@ -1,6 +1,13 @@
 import React from 'react';
+import {connect} from 'react-redux';
+import {Link} from 'react-router-dom';
+import {statimFilter, erFilter, additionalFilter} from '../../../../actions/filterActions';
 
-const Modes = () => (
+
+
+
+
+const Modes = (props) => (
     <div className='container__white'>
         <div className='modes'>
             <h1>Režimy provozu</h1>
@@ -34,7 +41,7 @@ const Modes = () => (
                             <li>Výsledky vydávány do 5 hodin od přijmu do laboratoře</li>
                             <li>Výsledky odesílány do NIS ihned</li>
                             <li>Výsledky tištěny až po VŠ kontrole výsledků</li>
-                            <li>SEZNAM METOD DOSTUPNÝCH V REŽIMU POHOTOVOST</li>
+                            <li onClick={props.showEr}><Link to='/metody'>SEZNAM METOD DOSTUPNÝCH V REŽIMU POHOTOVOST</Link></li>
                         </ul>
                     </div>
                 </div>            
@@ -55,7 +62,7 @@ const Modes = () => (
                             <li>Statimová žádanka musí být jasně označena jako STATIM, v SNO žádanky na růžovém papíře</li>
                             <li>Externím žadatelům se výsledky hlásí telefonicky (na žádance musí být uveden kontakt)</li>
                             <li>Určeno pro závažné stavy a akutní změny stavu nemocných, kdy výsledky mohou rozhodujícím způsobem ovlivnit péči o nemocné. Mají přednost při vyšetřování ostatních materiálů. Neslouží ke zkrácení čekaní na výsledky pro ambulatní pacienty. Neoprávněné požadavky a požadavky nesplňující dohodnutá pravidla spolupráce se evidují a řeší s příslušným nadřízeným ordinujícího lékaře</li>
-                            <li>SEZNAM METOD DOSTUPNÝCH V REŽIMU STATIM</li>
+                            <li onClick={props.showStatim}><Link to='/metody'>SEZNAM METOD DOSTUPNÝCH V REŽIMU STATIM</Link></li>
                         </ul>
                     </div>
                 </div>   
@@ -76,7 +83,7 @@ const Modes = () => (
                             <li>Dohlášku z odběru je možné požadovat u vybraných metod a to pouze 1x a maximálně do 24h nebo do 4h podle metody</li>
                             <li>Na dohlášku se vytváří nová žádanka a metody se vybírají ze sekce Dohlášky BIO a Dohlášky HEM</li>
                             <li>NÁVOD NA VYTVOŘENÍ ŽÁDANKY NA DOHLÁŠKU V NIS Akord ZDE</li>
-                            <li>V sekci Metody najdete u každé metody informaci, zda je možné provést dohlášku.</li>
+                            <li onClick={props.showAdditional}><Link to ='/metody'>V sekci Metody najdete u každé metody informaci, zda je možné provést dohlášku.</Link></li>
                         </ul>
                     </div>
                 </div>            
@@ -107,6 +114,21 @@ const Modes = () => (
     </div>
 );
 
-export default Modes;
+//clicking on specific li triggers function specified in mapDispatchToProps which dispatches action to change redux state (activated filters) to show only desired mode of methods, Link then redirects to methods
+const mapDispatchToProps = (dispatch) => {
+    return {
+        showStatim: () => {
+            dispatch(statimFilter(true));
+        },
+        showEr: () => {
+            dispatch(erFilter(true));
+        },
+        showAdditional: () => {
+            dispatch(additionalFilter(true));
+        }
+    };
+};
+
+export default connect(undefined, mapDispatchToProps)(Modes);
 
 

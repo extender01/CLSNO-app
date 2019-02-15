@@ -33,6 +33,7 @@ import DrawOrder from '../components/About/Draws/DrawOrder/DrawOrder';
 import DrawMistakesSummary from '../components/About/Draws/DrawMistakes/DrawMistakesSummary';
 import DrawGuideTemplate from '../components/About/Draws/DrawGuide/DrawGuideTemplate';
 import DrawDash from '../components/About/Draws/DrawDash';
+import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
@@ -51,11 +52,13 @@ import drawGuideData from '../data/drawGuides.json';
 
 //Media from react-media library renders component based on css media query passed as prop parameter and renders what comes back from callback
 
+//ScrollToTop is parrent component to all routes inside router, that when link is clicked, page is automatically scrolled to top - ScollToTop component says scroll to top on every component update and then render all children
+
 export const history = createHistory();
 
 const AppRouter = (props) => (
     <Router history={history}>
-        <React.Fragment>
+        <ScrollToTop>
             
 
             
@@ -83,8 +86,14 @@ const AppRouter = (props) => (
                     <Route path='/odbery' component={DrawDash} />
                     <Route path='/odbery-poradi' component={DrawOrder} />
                     <Route path='/odbery-chyby' component={DrawMistakesSummary} />
+
                     <Route path='/odbery-zilni' render={props => <DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  />} />
                     <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
+                    <Route path='/odbery-glyk' render={props => <DrawGuideTemplate data={drawGuideData.glykemie} {...props}  />} />
+                    <Route path='/odbery-moc-ranni' render={props => <DrawGuideTemplate data={drawGuideData.ranniMoc} {...props}  />} />
+                    <Route path='/odbery-moc-sber' render={props => <DrawGuideTemplate data={drawGuideData.sbiranaMoc} {...props}  />} />
+                    <Route path='/odbery-hambac' render={props => <DrawGuideTemplate data={drawGuideData.hambac} {...props}  />} />
+                    <Route path='/odbery-stolice' render={props => <DrawGuideTemplate data={drawGuideData.hovno} {...props}  />} />
 
                     <Route path='/organizace' component={Organization} />
                     <Route path='/transport' component={Transport} />
@@ -106,7 +115,7 @@ const AppRouter = (props) => (
                 </Switch>
                 }
             </div>
-        </React.Fragment>
+        </ScrollToTop>
     </Router>
 );
 

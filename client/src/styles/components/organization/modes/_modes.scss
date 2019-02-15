@@ -15,6 +15,7 @@
         margin: 6rem 1rem;
         max-width: 50rem;
         border: 1px $bg-blue solid;
+        background: #eee;
         // padding: 1rem;
 
         &__heading {
@@ -28,8 +29,20 @@
         }
 
         &__description {
-
             padding: 0 2rem;
+            
+            & a {
+                color: rgb(1, 110, 168);
+
+                &:hover {
+                    background: #e91e63;
+                    color: white;
+                }
+            }
+
+            & ul {
+                margin: 0;
+            }
             & li {
                margin: 2rem 0;
                line-height: 2.5rem; 

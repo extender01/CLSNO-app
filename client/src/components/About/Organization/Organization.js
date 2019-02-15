@@ -11,14 +11,6 @@ const Organization = () => (
                 cardImg='/images/about/draw_256.png' 
             />
 
-
-            <GeneralCard
-                cardHead='TRANSPORT DO LABORATOŘE' 
-                cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
-                cardLink='/transport' 
-                cardImg='/images/about/draw_256.png' 
-            />
-
             <GeneralCard
                 cardHead='ČASOVÝ ROZPIS PŘÍJMU VZORKŮ' 
                 cardText='Časový harmonogram příjmu vzorků na pavilony U a C' 
@@ -26,14 +18,14 @@ const Organization = () => (
                 cardImg='/images/about/draw_256.png' 
             />
 
+            <GeneralCard
+                cardHead='TRANSPORT DO LABORATOŘE' 
+                cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
+                cardLink='/transport' 
+                cardImg='/images/about/draw_256.png' 
+            />
         </div>
-    
-       
-
-
     </div>
-
-
 );
 
 export default Organization;

@@ -1,10 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 const DrawSystem = () => (
     <div  className='container__white'>
 
         <div className='draw__system'>
             <h1>Odběrový materiál používaný v OKB</h1>
+            <p>V centrálních laboratořích SNO se používají převážně zkumavky Vacutest Kima. Popis jednotlivých typů zkumavek naleznete v tabulce níže. V sekci <Link to='/metody'>METODY</Link> naleznete inormaci o vhodné odběrové zkumavce ke každému vyšetření.</p>
             <div className='draw__system__item'>
                 <p>Obrázek</p>
                 <p>Zkumavka / barva víčka</p>
