@@ -251,15 +251,15 @@ app.post('/api/adduser', isAdmin, (req, res) => {
     //only users with admin rights can create new users
     // if (req.user.rights === 'admin') {
     // if(2 > 1) {
-        let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
-        let user = new User(extractedProps);
-    
-        user.save().then(() => {
-            res.send(user);
-            //res.header('x-auth', retreivedToken).send(user);
-        }).catch((e) => {
-            res.status(400).send(e);
-        });
+    let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
+    let user = new User(extractedProps);
+
+    user.save().then(() => {
+        res.send(user);
+        //res.header('x-auth', retreivedToken).send(user);
+    }).catch((e) => {
+        res.status(400).send(e);
+    });
     // } else {
     //     res.status(400).send('nemas opravneni vytvaret uzivatele');
     // }

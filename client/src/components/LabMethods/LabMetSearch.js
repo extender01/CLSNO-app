@@ -1,6 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
-import {textFilter, searchAll, clearFilters} from '../../actions/filterActions';
+import {textFilter, searchAll, clearFilters, erFilter, statimFilter, additionalFilter} from '../../actions/filterActions';
 
 
 
@@ -26,10 +26,10 @@ class LabMetSearch extends React.Component {
         this.props.searchAll(!this.props.isSearchAll)
     }
 
+    //checks redux state filters if they are applied, if not return value is true
     noFilters = () => {
-        console.log(this.props.filters.category === 'all' && !this.props.filters.alphabet);
-        
-        return this.props.filters.category === 'all' && !this.props.filters.alphabet;
+        const { category, alphabet, statim, er, additional} = this.props.filters;
+        return category === 'all' && !alphabet && !statim && !er && !additional;
     }
     
     clearFilters = () => {
@@ -91,6 +91,9 @@ const mapDispatchToProps = (dispatch) => {
         },
         clearFilters: () => {
             dispatch(clearFilters())
+            dispatch(erFilter(false));
+            dispatch(additionalFilter(false));
+            dispatch(statimFilter(false));
         }
     };
 };

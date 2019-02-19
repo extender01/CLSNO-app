@@ -43,6 +43,8 @@ import Transport from '../components/About/Organization/Transport/Transport';
 import Modes from '../components/About/Organization/Modes/Modes';
 import Reception from '../components/About/Organization/Reception/Reception';
 
+import FromMD from '../components/ForPatients/FromMD';
+
 
 
 //==============import JSON data =============
@@ -94,6 +96,9 @@ const AppRouter = (props) => (
                     <Route path='/odbery-moc-sber' render={props => <DrawGuideTemplate data={drawGuideData.sbiranaMoc} {...props}  />} />
                     <Route path='/odbery-hambac' render={props => <DrawGuideTemplate data={drawGuideData.hambac} {...props}  />} />
                     <Route path='/odbery-stolice' render={props => <DrawGuideTemplate data={drawGuideData.hovno} {...props}  />} />
+
+                    <Route path='/pacient-od-lekare' component={FromMD} />
+
 
                     <Route path='/organizace' component={Organization} />
                     <Route path='/transport' component={Transport} />

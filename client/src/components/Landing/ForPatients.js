@@ -12,7 +12,7 @@ const ForPatients = () => (
             <GeneralCard 
                 cardHead='JDU OD LÉKAŘE S ŽÁDANKOU NA ODBĚR' 
                 cardText='Informace o odběrech, prováděných pro ambulance a oddělení' 
-                cardLink='/odberovy-system' 
+                cardLink='/pacient-od-lekare' 
                 cardImg='/images/about/draw_256.png'    
             />
 

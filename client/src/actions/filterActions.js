@@ -19,7 +19,7 @@ export const textFilter = (text) => {
     };
 };
 
-
+// boolean
 export const statimFilter = (statim) => {
     return {
         type: 'STATIM_FILTER',
@@ -27,6 +27,7 @@ export const statimFilter = (statim) => {
     };
 };
 
+// boolean
 export const erFilter = (er) => {
     return {
         type: 'ER_FILTER',
@@ -34,6 +35,7 @@ export const erFilter = (er) => {
     };
 };
 
+// boolean
 export const additionalFilter = (additional) => {
     return {
         type: 'ADDITIONAL_FILTER',
@@ -41,12 +43,6 @@ export const additionalFilter = (additional) => {
     };
 };
 
-// export const searchAll = (isAll) => {
-//     return {
-//         type: 'SEARCH_ALL',
-//         isAll
-//     };
-// };
 
 export const clearFilters = () => {
     return {
