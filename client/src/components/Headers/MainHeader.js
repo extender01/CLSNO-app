@@ -50,11 +50,11 @@ class MainHeader extends React.Component {
                     </nav>
                     
                     <div className ='f header__links'>
-                        <HashLink to='/metody' className='g1'>O laboratoři</HashLink>
+                        <HashLink to='/#o-laboratori' className='g1'>O laboratoři</HashLink>
                         <HashLink to='/#pacienti'className='g1'>Pro pacienty</HashLink>
                         <HashLink to='/#oddeleni'className='g1'>Pro oddělení</HashLink>
                         <Link to='/metody' className='g1'>Metody</Link>
-                        <Link to='/metody' className='g1'>Kontakty</Link>
+                        <HashLink to='/#kontakt' className='g1'>Kontakty</HashLink>
                         
                     </div>
 

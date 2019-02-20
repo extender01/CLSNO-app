@@ -2,7 +2,7 @@ import React from 'react';
 
 const Departments = () => (
     <div className='container__white'>
-        <div className='departments'>
+        <div  id='o-laboratori' className='departments'>
             
             <div className='departments__image'>
                 <img src={'/images/about/pavU.jpg'}/>

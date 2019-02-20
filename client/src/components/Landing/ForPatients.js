@@ -19,7 +19,7 @@ const ForPatients = () => (
             <GeneralCard 
                 cardHead='CHCI SI SÁM NECHAT UDĚLAT VYŠETŘENÍ JAKO SAMOPLÁTCE' 
                 cardText='Informace pro ty, kteří si chtějí sami nechat udělat a zaplatit vyšetření' 
-                cardLink='/odberovy-system' 
+                cardLink='/pacient-samoplatce' 
                 cardImg='/images/about/draw_256.png'    
             />
 
@@ -27,7 +27,7 @@ const ForPatients = () => (
             <GeneralCard 
                 cardHead='OGTT' 
                 cardText='Informace o orálně glukózovém tolerančním testu (test na cukrovku)' 
-                cardLink='/odberovy-system' 
+                cardLink='/pacient-ogtt' 
                 cardImg='/images/about/draw_256.png'    
             />
 

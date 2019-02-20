@@ -44,6 +44,8 @@ import Modes from '../components/About/Organization/Modes/Modes';
 import Reception from '../components/About/Organization/Reception/Reception';
 
 import FromMD from '../components/ForPatients/FromMD';
+import FromSPL from '../components/ForPatients/FromSPL';
+import OGTT from '../components/ForPatients/OGTT';
 
 
 
@@ -98,6 +100,8 @@ const AppRouter = (props) => (
                     <Route path='/odbery-stolice' render={props => <DrawGuideTemplate data={drawGuideData.hovno} {...props}  />} />
 
                     <Route path='/pacient-od-lekare' component={FromMD} />
+                    <Route path='/pacient-samoplatce' component={FromSPL} />
+                    <Route path='/pacient-ogtt' component={OGTT} />
 
 
                     <Route path='/organizace' component={Organization} />
