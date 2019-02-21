@@ -1,3 +1,3 @@
-const bp = '500px';
+const bp = '700px';
 
 export default bp;

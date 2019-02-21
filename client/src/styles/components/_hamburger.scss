@@ -11,7 +11,7 @@
   
   /* Change color on hover */
   .bm-item:hover {
-    color: white;
+    color: $h-lightblue;
   }
   
   /* The rest copied directly from react-burger-menu docs */
@@ -28,7 +28,7 @@
   
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #373a47;
+    background: white;
   }
   
   /* Position and sizing of clickable cross button */
@@ -44,10 +44,11 @@
   
   /* General sidebar styles */
   .bm-menu {
-    background: #373a47;
+    background: $bg-blue;
     padding: 2.5em 1.5em 0;
     font-size: 1.15em;
-    max-height: 400px;
+    max-height: 300px;
+    width: 100%;
   }
 
 

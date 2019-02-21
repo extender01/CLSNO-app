@@ -3,11 +3,12 @@
     top: 0;
     right: 0;
     left: 0;
-    background-image: linear-gradient(90deg, #3888B3, rgb(66, 180, 209), #3888B3);
+    background: $header-blue;
+    // background-image: linear-gradient(90deg, #3888B3, rgb(66, 180, 209), #3888B3);
     
     &__title {
         text-decoration: none;
-        color: rgb(95, 95, 95);
+        // color: rgb(95, 95, 95);
         margin: 0;
     }
 
@@ -38,6 +39,10 @@
 
     & a {
         color: white;
+
+        &:hover {
+            color: $h-lightblue;
+        }
     }
 }
 

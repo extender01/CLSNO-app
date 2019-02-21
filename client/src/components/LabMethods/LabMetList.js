@@ -21,8 +21,15 @@ export class LabMetList extends React.Component {
             <div className='lm__methods'>
                 {
                     this.props.labTests.length === 0 ? (
-                        <h2>Laboratorní metody nenalezeny</h2>
+                        <React.Fragment>
+                            <h2>Laboratorní metody nenalezeny</h2>
+                            
+
+                        </React.Fragment>
                     ) : (
+
+                       
+
                         this.props.labTests.map((labTest) => {
                             return <LabMetItem key={labTest._id} {...labTest} />;
                         })

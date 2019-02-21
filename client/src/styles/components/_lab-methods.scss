@@ -41,12 +41,14 @@
 
         //div with input
         &_input {
-            display: inline-flex;
+            display: flex;
             border: 1px white solid;
             padding: 1rem;
-            margin-top: 1rem;
+            margin: 1rem auto 0 auto;
             font-size: 3rem;
             background: none;
+            max-width: 35rem;
+            width: 100%;
 
             //remove blue border when focused on input
             & > input:focus {

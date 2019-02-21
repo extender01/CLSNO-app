@@ -24,24 +24,24 @@ import LabMetInternal from '../components/LabMethods/Detail/LabMetInternal';
 import CustomNoteForm from '../components/LabMethods/Detail/DataComponents/CustomNoteForm';
 import Contact from '../components/Landing/Contact';
 
-import Akreditace from '../components/About/Akreditace';
+import Akreditace from '../components/ForDepartments/Akreditace';
 import LabIdentification from '../components/Landing/LabIdentification';
 import Introduction from '../components/Landing/Jumbotron';
-import DrawSystem from '../components/About/Draws/DrawSystem/DrawSystem';
+import DrawSystem from '../components/ForDepartments/Draws/DrawSystem/DrawSystem';
 import Landing from '../components/Landing/Landing';
-import DrawOrder from '../components/About/Draws/DrawOrder/DrawOrder';
-import DrawMistakesSummary from '../components/About/Draws/DrawMistakes/DrawMistakesSummary';
-import DrawGuideTemplate from '../components/About/Draws/DrawGuide/DrawGuideTemplate';
-import DrawDash from '../components/About/Draws/DrawDash';
+import DrawOrder from '../components/ForDepartments/Draws/DrawOrder/DrawOrder';
+import DrawMistakesSummary from '../components/ForDepartments/Draws/DrawMistakes/DrawMistakesSummary';
+import DrawGuideTemplate from '../components/ForDepartments/Draws/DrawGuide/DrawGuideTemplate';
+import DrawDash from '../components/ForDepartments/Draws/DrawDash';
 import ScrollToTop from '../components/ScrollToTop/ScrollToTop';
 
 import AdminRoute from './AdminRoute';
 import LabMetDetail from '../components/LabMethods/Detail/LabMetDetail';
 
-import Organization from '../components/About/Organization/Organization';
-import Transport from '../components/About/Organization/Transport/Transport';
-import Modes from '../components/About/Organization/Modes/Modes';
-import Reception from '../components/About/Organization/Reception/Reception';
+import Organization from '../components/ForDepartments/Organization/Organization';
+import Transport from '../components/ForDepartments/Organization/Transport/Transport';
+import Modes from '../components/ForDepartments/Organization/Modes/Modes';
+import Reception from '../components/ForDepartments/Organization/Reception/Reception';
 
 import FromMD from '../components/ForPatients/FromMD';
 import FromSPL from '../components/ForPatients/FromSPL';
