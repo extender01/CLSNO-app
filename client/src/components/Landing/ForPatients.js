@@ -13,14 +13,14 @@ const ForPatients = () => (
                 cardHead='JDU OD LÉKAŘE S ŽÁDANKOU NA ODBĚR' 
                 cardText='Informace o odběrech, prováděných pro ambulance a oddělení' 
                 cardLink='/pacient-od-lekare' 
-                cardImg='/images/about/draw_256.png'    
+                cardImg='/images/landing/mudr.svg'    
             />
 
             <GeneralCard 
                 cardHead='CHCI SI SÁM NECHAT UDĚLAT VYŠETŘENÍ JAKO SAMOPLÁTCE' 
                 cardText='Informace pro ty, kteří si chtějí sami nechat udělat a zaplatit vyšetření' 
                 cardLink='/pacient-samoplatce' 
-                cardImg='/images/about/draw_256.png'    
+                cardImg='/images/landing/spl.svg'    
             />
 
 
@@ -28,7 +28,7 @@ const ForPatients = () => (
                 cardHead='OGTT' 
                 cardText='Informace o orálně glukózovém tolerančním testu (test na cukrovku)' 
                 cardLink='/pacient-ogtt' 
-                cardImg='/images/about/draw_256.png'    
+                cardImg='/images/landing/ogtt.svg'    
             />
 
 

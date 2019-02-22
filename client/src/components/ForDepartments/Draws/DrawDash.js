@@ -23,6 +23,14 @@ const DrawDash = () => (
             />
 
             <GeneralCard 
+                cardHead='SPRÁVNÉ VYPLNĚNÍ ŽÁDANKY' 
+                cardText='Údaje, které musí každá žádanka mít, podmíky přijetí vzorku.' 
+                cardLink='/odbery-poradi' 
+                cardImg='/images/about/methods3_256.png'
+                
+            />
+
+            <GeneralCard 
                 cardHead='CHYBY V PREANALYTICKÉ FÁZI' 
                 cardText='Seznam chyb, kterých je třeba se vyvarovat pro obdržení validního výsledku' 
                 cardLink='/odbery-chyby' 
@@ -45,14 +53,14 @@ const DrawDash = () => (
                 cardHead='ODBĚR ABR (ASTRUP)' 
                 cardText='Pokyny pro správné provedení kapilárního odběru pro ABR' 
                 cardLink='/odbery-abr' 
-                cardImg='/images/draw/draw_cap.svg'
+                cardImg='/images/draw/draw_abr.svg'
             />
 
             <GeneralCard 
                 cardHead='KAPILÁRNÍ ODBĚR GLYKÉMIE' 
                 cardText='Pokyny pro správné provedení kapilárního odběru pro glykémie' 
                 cardLink='/odbery-glyk' 
-                cardImg='/images/draw/draw_cap.svg'
+                cardImg='/images/draw/draw_glyk.svg'
             />
 
             <GeneralCard 

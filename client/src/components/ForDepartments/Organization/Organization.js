@@ -8,21 +8,21 @@ const Organization = () => (
                 cardHead='REŽIMY VYŠETŘENÍ' 
                 cardText='RUTINA, POHOTOVOST, STATIM a DOHLÁŠKY' 
                 cardLink='/rezimy' 
-                cardImg='/images/about/draw_256.png' 
+                cardImg='/images/organization/modes.svg' 
             />
 
             <GeneralCard
                 cardHead='ČASOVÝ ROZPIS PŘÍJMU VZORKŮ' 
                 cardText='Časový harmonogram příjmu vzorků na pavilony U a C' 
                 cardLink='/prijem' 
-                cardImg='/images/about/draw_256.png' 
+                cardImg='/images/organization/timetable.svg' 
             />
 
             <GeneralCard
                 cardHead='TRANSPORT DO LABORATOŘE' 
                 cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
                 cardLink='/transport' 
-                cardImg='/images/about/draw_256.png' 
+                cardImg='/images/organization/transport.svg' 
             />
         </div>
     </div>
