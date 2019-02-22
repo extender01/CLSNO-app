@@ -25,9 +25,16 @@ const DrawDash = () => (
             <GeneralCard 
                 cardHead='SPRÁVNÉ VYPLNĚNÍ ŽÁDANKY' 
                 cardText='Údaje, které musí každá žádanka mít, podmíky přijetí vzorku.' 
-                cardLink='/odbery-poradi' 
+                cardLink='/zadanky' 
                 cardImg='/images/about/methods3_256.png'
                 
+            />
+
+            <GeneralCard
+                cardHead='TRANSPORT DO LABORATOŘE' 
+                cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
+                cardLink='/transport' 
+                cardImg='/images/organization/transport.svg' 
             />
 
             <GeneralCard 
