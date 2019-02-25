@@ -25,28 +25,44 @@
         "cons": [
             {
                 "conImg": "/images/mistakes/tube_contamination.jpg",
-                "conHeading": "Kontaminace EDTA",
-                "conText": "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
+                "conHeading": "Kontaminace EDTA (Krevní obraz)",
+                "conText": "EDTA z krevniho obrazu přidává do krve velké množství K+ a zároveň vychytává dvojmocné ionty, takže snižuje množství Ca2+, Mg2+, Zn2+ a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
                 "conTable": [
                     {
                         "value": "/images/mistakes/arrow_down.png",
-                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                        "analytes": ["Ca2+", "M2+", "Zn2+", "ALP", "CK", "Fibrinogen", "Faktor V", "Faktor VIII"]
                     },
                     {
                         "value": "/images/mistakes/arrow_up.png",
-                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                        "analytes": ["K+", "APTT", "PT"]
                     }
                 ]
             },
             {
                 "conImg": "/images/mistakes/tube_contamination.jpg",
-                "conHeading": "Kontaminace EDTA",
-                "conText": "EDTA z krevniho obrazu vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě jako např. ALP, CK.",
+                "conHeading": "Kontaminace Citrátem (Koagulace, sedimentace)",
+                "conText": "Citrát sodný přidává do krve velké množství Na+ a podobně jako EDTA vychytává dvojmocné ionty, takže snižuje množství Ca, Mg, Zn a dále enzymy, které tyto ionty potřebují ke své aktivitě ",
                 "conTable": [
                     {
                         "value": "/images/mistakes/arrow_up.png",
-                        "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                        "analytes": ["Na+"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["Ca2+", "Mg2+", "Zn2+", "ALP", "AST"]
                     }
+                ]
+            },
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Kontaminace Li Heparinem (Biochemická zelená zkumavka)",
+                "conText": "Li heparin jako protisrážlivé činidlo prodlužuje parametry koagulace. Dále může interferovat v PCR stanoveních a v někerých reakcích antigenu a protilátky",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["APTT", "PT"]
+                    }
+                   
                 ]
             }
             
@@ -56,16 +72,18 @@
 
    "infusionCont": {
         "whatHeading": "Kontaminace infuzi",
-        "whatText": "Zkumavky obsahují různá aditiva, která vždy slouží nějakému účelu a nelze je mezi sebou zaměňovat nebo míchat obsah mezi zkumavkami.",
+        "whatText": "Při odběru z katetru nebo ze stejné ruky jako kape infuze může být vzorek krve naředěn infuzním roztokem a výrazně ovlivnit výsledky, jednak látkami, které jsou v infuzi obsaženy ve velkém množství a jednak naředěním ostatních látek",
         "whatImg": "/images/mistakes/infusion_contamination.jpg",
         "how": [
             {
-                "howHeading": "Přelívání z jednoho typu zkumavky do druhé",
-                "howText": "Například při snaze o doplnění objemu poslední odebírané zkumavky, kde už krev špatně tekla"
+                "howHeading": "Odběr přes nedostatečně opláchnutý katetr",
+                "howText": "Například při snaze o doplnění objemu poslední odebírané zkumavky, kde už krev špatně tekla",
+                "howImg": "/images/mistakes/draw_cap.svg"
             },
             {
                 "howHeading": "Nesprávné pořadí zkumavek při odběru",
-                "howText": "Při odběru může při výměně zkumavek dojít ke zpětnému toku, který sebou vezme aditiva a kontaminuje další použitou zkumavku."
+                "howText": "Při odběru může při výměně zkumavek dojít ke zpětnému toku, který sebou vezme aditiva a kontaminuje další použitou zkumavku.",
+                "howImg": "/images/mistakes/draw_cap.svg"
             }
         ],
         "cons": [

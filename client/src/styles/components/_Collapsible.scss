@@ -1,0 +1,11 @@
+.Collapsible {
+    color: #aaa;
+    text-align: center;
+    // background: rgb(116, 18, 18);
+    // border: 1px black solid;
+    margin-top: 2rem;
+
+    &__trigger:hover {
+        cursor: pointer;
+    }
+}

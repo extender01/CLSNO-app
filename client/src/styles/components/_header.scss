@@ -57,6 +57,13 @@
     // background: white;
 }
 
+
+.footer {
+    & p {
+        text-align: center;
+    }
+}
+
 @media (max-width: $bp) {
     .header {
 

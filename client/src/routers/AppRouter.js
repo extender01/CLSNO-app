@@ -48,6 +48,8 @@ import FromMD from '../components/ForPatients/FromMD';
 import FromSPL from '../components/ForPatients/FromSPL';
 import OGTT from '../components/ForPatients/OGTT';
 
+import Footer from '../components/Headers/Footer';
+
 
 
 //==============import JSON data =============
@@ -126,6 +128,8 @@ const AppRouter = (props) => (
                 </Switch>
                 }
             </div>
+
+            <Footer />
         </ScrollToTop>
     </Router>
 );

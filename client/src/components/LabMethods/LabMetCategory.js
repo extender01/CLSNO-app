@@ -1,21 +1,32 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import Collapsible from 'react-collapsible';
 import {categoryFilter, statimFilter, erFilter, additionalFilter, clearFilters} from '../../actions/filterActions';
 
 const LabMetCategory = (props) => (
     <React.Fragment>
+        
         <div className='fc lm__cat'>
             <button className={props.active === 'all' ? 'lm__cat-active': undefined} name='all' onClick={() => {props.clearAllFilters()}} >VŠECHNY</button>
             <button className={props.active === 'internal' ? 'lm__cat-active' : undefined} name='internal' onClick={(e) => {props.categoryFilter(e.target.name)}} >INTERNÍ</button>
             <button className={props.active === 'external' ? 'lm__cat-active' : undefined} name='external' onClick={(e) => {props.categoryFilter(e.target.name)}} >EXTERNÍ</button>
 
         </div>
-        <div className='fc lm__cat'>
-            <button className={props.statim === true ? 'lm__cat-active' : undefined} name='stat' onClick={() => {props.statimFilter(!props.statim)}} >STATIM</button>
-            <button className={props.er === true ? 'lm__cat-active' : undefined} name='er' onClick={() => {props.erFilter(!props.er)}} >POHOTOVOST</button>
-            <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
+        
+        <Collapsible trigger="Další filtry">
+            <div className='fc lm__cat'>
+                <button className={props.statim === true ? 'lm__cat-active' : undefined} name='stat' onClick={() => {props.statimFilter(!props.statim)}} >STATIM</button>
+                <button className={props.er === true ? 'lm__cat-active' : undefined} name='er' onClick={() => {props.erFilter(!props.er)}} >POHOTOVOST</button>
+                <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
 
-        </div>
+            </div>
+            <div className='fc lm__cat'>
+                <button className={props.statim === true ? 'lm__cat-active' : undefined} name='stat' onClick={() => {props.statimFilter(!props.statim)}} >STATIM</button>
+                <button className={props.er === true ? 'lm__cat-active' : undefined} name='er' onClick={() => {props.erFilter(!props.er)}} >POHOTOVOST</button>
+                <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
+
+            </div>
+        </Collapsible>
 
     
     </React.Fragment>
