@@ -2,7 +2,7 @@ import React from 'react';
 import Collapsible from 'react-collapsible';
 import DrawMistakesItem from './DrawMistakesItem';
 import mistakes from '../../../../data/drawMistakes.json';
-import Footer from '../../../Headers/Footer';
+import DrawMistakesHeader from './DrawMistakesHeader';
 
 
 
@@ -14,15 +14,34 @@ export default class DrawMistakesSummary extends React.Component {
             <React.Fragment>
                 <div className='draw__mistakes'>
                     <h1>Chyby v preanalytické fázi vyšetření</h1>
+
+                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.tubeCont.box} />} classParentString='draw__mistakes__collaps_box'>
+                        <DrawMistakesItem item={mistakes.tubeCont} />
+                    </Collapsible>
+
+                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.infusionCont.box} />} classParentString='draw__mistakes__collaps_box'>
+                        <DrawMistakesItem item={mistakes.infusionCont} />
+                    </Collapsible>
+
+                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.hemolysis.box} />} classParentString='draw__mistakes__collaps_box'>
+                        <DrawMistakesItem item={mistakes.hemolysis} />
+                    </Collapsible>
+
+                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.preparation.box} />} classParentString='draw__mistakes__collaps_box'>
+                        <DrawMistakesItem item={mistakes.preparation} />
+                    </Collapsible>
+
+                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.adjustation.box} />} classParentString='draw__mistakes__collaps_box'>
+                        <DrawMistakesItem item={mistakes.adjustation} />
+                    </Collapsible>
+
+
+
+
+
+
                 </div>
 
-                <Collapsible trigger='Kontaminace aditivy'>
-                    <DrawMistakesItem item={mistakes.tubeCont} />
-                </Collapsible>
-
-                <Collapsible trigger='Kontaminace infuzí'>
-                    <DrawMistakesItem item={mistakes.infusionCont} />
-                </Collapsible>
                     
                 
                 

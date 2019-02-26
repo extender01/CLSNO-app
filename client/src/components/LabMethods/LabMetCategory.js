@@ -13,7 +13,7 @@ const LabMetCategory = (props) => (
 
         </div>
         
-        <Collapsible trigger="Další filtry">
+        <Collapsible trigger='Další filtry'>
             <div className='fc lm__cat'>
                 <button className={props.statim === true ? 'lm__cat-active' : undefined} name='stat' onClick={() => {props.statimFilter(!props.statim)}} >STATIM</button>
                 <button className={props.er === true ? 'lm__cat-active' : undefined} name='er' onClick={() => {props.erFilter(!props.er)}} >POHOTOVOST</button>

@@ -1,5 +1,10 @@
 {
     "tubeCont": {
+        "box": {
+            "heading": "Kontaminace aditivy ve zkumavkách",
+            "image": "/images/mistakes/tube_contamination.jpg",
+            "text": "Zkumavky obsahují různá aditiva, která vždy slouží nějakému účelu a nelze je mezi sebou zaměňovat nebo míchat obsah mezi zkumavkami."
+        },
         "whatHeading": "Kontaminace aditivy ve zkumavkách",
         "whatText": "Zkumavky obsahují různá aditiva, která vždy slouží nějakému účelu a nelze je mezi sebou zaměňovat nebo míchat obsah mezi zkumavkami.",
         "whatImg": "/images/mistakes/tube_contamination.jpg",
@@ -71,8 +76,13 @@
 
 
    "infusionCont": {
-        "whatHeading": "Kontaminace infuzi",
-        "whatText": "Při odběru z katetru nebo ze stejné ruky jako kape infuze může být vzorek krve naředěn infuzním roztokem a výrazně ovlivnit výsledky, jednak látkami, které jsou v infuzi obsaženy ve velkém množství a jednak naředěním ostatních látek",
+        "box": {
+            "heading": "Kontaminace infuzním roztokem",
+            "image": "/images/mistakes/infusion_contamination.jpg",
+            "text": "Při odběru současně s podáváním infuze může roztok kontaminovat a výrazně naředit odebíranou krev a silně ovlivnit měřené parametry."
+        },
+        "whatHeading": "Kontaminace infuzním roztokem",
+        "whatText": "Při odběru z katetru nebo ze stejné ruky jako kape infuze může být vzorek krve naředěn infuzním roztokem a výrazně ovlivnit výsledky, jednak látkami, které jsou v infuzi obsaženy ve velkém množství a jednak naředěním ostatních látek.",
         "whatImg": "/images/mistakes/infusion_contamination.jpg",
         "how": [
             {
@@ -81,8 +91,8 @@
                 "howImg": "/images/mistakes/draw_cap.svg"
             },
             {
-                "howHeading": "Nesprávné pořadí zkumavek při odběru",
-                "howText": "Při odběru může při výměně zkumavek dojít ke zpětnému toku, který sebou vezme aditiva a kontaminuje další použitou zkumavku.",
+                "howHeading": "Odběr při současné aplikaci infuze",
+                "howText": ".................. ............. .............. . . .   ................",
                 "howImg": "/images/mistakes/draw_cap.svg"
             }
         ],
@@ -95,6 +105,181 @@
                     {
                         "value": "/images/mistakes/arrow_down.png",
                         "analytes": ["Ca", "Mg", "Zn", "ALP", "CK"]
+                    }
+                ]
+            }
+            
+        ]
+    },
+
+    "hemolysis": {
+        "box": {
+            "heading": "Hemolýza",
+            "image": "/images/mistakes/rbc.jpg",
+            "text": "Hemolytické vzorky krve znemožňují stanovení některých analytů. Mechanismy účinku jsou různé a rovněž záleží na stupni hemolýzy. Při silnější hemolýze se ruší všechny metody."
+        },
+        "whatHeading": "Hemolýza",
+        "whatText": "Červené krvinky obsahují některé analyty v signifikantně vyšším množství než v plasmě. Vylití obsahu krvinek tak může uměle zvýšit jejich koncentraci v séru / plasmě. Dále může volný hemoglobin nebo jeho červené zbarvení interferovat s chemickými reakcemi při jejich stanovování. Hemolýza při odběru se dá od intravaskulární hemolýzy odlišit stanovením haptoglobinu. Nejvíce jsou hemolýzou ovlivněny parametry K+, AST, bilirubin, Fe, LD. Při silnější hemolýze se ruší všechna vyšetření a je potřeba provést nový odběr i s vytvořením nové žádanky.",
+        "whatImg": "/images/mistakes/tube_contamination.jpg",
+        "how": [
+            {
+                "howHeading": "Odběr krve přes kanylu.",
+                "howText": "Při odběru krve přes kanylu jsou krvinky pod vetším tlakem a je vyšší riziko jejich rozbití. Za normálních okolností by se odběr přes kanylu provádět němel a měl by být proveden standardní odběr z druhé ruky a když nekape žádná infuze."
+            },
+            {
+                "howHeading": "Kontaminace dezinfekcí",
+                "howText": "Pokud není dezinfekce na pokožce zaschnutá, dojde k hemolýze"
+
+            },
+            {
+                "howHeading": "Nešetrné zacházení",
+                "howText": "Příliš prudké třepání zkumavkou po odběru nebo příliš násilné vstřikování krve stríkačkou (u otevřeného odběrového systému) krvinky rozbije"
+
+            },
+            {
+                "howHeading": "Špatné skladování",
+                "howText": "Příliš dlouhý čas mezi odběrem a příjmem nebo uskladnění plné krve v lednici. Krev je potřeba po odběru centrifugovat a fyzicky oddělit krevní elementy od plasmy / séra."
+
+            },
+            {
+                "howHeading": "Nesprávný poměr krve a protisrážlivého činidla",
+                "howText": "Nesprávný poměr objemů krve a protisrážlivého činidla může způsobit hemolýzu. Vakuové odběrové systémy by měly zajistit správný objem krve ve zkumavce."
+
+            }
+        ],
+        "cons": [
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Hemolytické sérum / plasma",
+                "conText": "Nejvíce jsou ovlivněny analyty, které jsou obsaženy v krvinkách ve velkém množství. Volný hemoglobin rovněž interferuje při chemických reakcích stanovení bilirubinu.",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["Bilirubin"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["K+", "AST", "Bilirubin", "Fe", "LD"]
+                    }
+                ]
+            }
+            
+        ]
+    },
+
+    "preparation": {
+        "box": {
+            "heading": "Chyby při přípravě pacienta na odběr",
+            "image": "/images/mistakes/draw.jpg",
+            "text": "Hemolytické vzorky krve znemožňují stanovení některých analytů. Mechanismy účinku jsou různé a rovněž záleží na stupni hemolýzy."
+        },
+        "whatHeading": "Hemolýza",
+        "whatText": "Červené krvinky obsahují některé analyty v signifikantně vyšším množství než v plasmě. Vylití obsahu krvinek tak může uměle zvýšit jejich koncentraci v séru / plasmě. Dále může volný hemoglobin nebo jeho červené zbarvení interferovat s chemickými reakcemi při jejich stanovování. Hemolýza při odběru se dá od intravaskulární hemolýzy odlišit stanovením haptoglobinu. Nejvíce jsou hemolýzou ovlivněny parametry K+, AST, bilirubin, Fe, LD. Při silnější hemolýze se ruší všechna vyšetření a je potřeba provést nový odběr i s vytvořením nové žádanky.",
+        "whatImg": "/images/mistakes/tube_contamination.jpg",
+        "how": [
+            {
+                "howHeading": "Odběr krve přes kanylu.",
+                "howText": "Při odběru krve přes kanylu jsou krvinky pod vetším tlakem a je vyšší riziko jejich rozbití. Za normálních okolností by se odběr přes kanylu provádět němel a měl by být proveden standardní odběr z druhé ruky a když nekape žádná infuze.",
+                "howImg": "/images/mistakes/draw_mix.svg"
+            },
+            {
+                "howHeading": "Kontaminace dezinfekcí",
+                "howText": "Pokud není dezinfekce na pokožce zaschnutá, dojde k hemolýze",
+                "howImg": "/images/mistakes/draw_order.svg"
+
+            },
+            {
+                "howHeading": "Nešetrné zacházení",
+                "howText": "Příliš prudké třepání zkumavkou po odběru nebo příliš násilné vstřikování krve stríkačkou (u otevřeného odběrového systému) krvinky rozbije",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
+            },
+            {
+                "howHeading": "Špatné skladování",
+                "howText": "Příliš dlouhý čas mezi odběrem a příjmem nebo uskladnění plné krve v lednici. Krev je potřeba po odběru centrifugovat a fyzicky oddělit krevní elementy od plasmy / séra.",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
+            },
+            {
+                "howHeading": "Nesprávný poměr krve a protisrážlivého činidla",
+                "howText": "Nesprávný poměr objemů krve a protisrážlivého činidla může způsobit hemolýzu. Vakuové odběrové systémy by měly zajistit správný objem krve ve zkumavce.",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
+            }
+        ],
+        "cons": [
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Hemolytické sérum / plasma",
+                "conText": "Nejvíce jsou ovlivněny analyty, které jsou obsaženy v krvinkách ve velkém množství. Volný hemoglobin rovněž interferuje při chemických reakcích stanovení bilirubinu.",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["Bilirubin"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["K+", "AST", "Bilirubin", "Fe", "LD"]
+                    }
+                ]
+            }
+            
+        ]
+    },
+
+    "adjustation": {
+        "box": {
+            "heading": "Chyby při adjustaci a transportu vzorků",
+            "image": "/images/mistakes/tube_contamination.jpg",
+            "text": "Hemolytické vzorky krve znemožňují stanovení některých analytů. Mechanismy účinku jsou různé a rovněž záleží na stupni hemolýzy."
+        },
+        "whatHeading": "Hemolýza",
+        "whatText": "Červené krvinky obsahují některé analyty v signifikantně vyšším množství než v plasmě. Vylití obsahu krvinek tak může uměle zvýšit jejich koncentraci v séru / plasmě. Dále může volný hemoglobin nebo jeho červené zbarvení interferovat s chemickými reakcemi při jejich stanovování. Hemolýza při odběru se dá od intravaskulární hemolýzy odlišit stanovením haptoglobinu. Nejvíce jsou hemolýzou ovlivněny parametry K+, AST, bilirubin, Fe, LD. Při silnější hemolýze se ruší všechna vyšetření a je potřeba provést nový odběr i s vytvořením nové žádanky.",
+        "whatImg": "/images/mistakes/tube_contamination.jpg",
+        "how": [
+            {
+                "howHeading": "Odběr krve přes kanylu.",
+                "howText": "Při odběru krve přes kanylu jsou krvinky pod vetším tlakem a je vyšší riziko jejich rozbití. Za normálních okolností by se odběr přes kanylu provádět němel a měl by být proveden standardní odběr z druhé ruky a když nekape žádná infuze.",
+                "howImg": "/images/mistakes/draw_mix.svg"
+            },
+            {
+                "howHeading": "Kontaminace dezinfekcí",
+                "howText": "Pokud není dezinfekce na pokožce zaschnutá, dojde k hemolýze",
+                "howImg": "/images/mistakes/draw_order.svg"
+
+            },
+            {
+                "howHeading": "Nešetrné zacházení",
+                "howText": "Příliš prudké třepání zkumavkou po odběru nebo příliš násilné vstřikování krve stríkačkou (u otevřeného odběrového systému) krvinky rozbije",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
+            },
+            {
+                "howHeading": "Špatné skladování",
+                "howText": "Příliš dlouhý čas mezi odběrem a příjmem nebo uskladnění plné krve v lednici. Krev je potřeba po odběru centrifugovat a fyzicky oddělit krevní elementy od plasmy / séra.",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
+            },
+            {
+                "howHeading": "Nesprávný poměr krve a protisrážlivého činidla",
+                "howText": "Nesprávný poměr objemů krve a protisrážlivého činidla může způsobit hemolýzu. Vakuové odběrové systémy by měly zajistit správný objem krve ve zkumavce.",
+                "howImg": "/images/mistakes/draw_cap.svg"
+
+            }
+        ],
+        "cons": [
+            {
+                "conImg": "/images/mistakes/tube_contamination.jpg",
+                "conHeading": "Hemolytické sérum / plasma",
+                "conText": "Nejvíce jsou ovlivněny analyty, které jsou obsaženy v krvinkách ve velkém množství. Volný hemoglobin rovněž interferuje při chemických reakcích stanovení bilirubinu.",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["Bilirubin"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["K+", "AST", "Bilirubin", "Fe", "LD"]
                     }
                 ]
             }
