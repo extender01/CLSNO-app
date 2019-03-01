@@ -1,6 +1,6 @@
 import React from 'react';
 import TransportItem from './TransportItem';
-import transportData from '../../../../data/transport/transport.json'
+import transportData from '../../../../data/transport/transport.json';
 
 const Transport = () => (
     <div className='container__white'>

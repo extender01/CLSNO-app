@@ -48,6 +48,8 @@ import FromMD from '../components/ForPatients/FromMD';
 import FromSPL from '../components/ForPatients/FromSPL';
 import OGTT from '../components/ForPatients/OGTT';
 
+import VADRecommendations from '../components/ForDepartments/Draws/DrawMistakes/VADRecommendations';
+
 import Footer from '../components/Headers/Footer';
 
 
@@ -94,7 +96,7 @@ const AppRouter = (props) => (
                     <Route path='/odbery-poradi' component={DrawOrder} />
                     <Route path='/odbery-chyby' component={DrawMistakesSummary} />
 
-                    <Route path='/odbery-zilni' render={props => <DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  />} />
+                    <Route path='/odbery-zilni' render={props => <React.Fragment><DrawGuideTemplate data={drawGuideData.venipuncture} {...props}  /><VADRecommendations /></React.Fragment>} />
                     <Route path='/odbery-abr' render={props => <DrawGuideTemplate data={drawGuideData.abr} {...props}  />} />
                     <Route path='/odbery-glyk' render={props => <DrawGuideTemplate data={drawGuideData.glykemie} {...props}  />} />
                     <Route path='/odbery-moc-ranni' render={props => <DrawGuideTemplate data={drawGuideData.ranniMoc} {...props}  />} />

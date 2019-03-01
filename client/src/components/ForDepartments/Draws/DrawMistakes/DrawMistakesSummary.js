@@ -3,6 +3,7 @@ import Collapsible from 'react-collapsible';
 import DrawMistakesItem from './DrawMistakesItem';
 import mistakes from '../../../../data/drawMistakes.json';
 import DrawMistakesHeader from './DrawMistakesHeader';
+import VADRecommendations from './VADRecommendations';
 
 
 
@@ -11,7 +12,7 @@ export default class DrawMistakesSummary extends React.Component {
     
     render() {
         return (
-            <React.Fragment>
+            <div className='container__white'>
                 <div className='draw__mistakes'>
                     <h1>Chyby v preanalytické fázi vyšetření</h1>
 
@@ -21,6 +22,7 @@ export default class DrawMistakesSummary extends React.Component {
 
                     <Collapsible trigger={<DrawMistakesHeader box={mistakes.infusionCont.box} />} classParentString='draw__mistakes__collaps_box'>
                         <DrawMistakesItem item={mistakes.infusionCont} />
+                        <VADRecommendations />
                     </Collapsible>
 
                     <Collapsible trigger={<DrawMistakesHeader box={mistakes.hemolysis.box} />} classParentString='draw__mistakes__collaps_box'>
@@ -31,21 +33,12 @@ export default class DrawMistakesSummary extends React.Component {
                         <DrawMistakesItem item={mistakes.preparation} />
                     </Collapsible>
 
-                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.adjustation.box} />} classParentString='draw__mistakes__collaps_box'>
-                        <DrawMistakesItem item={mistakes.adjustation} />
-                    </Collapsible>
-
-
-
-
-
-
                 </div>
 
                     
                 
                 
-            </React.Fragment>
+            </div>
         );
     }
 

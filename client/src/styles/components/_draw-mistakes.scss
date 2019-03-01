@@ -1,6 +1,6 @@
 .draw__mistakes {
 
-    max-width: 150rem;
+    max-width: 120rem;
     margin: 0 auto;
     
 
@@ -12,20 +12,21 @@
 
     &__collaps_box {
         // padding: 2rem;
-        border: 1px rgb(175, 175, 175) solid;
-        margin: 3rem 2rem;
-        background: rgb(240, 240, 240);
+        border-top: 1px rgb(137, 166, 224) solid;
+        margin: 5rem 2rem;
+        padding-top: 1rem;
+        background: rgb(238, 249, 255);
     }
 
     &__header {
-        background: white;
+        // background: white;
         color: $bg-blue;
         // border: 1px green solid;
         cursor: pointer;
         @include frs();
         // flex-wrap: nowrap;
         &:hover {
-            background: $bg-blue;
+            background: rgb(202, 237, 255);
             color: white;
         }
 
@@ -88,7 +89,7 @@
     }
 
     &__how {
-        max-width: 60rem;
+        max-width: 50rem;
         margin: 1rem;
         padding: 1rem;
         border: 1px $bg-blue solid;
@@ -96,6 +97,10 @@
         &__img {
             width: 10rem;
             margin-right: 2rem;
+
+            & img {
+                width: 10rem;
+            }
         }
 
 
@@ -118,12 +123,14 @@
 
     &__cons {
     border: 1px $bg-blue solid;
-    max-width: 115rem;
+    max-width: 107rem;
     padding: 1rem;
     margin: 1rem;
 
     &__item {
-        margin-bottom: 8rem;
+        margin: 2rem 2rem 8rem 2rem;
+        background: #d3ecf9;
+        padding: 2rem;
     }
 
         &__table {
