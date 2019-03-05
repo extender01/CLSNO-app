@@ -11,6 +11,7 @@ const DrawGuideTemplate = (props) => (
                 
                 {props.data.important.map((item, index) => (
                     <div key={index} className='drawguide__template__important__item'>
+                        {item.image && <img src={item.image} alt={item.head} />}
                         <h3>{item.head}</h3>
                         <p>{item.text}</p>
                         {item.link && <p>Více informací zde: {item.link}</p>}

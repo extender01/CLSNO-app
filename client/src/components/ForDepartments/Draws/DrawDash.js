@@ -11,7 +11,6 @@ const DrawDash = () => (
                 cardText='Informace k systému používanému v SNO' 
                 cardLink='/odberovy-system' 
                 cardImg='/images/about/draw_256.png' 
-                
             />
 
             <GeneralCard 
@@ -19,22 +18,6 @@ const DrawDash = () => (
                 cardText='V jakém pořadí se mají správně odebírat zkumavky?' 
                 cardLink='/odbery-poradi' 
                 cardImg='/images/draw/draw_order.svg' 
-                
-            />
-
-            <GeneralCard 
-                cardHead='SPRÁVNÉ VYPLNĚNÍ ŽÁDANKY' 
-                cardText='Údaje, které musí každá žádanka mít, podmíky přijetí vzorku.' 
-                cardLink='/zadanky' 
-                cardImg='/images/about/methods3_256.png'
-                
-            />
-
-            <GeneralCard
-                cardHead='TRANSPORT DO LABORATOŘE' 
-                cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
-                cardLink='/transport' 
-                cardImg='/images/organization/transport.svg' 
             />
 
             <GeneralCard 
@@ -43,6 +26,27 @@ const DrawDash = () => (
                 cardLink='/odbery-chyby' 
                 cardImg='/images/draw/draw_mistakes2.svg' 
             />
+
+
+            <GeneralCard 
+                cardHead='SPRÁVNÉ VYPLNĚNÍ ŽÁDANKY' 
+                cardText='Údaje, které musí každá žádanka mít, podmíky přijetí vzorku.' 
+                cardLink='/zadanky' 
+                cardImg='/images/about/methods3_256.png'
+            />
+
+
+
+            <GeneralCard
+                cardHead='TRANSPORT DO LABORATOŘE' 
+                cardText='Informace o podmínkách a pravidlech transportu vzorků do laboratoře' 
+                cardLink='/transport' 
+                cardImg='/images/organization/transport.svg' 
+            />
+
+
+
+
 
         </div>
 

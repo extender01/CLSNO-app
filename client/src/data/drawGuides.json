@@ -23,15 +23,18 @@
         ],
         "important": [ 
             {
+                "image": "/images/backup.jpg",
                 "head" : "Odběr při infuzi",
                 "text": "U odběru při infuzi hrozí kontaminace a SILNÉ ovlivnění výsledků",
                 "link": "/metody"
             },
             {
+                "image": "/images/backup.jpg",
                 "head" : "Nezatahovat paži",
                 "text": "Nezatahovat a necvičit paží při odběru. Silně ovlivňuje ŽELEZO"
             },
             {
+                "image": "/images/backup.jpg",
                 "head" : "Pořádně promíchat",
                 "text": "Zkumavky po odběru promíchat převrácením 6-8x, aby se krev dobře promíchala s aditivy"
             }
@@ -58,26 +61,33 @@
         ],
         "important": [
             {
+                "image": "/images/backup.jpg",
                 "head": "Rychle do laboratoře",
                 "text": "Analýzu na ABR je třeba ideálně provést nejpozději do 1 hodiny od odběru. V plné krvi 'to žije', leukocyty, obvzláště při jejich zvýšeném množství spotřebovávají kyslík, erytrocyty produkcí laktátu snižují pH."
             },
 
             {
                 "head": "Bubliny jsou zlo",
-                "text": "Veškerý vzduch je potřeba jak ze stříkaček tak z kapilár dostat pryč. Odběr musí být anaerobní, protože složení plynů v  krvi je odlišné od složení plynů ve vzduchu"
+                "text": "Veškerý vzduch je potřeba jak ze stříkaček tak z kapilár dostat pryč. Odběr musí být anaerobní, protože složení plynů v  krvi je odlišné od složení plynů ve vzduchu",
+                "image": "/images/draw/ABR_nobubbles.jpg"
             },
 
             {
                 "head": "Bez sraženin",
-                "text": "Po odběru je potřeba krev dobře promíchat, aby se protisrážlivé činidlo dobře promíchalo s krví. Stříkačku jemným vertikáním otáčením v ruce a kapiláru pomocí magnetického drátku, ten je třeba magnetem rozpohybovat několikrát od jednoho konci k druhému. Kapiláru je třeba dobře uzavřít gumovými víčky"
+                "text": "Po odběru je potřeba krev dobře promíchat, aby se protisrážlivé činidlo dobře promíchalo s krví. Stříkačku jemným vertikáním otáčením v ruce a kapiláru pomocí magnetického drátku, ten je třeba magnetem rozpohybovat několikrát od jednoho konci k druhému. Kapiláru je třeba dobře uzavřít gumovými víčky",
+                "image": "/images/backup.jpg"
+
             },
 
+
             {
+                "image": "/images/backup.jpg",
                 "head": "1 magnetický drátek",
                 "text": "Do kapilár dávejte pouze 1 magnetický drátek. Když je jich v kapiláře víc, tak je větší riziko vzniku sraženiny na okrajích kapiláry"
             },
 
             {
+                "image": "/images/backup.jpg",
                 "head": "Dostatečný objem",
                 "text": "Stříkačka musí pro úspěšné stanovení obsahovat alespoň 0,5 ml krve. Při menším množství nelze stanovit všechny parametry"
             }
@@ -103,11 +113,13 @@
         ],
         "important": [
             {
+                "image": "/images/backup.jpg",
                 "head": "Vždy nová žádánka",
                 "text": "Pro každé stanovení glykemie v různou denní dobu je potřeba v NIS Akord vytvořit NOVOU žádanku. Není možné nápříklad pouze znovu vytisknout žádanky z rána pro odpolední glykemie, žádánky mají unikátní ID a po jejich načtení ráno už je nelze znovu použít"
             },
 
             {
+                "image": "/images/backup.jpg",
                 "head": "Řádně promíchat",
                 "text": "Po vložení kapiláry do zkumavky s roztokem je třeba zkumavku řádně promíchat, aby se krev z kapiláry dostala celá do roztoku"
             }
@@ -133,16 +145,19 @@
         ],
         "important": [
             {
+                "image": "/images/backup.jpg",
                 "head": "Střední proud",
                 "text": "Pří odběru nezachytávat moč hned ze startu, ale nechat trochu odtéct do toalety a do nádobky odebírat až další část moče"
             },
 
             {
+                "image": "/images/backup.jpg",
                 "head": "Ranní moč",
                 "text": "Na analýzu sedimentu moče by se měla používat VÝHRADNĚ RANNÍ MOČ. Moč odebraná během dne není dostatečně zakoncentrovaná a nemá takovou klinickou výpovědní hodnotu jako moč ranní"
             },
 
             {
+                "image": "/images/backup.jpg",
                 "head": "Do 1 hodiny",
                 "text": "Analýza moče chemicky a sedimentu by měla být provedena DO 1 HODINY OD ODBĚRU. Po delším čase se elementy rozpadají a rychle se množí bakterie"
             }
@@ -166,16 +181,19 @@
         ],
         "important": [
             {
+                "image": "/images/backup.jpg",
                 "head": "Sucho a chlad",
                 "text": "Během doby sběru je třeba sběrnou nádobu uchovávat v suchu a chladu"
             },
 
-            {
+            {            
+                "image": "/images/backup.jpg",
                 "head": "Promíchat",
                 "text": "Po ukončení sběru je třeba moč dobře promíchat a odebrat 10 ml do plastové zkumavky na moč"
             },
 
             {
+                "image": "/images/backup.jpg",
                 "head": "V NIS Akord bez jednotek",
                 "text": "V Akordu zapisujte údaje o době a množství sběru bez jednotek, tedy pouze čísla (v hodinách a mililitrech)"
             }
@@ -201,11 +219,13 @@
         ],
         "important": [
             {
+                "image": "/images/backup.jpg",
                 "head": "3 hodinový sběr",
                 "text": "Moč je třeba sbírat 3 hodiny. Není-li možné dodržet limit přesně, je dovoleno rozmezí 2,5 až 3,5 hodin"
             },
 
             {
+                "image": "/images/backup.jpg",
                 "head": "Do laboratoře do 1 hodiny",
                 "text": "Moč je třeba doručit do laboratoře do 1 hodniny od odběru"
             }

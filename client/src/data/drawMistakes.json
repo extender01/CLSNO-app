@@ -7,7 +7,7 @@
         },
         "whatHeading": "Kontaminace aditivy ve zkumavkách",
         "whatText": "Zkumavky obsahují různá chemická aditiva a každý laboratorní test vyžaduje jiný typ aditiva. Nelze proto zkumavky jen tak zaměňovat nebo přelévat krev mezi zkumavkami",
-        "whatImg": "/images/mistakes/tube_contamination.jpg",
+        "whatImg": "/images/mistakes/tube_contamination2.jpg",
         "how": [
             {
                 "howHeading": "Přelévání krve z jednoho typu zkumavky do druhého",
@@ -134,7 +134,7 @@
         },
         "whatHeading": "Hemolýza",
         "whatText": "Červené krvinky obsahují některé analyty v signifikantně vyšším množství než v plasmě. Vylití obsahu krvinek tak může uměle zvýšit jejich koncentraci v séru / plasmě. Dále může volný hemoglobin nebo jeho červené zbarvení interferovat s chemickými reakcemi při jejich stanovování. Hemolýza při odběru se dá od intravaskulární hemolýzy odlišit stanovením haptoglobinu. Nejvíce jsou hemolýzou ovlivněny parametry K+, AST, bilirubin, Fe, LD. Při silnější hemolýze se ruší všechna vyšetření a je potřeba provést nový odběr i s vytvořením nové žádanky.",
-        "whatImg": "/images/backup.jpg",
+        "whatImg": "/images/mistakes/haemolysis.jpg",
         "how": [
             {
                 "howHeading": "Odběr krve přes kanylu.",
@@ -180,9 +180,64 @@
         ]
     },
 
+    "abr": {
+        "box": {
+            "heading": "Chyby při odběru na krevní plyny a acidobazickou rovnováhu (Astrup)",
+            "image": "/images/mistakes/abr.svg",
+            "text": "Při odběru vzorků na stanovení acidobazické rovnováhy a krevních plynů je naprosto kritické dodržet anaerobní podmínky odběru, vzorek analyzovat co nejdříve po odběru a také zamezit vzniku sraženin."
+        },
+        "whatHeading": "Kontaminace infuzním roztokem",
+        "whatText": "Množství (parciální tlaky) různých plynů v krvi je velmi odlišné od jejich od jejich množství ve vzduchu. Kyslík má ve vzduchu parciální tlak zhruba 21 kPa a v arteriální krvi přibližně 12 kPa. U CO2 je rozdíl ještě větší: ve vzduchu je pouze 0,04 kPa a v krvi 5,3 kPa. Pokud se odebíraná krev dostane do styku se vzduchem, výrazně se ovlivní poměry plynů a tím i další doprovodné parametry. ",
+        "whatImg": "/images/backup.jpg",
+        "how": [
+            {
+                "howHeading": "Bubliny ve stříkačce",
+                "howText": "V případě nasátí bubliny do stříkačky je potřeba bubliny vytlačit ve vertikální poloze pryč. Používané stříkačky PicoSafe umožňují vytlačení bublin do vršku bez nutnosti otevření stříkačky",
+                "howImg": "/images/backup.jpg"
+            },
+            {
+                "howHeading": "Bubliny v kapiláře",
+                "howText": "Pokud je při nasávání kapky krve do kapiláry nasáta také bublina vzduchu, je nutné ji co nejdříve odstranit pomocí drátku a magnetu",
+                "howImg": "/images/backup.jpg"
+            }
+        ],
+        "cons": [
+            {
+                "conHeading": "Bubliny",
+                "conText": "Kontakt se vzduchem ovlivní složení plynu v krvi. Kyslík ze vzduchu přejde do krve a způsobí falešné zvýšení. CO2 jde naopak z krve pryč a způsobí falešné snížení. Snížení CO2 má přímý dopad na zvýšení pH a ovlivnění dalších počítaných parametrů ",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["pH", "pO2", "sO2"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["pCO2"]
+                    }
+                ]
+            },
+            {
+                "conHeading": "Příliš dlouhá doba mezi odběrem a analýzou",
+                "conText": "",
+                "conTable": [
+                    {
+                        "value": "/images/mistakes/arrow_up.png",
+                        "analytes": ["pCO2", "pH"]
+                    },
+                    {
+                        "value": "/images/mistakes/arrow_down.png",
+                        "analytes": ["pO2", "Ca2+"]
+                    }
+                ]
+            }
+            
+        ]
+    },
+    
+
     "preparation": {
         "box": {
-            "heading": "Chyby při přípravě pacienta na odběr",
+            "heading": "Chyby při přípravě pacienta na odběr a při odběru",
             "image": "/images/mistakes/draw.jpg",
             "text": "Pacient musí den před odběrem dodržet několik pravidel, která jsou důležitá k tomu, aby naměřené výsledky mělí správnou výpovědní hodnotu."
         },

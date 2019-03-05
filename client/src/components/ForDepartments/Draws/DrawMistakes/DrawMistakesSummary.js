@@ -29,6 +29,11 @@ export default class DrawMistakesSummary extends React.Component {
                         <DrawMistakesItem item={mistakes.hemolysis} />
                     </Collapsible>
 
+                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.abr.box} />} classParentString='draw__mistakes__collaps_box'>
+                        <DrawMistakesItem item={mistakes.abr} />
+                    </Collapsible>
+
+
                     <Collapsible trigger={<DrawMistakesHeader box={mistakes.preparation.box} />} classParentString='draw__mistakes__collaps_box'>
                         <DrawMistakesItem item={mistakes.preparation} />
                     </Collapsible>

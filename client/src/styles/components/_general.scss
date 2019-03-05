@@ -123,8 +123,9 @@
   
   
 // background image for div
-@mixin bgimg() {
-    background: url('/images/ET6.jpg');
+@mixin bgimg($bg: url('/images/about/about1.jpg') ) {
+
+    background: $bg;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;

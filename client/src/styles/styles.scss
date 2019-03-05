@@ -11,15 +11,16 @@
 
 @import './components/hamburger';
 
-
-@import './components/lab-methods';
-@import './components/lab-details';
-// // @import './components/lab-form';
-// // @import './components/credentials-form';
 @import './components/landing/landing';
-@import './components/draws';
-@import './components/draw-mistakes';
-@import './components/draw-guide';
+
+
+@import './components/methods/lab-methods';
+@import './components/methods/lab-details';
+// // @import './components/methods/lab-form';
+
+
+// // @import './components/credentials-form';
+
 
 
 
@@ -32,7 +33,12 @@
 @import './components/for-patients/fromSPL';
 @import './components/for-patients/ogtt';
 @import './components/for-patients/instructions';
-@import './components/draws/request';
+
+@import './components/draw/request';
+
+@import './components/draw/draws';
+@import './components/draw/draw-mistakes';
+@import './components/draw/draw-guide';
 
 @import './components/Collapsible';
 
