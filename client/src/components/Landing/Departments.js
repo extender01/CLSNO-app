@@ -28,9 +28,9 @@ const Departments = () => (
                 <h3>ÚSEK HEMATOLOGIE</h3>
                 <p>Provádí vyšetření krevních obrazů včetně diferenciálního počtu, krevních nátěrů, nátěrů kostní dřeně, vyšetření koagulačních parametrů a další.</p>
                 <div className='departments__item__images'>
+                    <img src='/images/landing/hem1.jpg' />
                     <img src='/images/backup.jpg' />
-                    <img src='/images/backup.jpg' />
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/landing/hem3.jpg' />
                 </div>
             </div>
 
@@ -38,9 +38,9 @@ const Departments = () => (
                 <h3>ÚSEK RADIOIMUNOANALÝZY</h3>
                 <p>Provádí vyšetření nádorových markerů, hormonů, vitaminů a další.</p>
                 <div className='departments__item__images'>
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/landing/ria1.jpg' />
                     <img src='/images/landing/ria2.jpg' />
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/landing/ria3.jpg' />
                 </div>
             </div>
         </div>

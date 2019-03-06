@@ -187,19 +187,25 @@
             "text": "Při odběru vzorků na stanovení acidobazické rovnováhy a krevních plynů je naprosto kritické dodržet anaerobní podmínky odběru, vzorek analyzovat co nejdříve po odběru a také zamezit vzniku sraženin."
         },
         "whatHeading": "Kontaminace infuzním roztokem",
-        "whatText": "Množství (parciální tlaky) různých plynů v krvi je velmi odlišné od jejich od jejich množství ve vzduchu. Kyslík má ve vzduchu parciální tlak zhruba 21 kPa a v arteriální krvi přibližně 12 kPa. U CO2 je rozdíl ještě větší: ve vzduchu je pouze 0,04 kPa a v krvi 5,3 kPa. Pokud se odebíraná krev dostane do styku se vzduchem, výrazně se ovlivní poměry plynů a tím i další doprovodné parametry. ",
-        "whatImg": "/images/backup.jpg",
+        "whatText": "Množství (parciální tlaky) různých plynů v krvi je velmi odlišné od jejich od jejich množství ve vzduchu. Kyslík má ve vzduchu parciální tlak zhruba 21 kPa a v arteriální krvi přibližně 12 kPa. U CO2 je rozdíl ještě větší: ve vzduchu je pouze 0,04 kPa a v krvi 5,3 kPa. Pokud se odebíraná krev dostane do styku se vzduchem, výrazně se ovlivní poměry plynů a tím i další doprovodné parametry. Dalším problémem je probíhající metabolismus krevních buněk, který ovlivňuje jak acidobazickou rovnováhu, tak krevní plyny. ",
+        "whatImg": "/images/mistakes/bubbles.jpg",
         "how": [
             {
                 "howHeading": "Bubliny ve stříkačce",
                 "howText": "V případě nasátí bubliny do stříkačky je potřeba bubliny vytlačit ve vertikální poloze pryč. Používané stříkačky PicoSafe umožňují vytlačení bublin do vršku bez nutnosti otevření stříkačky",
-                "howImg": "/images/backup.jpg"
+                "howImg": "/images/mistakes/bubbles3.jpg"
             },
             {
                 "howHeading": "Bubliny v kapiláře",
                 "howText": "Pokud je při nasávání kapky krve do kapiláry nasáta také bublina vzduchu, je nutné ji co nejdříve odstranit pomocí drátku a magnetu",
-                "howImg": "/images/backup.jpg"
+                "howImg": "/images/mistakes/bubbles2.jpg"
+            },
+            {
+                "howHeading": "Dlouho po odběru",
+                "howText": "Metabolismus krevních buněk pokračuje i po odběru a ovlivňuje jak acidobazickou rovnováhu, tak krevní plyny. Při leukocytóze je ovlivnění výraznější.",
+                "howImg": "/images/mistakes/abr_metabolism.jpg"
             }
+
         ],
         "cons": [
             {
@@ -218,11 +224,11 @@
             },
             {
                 "conHeading": "Příliš dlouhá doba mezi odběrem a analýzou",
-                "conText": "",
+                "conText": "Metabolismus krevních buněk pokračuje i po odběru a ovlivňuje jak acidobazickou rovnováhu, tak krevní plyny. Stoupá CO2, spotřebovává se kyslík a klesá pH. Při leukocytóze je ovlivnění výraznější.",
                 "conTable": [
                     {
                         "value": "/images/mistakes/arrow_up.png",
-                        "analytes": ["pCO2", "pH"]
+                        "analytes": [ "pH", "pCO2"]
                     },
                     {
                         "value": "/images/mistakes/arrow_down.png",
@@ -238,12 +244,12 @@
     "preparation": {
         "box": {
             "heading": "Chyby při přípravě pacienta na odběr a při odběru",
-            "image": "/images/mistakes/draw.jpg",
+            "image": "/images/mistakes/draw2.jpg",
             "text": "Pacient musí den před odběrem dodržet několik pravidel, která jsou důležitá k tomu, aby naměřené výsledky mělí správnou výpovědní hodnotu."
         },
         "whatHeading": "Chyby při přípravě pacienta na odběr",
         "whatText": "Pokud není pacient správně poučen a nedodrží pravidla před odběrem, naměřené hodnoty mohou být zavádějící a nesprávné.",
-        "whatImg": "/images/mistakes/draw.jpg",
+        "whatImg": "/images/mistakes/draw3.jpg",
         "how": [
             {
                 "howHeading": "Pacient nebyl nalačno",

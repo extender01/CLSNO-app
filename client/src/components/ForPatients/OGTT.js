@@ -8,7 +8,7 @@ const OGTT = () => (
                 <h1>Orálně glukózový toleranční test (OGTT), &quot;test na cukrovku&quot;</h1>
                 <div className='ogtt__item'>
                     <div className='ogtt__item__map'>
-                        <img src='/images/ET.jpg' />
+                        <img src='/images/forPatients/ogtt.jpg' />
                     </div>
                     <div className='ogtt__item__text'>
                         <h2>OGTT</h2>

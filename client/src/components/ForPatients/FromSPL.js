@@ -9,7 +9,7 @@ const FromSPL = () => (
                 <h1>Odběr krve a vyšetření jako samoplátce bez žádanky od lékaře</h1>
                 <div className='fromSPL__item'>
                     <div className='fromSPL__item__map'>
-                        <img src='/images/ET.jpg' />
+                        <img src='/images/forPatients/spl.jpg' />
                     </div>
                     <div className='fromSPL__item__text'>
                         <h2>Samoplátce</h2>
