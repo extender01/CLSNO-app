@@ -43,6 +43,7 @@ import Transport from '../components/ForDepartments/Organization/Transport/Trans
 import Modes from '../components/ForDepartments/Organization/Modes/Modes';
 import Reception from '../components/ForDepartments/Organization/Reception/Reception';
 import Request from '../components/ForDepartments/Draws/Request/Request';
+import Manuals from '../components/ForDepartments/Manuals/Manuals';
 
 import FromMD from '../components/ForPatients/FromMD';
 import FromSPL from '../components/ForPatients/FromSPL';
@@ -114,6 +115,7 @@ const AppRouter = (props) => (
                     <Route path='/rezimy' component={Modes} />
                     <Route path='/prijem' component={Reception} />
                     <Route path='/zadanky' component={Request} />
+                    <Route path='/navody' component={Manuals} />
 
 
 
@@ -131,7 +133,6 @@ const AppRouter = (props) => (
                 }
             </div>
 
-            <Footer />
         </ScrollToTop>
     </Router>
 );

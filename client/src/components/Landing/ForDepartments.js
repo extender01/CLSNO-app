@@ -33,7 +33,7 @@ const ForDepartments = () => (
             <GeneralCard
                 cardHead='NÁVODY A POSTUPY'
                 cardText='Návody týkající se laboratorních žádanek'
-                cardLink='/organizace'
+                cardLink='/navody'
                 cardImg='/images/about/icons/help.svg'
             
             />
