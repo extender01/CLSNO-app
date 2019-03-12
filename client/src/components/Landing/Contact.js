@@ -175,8 +175,17 @@ const Contact = () => (
             </div>        
         </div>
         
-        <div className='general__line'>
+        <div className='general__line contact__phone_er'>
             <h3>V době 15:30 - 6:30 a přes celé víkendy a svátky je obsluhován pouze telefon POHOTOVOST</h3>
+        </div>
+
+        <div className='contact__address'>
+            <img  className='contact__image' src='/images/forDepartments/about/pavU.jpg' />
+            <iframe  frameBorder="0"
+                className='contact__map'
+                style={{border:0}}
+                src="https://www.google.com/maps/embed/v1/place?q=49.935305%2C%2017.877637&key=AIzaSyA38w_aSuQlVqIz5KHE6eMDGcCzI3Vg-kw" allowFullScreen>
+            </iframe>
         </div>
 
         
