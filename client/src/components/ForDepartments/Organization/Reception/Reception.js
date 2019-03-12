@@ -118,7 +118,7 @@ const Reception = () => (
                 <h3>Časový plán příjmu biochemie a hematologie na pavilonech U a C</h3>
 
                 <div className='reception__image'>
-                    <img src='./images/about/reception2.jpg' />
+                    <img src='./images/forDepartments/about/reception2.jpg' />
                 </div>
             
             </div>
@@ -128,7 +128,7 @@ const Reception = () => (
 
                 <div className='general__line-center'>
                     <div className='reception__icon'>
-                        <img src='./images/about/icons/request_icon2.svg' />
+                        <img src='./images/forDepartments/about/icons/request_icon2.svg' />
                     </div>
 
                     <p className='reception__textForIcon'>V době pohotovosti je potřeba psát biochemické a hematologické žádanky zvlášť</p>
@@ -136,7 +136,7 @@ const Reception = () => (
 
                 <div className='general__line-center'>
                     <div className='reception__icon'>
-                        <img src='./images/about/icons/stamp.svg' />
+                        <img src='./images/forDepartments/about/icons/stamp.svg' />
                     </div>
 
                     <p className='reception__textForIcon'>Na žádankách na externí vyšetření musí být razítko oddělení včetně</p>

@@ -12,21 +12,21 @@ const ForDepartments = () => (
                 cardHead='ODBĚRY'
                 cardText='Informace ke odběrům, žádankám a vzorkům'
                 cardLink='/odbery'
-                cardImg='/images/about/draw_256.png'
+                cardImg='/images/forDepartments/about/draw_256.png'
             />
 
             <GeneralCard
                 cardHead='SEZNAM METOD'
                 cardText='Seznam metod prováděných v SNO a odesílaných do smluvních laboratoří.'
                 cardLink='/metody'
-                cardImg='/images/about/methods3_256.png'
+                cardImg='/images/forDepartments/about/methods3_256.png'
             />
 
             <GeneralCard
                 cardHead='ORGANIZACE PROVOZU'
                 cardText='Kdy a jak laboratoř přijímá vzorky k analýze.'
                 cardLink='/organizace'
-                cardImg='/images/about/organization_256.png'
+                cardImg='/images/forDepartments/about/organization_256.png'
             
             />
 
@@ -34,7 +34,7 @@ const ForDepartments = () => (
                 cardHead='NÁVODY A POSTUPY'
                 cardText='Návody týkající se laboratorních žádanek'
                 cardLink='/navody'
-                cardImg='/images/about/icons/help.svg'
+                cardImg='/images/forDepartments/about/icons/help.svg'
             
             />
 

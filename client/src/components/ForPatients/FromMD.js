@@ -8,7 +8,7 @@ const FromMD = () => (
                 <h1>Odběr krve s žádankou od lékaře</h1>
                 <div className='fromMD__item'>
                     <div className='fromMD__item__map'>
-                        <img src='/images/ForPatients/md.jpg' />
+                        <img src='/images/forPatients/md.jpg' />
                     </div>
                     <div className='fromMD__item__text'>
                         <h2>Odběry</h2>

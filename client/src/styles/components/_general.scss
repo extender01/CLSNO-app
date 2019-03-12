@@ -123,7 +123,7 @@
   
   
 // background image for div
-@mixin bgimg($bg: url('/images/about/about1.jpg') ) {
+@mixin bgimg($bg: url('/images/landing/about1.jpg') ) {
 
     background: $bg;
     background-repeat: no-repeat;

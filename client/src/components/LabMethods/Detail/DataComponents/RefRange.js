@@ -27,7 +27,7 @@ const RefRange = (props) => (
                 }).map((item, index) => {
                     return ( 
                         <tr key={index} className={`refRange__${item.sex}`}>
-                            <td><img src={`/images/sex_${item.sex}.svg`} width='32px'/></td>
+                            <td><img src={`/images/methods/sex_${item.sex}.svg`} width='32px'/></td>
                             <td>{item.age}</td>
                             <td>{item.range}</td>
                             <td>{item.refNote}</td>

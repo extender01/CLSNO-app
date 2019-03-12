@@ -6,6 +6,29 @@ const Contact = () => (
             <h1>Kontakty</h1>
             <p>553 76 XXXX</p>
         </div>
+
+        <div className='general__line'>
+            
+            <div className='contact__boss' >
+                <h4>Primář</h4>
+                <p>Vladimír Kurfürst</p>
+                <p>553 76 6430</p>
+                <p>vladimir.kurfurst@snopava.cz</p>
+                
+               
+            </div>
+            
+            <div className='contact__boss' >
+                <h4>Vrchní laborant</h4>
+                <p>Eva Grabcová</p>
+                <p>553 76 6432</p>
+                <p>eva.grabcova@snopava.cz</p>
+                
+               
+            </div>
+        </div>
+
+
         <div className='general__line'>
             
             <div className='contact__table' >

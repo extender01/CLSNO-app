@@ -6,7 +6,7 @@
 
 .jumbotron {
 
-    min-height: 65rem;
+    min-height: 75rem;
     @include bgimg();
     @include frc();
 
@@ -93,7 +93,7 @@
 
 
 .container__departments {
-    @include bgimg(url('/images/ET17.jpg'));
+    @include bgimg(url('/images/landing/about2.jpg'));
     
 
 }
@@ -209,6 +209,22 @@
     }
 
  
+
+}
+
+.contact__boss {
+    background: rgb(43, 106, 139);
+    margin: 1rem 0;
+    text-align: left;
+    padding: 2rem;
+    text-align: center;
+    line-height: 2.5rem;
+    
+    & > h4 {
+        text-align: center;
+        padding-top: 2rem;
+        color: white;
+    }
 
 }
 

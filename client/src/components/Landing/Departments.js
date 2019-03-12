@@ -7,7 +7,7 @@ const Departments = () => (
                 <h3>CENTRÁLNÍ LABORATOŘE</h3>
                 <p>Centrální laboratoře provedou ročně kolem 1 250 000 analýz z palety více než 250 různých metod. Tyto výsledky poskytují důležité informace lékařům ostatních medicínských oborů, nutné ke stanovení diagnózy, léčbě a sledování průběhů nemocí.</p>
                 <div className='departments__item__images'>
-                    <img src='/images/about/pavU.jpg' />
+                    <img src='/images/forDepartments/about/pavU.jpg' />
                     <img src='/images/landing/cl3.jpg' />
                     <img src='/images/landing/cl2.jpg' />
                 </div>
@@ -29,7 +29,7 @@ const Departments = () => (
                 <p>Provádí vyšetření krevních obrazů včetně diferenciálního počtu, krevních nátěrů, nátěrů kostní dřeně, vyšetření koagulačních parametrů a další.</p>
                 <div className='departments__item__images'>
                     <img src='/images/landing/hem1.jpg' />
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/landing/hem2.jpg' />
                     <img src='/images/landing/hem3.jpg' />
                 </div>
             </div>

@@ -32,7 +32,7 @@ const VADRecommendations = () => (
             <div className='VADRec__item'>
                 <div className='VADRec__item__heading'>
                     <h4>ODSÁT A VYHODIT</h4>
-                    <img src='/images/draw/VAD_discard.jpg' />
+                    <img src='/images/forDepartments/draw/VAD_discard.jpg' />
                 </div>
                 <div className='VADRec__item__text'>
                     <p>První nasávaná krev se musí vyhodit, dokud není zcela vymytý fyziologický roztok z hadiček pryč.</p>

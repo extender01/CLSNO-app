@@ -12,7 +12,7 @@ const DrawOrg = () => (
                 cardHead='ODBĚRY'
                 cardText='Informace ke odběrům, žádankám a vzorkům'
                 cardLink='/odbery'
-                cardImg='/images/about/draw_256.png'
+                cardImg='/images/forDepartments/about/draw_256.png'
             
             />
 
@@ -20,7 +20,7 @@ const DrawOrg = () => (
                 cardHead='ORGANIZACE PROVOZU'
                 cardText='Kdy a jak laboratoř přijímá vzorky k analýze.'
                 cardLink='/organizace'
-                cardImg='/images/about/organization_256.png'
+                cardImg='/images/forDepartments/about/organization_256.png'
             
             />
 
@@ -30,7 +30,7 @@ const DrawOrg = () => (
                 cardHead='SEZNAM METOD'
                 cardText='Seznam metod prováděných v SNO a odesílaných do smluvních laboratoří.'
                 cardLink='/metody'
-                cardImg='/images/about/methods3_256.png'
+                cardImg='/images/forDepartments/about/methods3_256.png'
             />
 
             
@@ -38,7 +38,7 @@ const DrawOrg = () => (
                 cardHead='ŽÁDANKA V PDF'
                 cardText='Žádanka pro externí žadatele v pdf k vytištění.'
                 cardLink='/metody'
-                cardImg='/images/about/zadanka_256.png'
+                cardImg='/images/forDepartments/about/zadanka_256.png'
             
             />
          
