@@ -11,26 +11,11 @@ import {startLoadTests} from '../../actions/testActions';
 import bp from '../../helper/mediaQueryBreakPoint';
 
 class MainHeader extends React.Component {
-
-    constructor(props) {
-        super(props);
-    }
-    
-    componentDidMount() {
-        // this.props.startLoadTests();
-        // this.props.checkWhoIsLogged();
-        
-        
-        console.log('probehlo componentdidmount z Headeru');
-        
-        
-
-        
-    }
-    
+    // constructor(props) {
+    //     super(props);
+    // }
+   
     render() {
-        console.log('mainheader se renderoval');
-        
         return (
             <div className='header'>
                 
@@ -73,13 +58,7 @@ class MainHeader extends React.Component {
                             </div>
                         )}
                     </div>
-
-
-                   
-
                 </div> 
-                 
-                
             </div>
         );
     }

@@ -24,8 +24,6 @@ const FromSPL = () => (
                         <li>Poté počkáte v čekárně na provedení odběru krve.</li>
                         <li>Výsledky si můžete vyzvednout pouze osobně v tištěné podobě s platným průkazem totožnosti.</li>
                     </ul>
-
-
                 </div>
             </div>
         </div>

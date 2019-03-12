@@ -120,12 +120,7 @@ const DrawSystem = () => (
                 <p>Bez úprav</p>
                 <p>Vyšetření stolice na okultní krvácení</p>
             </div>  
-        
         </div>
-
-
-        
-        
     </div>
 );
 

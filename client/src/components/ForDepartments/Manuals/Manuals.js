@@ -25,14 +25,8 @@ const Manuals = () => (
                 cardLink='/navody/dohlaska' 
                 cardImg='/images/forDepartments/manuals/dohl.jpg' 
             />
-
         </div>
-    
     </div>
-    
-
-
-
 );
 
 export default Manuals;

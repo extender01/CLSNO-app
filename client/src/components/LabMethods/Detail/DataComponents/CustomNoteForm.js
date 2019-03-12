@@ -1,5 +1,4 @@
 import React from 'react';
-import Axios from 'axios';
 import {connect} from 'react-redux'
 import {startAddCustomNote} from '../../../../actions/testActions';
 
@@ -27,7 +26,6 @@ class CustomNoteForm extends React.Component {
         this.setState(() => {
             return {[name]: value}
         });
-        console.log(name, value);
 
     }
 
@@ -37,21 +35,16 @@ class CustomNoteForm extends React.Component {
     }
     
     render() {
-       console.log(this.props.location.jmeno);
-       
         return (
-            
                 <form className='f_column customNote__form' onSubmit={this.customNoteSubmit}>
                     <label>{`Poznámka oddělení ${this.props.user} k metodě ${this.props.labmet.name}`} </label>
                     <textarea autoFocus cols='50' rows='4' name='customNote' value={this.state.customNote} placeholder='Zde napište svoji poznámku. Je viditelná pouze pro vás.' onChange={this.onChange}></textarea>
                    
                     <button>ULOŽIT</button>
                 </form>
-            
         );
     }
 }
-
 
 const mapStateToProps = (state, props) => {
     return {
@@ -59,7 +52,6 @@ const mapStateToProps = (state, props) => {
         labmet: state.labTests.tests.find((item) => {
             return item._id === props.match.params.id
         })
-
     };
 };
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 //data from json, props in approuter
 
@@ -15,7 +16,6 @@ const DrawGuideTemplate = (props) => (
                         <h3>{item.head}</h3>
                         <p>{item.text}</p>
                         {item.link && <p>Více informací zde: {item.link}</p>}
-                
                     </div>
                 ))}
             
@@ -29,8 +29,15 @@ const DrawGuideTemplate = (props) => (
                 ))}
             </ul>
         </div>
-
     </div>
 );
+
+DrawGuideTemplate.propTypes = {
+    data: PropTypes.shape({
+        name: PropTypes.string,
+        important: PropTypes.array,
+        guide: PropTypes.array
+    })
+};
 
 export default DrawGuideTemplate;

@@ -43,11 +43,6 @@ const DrawDash = () => (
                 cardLink='/transport' 
                 cardImg='/images/organization/transport.svg' 
             />
-
-
-
-
-
         </div>
 
         <h2>Informace ke konkretnim typum odberu</h2>
@@ -102,13 +97,7 @@ const DrawDash = () => (
                 cardLink='/odbery-stolice' 
                 cardImg='/images/draw/draw_fob.svg'
             />
-        
-        
-        
-        
         </div>
-               
-      
     </div>
 );
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const TransportItem = (props) => (
     <div className='transport__item'>
@@ -8,5 +9,13 @@ const TransportItem = (props) => (
     </div>
 
 );
+
+TransportItem.propTypes = {
+    transport: PropTypes.shape({
+        img: PropTypes.string,
+        head: PropTypes.string,
+        text: PropTypes.string
+    })
+};
 
 export default TransportItem;

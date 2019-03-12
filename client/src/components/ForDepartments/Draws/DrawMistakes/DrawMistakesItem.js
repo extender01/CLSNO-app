@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import DrawMistakesWhat from './DrawMistakesWhat';
 import DrawMistakesHow from './DrawMistakesHow';
 import DrawMistakesCons from './DrawMistakesCons';
@@ -17,5 +19,9 @@ const DrawMistakesItem = (props) => (
 
     </div>
 );
+
+DrawMistakesItem.propTypes = {
+    item: PropTypes.object
+};
 
 export default DrawMistakesItem;

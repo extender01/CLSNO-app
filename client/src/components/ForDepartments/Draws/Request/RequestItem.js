@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 
 const RequestItem = (props) => (
@@ -14,5 +15,14 @@ const RequestItem = (props) => (
         
     </div>
 );
+
+RequestItem.propTypes = {
+    info: PropTypes.shape({
+        head: PropTypes.string,
+        text: PropTypes.array
+    }),
+    image: PropTypes.string
+};
+
 
 export default RequestItem; 

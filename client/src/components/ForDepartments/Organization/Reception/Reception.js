@@ -2,22 +2,12 @@ import React from 'react';
 
 const Reception = () => (
     <div className='container__white'>
-    
-
-
         <div className='reception'>
-
             <h2>Časový rozpis příjmu materiálu</h2>
-
             <p>Zde najdete časový harmonogram příjmu materiálu jednotlivých úseků. Věnujte pozornost hlavně rozdělení příjmu hematologického úseku mezi pavilony U a C, který je znározněn na plánku níže spolu s biochemickým příjmem (oranžově biochemie a fialově hematologie). Ostatní úseky zpracovávají materiál pouze v rutinním provozu v pracovní dny.</p>
 
-
-        
-
             <div className='general__line'>
-
                 <div className='reception__card'>
-
                     <table>
                         <tbody>
                             <tr>
@@ -27,7 +17,6 @@ const Reception = () => (
                             <tr>
                                 <td className='reception__center' colSpan='2'>Pracovni dny</td>
                             </tr>
-
 
                             <tr>
                                 <td>RUTINA</td>
@@ -58,15 +47,10 @@ const Reception = () => (
                                 <td>11:30 - 7:00 pav C</td>
                             </tr>
                         </tbody>
-
                     </table>
-                        
-                    
                 </div>
 
-
                 <div className='reception__card'>
-
                     <table>
                         <tbody>
                             <tr>
@@ -76,7 +60,6 @@ const Reception = () => (
                             <tr>
                                 <td className='reception__center' colSpan='2'>Pracovni dny</td>
                             </tr>
-
 
                             <tr>
                                 <td>RUTINA</td>
@@ -88,8 +71,6 @@ const Reception = () => (
                                 <td>15:00 - 6:30 pav U</td>
                             </tr>
 
-                            
-
                             <tr>
                                 <td  className='reception__center' colSpan='2'>Vikendy a svatky</td>
                             </tr>
@@ -99,14 +80,8 @@ const Reception = () => (
                                 <td>non-stop pav U</td>
                             </tr>
                         </tbody>
-                    
-
-
                     </table>
-                        
-                    
                 </div>
-            
             </div>
 
 
@@ -167,25 +142,7 @@ const Reception = () => (
                     <p className='reception__textForIcon'>Na žádankách na externí vyšetření musí být razítko oddělení včetně</p>
                 </div>            
             </div>
-
-            
-
-
-
         </div>
-
-        
-
-
-        
-
-
-
-
-
-        
-
-        
     </div>
 );
 

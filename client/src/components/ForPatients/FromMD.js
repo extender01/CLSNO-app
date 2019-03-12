@@ -17,13 +17,12 @@ const FromMD = () => (
                         <p>Pokud není lékařem uvedeno jinak, provádí se odběry v ranních hodinách nalačno</p>
                         <p>S žádankou příjdete do čekárny a počkáte na odběrovou sestru, která si od Vás vezme žádanku a poté si Vás zavolá k odběru</p>
                     </div>
-
-
                 </div>
             </div>
         </div>
 
         <Instructions />
+        
     </React.Fragment>
 );
 

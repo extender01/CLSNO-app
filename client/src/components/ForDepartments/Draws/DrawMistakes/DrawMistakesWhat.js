@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const DrawMistakesWhat = (props) => (
     
@@ -11,4 +12,10 @@ const DrawMistakesWhat = (props) => (
     </div>
 );
 
+DrawMistakesWhat.propTypes = {
+    item: PropTypes.shape({
+        whatImg: PropTypes.string,
+        whatText: PropTypes.string
+    })
+};
 export default DrawMistakesWhat;

@@ -1,11 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
+import PropTypes from 'prop-types';
 import {statimFilter, erFilter, additionalFilter} from '../../../../actions/filterActions';
-
-
-
-
 
 const Modes = (props) => (
     <div className='container__white'>
@@ -35,7 +32,6 @@ const Modes = (props) => (
                     </div>
 
                     <div className='modes__item__description'>
-
                         <ul>
                             <li>Pohotovost mimo rutinní dobu, tzn. všední dny 15:00 - 6:30 a víkendy a svátky celý den</li>
                             <li>Výsledky vydávány do 5 hodin od přijmu do laboratoře</li>
@@ -52,7 +48,6 @@ const Modes = (props) => (
                     </div>
 
                     <div className='modes__item__description'>
-
                         <ul>
                             <li>Příjem 24h non-stop</li>
                             <li>Výsledky obvykle do 1 hodiny od příjmu</li>
@@ -67,17 +62,12 @@ const Modes = (props) => (
                     </div>
                 </div>   
                 
-                
-
-
-
                 <div className='modes__item'>
                     <div className='modes__item__heading'>
                         <h2>DOHLÁŠKA</h2>
                     </div>
 
                     <div className='modes__item__description'>
-
                         <ul>
                             <li>Z předchozího odběru lze po splnění podmínek provést dodatečná vyšetření</li>
                             <li>Dohlášku z odběru je možné požadovat u vybraných metod a to pouze 1x a maximálně do 24h nebo do 4h podle metody</li>
@@ -127,6 +117,13 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(additionalFilter(true));
         }
     };
+};
+
+
+Modes.propTypes = {
+    showEr: PropTypes.func,
+    showStatim: PropTypes.func,
+    showAdditional: PropTypes.func
 };
 
 export default connect(undefined, mapDispatchToProps)(Modes);

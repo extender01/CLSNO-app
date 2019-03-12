@@ -11,12 +11,8 @@ const Transport = () => (
                 {transportData.transport.map((item, index) => (
                     <TransportItem key={index} transport={item} />
                 ))}
-
             </div>
-        </div>
-
-        
-        
+        </div>   
     </div>
 );
 

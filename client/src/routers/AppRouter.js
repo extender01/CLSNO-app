@@ -51,6 +51,10 @@ import OGTT from '../components/ForPatients/OGTT';
 
 import VADRecommendations from '../components/ForDepartments/Draws/DrawMistakes/VADRecommendations';
 
+import Memo from '../components/ForDepartments/Manuals/Memo';
+import Additional from '../components/ForDepartments/Manuals/Additional';
+import ATB from '../components/ForDepartments/Manuals/ATB';
+
 import Footer from '../components/Headers/Footer';
 
 
@@ -115,8 +119,10 @@ const AppRouter = (props) => (
                     <Route path='/rezimy' component={Modes} />
                     <Route path='/prijem' component={Reception} />
                     <Route path='/zadanky' component={Request} />
-                    <Route path='/navody' component={Manuals} />
-
+                    <Route path='/navody' component={Manuals} exact={true} />
+                    <Route path='/navody/memo' component={Memo} />
+                    <Route path='/navody/dohlaska' component={Additional} />
+                    <Route path='/navody/gentavanko' component={ATB} />
 
 
                     <Route path='/forbidden' component={Forbidden} />

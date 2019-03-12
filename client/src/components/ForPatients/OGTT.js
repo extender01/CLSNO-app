@@ -10,6 +10,7 @@ const OGTT = () => (
                     <div className='ogtt__item__map'>
                         <img src='/images/forPatients/ogtt.jpg' />
                     </div>
+
                     <div className='ogtt__item__text'>
                         <h2>OGTT</h2>
                         <p>OGTT se provádí u pacientů s podezřením na cukrovku a také jako screeningový test v těhotenství standardně mezi 24. a 28. týdnem těhotenství</p>
@@ -17,6 +18,7 @@ const OGTT = () => (
                         <p>Na test je potřeba mít žádanku od lékaře a dopředu se objednat na tel. 553 766 437. Je vhodné volat zhruba dva týdny před plánovaným termínem testu.</p>
                         <p>Test se provádí každý pracovní den v 7:30 a trvá zhruba do 10. hodin. Denní kapacita je 6 pacientů</p>
                     </div>
+
                     <div className='ogtt__item__description'>
                         <h2>Pokyny před odběrem</h2>
                         <ul>
@@ -40,13 +42,9 @@ const OGTT = () => (
                             <li>O výsledky testu si zavolejte následující pracovní den do diabetologické poradny na číslo...</li>
                         </ul>
                     </div>
-                   
-
-
                 </div>
             </div>
         </div>
-
     </React.Fragment>
 );
 

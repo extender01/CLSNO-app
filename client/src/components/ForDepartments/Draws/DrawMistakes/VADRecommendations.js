@@ -42,7 +42,6 @@ const VADRecommendations = () => (
                         <li>6x objem hadiček pro koagulační testy, minimálně 5 ml</li>
                         <li>U centrálních přístupů 6 ml pro netunelové katetry a 9 ml pro tunelové katetry</li>
                     </ul>
-
                 </div>
             </div>   
 
@@ -57,7 +56,6 @@ const VADRecommendations = () => (
                     <p>Je doporučeno používat speciální konektory pro napojení a napíchnutí zkumavek</p>
                 </div>
             </div>   
-
         </div>
     </div>
 );

@@ -53,10 +53,7 @@ const DrawOrder = () => (
                 <p className='draw__order__item--additive'>7. K2EDTA, NaF</p>
                 <p className='draw__order__item--example'>Glykemie</p>
             </div>  
-        
-    
         </div>
-
     </div>
 );
 
