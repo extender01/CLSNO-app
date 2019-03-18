@@ -51,14 +51,9 @@ export const startLogin = (credentials) => {
 
 const signupBegin = () => ({type: 'SIGNUP_BEGIN'});
 const signupFailure = (error = null) => ({type: 'SIGNUP_FAILURE', error: error});
-const signupSuccess = (user = {}) => {
+const signupSuccess = () => {
     return {
-        type: 'SIGNUP_SUCCESS',
-        // user: {
-        //     _id: user._id,
-        //     nick: user.nick,
-        //     rights: user.rights
-        // }
+        type: 'SIGNUP_SUCCESS'
     };
 };
 

@@ -30,9 +30,6 @@ const CustomNote = ({customNote: {customNote = null} = {}, user, ...otherProps }
             <p>Pro přidání / zobrazení vaší poznámky se musíte přihlásit</p>
         }
     </div>
-        
-    
-    
 );
 
 const mapStateToProps = (state) => ({user: state.users.user.nick});

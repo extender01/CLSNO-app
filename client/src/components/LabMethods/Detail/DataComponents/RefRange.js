@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const RefRange = (props) => (
     <div className={`box ${props.classNames}`}>
@@ -39,6 +41,14 @@ const RefRange = (props) => (
         </table> }
     </div>
 );
+
+
+RefRange.propTypes = {
+    classNames: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string,
+    refRange: PropTypes.arrayOf(PropTypes.object)
+};
 
 
 export default RefRange;

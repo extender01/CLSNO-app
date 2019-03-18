@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import {alphabetFilter} from '../../actions/filterActions';
 import {connect} from 'react-redux';
 
@@ -30,9 +32,13 @@ const mapDispatchToProps = (dispatch) => {
         alphabetFiltering: (letter) => {
             dispatch(alphabetFilter(letter));
         }
-    }
+    };
 
-}
+};
 
+LabMetAlphabet.propTypes = {
+    active: PropTypes.string,
+    alphabetFiltering: PropTypes.func
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(LabMetAlphabet);

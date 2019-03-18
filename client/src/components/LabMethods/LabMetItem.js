@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import {connect} from 'react-redux';
-import accentFold from '../../selectors/labMetSelector';
+import PropTypes from 'prop-types';
 
 const LabMetItem = (props) => (
     <div  className={`lm__item lm__${props.category}`}>
@@ -41,6 +41,15 @@ const mapStateToProps = (state) => {
     return {
         textFilter: state.labTests.filters.text
     };
+};
+
+LabMetItem.propTypes = {
+    category: PropTypes.string,
+    textFilter: PropTypes.string,
+    name: PropTypes.string,
+    syn: PropTypes.string,
+    where: PropTypes.string,
+    _id: PropTypes.string
 };
 
 

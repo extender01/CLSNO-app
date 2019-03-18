@@ -1,14 +1,12 @@
 import React from "react";
 import Media from 'react-media';
+import PropTypes from 'prop-types';
+
 import bp from '../../../../helper/mediaQueryBreakPoint';
 
 
 
 export default class Draw extends React.Component {
-
-    constructor(props) {
-        super(props);
-    };
 
     drawTypes = {
         sg: 'Srážlivá krev s gelem',
@@ -22,8 +20,6 @@ export default class Draw extends React.Component {
         mocsb: 'Moč sbíraná',
         pu: 'Punktát',
         csf: 'Likvor'
-        
-        
     };
 
     coZaOdber = () => {
@@ -39,21 +35,17 @@ export default class Draw extends React.Component {
                     } else {
                         return ( 
                             <div key={index} className="draw__type" >
-                                
                                 {this.drawTypes[item] &&
                                     <React.Fragment>
-                                    <img src={`/images/forDepartments/drawsystem/${item}.png`} title={this.drawTypes[item]} height='60px' />
-                                    
-                                    <Media query={`(min-width: ${bp})`}>
-                                        {(matches) => 
-                                            matches ? <p>{this.drawTypes[item]}</p> : null
-                                        }
-                                    </Media> 
-
-                                    
+                                        <img src={`/images/forDepartments/drawsystem/${item}.png`} title={this.drawTypes[item]} height='60px' />
+                                        
+                                        <Media query={`(min-width: ${bp})`}>
+                                            {(matches) => 
+                                                matches ? <p>{this.drawTypes[item]}</p> : null
+                                            }
+                                        </Media> 
                                     </React.Fragment>
                                 }
-                                
                             </div>
                         );
                     }
@@ -64,7 +56,6 @@ export default class Draw extends React.Component {
                 <p>Údaje nejsou k dispozici</p>
             )
         }
-        
     };
 
     render() {
@@ -78,4 +69,8 @@ export default class Draw extends React.Component {
             </div>
         )
     }
-}
+};
+
+Draw.propTypes = {
+    draw: PropTypes.string
+};

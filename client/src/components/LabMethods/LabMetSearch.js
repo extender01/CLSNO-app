@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
 import {textFilter, searchAll, clearFilters, erFilter, statimFilter, additionalFilter} from '../../actions/filterActions';
 
 
@@ -8,10 +10,7 @@ import {textFilter, searchAll, clearFilters, erFilter, statimFilter, additionalF
 
 
 class LabMetSearch extends React.Component {
-    
-    constructor(props) {
-        super(props)
-    }
+   
 
     textFilter = (e) => {
         this.props.textFilter(e.target.value)
@@ -96,6 +95,16 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(statimFilter(false));
         }
     };
+};
+
+LabMetSearch.propTypes = {
+    text: PropTypes.string,
+    textFilter: PropTypes.func,
+    searchAll: PropTypes.func,
+    clearFilters: PropTypes.func,
+    isSearchAll: PropTypes.bool,
+    filters: PropTypes.object
+
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LabMetSearch);

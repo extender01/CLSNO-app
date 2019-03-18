@@ -84,13 +84,11 @@
         "how": [
             {
                 "howHeading": "Odběr přes nedostatečně opláchnutý katetr / kanylu",
-                "howText": "Při nasávání krve do zkumavky se v hadičkách krev smíchá se zbytky infuze",
-                "howImg": "/images/backup.jpg"
+                "howText": "Při nasávání krve do zkumavky se v hadičkách krev smíchá se zbytky infuze"
             },
             {
                 "howHeading": "Odběr při současné aplikaci infuze",
-                "howText": "Pokud je odběr prováděn nad kapající infuzí, je krev v žíle těsně za místem vstupu infuze silně naředěná infuzním roztokem",
-                "howImg": "/images/backup.jpg"
+                "howText": "Pokud je odběr prováděn nad kapající infuzí, je krev v žíle těsně za místem vstupu infuze silně naředěná infuzním roztokem"
             }
         ],
         "cons": [

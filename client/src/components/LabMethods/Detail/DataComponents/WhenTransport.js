@@ -1,10 +1,7 @@
 import React from "react";
+import PropTypes from 'prop-types';
 
 class WhenTransport extends React.Component {
-
-    constructor(props) {
-        super(props);
-    };
     
     whenGoes = () => {
         console.log("ma to byt krnov");
@@ -70,6 +67,10 @@ class WhenTransport extends React.Component {
         )
     }
 }    
+
+WhenTransport.propTypes = {
+    where: PropTypes.string
+}
 
 export default WhenTransport;
 

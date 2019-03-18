@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 
-import {startLogin, startLogout} from '../actions/userActions';
+import {startLogin} from '../actions/userActions';
 import LogoutForm from './LogoutForm';
 import CredentialsForm from './CredentialsForm';
 
@@ -30,9 +31,15 @@ const mapStateToProps = (state) => ({isLogged: !!state.users.user._id, user: sta
 const mapDispatchToProps = (dispatch) => {
     return {
         startLogin: (credentials) => {
-            dispatch(startLogin(credentials))
+            dispatch(startLogin(credentials));
         }
     };
+};
+
+LoginPage.propTypes = {
+    isLogged: PropTypes.bool,
+    startLogin: PropTypes.func,
+    user: PropTypes.string
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(LoginPage);

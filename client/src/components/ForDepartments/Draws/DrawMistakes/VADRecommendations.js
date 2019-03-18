@@ -9,7 +9,7 @@ const VADRecommendations = () => (
             <div className='VADRec__item'>
                 <div className='VADRec__item__heading'>
                     <h4>ZASTAVIT INFUZI</h4>
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/mistakes/stop.svg' />
                 </div>
                 <div className='VADRec__item__text'>
                     <p>Před odběrem krve je potřeba zastavit kapání infuze minimálně na 2 minuty</p>
@@ -21,7 +21,7 @@ const VADRecommendations = () => (
             <div className='VADRec__item'>
                 <div className='VADRec__item__heading'>
                     <h4>ČISTÉ TRUBKY</h4>
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/mistakes/pipes.jpg' />
                 </div>
                 <div className='VADRec__item__text'>
                     <p>Doporučuje se proplach minimálně 10 ml fyziologického roztoku bez dalších aditiv (ne heparin nebo citrát - ty musí pryč)</p>
@@ -48,7 +48,7 @@ const VADRecommendations = () => (
             <div className='VADRec__item'>
                 <div className='VADRec__item__heading'>
                     <h4>PŘIPOJENÍ ZKUMAVKY</h4>
-                    <img src='/images/backup.jpg' />
+                    <img src='/images/mistakes/tube_connection.jpg' />
                 </div>
                 <div className='VADRec__item__text'>
                     <p>Vakuum ve zkumavce je vhodné pro standardní odběr přes jehlu. Při odběru přes katetr jsou však krvinky vystaveny větším třecím silám a existuje signifikantně vyšší riziko hemolýzy. Proto je doporučeno používat zkumavky s menším celkovým objemem, kde je podtlak menší a tím i menší riziko hemolýzy</p>

@@ -1,7 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import Collapsible from 'react-collapsible';
+import PropTypes from 'prop-types';
+
 import {categoryFilter, statimFilter, erFilter, additionalFilter, clearFilters} from '../../actions/filterActions';
+import LabMetAlphabet from './LabMetAlphabet';
 
 const LabMetCategory = (props) => (
     <React.Fragment>
@@ -20,7 +23,12 @@ const LabMetCategory = (props) => (
                 <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
 
             </div>
-            
+
+
+            <Collapsible trigger='Abeceda'>
+                <LabMetAlphabet />
+            </Collapsible>
+           
         </Collapsible>
 
     
@@ -69,12 +77,17 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
-// const fce = (arg) => {
-//     if (arg === 'all') {
-//         return arg;
-//     }
-// };
-
+LabMetCategory.propTypes = {
+    active: PropTypes.string,
+    clearAllFilters: PropTypes.func,
+    categoryFilter: PropTypes.func,
+    statim: PropTypes.bool,
+    er: PropTypes.bool,
+    additional: PropTypes.bool,
+    statimFilter: PropTypes.func,
+    erFilter: PropTypes.func,
+    additionalFilter: PropTypes.func
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(LabMetCategory)

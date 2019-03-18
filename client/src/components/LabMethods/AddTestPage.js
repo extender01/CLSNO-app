@@ -1,22 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
 import LabMetForm from './LabMetForm';
 import { startAddTest } from '../../actions/testActions';
 
 
-class AddTestPage extends React.Component {
-  
-    render() {
-        console.log('renderAddTest ', this.state, this.props);
+const AddTestPage = (props) => (
+    <React.Fragment>
+        {props.error &&   <p>{props.error.message}</p>}
+        <LabMetForm new={true} formSubmit={props.startAddTest} />
+    </React.Fragment>
+);
 
-        return (
-            <React.Fragment>
-                {this.props.error &&   <p>{this.props.error.message}</p>}
-                <LabMetForm new={true} formSubmit={this.props.startAddTest} />
-            </React.Fragment>
-        );
-    }
-}
 
 
 const mapStateToProps = (state) => {
@@ -33,6 +29,10 @@ const mapDispatchToProps = (dispatch) => {
     };
 };
 
+AddTestPage.propTypes = {
+    error: PropTypes.string,
+    startAddTest: PropTypes.func
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTestPage);

@@ -10,7 +10,6 @@ export default () => {
     const store = createStore(combineReducers({
         labTests: testReducer,
         users: userReducer
-        //filters: filtersReducer
     }),
     composeEnhancers(applyMiddleware(thunk))
     );

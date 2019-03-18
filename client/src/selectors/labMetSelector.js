@@ -28,11 +28,7 @@ const labMetSelector = (labMet, filter) => {
         };
         
         const byText = byTextName || byTextSyn();
-
-        
-        
         return byCategory && byAlphabet && byText && byStatim && byEr && byAdditional;
-        
         
     }).sort((a, b) => {
         if (a.name.toLowerCase() < b.name.toLowerCase()) {
@@ -40,7 +36,6 @@ const labMetSelector = (labMet, filter) => {
         } else if ( a.name.toLowerCase() > b.name.toLowerCase()) {
             return 1;
         }
-
         return 0;
     });
 };

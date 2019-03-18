@@ -1,13 +1,10 @@
 import React from 'react';
 import {connect} from 'react-redux';
 
-
 import { startLogout } from '../actions/userActions';
-
 
 class LogoutForm extends React.Component {
    
-
     logout = (e) => {
         e.preventDefault();
         this.props.startLogout();

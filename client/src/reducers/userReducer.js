@@ -1,5 +1,3 @@
-
-
 const userReducerDefaultState = {
     user: {
         '_id': '',
@@ -12,14 +10,11 @@ const userReducerDefaultState = {
 
 };
 
-//DODELAT LOGOUT FAILURE A PRENEST TLACITKO LOGOUT NA HEADER NEBO NEKAM
-
 const userReducer = (state = userReducerDefaultState, action) => {
     switch (action.type) {
     case 'LOGIN_BEGIN':
         return {...state, isLogged: false, loading: true, error: null};
     case 'LOGIN_FAILURE':
-        console.log('bzl failure');
         return {...state, isLogged: false, loading: false, error: action.error};
     case 'LOGIN_SUCCESS':
         return {...state, isLogged: true, loading: false, error: null, user: action.user};

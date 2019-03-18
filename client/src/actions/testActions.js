@@ -26,7 +26,6 @@ also append getstate as second argument) */
                             
 export const startAddTest = (test) => {
     return (dispatch) => {
-        console.log('startAddTest started, now dispatching addTestBegin, test object is: ', test);
         dispatch(addTestBegin());
         //this will get data from result of axios POST call (what is saved to mongodb) and is used to update redux via dispatch
         console.log('starting axios POST request to send new test to db');
@@ -176,13 +175,13 @@ export const startAddCustomNote = (passedNote, passedId) => {
             history.goBack();
         }).catch((err) => {
             console.log(err);
+            dispatch(addCustomNoteFailure(err));
             history.push('/forbidden');
             
         });
     };
 };
 
-//NEAKTUALIZUJE CUTSTOM NOTE PO DISPATCH ADDCUSTOMNOTESUCCES, SPRAVIT
 
 
            

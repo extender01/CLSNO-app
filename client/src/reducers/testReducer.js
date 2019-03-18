@@ -1,5 +1,3 @@
-
-
 const testReducerDefaultState = {
     tests: [],
     loading: false,
@@ -13,8 +11,6 @@ const testReducerDefaultState = {
         additional: false
     }
 };
-
-
 
 const testReducer = (state = testReducerDefaultState, action) => {
     switch (action.type) {
@@ -55,10 +51,6 @@ const testReducer = (state = testReducerDefaultState, action) => {
             error: null
         };
     
-        // return {
-        //     ...state
-        //     // UPDATOVAT REDUX STATE POMOCI NOVYCH DAT CO SE VRATI ZPATKY Z AXIOS PATCH, ABY SE ZMENY PROJEVILY HNED
-        // };
 
     case 'LOAD_TESTS_BEGIN':
         return {...state, loading: true, error: null};
@@ -76,13 +68,10 @@ const testReducer = (state = testReducerDefaultState, action) => {
         return {
             ...state,
             tests: state.tests.map((item) => {
-                //console.log('item testu z pole je: ', item);
                 
                 if(item._id === action._id) {
-                    // console.log('problehlo add custom note v reduceru');
                     
                     return {...item, customNotes: action.customNotes};
-                    // return {...item, customNotes: action.customNotes};
 
                 } else {
                     return item;
@@ -96,8 +85,6 @@ const testReducer = (state = testReducerDefaultState, action) => {
         return {...state, filters: {...state.filters, alphabet: action.alphabet}};
     case 'TEXT_FILTER':
         return {...state, filters: {...state.filters, text: action.text}};
-    // case 'SEARCH_ALL':
-    //     return {...state, filters: {...state.filters, searchAll: action.isAll}};
     case 'STATIM_FILTER':
         return {...state, filters: {...state.filters, statim: action.statim}};
     case 'ER_FILTER':
@@ -106,7 +93,6 @@ const testReducer = (state = testReducerDefaultState, action) => {
         return {...state, filters: {...state.filters, additional: action.additional}};
     case 'CLEAR_FILTERS':
         return {...state, filters: {...state.filters, category: 'all', alphabet: ''}};
-
 
     default:
         return state;

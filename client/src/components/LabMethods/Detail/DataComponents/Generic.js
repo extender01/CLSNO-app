@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 
 const Generic = (props) => (
     <div className={`box ${props.classNames}`}>
@@ -7,5 +9,12 @@ const Generic = (props) => (
     </div>
 );
 
+
+
+Generic.propTypes = {
+    classNames: PropTypes.string,
+    label: PropTypes.string,
+    value: PropTypes.string
+};
 
 export default Generic;

@@ -13,7 +13,6 @@ const Departments = () => (
                 </div>
             </div>
 
-
             <div className='departments__item'>
                 <h3>ÚSEK BIOCHEMIE</h3>
                 <p>V non-stop režimu provádí vyšetření základních biochemických parametrů, parametrů vnitřního prostředí, kardiomarkerů, specifických proteinů, funkční testy, vyšetření moče, močových konkrementů a další. </p>
@@ -44,8 +43,6 @@ const Departments = () => (
                 </div>
             </div>
         </div>
-       
-   
     </div>
 );
 

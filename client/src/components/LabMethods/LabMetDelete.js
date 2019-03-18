@@ -1,5 +1,7 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
 import {startDeleteTest} from '../../actions/testActions';
 
 const LabMetDelete = (props) => (
@@ -14,6 +16,11 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(startDeleteTest(id_arg));
         }
     };
+};
+
+LabMetDelete.propTypes = {
+    deleteTest: PropTypes.func,
+    id: PropTypes.string
 };
 
 export default connect(undefined, mapDispatchToProps)(LabMetDelete);

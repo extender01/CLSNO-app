@@ -1,5 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import PropTypes from 'prop-types';
+
+
 import LabMetForm from './LabMetForm';
 import LabMetDelete from './LabMetDelete';
 import { startEditTest } from '../../actions/testActions';
@@ -10,14 +13,9 @@ import { startEditTest } from '../../actions/testActions';
 
 class EditTestPage extends React.Component {
     
-    constructor(props) {
-        super(props);
-    }
-
     onClickEdit = (formData) => {
         console.log('formData', formData);
-        this.props.startEditTest(this.props.particularTest._id, formData)
-        
+        this.props.startEditTest(this.props.particularTest._id, formData) 
     }
 
     render() {
@@ -39,7 +37,7 @@ const mapStateToProps = (state, ownProps) => {
     };
 };
 
-const mapDispatchToProps = (dispatch, ownProps) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         startEditTest: (id_arg, test_arg) => {
             dispatch(startEditTest(id_arg, test_arg));
@@ -47,6 +45,10 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     };
 };
 
+EditTestPage.propTypes = {
+    startEditTest: PropTypes.func,
+    particularTest: PropTypes.object,
+};
 
 
 export default connect(mapStateToProps, mapDispatchToProps)(EditTestPage);

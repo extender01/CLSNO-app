@@ -8,7 +8,6 @@ const ForPatients = () => (
 
         <div className='for-patients'>
 
-
             <GeneralCard 
                 cardHead='JDU OD LÉKAŘE S ŽÁDANKOU NA ODBĚR' 
                 cardText='Informace o odběrech, prováděných pro ambulance a oddělení' 
@@ -23,16 +22,12 @@ const ForPatients = () => (
                 cardImg='/images/landing/spl.svg'    
             />
 
-
             <GeneralCard 
                 cardHead='OGTT' 
                 cardText='Informace o orálně glukózovém tolerančním testu (test na cukrovku)' 
                 cardLink='/pacient-ogtt' 
                 cardImg='/images/landing/ogtt.svg'    
             />
-
-
-
 
         </div>
     </div>

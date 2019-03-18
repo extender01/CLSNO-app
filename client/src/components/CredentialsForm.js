@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import { history } from '../routers/AppRouter';
 
@@ -20,8 +21,6 @@ export default class CredentialsForm extends React.Component {
         this.setState(() => {
             return {[name]: value}
         });
-        console.log(name, value);
-
     };
     
     onSubmit = (e) => {
@@ -30,8 +29,6 @@ export default class CredentialsForm extends React.Component {
 
     };
 
-
-    
     render() {
         return (
             <div className='f_center'>
@@ -39,7 +36,6 @@ export default class CredentialsForm extends React.Component {
                     
                     <input type='text' name='nick' placeholder='Přihlašovací jméno' value={this.state.nick} onChange={this.onChange}/>
                     <input type='password' name='password' placeholder='Heslo' value={this.state.password} onChange={this.onChange} />
-                    
                     
                     {this.props.buttonName !== 'LOGIN' && <div>
                             <input type='radio' name='rights' value='department' onChange={this.onChange}/>
@@ -49,7 +45,6 @@ export default class CredentialsForm extends React.Component {
                             <input type='radio' name='rights' value='admin' onChange={this.onChange} />
                             <label> Admin  </label>
                     </div>}
-
                     <button>{this.props.buttonName}</button>
                 </form>
 
@@ -57,5 +52,10 @@ export default class CredentialsForm extends React.Component {
             </div>
         )
     }
+};
+
+CredentialsForm.propTypes = {
+    formSubmit: PropTypes.func,
+    buttonName: PropTypes.string
 };
 

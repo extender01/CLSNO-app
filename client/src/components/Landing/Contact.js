@@ -14,8 +14,6 @@ const Contact = () => (
                 <p>Vladimír Kurfürst</p>
                 <p>553 76 6430</p>
                 <p>vladimir.kurfurst@snopava.cz</p>
-                
-               
             </div>
             
             <div className='contact__boss' >
@@ -23,14 +21,11 @@ const Contact = () => (
                 <p>Eva Grabcová</p>
                 <p>553 76 6432</p>
                 <p>eva.grabcova@snopava.cz</p>
-                
-               
             </div>
         </div>
 
 
         <div className='general__line'>
-            
             <div className='contact__table' >
                 <h4>Centrální laboratoře</h4>
                 <table className='contact__table--cl'>
@@ -55,12 +50,10 @@ const Contact = () => (
                             <td>Příjem hematologie</td>
                             <td>6436</td>
                         </tr>
-                        
                         <tr>
                             <td>Třídění materíálu, externí vyšetření</td>
                             <td>6568</td>
                         </tr>
-                        
                         <tr>
                             <td>Odběrová místnost</td>
                             <td>6267</td>
@@ -97,12 +90,10 @@ const Contact = () => (
                             <td>Močová laboratoř</td>
                             <td>6435</td>
                         </tr>
-                        
                         <tr>
                             <td>Automat RUTINA</td>
                             <td>6438</td>
                         </tr>
-                        
                         <tr>
                             <td>Automat STATIM</td>
                             <td>6268</td>
@@ -187,10 +178,7 @@ const Contact = () => (
                 src="https://www.google.com/maps/embed/v1/place?q=49.935305%2C%2017.877637&key=AIzaSyA38w_aSuQlVqIz5KHE6eMDGcCzI3Vg-kw" allowFullScreen>
             </iframe>
         </div>
-
-        
     </div>
-   
 );
 
 export default Contact;
