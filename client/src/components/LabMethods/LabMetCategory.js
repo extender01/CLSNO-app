@@ -20,12 +20,7 @@ const LabMetCategory = (props) => (
                 <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
 
             </div>
-            <div className='fc lm__cat'>
-                <button className={props.statim === true ? 'lm__cat-active' : undefined} name='stat' onClick={() => {props.statimFilter(!props.statim)}} >STATIM</button>
-                <button className={props.er === true ? 'lm__cat-active' : undefined} name='er' onClick={() => {props.erFilter(!props.er)}} >POHOTOVOST</button>
-                <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
-
-            </div>
+            
         </Collapsible>
 
     
