@@ -23,6 +23,16 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
+const Probe = require('pmx').probe();
+
+Probe.metric({
+    name    : 'NODE_ENV',
+    value   : function() {
+        return process.env.NODE_ENV;
+    }
+});
+
+console.log('tohle je NODE_ENV: ', process.env.NODE_ENV);
 
 //==========================================================================
 
