@@ -24,7 +24,7 @@ module.exports = {
       ref  : 'origin/master',
       repo : 'git@github.com:extender01/CLSNO-app.git',
       path : '/var/www/clsno/html',
-      'post-deploy' : 'npm install && cd client && npm install && cd .. &&pm2 reload ecosystem.config.js --env production'
+      'post-deploy' : 'sudo npm install && cd client && sudo npm install && cd .. &&pm2 reload ecosystem.config.js --env production'
     }
   }
 };
