@@ -136,6 +136,10 @@ let TestSchema = new mongoose.Schema({
     categories: {
         type: String,
         required: false
+    },
+    volume: {
+        type: String,
+        required: false
     }
 
 });

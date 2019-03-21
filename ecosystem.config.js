@@ -1,8 +1,8 @@
 module.exports = {
   apps : [{
     name: 'CLSNO',
-    script: './server/server.js',
-    cwd: '/var/www/clsno/html/',
+    script: './source/server/server.js',
+    
 
     // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
     args: 'one two',
