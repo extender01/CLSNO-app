@@ -254,7 +254,7 @@ app.patch('/api/tests/:id', isAdmin, (req, res) => {
 //THIS VERSION ONLY CREATES NEW USER AND SAVES HIM TO DB
 // app.post('/api/adduser', isAdmin, (req, res) => {
 app.post('/api/adduser', (req, res) => { //for admin creation
-    console.log('chci admina');
+    console.log('chci admina a mam ho');
     
     //only users with admin rights can create new users
     // if (req.user.rights === 'admin') {
