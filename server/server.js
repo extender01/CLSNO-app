@@ -14,7 +14,9 @@ const {whoIsIt} = require('./middleware/whoIsIt');
 const {isAdmin} = require('./middleware/isAdmin');
 
 const app = express();
-const publicPath = path.join(__dirname, '..', 'client', 'public')
+const publicPath = path.join(__dirname, '..', 'client', 'public');
+console.log(publicPath);
+
 const port = process.env.PORT;
 
 const corsOptions = {exposedHeaders: 'x-auth'};
@@ -23,14 +25,7 @@ app.use(cors(corsOptions));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-const Probe = require('pmx').probe();
 
-Probe.metric({
-    name    : 'NODE_ENV',
-    value   : function() {
-        return process.env.NODE_ENV;
-    }
-});
 
 console.log('tohle je NODE_ENV: ', process.env.NODE_ENV);
 
@@ -234,11 +229,11 @@ app.patch('/api/tests/:id', isAdmin, (req, res) => {
 
 // ============ SIGN UP=================================
 
-//THIS VERSION SIGNS UP USER AND LOGIN HIM (CREATES AND SENDS TOKEN) IMMEDIATELY
+// THIS VERSION SIGNS UP USER AND LOGIN HIM (CREATES AND SENDS TOKEN) IMMEDIATELY
 // app.post('/api/adduser', (req, res) => {
 //     //only users with admin rights can create new users
-//     if (req.user.rights === 'admin') {
-//     // if(2 > 1) {
+//     // if (req.user.rights === 'admin') {
+//     if(2 > 1) {
 //         let extractedProps = _.pick(req.body, ['nick', 'password', 'rights']);
 //         let user = new User(extractedProps);
     
@@ -257,9 +252,10 @@ app.patch('/api/tests/:id', isAdmin, (req, res) => {
 // });
 
 //THIS VERSION ONLY CREATES NEW USER AND SAVES HIM TO DB
-app.post('/api/adduser', isAdmin, (req, res) => {
-//app.post('/api/adduser', (req, res) => {
-
+// app.post('/api/adduser', isAdmin, (req, res) => {
+app.post('/api/adduser', (req, res) => { //for admin creation
+    console.log('chci admina');
+    
     //only users with admin rights can create new users
     // if (req.user.rights === 'admin') {
     // if(2 > 1) {
@@ -349,7 +345,12 @@ app.get ('*', (req, res) => {
 
 
 app.listen(port, () => {
-    console.log(`Started up at port ${port}`);
+    // console.log(`Started up at port ${port}`);
+    console.log('server started');
 });
 
 module.exports = {app};
+
+
+
+
