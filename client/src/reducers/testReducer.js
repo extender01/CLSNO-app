@@ -8,7 +8,8 @@ const testReducerDefaultState = {
         text: '',
         statim: false,
         er: false,
-        additional: false
+        additional: false,
+        group: ''
     }
 };
 
@@ -91,6 +92,8 @@ const testReducer = (state = testReducerDefaultState, action) => {
         return {...state, filters: {...state.filters, er: action.er}};
     case 'ADDITIONAL_FILTER':
         return {...state, filters: {...state.filters, additional: action.additional}};
+    case 'GROUP_FILTER':
+        return {...state, filters: {...state.filters, groups: action.group}};
     case 'CLEAR_FILTERS':
         return {...state, filters: {...state.filters, category: 'all', alphabet: ''}};
 

@@ -9,21 +9,37 @@ const LabMetItem = (props) => (
        
         {/* if filtering text exists in redux, check if that searched text string is contained in name of labTest, if so then apply class to div*/}
         <div className={(props.textFilter && props.name.toLowerCase().includes(props.textFilter.toLowerCase())) ? 'lm__item--found' : undefined}>
-            {props.category === 'external' ? (   
+
+            {props.category === 'external' && (
                 <Link to={{
                     pathname: '/metody/detail/' + props._id,
                     state: 'external' 
                 }}>
                     {props.name}
                 </Link>
-            ) : (
+
+            )}
+
+            {props.category === 'internal' && (
                 <Link to={{
                     pathname: '/metody/detail/' + props._id,
                     state: 'internal' 
                 }}>
                     {props.name}
                 </Link>
+
             )}
+
+            {props.category === 'calculated' && (
+                <Link to={{
+                    pathname: '/metody/detail/' + props._id,
+                    state: 'calculated' 
+                }}>
+                    {props.name}
+                </Link>
+
+            )}
+
 
         </div>
 

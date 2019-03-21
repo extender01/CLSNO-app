@@ -31,7 +31,10 @@ const labMethodDefaultState = {
     interfereUp: '',
     physVar: '',
     bioHalfLife: '',
-    categories: ''
+    groups: '',
+    volume: '',
+    dependencies: '',
+    formula: ''
 };
 
 export default labMethodDefaultState;

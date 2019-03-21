@@ -8,7 +8,6 @@ export default class LabMetForm extends React.Component {
    
     constructor(props) {
         super(props);
-        
         this.state = this.props.labMetToEdit || labMethodDefaultState;
         this.state.refRangePrepare = this.refRangeDefault;
         this.state.error = '';
@@ -22,6 +21,8 @@ export default class LabMetForm extends React.Component {
         sortOrder: ''
     };
 
+
+   
     onChange = (e) => {
         const inputValue = e.target.value;
         const inputName = e.target.name;
@@ -42,7 +43,18 @@ export default class LabMetForm extends React.Component {
     intExtToggle = (e) => {
         const buttonName = e.target.name;
         this.setState(() => {
-            return {category: buttonName}
+            if (buttonName === 'calculated') {
+                return {
+                    category: buttonName,
+                     where: 'Výpočtová',
+                     draw: "custom: Výpočtová metoda",
+                     preanal: "Závisí na podmínkach pro metody nutné k výpočtu",
+                     responseNote: "Závisí na dostupnosti metod nutných k výpočtu"
+
+                    }
+            } else {
+                return {category: buttonName, where: ''}
+            }
         });
     };
    
@@ -111,6 +123,8 @@ export default class LabMetForm extends React.Component {
                 {this.props.new && <div className='f labmetform__category'>
                     <button name='internal' className={this.state.category === 'internal' ? 'labmetform__category--active' : undefined} onClick={this.intExtToggle}>Interni</button>
                     <button name='external' className={this.state.category === 'external' ? 'labmetform__category--active' : undefined} onClick={this.intExtToggle}>Externi</button>
+                    <button name='calculated' className={this.state.category === 'calculated' ? 'labmetform__category--active' : undefined} onClick={this.intExtToggle}>Výpočtové</button>
+
                 </div> }
 
                 <form onSubmit={this.onSubmit} className='labmetform' >
@@ -133,7 +147,7 @@ export default class LabMetForm extends React.Component {
                         </li>
                         <li className='f_between labmetform__li'> 
                             <label>Název v Akordu</label>
-                            <input type='text' name='nameAk' value={this.state.nameAk} onChange={this.onChange} />
+                            <input type='text' name='nameAk' value={this.state.nameAk} onChange={this.onChange} />   
                         </li>
                         <li className='f_between labmetform__li'>
                             <label>Skupiny v akordu</label>
@@ -209,11 +223,16 @@ export default class LabMetForm extends React.Component {
                             <input type='checkbox' name='erCare' value={this.state.erCare} onChange={this.checkboxToggle} />
                         </li>
                         <li className='f_between labmetform__li'>
-                            
-                        </li>
-                        <li className='f_between labmetform__li'>
                             <label>Dohláška</label>
                             <input type='text' name='additionalOrder' value={this.state.additionalOrder} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Kategorie skupiny</label>
+                            <input type='text' name='groups' value={this.state.groups} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Mininální objem</label>
+                            <input type='text' name='volume' value={this.state.volume} onChange={this.onChange} />
                         </li>
                         <li className='f_between labmetform__li'>
                             <label>Poznámka k dostupnosti</label>
@@ -236,6 +255,19 @@ export default class LabMetForm extends React.Component {
                             <input type='text' name='bioHalfLife' value={this.state.bioHalfLife} onChange={this.onChange} />
                         </li>
                     </ul> }
+
+
+                    {this.state.category === 'calculated' && <ul>
+                        
+                        <li className='f_between labmetform__li'>
+                            <label>Nutné k výpočtu</label>
+                            <input type='text' name='dependencies' value={this.state.dependencies} onChange={this.onChange} />
+                        </li>
+                        <li className='f_between labmetform__li'>
+                            <label>Vzorec</label>
+                            <input type='text' name='formula' value={this.state.formula} onChange={this.onChange} />
+                        </li>
+                    </ul> }                    
 
                     <ul>
                         <li className='f_center labmetform__li'>

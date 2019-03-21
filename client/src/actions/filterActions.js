@@ -43,6 +43,17 @@ export const additionalFilter = (additional) => {
     };
 };
 
+// string
+//groups (categories)
+
+export const groupFilter = (group) => {
+    return {
+        type: 'GROUP_FILTER',
+        group
+    };
+};
+
+
 
 export const clearFilters = () => {
     return {

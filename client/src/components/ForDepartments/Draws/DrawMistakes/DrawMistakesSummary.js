@@ -13,7 +13,7 @@ export default class DrawMistakesSummary extends React.Component {
                 <div className='draw__mistakes'>
                     <h1>Chyby v preanalytické fázi vyšetření</h1>
 
-                    <Collapsible trigger={<DrawMistakesHeader box={mistakes.tubeCont.box} />} classParentString='draw__mistakes__collaps_box'>
+                    <Collapsible openedClassName='Collapsible__open' trigger={<DrawMistakesHeader box={mistakes.tubeCont.box} />} classParentString='draw__mistakes__collaps_box'>
                         <DrawMistakesItem item={mistakes.tubeCont} />
                     </Collapsible>
 

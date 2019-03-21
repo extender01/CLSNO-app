@@ -14,7 +14,7 @@ const Generic = (props) => (
 Generic.propTypes = {
     classNames: PropTypes.string,
     label: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.array])
 };
 
 export default Generic;

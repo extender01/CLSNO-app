@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import LabMetInternal from './LabMetInternal';
 import LabMetGeneric from './LabMetGeneric';
 import LabMetExternal from './LabMetExternal';
+import LabMetCalculated from './LabMetCalculated';
 
 const LabMetDetail = ({lm, rights, location}) => (
 
@@ -14,12 +15,17 @@ const LabMetDetail = ({lm, rights, location}) => (
             <React.Fragment>
                 <LabMetGeneric lm={lm} rights={rights} />                       
                 
-                {location.state === 'external' ? (
+                {location.state === 'external' && (
                     <LabMetExternal lm={lm} rights={rights} />
-                ) : (
+                )}
+                {location.state === 'internal' && (
+
                     <LabMetInternal lm={lm} />
-                )
-                }
+                )}
+                {location.state === 'calculated' && (
+
+                    <LabMetCalculated lm={lm} />
+                )}
             </React.Fragment>
         }
     </div>

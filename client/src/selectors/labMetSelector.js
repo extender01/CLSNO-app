@@ -5,19 +5,19 @@ const labMetSelector = (labMet, filter) => {
     //goes through lab tests object and check if each passes through filtering conditions
     return labMet.filter((item) => {
        
-        // boolean if test name starts with selected letter or with number or if alphabet filter is not selected
+        // ALPHABET //// boolean if test name starts with selected letter or with number or if alphabet filter is not selected
         const byAlphabet = item.name.charAt(0) === filter.alphabet || (!isNaN(item.name.charAt(0)) && filter.alphabet === '0-9') || filter.alphabet === '';
 
-        //boolean if test is in selected category or if no category is selected
+        //CATEGORY ///// boolean if test is in selected category or if no category is selected
         const byCategory = item.category === filter.category || filter.category === 'all';
 
 
-        //byStatim is true if filter.statim is set to false (all methods are displayed) or if filter is applied and method has statCare === true (method is run in statim mode)
+        // PROVOZ ////// byStatim is true if filter.statim is set to false (all methods are displayed) or if filter is applied and method has statCare === true (method is run in statim mode)
         const byStatim = item.statCare === filter.statim || filter.statim === false;
         const byEr = item.erCare === filter.er || filter.er === false;
         const byAdditional = (item.additionalOrder !== '' && filter.additional === true)  || filter.additional === false;
 
-        //if name or synonyme contains string from input (byTextSyn is fuction beacuse we must check if syn exists)
+        //TEXT STRING ////// if name or synonyme contains string from input (byTextSyn is fuction beacuse we must check if syn exists)
         const byTextName = accentFold(item.name.toLowerCase()).includes(filter.text.toLowerCase());
         const byTextSyn = () => {
             if(item.syn) {
@@ -26,9 +26,23 @@ const labMetSelector = (labMet, filter) => {
                 return false;
             }
         };
-        
         const byText = byTextName || byTextSyn();
-        return byCategory && byAlphabet && byText && byStatim && byEr && byAdditional;
+
+
+        //GROUPS //// if groups string contains filtered group from selected button
+        //NESLO PROTOZE DRIVE ZADANE METODY NEMAJI GROUPS TAKZE TO NENI STRING
+        const byGroup = () => {
+            if (typeof item.groups === 'string' && item.groups.length > 0) {
+                return true;
+            } else {
+                return false;
+            }
+
+        };
+
+
+
+        return byCategory && byAlphabet && byText && byStatim && byEr && byAdditional && byGroup();
         
     }).sort((a, b) => {
         if (a.name.toLowerCase() < b.name.toLowerCase()) {

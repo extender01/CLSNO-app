@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import configureStore from './store/configureStore';
 import { Provider } from 'react-redux';
+// import { PulseLoader } from 'react-spinners';
 
 
 import AppRouter from './routers/AppRouter';
@@ -27,13 +28,13 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(<p>Loading</p>, document.getElementById("app"));
+ReactDOM.render(<p>LOADING</p>, document.getElementById('app'))
 
 
 //startLogedUser and startLoadTests have custom callbacks -> after successfull    
 store.dispatch(startLoggedUser(() => {
     store.dispatch(startLoadTests(() => {
-        ReactDOM.render(jsx, document.getElementById("app"));
+        ReactDOM.render(jsx, document.getElementById('app'));
     }));
 }));
 

@@ -11,7 +11,7 @@ let TestSchema = new mongoose.Schema({
     },
     where: {
         type: String,
-        required: true
+        required: false
     },
     category: {
         type: String,
@@ -133,11 +133,19 @@ let TestSchema = new mongoose.Schema({
         type: String,
         required: false
     },
-    categories: {
+    groups: {
         type: String,
         required: false
     },
     volume: {
+        type: String,
+        required: false
+    },
+    dependencies: {
+        type: String,
+        required: false
+    },
+    formula: {
         type: String,
         required: false
     }
