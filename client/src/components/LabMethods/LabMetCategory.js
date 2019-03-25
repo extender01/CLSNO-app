@@ -4,22 +4,23 @@ import Collapsible from 'react-collapsible';
 import PropTypes from 'prop-types';
 
 import {categoryFilter, statimFilter, erFilter, additionalFilter, clearFilters, groupFilter} from '../../actions/filterActions';
+import LabMetFilterTrigger from './LabMetFilterTrigger';
 import LabMetAlphabet from './LabMetAlphabet';
 
 const LabMetCategory = (props) => (
     <React.Fragment>
         
-        <div className='fc lm__cat'>
+        <div className='lm__cat'>
             <button className={props.active === 'all' ? 'lm__cat-active': undefined} name='all' onClick={() => {props.clearAllFilters()}} >VŠECHNY</button>
             <button className={props.active === 'internal' ? 'lm__cat-active' : undefined} name='internal' onClick={(e) => {props.categoryFilter(e.target.name)}} >INTERNÍ</button>
             <button className={props.active === 'external' ? 'lm__cat-active' : undefined} name='external' onClick={(e) => {props.categoryFilter(e.target.name)}} >EXTERNÍ</button>
 
         </div>
         <Collapsible trigger='Další filtry'>
-            <Collapsible trigger='PROVOZ'>
+            <Collapsible trigger={<LabMetFilterTrigger heading='PROVOZ' />} classParentString='lm__collapsible__filters'>
 
 
-                <div className='fc lm__cat'>
+                <div className='lm__cat'>
                     <button className={props.statim === true ? 'lm__cat-active' : undefined} name='stat' onClick={() => {props.statimFilter(!props.statim)}} >STATIM</button>
                     <button className={props.er === true ? 'lm__cat-active' : undefined} name='er' onClick={() => {props.erFilter(!props.er)}} >POHOTOVOST</button>
                     <button className={props.additional === true ? 'lm__cat-active' : undefined} name='additional' onClick={() => {props.additionalFilter(!props.additional)}} >DOHLASKA</button>
@@ -28,10 +29,10 @@ const LabMetCategory = (props) => (
 
             </Collapsible>
 
-            <Collapsible trigger='Kategorie'>
+            <Collapsible trigger={<LabMetFilterTrigger heading='KATEGORIE A SKUPINY' />} classParentString='lm__collapsible__filters'>
 
 
-                <div className='fc lm__cat'>
+                <div className='lm__cat'>
                     <button className={props.groups === 'zaklad' ? 'lm__cat-active' : undefined} name='group' onClick={() => {props.groupFilter('zaklad')}} >Základní panel</button>
                     <button className={props.groups === 'jatra' ? 'lm__cat-active' : undefined} name='group' onClick={() => {props.groupFilter('jatra')}} >Vyšetření jater</button>
                     <button className={props.groups === 'ledviny' ? 'lm__cat-active' : undefined} name='group' onClick={() => {props.groupFilter('ledviny')}} >Vyšetření ledvin</button>
@@ -41,7 +42,7 @@ const LabMetCategory = (props) => (
             </Collapsible>    
             
             
-            <Collapsible trigger='Abeceda'>
+            <Collapsible trigger={<LabMetFilterTrigger heading='ABECENDĚ' />} classParentString='lm__collapsible__filters'>
                 <LabMetAlphabet />
             </Collapsible>
         </Collapsible>

@@ -34,7 +34,11 @@ const labMethodDefaultState = {
     groups: '',
     volume: '',
     dependencies: '',
-    formula: ''
+    formula: '',
+    code: '',
+    points: undefined,
+    openLimsNumber: undefined,
+    material: ''
 };
 
 export default labMethodDefaultState;

@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 //nested destructuring
-const DrawMistakesHeader = ({box: {heading, image, text}}) => (
+const DrawMistakesTrigger = ({box: {heading, image, text}}) => (
     <div className='draw__mistakes__header'>
         
         <img src={image} />
@@ -14,7 +14,7 @@ const DrawMistakesHeader = ({box: {heading, image, text}}) => (
 );
 
 
-DrawMistakesHeader.propTypes = {
+DrawMistakesTrigger.propTypes = {
     box: PropTypes.shape({
         heading: PropTypes.string,
         image: PropTypes.string,
@@ -22,4 +22,4 @@ DrawMistakesHeader.propTypes = {
     }) 
 };
 
-export default DrawMistakesHeader;  
+export default DrawMistakesTrigger;  

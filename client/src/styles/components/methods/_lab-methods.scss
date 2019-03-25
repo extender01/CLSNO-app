@@ -113,7 +113,12 @@
     }
 
     &__cat {
-        // background: $searchBar;
+        @include frs();
+        // background: blue;
+        &:nth-child(2n+1) {
+            padding: 1rem 0;
+            // background: yellow;
+        }
 
         & button {
             background: #7ca1b3;
@@ -127,6 +132,48 @@
         }
 
 
+    }
+
+    &__collapsible__filters {
+        background: rgba(23, 81, 111, 0.3);
+        padding: 1rem 0;
+        margin: 1rem 0;
+        display: block;
+
+        &__heading {
+            display: inline-block;
+            width: 90%;
+        }
+
+        &__trigger:hover {
+            cursor: pointer;
+        }
+        &__trigger {
+            // background: green;
+            
+            &:after {
+                font-family: 'Font Awesome 5 Free';
+                content: '\f053';
+                margin-left: 1rem;
+                
+                // position: absolute;
+                // right: 10px;
+                // top: 10px;
+                display: inline-block;
+                transform: rotateZ(270deg);
+                transition: transform 300ms;
+              }
+            
+            &.is-open {
+                // background: red;
+                &:after {
+                transform: rotateZ(90deg);
+            }
+              }
+        }    
+
+        
+            
     }
 
     &__item {
@@ -189,4 +236,5 @@
         }
     }
 }
+
 
