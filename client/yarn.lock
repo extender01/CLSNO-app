@@ -2897,11 +2897,6 @@ execa@^0.7.0:
     signal-exit "^3.0.0"
     strip-eof "^1.0.0"
 
-exenv@1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.0.tgz#3835f127abf075bfe082d0aed4484057c78e3c89"
-  integrity sha1-ODXxJ6vwdb/ggtCu1EhAV8eOPIk=
-
 exenv@^1.2.1:
   version "1.2.2"
   resolved "https://registry.yarnpkg.com/exenv/-/exenv-1.2.2.tgz#2ae78e85d9894158670b03d47bec1f03bd91bb9d"
@@ -6485,11 +6480,6 @@ react-collapsible@^2.5.0:
   resolved "https://registry.yarnpkg.com/react-collapsible/-/react-collapsible-2.5.0.tgz#7950ec4038c0b11f92f470ce17f596144044e42f"
   integrity sha512-6O9lGdQq/YJsWbEEf+geoTzv/vWFKUNrCHOUyrzIWV8eEgFT8xP3EB64/Xj232hEavDOb7SEKhcjeMUNAQFUvg==
 
-react-dom-factories@^1.0.0:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/react-dom-factories/-/react-dom-factories-1.0.2.tgz#eb7705c4db36fb501b3aa38ff759616aa0ff96e0"
-  integrity sha1-63cFxNs2+1AbOqOP91lhaqD/luA=
-
 react-dom@16.6.0:
   version "16.6.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.6.0.tgz#6375b8391e019a632a89a0988bce85f0cc87a92f"
@@ -6533,15 +6523,6 @@ react-media@^1.8.0:
     invariant "^2.2.2"
     json2mq "^0.2.0"
     prop-types "^15.5.10"
-
-react-modal@2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/react-modal/-/react-modal-2.2.2.tgz#4bbf98bc506e61c446c9f57329c7a488ea7d504b"
-  integrity sha512-tdgyEyfbyfzDUj40XtWldAQe7e+yhJDUtVSlsQ9AQCGifzWck6v1XTtIVGViVftOsEA3cBWCZCjF3rq6FPJzMg==
-  dependencies:
-    exenv "1.2.0"
-    prop-types "^15.5.10"
-    react-dom-factories "^1.0.0"
 
 react-redux@^5.0.7:
   version "5.1.0"

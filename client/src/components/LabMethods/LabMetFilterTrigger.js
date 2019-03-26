@@ -1,5 +1,5 @@
 import React from 'react';
-import { PromiseProvider } from 'mongoose';
+
 // import PropTypes from 'prop-types';
 
 //nested destructuring
