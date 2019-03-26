@@ -33,9 +33,9 @@ const LabMetCategory = (props) => (
 
 
                 <div className='lm__cat'>
-                    <button className={props.groups === 'zaklad' ? 'lm__cat-active' : undefined} name='group' onClick={() => {props.groupFilter('zaklad')}} >Základní panel</button>
-                    <button className={props.groups === 'jatra' ? 'lm__cat-active' : undefined} name='group' onClick={() => {props.groupFilter('jatra')}} >Vyšetření jater</button>
-                    <button className={props.groups === 'ledviny' ? 'lm__cat-active' : undefined} name='group' onClick={() => {props.groupFilter('ledviny')}} >Vyšetření ledvin</button>
+                    <button className={props.groups === 'zaklad' ? 'lm__cat-active' : undefined} name='groups' onClick={() => groupSelector(props, 'zaklad')} >Základní panel</button>
+                    <button className={props.groups === 'jatra' ? 'lm__cat-active' : undefined} name='groups' onClick={() => groupSelector(props, 'jatra')} >Vyšetření jater</button>
+                    <button className={props.groups === 'ledviny' ? 'lm__cat-active' : undefined} name='groups' onClick={() => groupSelector(props, 'ledviny')}>Vyšetření ledvin</button>
 
                 </div>
 
@@ -95,6 +95,17 @@ const mapDispatchToProps = (dispatch) => {
        
 
     };
+};
+
+// checks if there is applied group filter in redux state (in props via mapStateToProps) and if its equal to passed value (keyword, that means that same button for group was clicked second time) - if that is true filter is reset to ''
+//if passed keyword is different (group button clicked for first time or after DIFFERENT button, then filer is set to that keyword)
+// props are passed because this fuction is outside of component and doesnt have access via HOC from connect redux
+const groupSelector = (props, keyword) => {
+    if(props.groups === keyword) {
+        props.groupFilter('');
+    } else {
+        props.groupFilter(keyword);
+    }
 };
 
 LabMetCategory.propTypes = {

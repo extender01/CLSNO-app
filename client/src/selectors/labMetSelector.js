@@ -32,10 +32,23 @@ const labMetSelector = (labMet, filter) => {
         //GROUPS //// if groups string contains filtered group from selected button
         //NESLO PROTOZE DRIVE ZADANE METODY NEMAJI GROUPS TAKZE TO NENI STRING
         const byGroup = () => {
-            if (typeof item.groups === 'string' && item.groups.length > 0) {
+            // if (typeof item.groups === 'string' && item.groups.length > 0) {
+            //     if (item.groups === filter.groups) {
+            //         return true;
+            //     }   else {
+            //         return false;
+            //     }                     
+            // } else {
+            //     return true;
+            // }
+            if(filter.groups === '') {
                 return true;
             } else {
-                return false;
+                if(typeof item.groups === 'string' && item.groups.includes(filter.groups)) {
+                    return true;
+                } else {
+                    return false;
+                }
             }
 
         };
@@ -43,6 +56,7 @@ const labMetSelector = (labMet, filter) => {
 
 
         return byCategory && byAlphabet && byText && byStatim && byEr && byAdditional && byGroup();
+        // return true;
         
     }).sort((a, b) => {
         if (a.name.toLowerCase() < b.name.toLowerCase()) {
