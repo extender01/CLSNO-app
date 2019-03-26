@@ -148,22 +148,6 @@ let TestSchema = new mongoose.Schema({
     formula: {
         type: String,
         required: false
-    },
-    code: {
-        type: String,
-        required: false
-    },
-    points: {
-        type: Number,
-        required: false
-    },
-    openLimsNumber: {
-        type: Number,
-        required: false
-    },
-    material: {
-        type: String,
-        required: false
     }
 
 });
