@@ -126,7 +126,9 @@ export const startLoggedUser = (callback) => {
             callback()
             
         }).catch((e) => {
-            console.log('error pri loadovani testu');
+            console.log('error pri loadovani useru');
+            dispatch(loggedUserSuccess({user: {nick: 'nobody', rights: 'department', _id: ''}}));
+            callback()
             
             
             

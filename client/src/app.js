@@ -28,19 +28,20 @@ const jsx = (
     </Provider>
 );
 
-ReactDOM.render(<p>LOADING</p>, document.getElementById('app'))
+// ReactDOM.render(<p>LOADING</p>, document.getElementById('app'))
 
 
 //startLogedUser and startLoadTests have custom callbacks -> after successfull    
+
 store.dispatch(startLoggedUser(() => {
-    store.dispatch(startLoadTests(() => {
-        ReactDOM.render(jsx, document.getElementById('app'));
-    }));
+    // store.dispatch(startLoadTests(() => {
+    ReactDOM.render(jsx, document.getElementById('app'));
 }));
+// }));
 
 
 
 
 
 
- //ReactDOM.render(jsx, document.getElementById("app"));
+//  ReactDOM.render(jsx, document.getElementById("app"));

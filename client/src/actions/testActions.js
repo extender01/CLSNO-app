@@ -133,7 +133,7 @@ const loadTestsSuccess = (tests = []) => {
     };
 };
 
-export const startLoadTests = (callback) => {
+export const startLoadTests = () => {
     return (dispatch) => {
     
         dispatch(loadTestsBegin());
@@ -141,11 +141,12 @@ export const startLoadTests = (callback) => {
           
             console.log('uspesne nacteny testy', result.data);
             dispatch(loadTestsSuccess(result.data));
-            callback()
+            // callback()
     
         }).catch((e) => {
             console.log('error pri loadovani testu');
             dispatch(loadTestFailure(e));
+            // dispatch(loadTestsSuccess());
             
             
         });

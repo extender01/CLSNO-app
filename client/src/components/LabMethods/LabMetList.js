@@ -7,6 +7,8 @@ import labMetSelector from '../../selectors/labMetSelector';
 
 const LabMetList = (props) => (
     <div className='lm__methods'>
+        
+    
         {
             props.labTests.length === 0 ? (
                 <React.Fragment>
@@ -24,7 +26,7 @@ const LabMetList = (props) => (
 
 const mapStateToProps = (state) => {
     return {
-        labTests: labMetSelector(state.labTests.tests, state.labTests.filters)
+        labTests: labMetSelector(state.labTests.tests, state.labTests.filters),
     };
 };
 
